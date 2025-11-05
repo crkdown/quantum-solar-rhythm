@@ -61,6 +61,8 @@ export default {
       fontFamily: {
         serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        nourd: ['Nourd', 'sans-serif'],
+        lora: ['Lora', 'serif'],
       },
       backgroundImage: {
         'rhythm-gradient': 'var(--rhythm-gradient)',
