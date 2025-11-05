@@ -8,7 +8,7 @@ const Footer = () => {
           
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-nourd font-semibold text-[#A6A6A6] mb-4">
+            <h3 className="text-2xl font-nourd font-semibold text-[#4D7D7D] mb-4">
               Solaris Nutri
             </h3>
             <p className="text-[#A6A6A6] font-lora text-sm leading-relaxed mb-4">
@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-nourd font-semibold text-[#A6A6A6] mb-4">Explore</h4>
+            <h4 className="font-nourd font-semibold text-[#4D7D7D] mb-4">Explore</h4>
             <ul className="space-y-2 text-sm font-lora">
               <li>
                 <Link to="/about" className="text-[#A6A6A6] hover:text-primary transition-colors">
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-nourd font-semibold text-[#A6A6A6] mb-4">Connect</h4>
+            <h4 className="font-nourd font-semibold text-[#4D7D7D] mb-4">Connect</h4>
             <ul className="space-y-2 text-sm font-lora">
               <li>
                 <Link to="/contact" className="text-[#A6A6A6] hover:text-primary transition-colors">
