@@ -56,7 +56,7 @@ const Shop = () => {
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Shop & Resources
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
             Printables & Shop
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
@@ -68,7 +68,7 @@ const Shop = () => {
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <Download className="text-accent" size={28} />
-            <h2 className="font-serif text-3xl font-bold text-primary">
+            <h2 className="font-serif text-3xl font-bold text-[#4D7D7D]">
               Digital Printables & Charts
             </h2>
           </div>
@@ -112,7 +112,7 @@ const Shop = () => {
         <div>
           <div className="flex items-center gap-3 mb-8">
             <Package className="text-accent" size={28} />
-            <h2 className="font-serif text-3xl font-bold text-primary">
+            <h2 className="font-serif text-3xl font-bold text-[#4D7D7D]">
               Solaris Nutri Products
             </h2>
           </div>
@@ -163,7 +163,7 @@ const Shop = () => {
 
         {/* Bundle Offer */}
         <div className="max-w-4xl mx-auto mt-20 bg-primary/5 p-12 rounded-lg border border-primary/20 text-center animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-primary mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-4">
             Complete Rhythm Toolkit Bundle
           </h2>
           <p className="font-sans text-foreground/80 mb-6">

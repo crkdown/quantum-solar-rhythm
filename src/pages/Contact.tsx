@@ -15,7 +15,7 @@ const Contact = () => {
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Contact
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
             Let's Begin Your Rhythm Journey
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
@@ -27,7 +27,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="border-border shadow-quantum animate-fade-in-up">
             <CardHeader>
-              <CardTitle className="font-serif text-2xl text-primary">
+              <CardTitle className="font-serif text-2xl text-[#4D7D7D]">
                 Send a Message
               </CardTitle>
             </CardHeader>
@@ -92,7 +92,7 @@ const Contact = () => {
                     <Mail className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-semibold text-primary mb-2">
+                    <h3 className="font-serif text-xl font-semibold text-[#4D7D7D] mb-2">
                       Email Us
                     </h3>
                     <p className="font-sans text-foreground/70 mb-3">
@@ -117,7 +117,7 @@ const Contact = () => {
                     <Calendar className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-semibold text-primary mb-2">
+                    <h3 className="font-serif text-xl font-semibold text-[#4D7D7D] mb-2">
                       Book a Discovery Call
                     </h3>
                     <p className="font-sans text-foreground/70 mb-3">
@@ -133,7 +133,7 @@ const Contact = () => {
 
             {/* Info Box */}
             <div className="bg-muted/30 p-8 rounded-lg border border-border">
-              <h3 className="font-serif text-xl font-semibold text-primary mb-4">
+              <h3 className="font-serif text-xl font-semibold text-[#4D7D7D] mb-4">
                 What to Expect
               </h3>
               <ul className="space-y-3 font-sans text-sm text-foreground/80">

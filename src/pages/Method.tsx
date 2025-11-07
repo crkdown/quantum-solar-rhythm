@@ -13,7 +13,7 @@ const Method = () => {
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             The Method
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
             The Quantum Rhythm Framework
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
@@ -43,7 +43,7 @@ const Method = () => {
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-primary">
+              <h2 className="font-serif text-4xl font-bold text-[#4D7D7D]">
                 Decode
               </h2>
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
@@ -83,7 +83,7 @@ const Method = () => {
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-primary">
+              <h2 className="font-serif text-4xl font-bold text-[#4D7D7D]">
                 Reprogram
               </h2>
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
@@ -123,7 +123,7 @@ const Method = () => {
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-primary">
+              <h2 className="font-serif text-4xl font-bold text-[#4D7D7D]">
                 Rebuild
               </h2>
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
@@ -158,7 +158,7 @@ const Method = () => {
 
         {/* CTA */}
         <div className="max-w-3xl mx-auto mt-20 text-center bg-primary/5 p-12 rounded-lg border border-primary/20 animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-primary mb-4">
+          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-4">
             Ready to Begin Your Rhythm Reset?
           </h2>
           <p className="font-sans text-foreground/80 mb-8">

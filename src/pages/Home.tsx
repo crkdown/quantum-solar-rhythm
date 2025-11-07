@@ -27,7 +27,7 @@ const Home = () => {
               Quantum Rhythm Framework
             </div>
             
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-[#4D7D7D] leading-tight">
               The world doesn't need another diet.
               <span className="block text-accent mt-4">It needs rhythm.</span>
             </h1>
@@ -63,7 +63,7 @@ const Home = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in-up">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D]">
               Why Rhythm?
             </h2>
             <p className="font-sans text-lg text-foreground/80 leading-relaxed">
@@ -83,7 +83,7 @@ const Home = () => {
       {/* Three Pillars */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-6">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-center mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] text-center mb-16">
             The Three Phases
           </h2>
           
@@ -113,7 +113,7 @@ const Home = () => {
                 <div className="text-accent font-serif text-6xl font-bold mb-4 opacity-50">
                   {item.phase}
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+                <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
                   {item.title}
                 </h3>
                 <p className="font-sans text-foreground/70 leading-relaxed">

@@ -11,7 +11,7 @@ const About = () => {
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
               About Pau
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
               Bridging Biology, Rhythm & Consciousness
             </h1>
           </div>
@@ -57,7 +57,7 @@ const About = () => {
           {/* Philosophy */}
           <div className="mt-16 grid md:grid-cols-2 gap-8">
             <div className="bg-muted/30 p-8 rounded-lg border border-border animate-fade-in-up">
-              <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+              <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
                 My Approach
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">
@@ -81,7 +81,7 @@ const About = () => {
             </div>
 
             <div className="bg-muted/30 p-8 rounded-lg border border-border animate-fade-in-up" style={{ animationDelay: "150ms" }}>
-              <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+              <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
                 My Credentials
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">

@@ -61,7 +61,7 @@ const Programs = () => {
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Programs
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
             Rhythm Reset Programs
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
@@ -136,7 +136,7 @@ const Programs = () => {
 
         {/* What's Included */}
         <div className="max-w-4xl mx-auto bg-muted/30 p-12 rounded-lg border border-border animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-primary text-center mb-8">
+          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] text-center mb-8">
             What's Included in All Programs
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -160,7 +160,7 @@ const Programs = () => {
 
         {/* Not Sure Section */}
         <div className="max-w-3xl mx-auto mt-16 text-center animate-fade-in">
-          <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+          <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
             Not Sure Which Program is Right for You?
           </h3>
           <p className="font-sans text-foreground/80 mb-6">
