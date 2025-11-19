@@ -6,6 +6,14 @@ const Resources = () => {
   const resources = [
     {
       icon: Calendar,
+      title: "Rhythm Calculator",
+      description: "Interactive assessment to discover your chronotype and optimal eating windows.",
+      type: "Interactive Tool",
+      size: "Free",
+      link: "/rhythm-calculator"
+    },
+    {
+      icon: Calendar,
       title: "Rhythm Planner",
       description: "Track your daily rhythms, energy patterns, and alignment progress.",
       type: "PDF Download",
@@ -96,10 +104,19 @@ const Resources = () => {
                 </CardContent>
 
                 <CardFooter>
-                  <Button className="w-full bg-primary hover:bg-primary/90 font-sans">
-                    <Download size={16} className="mr-2" />
-                    Download Free
-                  </Button>
+                  {resource.link ? (
+                    <Button 
+                      onClick={() => window.location.href = resource.link}
+                      className="w-full bg-accent hover:bg-accent/90 font-sans"
+                    >
+                      Start Assessment
+                    </Button>
+                  ) : (
+                    <Button className="w-full bg-primary hover:bg-primary/90 font-sans">
+                      <Download size={16} className="mr-2" />
+                      Download Free
+                    </Button>
+                  )}
                 </CardFooter>
               </Card>
             );

@@ -12,6 +12,7 @@ import Programs from "./pages/Programs";
 import Masterclasses from "./pages/Masterclasses";
 import Resources from "./pages/Resources";
 import Blog from "./pages/Blog";
+import RhythmCalculator from "./pages/RhythmCalculator";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/masterclasses" element={<Masterclasses />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/rhythm-calculator" element={<RhythmCalculator />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
