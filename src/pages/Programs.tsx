@@ -6,47 +6,49 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 const Programs = () => {
   const programs = [
     {
-      duration: "3-Week",
-      title: "Rhythm Awakening",
-      price: "$397",
-      description: "Perfect for beginners ready to experience the power of circadian alignment.",
+      duration: "3-Month",
+      title: "Rhythm Reset",
+      price: "$897",
+      description: "Stabilize body rhythms, restore energy, and simplify nourishment through circadian alignment.",
       features: [
-        "Complete rhythm assessment",
-        "Personalized eating window protocol",
-        "Weekly coaching calls",
-        "QRN starter charts",
-        "Email support"
+        "Rhythm calendar & circadian alignment",
+        "Gut reset protocol",
+        "Weekly/biweekly sessions",
+        "WhatsApp support",
+        "Personalized rhythm plan",
+        "QRN starter toolkit"
       ],
       popular: false
     },
     {
-      duration: "6-Week",
-      title: "Rhythm Reset",
-      price: "$697",
-      description: "Our signature program for deep transformation through all three phases.",
+      duration: "6-Month",
+      title: "Coherence Deepening",
+      price: "$1,697",
+      description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
       features: [
-        "Everything in 3-Week program",
-        "Advanced circadian protocols",
-        "Bi-weekly 1:1 sessions",
-        "Complete QRN chart set",
-        "Seasonal alignment guide",
-        "Private community access"
+        "Everything in 3-Month program",
+        "Lunar cycle synchronization",
+        "Seasonal transition guidance",
+        "Food energetics & microbiome optimization",
+        "Advanced craving decoding",
+        "Bi-weekly deep-dive sessions",
+        "Priority support"
       ],
       popular: true
     },
     {
-      duration: "9-Week",
-      title: "Rhythm Mastery",
-      price: "$997",
-      description: "Comprehensive mastery program for lasting quantum coherence and vitality.",
+      duration: "9-Month",
+      title: "Full Quantum Rhythm Embodiment",
+      price: "$2,997",
+      description: "Complete reprogramming of body rhythms with planetary cycle integration and nervous system mastery.",
       features: [
-        "Everything in 6-Week program",
+        "Everything in 6-Month program",
+        "Planetary rhythm cycle integration",
+        "Nervous system & vagus regulation",
         "Weekly 1:1 deep-dive sessions",
-        "Custom meal architecture",
-        "Quantum coherence training",
-        "Lifetime rhythm toolkit",
-        "Priority support",
-        "3 months follow-up check-ins"
+        "Complete rhythm intelligence embodiment",
+        "Lifetime access to resources",
+        "6 months post-program support"
       ],
       popular: false
     }

@@ -11,6 +11,9 @@ const Navigation = () => {
     { path: "/about", label: "About Pau" },
     { path: "/method", label: "The Method" },
     { path: "/programs", label: "Programs" },
+    { path: "/masterclasses", label: "Masterclasses" },
+    { path: "/resources", label: "Resources" },
+    { path: "/blog", label: "Journal" },
     { path: "/shop", label: "Shop" },
     { path: "/contact", label: "Contact" },
   ];
