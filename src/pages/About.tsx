@@ -20,36 +20,39 @@ const About = () => {
           <div className="prose prose-lg max-w-none space-y-8 animate-fade-in-up">
             <div className="bg-card p-8 md:p-12 rounded-lg border border-border shadow-subtle-glow">
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                I'm <span className="font-semibold text-primary">Quantum Pau</span> — 
-                a Quantum Coherence Practitioner and Nutritionist who spent years 
-                searching for answers that traditional nutrition couldn't provide.
+                I'm <span className="font-semibold text-primary">Solaris Nutri (Pau)</span> — 
+                a nutritionist-dietitian trained at the National University of Colombia (UNAL) 
+                with clinical experience in hospitals and community health. After years inside 
+                conventional nutrition systems, I witnessed how disease-based protocols 
+                disconnected people from their bodies.
               </p>
 
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                After witnessing countless clients struggle with restrictive diets 
-                that ignored their body's natural intelligence, I knew there had to 
-                be a better way. My journey led me deep into chronobiology, quantum 
-                physics, and the ancient wisdom of circadian rhythms.
+                I continued my studies as a Holistic Health Coach through the Institute for 
+                Integrative Nutrition (IIN), exploring multiple modalities — from Ayurveda 
+                and macrobiotics to quantum biology, anthroposophy, biodynamics, microbiome 
+                science, and the work of Rudolf Steiner, Alice Bailey, and Blavatsky.
               </p>
 
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                What I discovered changed everything: <span className="text-accent font-medium">your body 
-                doesn't need another meal plan — it needs rhythm restoration</span>. 
-                When we align our eating patterns with our biological clocks, 
-                something remarkable happens. Inflammation decreases. Energy stabilizes. 
-                Emotional resilience returns.
+                From this synthesis emerged <span className="text-accent font-medium">Quantum Rhythm 
+                Nutrition</span> — a living framework designed to realign the human body with 
+                nature's cycles, planetary rhythms, and biological coherence. It's not a diet. 
+                It's a <span className="font-semibold">rhythmic operating system</span> that reconnects 
+                humans with their natural timing — circadian, lunar, seasonal, emotional, metabolic.
               </p>
 
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                This realization birthed the <span className="font-semibold text-primary">Quantum 
-                Rhythm Framework</span> — a methodology that treats time as a nutrient 
-                and honors the profound intelligence encoded in your cells.
+                This methodology blends nutritional science with rhythm intelligence, planetary 
+                cycles, conscious eating, and practical tools like the <em>Cereal of the Week</em> 
+                (Steiner), seasonal nourishment, and education on industrialized food.
               </p>
 
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                Today, I help people worldwide reclaim their vitality through rhythm, 
-                not restriction. Because when you work <em>with</em> your body's natural 
-                cycles instead of against them, transformation becomes inevitable.
+                My mission is to help humans remember who they are — <span className="text-accent font-medium">microcosms 
+                of a living planet</span> — and restore alignment beyond restriction. Because when you 
+                work <em>with</em> your body's natural cycles instead of against them, transformation 
+                becomes inevitable.
               </p>
             </div>
           </div>
@@ -63,19 +66,19 @@ const About = () => {
               <ul className="space-y-3 font-sans text-foreground/80">
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Biology-first nutrition grounded in circadian science</span>
+                  <span>Alignment over restriction — rhythm intelligence as foundation</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Quantum coherence as the foundation of vitality</span>
+                  <span>Integration of chronobiology, quantum biology, and planetary rhythms</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Compassionate guidance without restriction or shame</span>
+                  <span>Food as frequency and information, not just calories</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Practical tools that honor modern life</span>
+                  <span>Compassionate guidance rooted in love, kindness, and respect for nature</span>
                 </li>
               </ul>
             </div>
@@ -87,19 +90,19 @@ const About = () => {
               <ul className="space-y-3 font-sans text-foreground/80">
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Certified Quantum Coherence Practitioner</span>
+                  <span>Nutritionist-Dietitian (UNAL - National University of Colombia)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Registered Nutritionist (CNP)</span>
+                  <span>Certified Holistic Health Coach (IIN - Institute for Integrative Nutrition)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Chronobiology & Circadian Health Specialist</span>
+                  <span>Clinical nutrition experience in hospitals & community health</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>10+ years guiding rhythm restoration</span>
+                  <span>Creator of Quantum Rhythm Nutrition framework</span>
                 </li>
               </ul>
             </div>

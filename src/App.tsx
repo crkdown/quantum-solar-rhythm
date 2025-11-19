@@ -9,6 +9,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Method from "./pages/Method";
 import Programs from "./pages/Programs";
+import Masterclasses from "./pages/Masterclasses";
+import Resources from "./pages/Resources";
+import Blog from "./pages/Blog";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -25,13 +28,16 @@ const App = () => (
           <Navigation />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/method" element={<Method />} />
-              <Route path="/programs" element={<Programs />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/method" element={<Method />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/masterclasses" element={<Masterclasses />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
