@@ -8,7 +8,7 @@ const Programs = () => {
     {
       duration: "3-Month",
       title: "Rhythm Reset",
-      price: "$897",
+      price: "€700 – €900",
       description: "Stabilize body rhythms, restore energy, and simplify nourishment through circadian alignment.",
       features: [
         "Rhythm calendar & circadian alignment",
@@ -23,7 +23,7 @@ const Programs = () => {
     {
       duration: "6-Month",
       title: "Coherence Deepening",
-      price: "$1,697",
+      price: "€1,600 – €1,800",
       description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
       features: [
         "Everything in 3-Month program",
@@ -39,7 +39,7 @@ const Programs = () => {
     {
       duration: "9-Month",
       title: "Full Quantum Rhythm Embodiment",
-      price: "$2,997",
+      price: "€2,500 – €2,700",
       description: "Complete reprogramming of body rhythms with planetary cycle integration and nervous system mastery.",
       features: [
         "Everything in 6-Month program",
