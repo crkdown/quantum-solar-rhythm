@@ -13,6 +13,7 @@ const Navigation = () => {
     { path: "/method", label: "The Method" },
     { path: "/programs", label: "Programs" },
     { path: "/rhythm-calculator", label: "Rhythm Calculator" },
+    { path: "/food-rhythm-tool", label: "Food Rhythm Tool" },
     { path: "/earth-rhythm-retreat", label: "Earth Rhythm Retreat" },
     { path: "/masterclasses", label: "Masterclasses" },
     { path: "/resources", label: "Resources" },
