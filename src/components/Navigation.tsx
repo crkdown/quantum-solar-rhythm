@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +28,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-serif font-semibold text-primary">
-            Solaris Nutri
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Solaris Nutri" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
