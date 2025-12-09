@@ -20,39 +20,23 @@ const About = () => {
           <div className="prose prose-lg max-w-none space-y-8 animate-fade-in-up">
             <div className="bg-card p-8 md:p-12 rounded-lg border border-border shadow-subtle-glow">
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                I'm <span className="font-semibold text-primary">Solaris Nutri (Pau)</span> — 
-                a nutritionist-dietitian trained at the National University of Colombia (UNAL) 
-                with clinical experience in hospitals and community health. After years inside 
-                conventional nutrition systems, I witnessed how disease-based protocols 
-                disconnected people from their bodies.
+                <span className="font-semibold text-primary">Solaris Nutri</span> is a forward-thinking 
+                wellness company led by Paula Carolina Suescun, a nutritionist, holistic health coach, 
+                and creator of the <span className="text-accent font-medium">Quantum Rhythm Nutrition™</span> method.
               </p>
 
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                I continued my studies as a Holistic Health Coach through the Institute for 
-                Integrative Nutrition (IIN), exploring multiple modalities — from Ayurveda 
-                and macrobiotics to quantum biology, anthroposophy, biodynamics, microbiome 
-                science, and the work of Rudolf Steiner, Alice Bailey, and Blavatsky.
-              </p>
-
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                From this synthesis emerged <span className="text-accent font-medium">Quantum Rhythm 
-                Nutrition</span> — a living framework designed to realign the human body with 
-                nature's cycles, planetary rhythms, and biological coherence. It's not a diet. 
-                It's a <span className="font-semibold">rhythmic operating system</span> that reconnects 
-                humans with their natural timing — circadian, lunar, seasonal, emotional, metabolic.
-              </p>
-
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                This methodology blends nutritional science with rhythm intelligence, planetary 
-                cycles, conscious eating, and practical tools like the <em>Cereal of the Week</em> 
-                (Steiner), seasonal nourishment, and education on industrialized food.
+                The method focuses on restoring biological alignment through circadian, lunar, seasonal, 
+                and digestive rhythms. Integrating physiology, chronobiology, microbiome science, Chinese 
+                Medicine, biodynamics, and esoteric principles, Solaris Nutri offers a unique multidimensional 
+                approach to nutrition that reconnects individuals with their natural cycles.
               </p>
 
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                My mission is to help humans remember who they are — <span className="text-accent font-medium">microcosms 
-                of a living planet</span> — and restore alignment beyond restriction. Because when you 
-                work <em>with</em> your body's natural cycles instead of against them, transformation 
-                becomes inevitable.
+                Paula's mission is to empower people to regain clarity, energy, and metabolic balance by 
+                understanding their body as a rhythmic system influenced by natural forces. Her work bridges 
+                science and intuitive knowledge, guiding clients toward sustainable wellbeing and deeper 
+                coherence with the living world.
               </p>
             </div>
           </div>

@@ -43,7 +43,7 @@ const Home = () => {
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-8 py-6 text-lg shadow-quantum transition-all hover:scale-105"
                 >
-                  Start Your 6-Week Rhythm Reset
+                  Start Your 3-Month Rhythm Reset
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
