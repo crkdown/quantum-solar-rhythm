@@ -91,6 +91,58 @@ const About = () => {
               </ul>
             </div>
           </div>
+
+          {/* Core Values */}
+          <div className="mt-16 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+            <h3 className="font-serif text-3xl font-semibold text-[#4D7D7D] text-center mb-10">
+              Core Values
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Rhythm",
+                  description: "Honouring circadian, lunar, seasonal, and digestive cycles."
+                },
+                {
+                  title: "Nature",
+                  description: "Trusting natural simplicity as the ultimate teacher."
+                },
+                {
+                  title: "Integration",
+                  description: "Merging modern science with ancestral, biodynamic, Ayurvedic, and esoteric knowledge."
+                },
+                {
+                  title: "Education",
+                  description: "Empowering people through understanding."
+                },
+                {
+                  title: "Simplicity",
+                  description: "Restoring balance by removing complexity."
+                },
+                {
+                  title: "Conscious Evolution",
+                  description: "Supporting physical, emotional, and energetic growth."
+                },
+                {
+                  title: "Natural Integrity",
+                  description: "Choosing minimally industrialised foods that sustain vitality and ecological balance."
+                }
+              ].map((value, index) => (
+                <div 
+                  key={index} 
+                  className="bg-accent/5 p-6 rounded-lg border border-accent/20 hover:border-accent/40 transition-colors"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <Circle size={8} fill="currentColor" className="text-accent" />
+                    <h4 className="font-serif text-lg font-semibold text-[#4D7D7D]">{value.title}</h4>
+                  </div>
+                  <p className="font-sans text-sm text-foreground/70 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
