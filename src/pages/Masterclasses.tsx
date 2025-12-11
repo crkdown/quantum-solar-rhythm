@@ -2,6 +2,7 @@ import { Circle, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Masterclasses = () => {
   const masterclasses = [
@@ -9,28 +10,28 @@ const Masterclasses = () => {
       title: "The Craving Code",
       description: "Decode the hidden language of your cravings and understand what your body is really asking for.",
       duration: "2.5 hours",
-      price: "$97",
-      status: "Available Now"
+      price: "€97",
+      status: "Coming Soon"
     },
     {
       title: "The Gluten Matrix",
       description: "Navigate the complex world of gluten, grain sensitivity, and their impact on your rhythmic coherence.",
       duration: "3 hours",
-      price: "$97",
-      status: "Available Now"
+      price: "€97",
+      status: "Coming Soon"
     },
     {
       title: "Ultra-Processed",
       description: "Understand the industrial food system and how ultra-processed foods disrupt your natural rhythms.",
       duration: "2 hours",
-      price: "$97",
-      status: "Available Now"
+      price: "€97",
+      status: "Coming Soon"
     },
     {
       title: "The Cereal Code",
       description: "Unlock Steiner's 'Cereal of the Week' wisdom and integrate planetary rhythms through sacred grains.",
       duration: "3 hours",
-      price: "$97",
+      price: "€97",
       status: "Coming Soon"
     }
   ];
@@ -40,6 +41,9 @@ const Masterclasses = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+          </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Masterclasses

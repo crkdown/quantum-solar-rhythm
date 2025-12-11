@@ -75,7 +75,7 @@ const Home = () => {
             <p className="font-sans text-lg text-foreground/80 leading-relaxed">
               Your body doesn't speak the language of calories or macros. 
               It speaks the language of <span className="text-accent font-medium">circadian rhythms</span>, 
-              seasonal cycles, and quantum coherence.
+              seasonal cycles, and biological alignment.
             </p>
             <p className="font-sans text-lg text-foreground/80 leading-relaxed">
               The Quantum Rhythm Framework (QR) is the first nutritional methodology 

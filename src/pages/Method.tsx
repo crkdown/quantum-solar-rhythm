@@ -2,6 +2,7 @@ import { Circle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import methodDiagram from "@/assets/method-diagram.jpg";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Method = () => {
   return (
@@ -9,6 +10,9 @@ const Method = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+          </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             The Method
@@ -64,7 +68,7 @@ const Method = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Quantum coherence baseline assessment</span>
+                    <span>BioRhythm alignment baseline assessment</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />

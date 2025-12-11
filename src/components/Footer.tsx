@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Footer = () => {
   return (
@@ -8,15 +9,15 @@ const Footer = () => {
           
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-nourd font-semibold text-[#4D7D7D] mb-4">
-              Solaris Nutri
-            </h3>
+            <Link to="/" className="inline-block mb-4">
+              <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+            </Link>
             <p className="text-[#A6A6A6] font-lora text-sm leading-relaxed mb-4">
-              Alignment not restriction.<br />
-              Because alignment restores vitality.
+              Guiding alignment across the seen and unseen bodies.<br />
+              Alignment not restriction — because alignment restores vitality.
             </p>
             <p className="text-xs text-[#A6A6A6] font-lora">
-              Created by Quantum Pau — Quantum Coherence Practitioner & Nutritionist
+              Created by Paula Carolina Suescun — BioRhythm Nutrition Coach & Nutritionist
             </p>
           </div>
 
@@ -26,7 +27,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm font-lora">
               <li>
                 <Link to="/about" className="text-[#A6A6A6] hover:text-primary transition-colors">
-                  About Pau
+                  About Paula
                 </Link>
               </li>
               <li>
@@ -81,6 +82,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border text-center">
+          <img src={logo} alt="Solaris Nutri" className="h-12 w-auto mx-auto mb-4 opacity-60" />
           <p className="text-xs text-[#A6A6A6] font-lora">
             © {new Date().getFullYear()} Solaris Nutri. All rights reserved.
           </p>
