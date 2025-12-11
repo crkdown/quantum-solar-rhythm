@@ -6,6 +6,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Link } from "react-router-dom";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 type Answer = {
   questionIndex: number;
@@ -204,6 +205,9 @@ const FoodRhythmTool = () => {
         <div className="container mx-auto px-6 max-w-4xl">
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
+            <div className="flex justify-center mb-6">
+              <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+            </div>
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
               Your Food Rhythm Profile
@@ -320,6 +324,9 @@ const FoodRhythmTool = () => {
       <div className="container mx-auto px-6 max-w-2xl">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+          </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Food Rhythm Tool

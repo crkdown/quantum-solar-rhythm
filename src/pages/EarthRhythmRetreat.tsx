@@ -2,6 +2,7 @@ import { Circle, Clock, Heart, Sun, Droplets, Wind, Leaf, Users, MapPin } from "
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const EarthRhythmRetreat = () => {
   const schedule = [
@@ -127,6 +128,9 @@ const EarthRhythmRetreat = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-accent/10 to-background" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center mb-6">
+              <img src={logo} alt="Solaris Nutri" className="h-24 w-auto" />
+            </div>
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-6">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
               One-Day Realignment Retreat

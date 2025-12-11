@@ -1,49 +1,29 @@
-import { Circle, Download, Package } from "lucide-react";
+import { Circle, Leaf, Sparkles, Heart, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Shop = () => {
-  const printables = [
+  const granolaFeatures = [
     {
-      title: "QRN Daily Chart",
-      description: "Track your circadian eating windows, energy levels, and rhythm patterns.",
-      price: "$12",
-      type: "Digital Download"
+      icon: Clock,
+      title: "Slow-Roasted at 120°C",
+      description: "Low-temperature roasting preserves delicate nutrients, enzymes, and the natural life force of ingredients that high heat destroys."
     },
     {
-      title: "Seasonal Alignment Guide",
-      description: "Quarterly nutrition protocols aligned with natural seasonal rhythms.",
-      price: "$24",
-      type: "Digital Download"
+      icon: Leaf,
+      title: "Enzyme Preservation",
+      description: "Cooking below 120°C maintains beneficial enzymes that aid digestion and nutrient absorption, keeping your gut rhythm aligned."
     },
     {
-      title: "Chronotype Assessment Kit",
-      description: "Discover your unique biological rhythm signature with detailed analysis.",
-      price: "$18",
-      type: "Digital Download"
+      icon: Sparkles,
+      title: "Enhanced Bioavailability",
+      description: "Gentle roasting unlocks nutrients while maintaining their bioactive form, allowing your body to fully absorb and utilize them."
     },
     {
-      title: "Quantum Meal Planner",
-      description: "Weekly meal architecture templates based on circadian principles.",
-      price: "$15",
-      type: "Digital Download"
-    }
-  ];
-
-  const products = [
-    {
-      title: "Solaris Morning Muesli",
-      description: "Quantum-aligned breakfast blend designed for optimal circadian activation.",
-      price: "$28",
-      type: "Physical Product",
-      available: "Coming Soon"
-    },
-    {
-      title: "Solaris Evening Blend",
-      description: "Nighttime nutrient blend supporting natural melatonin production.",
-      price: "$32",
-      type: "Physical Product",
-      available: "Coming Soon"
+      icon: Heart,
+      title: "Rhythmic Nourishment",
+      description: "Crafted to support your circadian rhythm — perfect for morning activation without the inflammatory stress of processed cereals."
     }
   ];
 
@@ -52,130 +32,129 @@ const Shop = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Solaris Nutri" className="h-24 w-auto" />
+          </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
-            Shop & Resources
+            Artisan Nourishment
           </div>
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
-            Printables & Shop
+            Solaris Granola
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
-            Tools and resources to support your rhythm restoration journey.
+            Handcrafted, rhythm-aligned granola slow-roasted at 120°C to preserve life force and nourish your body's natural intelligence.
           </p>
         </div>
 
-        {/* Printables Section */}
-        <div className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <Download className="text-accent" size={28} />
-            <h2 className="font-serif text-3xl font-bold text-[#4D7D7D]">
-              Digital Printables & Charts
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
-            {printables.map((item, index) => (
-              <Card 
-                key={index}
-                className="border-border hover:shadow-quantum transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader>
-                  <CardDescription className="text-xs font-sans uppercase tracking-wide text-accent mb-2">
-                    {item.type}
+        {/* Main Product Card */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="border-border shadow-quantum animate-fade-in-up overflow-hidden">
+            <div className="bg-gradient-to-br from-accent/10 to-primary/5 p-8 md:p-12">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <CardDescription className="text-sm font-sans uppercase tracking-wide text-accent mb-3">
+                    Artisan Product
                   </CardDescription>
-                  <CardTitle className="font-serif text-xl text-primary">
-                    {item.title}
+                  <CardTitle className="font-serif text-4xl text-primary mb-4">
+                    Solaris Morning Granola
                   </CardTitle>
-                </CardHeader>
-
-                <CardContent>
-                  <p className="font-sans text-sm text-foreground/70 leading-relaxed mb-4">
-                    {item.description}
+                  <p className="font-sans text-foreground/70 leading-relaxed mb-6">
+                    A carefully curated blend of organic oats, seeds, nuts, and natural sweeteners, 
+                    slow-roasted at precisely 120°C to maintain nutritional integrity and support 
+                    your morning rhythm activation.
                   </p>
-                  <div className="font-serif text-2xl font-bold text-primary">
-                    {item.price}
+                  <div className="font-serif text-4xl font-bold text-primary mb-4">
+                    €18
                   </div>
-                </CardContent>
-
-                <CardFooter>
-                  <Button className="w-full bg-primary hover:bg-primary/90 font-sans">
-                    Download Now
+                  <p className="text-sm text-muted-foreground font-sans mb-6">
+                    350g · Handmade in small batches · Organic ingredients
+                  </p>
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 font-sans w-full md:w-auto">
+                    Order Now
                   </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-64 h-64 rounded-full bg-gradient-to-br from-accent/20 to-primary/10 flex items-center justify-center">
+                    <img src={logo} alt="Solaris Nutri Granola" className="h-40 w-auto opacity-80" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
 
-        {/* Products Section */}
-        <div>
-          <div className="flex items-center gap-3 mb-8">
-            <Package className="text-accent" size={28} />
-            <h2 className="font-serif text-3xl font-bold text-[#4D7D7D]">
-              Solaris Nutri Products
+        {/* Benefits of Slow Roasting Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#4D7D7D] mb-4">
+              Why Slow-Roasting at 120°C Matters
             </h2>
+            <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
+              Temperature is everything. Unlike commercial granolas roasted at 180°C+, 
+              our gentle process honours the living intelligence within each ingredient.
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl">
-            {products.map((item, index) => (
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {granolaFeatures.map((feature, index) => (
               <Card 
                 key={index}
-                className="border-border hover:shadow-quantum transition-all duration-300 animate-fade-in-up"
+                className="border-border hover:shadow-subtle-glow transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <CardDescription className="text-xs font-sans uppercase tracking-wide text-accent">
-                      {item.type}
-                    </CardDescription>
-                    <span className="text-xs font-sans font-semibold text-muted-foreground bg-muted px-2 py-1 rounded">
-                      {item.available}
-                    </span>
+                <CardHeader className="pb-2">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-accent/10">
+                      <feature.icon className="text-accent" size={24} />
+                    </div>
+                    <CardTitle className="font-serif text-xl text-primary">
+                      {feature.title}
+                    </CardTitle>
                   </div>
-                  <CardTitle className="font-serif text-2xl text-primary">
-                    {item.title}
-                  </CardTitle>
                 </CardHeader>
-
                 <CardContent>
-                  <p className="font-sans text-foreground/70 leading-relaxed mb-4">
-                    {item.description}
+                  <p className="font-sans text-foreground/70 leading-relaxed">
+                    {feature.description}
                   </p>
-                  <div className="font-serif text-3xl font-bold text-primary">
-                    {item.price}
-                  </div>
                 </CardContent>
-
-                <CardFooter>
-                  <Button 
-                    className="w-full font-sans" 
-                    variant="secondary"
-                    disabled
-                  >
-                    Notify When Available
-                  </Button>
-                </CardFooter>
               </Card>
             ))}
           </div>
         </div>
 
-        {/* Bundle Offer */}
-        <div className="max-w-4xl mx-auto mt-20 bg-primary/5 p-12 rounded-lg border border-primary/20 text-center animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-4">
-            Complete Rhythm Toolkit Bundle
-          </h2>
-          <p className="font-sans text-foreground/80 mb-6">
-            Get all four printables at a special bundle price and save 25%.
-          </p>
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <span className="text-muted-foreground line-through font-serif text-2xl">$69</span>
-            <span className="font-serif text-4xl font-bold text-accent">$52</span>
+        {/* Science Section */}
+        <div className="max-w-4xl mx-auto bg-muted/30 p-8 md:p-12 rounded-lg border border-border animate-fade-in">
+          <div className="text-center mb-8">
+            <h3 className="font-serif text-2xl font-bold text-[#4D7D7D] mb-4">
+              The Science of Gentle Heat
+            </h3>
           </div>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 font-sans font-medium px-8">
-            Get Bundle Now
-          </Button>
+          <div className="space-y-4 font-sans text-foreground/80 leading-relaxed">
+            <p>
+              <span className="font-semibold text-primary">Above 120°C</span>, many heat-sensitive 
+              nutrients begin to degrade. Vitamin C, B vitamins, and beneficial enzymes are 
+              particularly vulnerable to high temperatures.
+            </p>
+            <p>
+              <span className="font-semibold text-primary">The Maillard reaction</span> that creates 
+              that satisfying golden crunch can occur gently at lower temperatures, preserving 
+              flavour while protecting nutritional value.
+            </p>
+            <p>
+              <span className="font-semibold text-primary">Slow roasting</span> allows for even 
+              heat distribution, ensuring every oat, seed, and nut reaches its optimal state 
+              without the oxidative damage caused by rapid high-heat cooking.
+            </p>
+          </div>
+        </div>
+
+        {/* Tagline */}
+        <div className="text-center mt-16 animate-fade-in">
+          <img src={logo} alt="Solaris Nutri" className="h-16 w-auto mx-auto mb-4 opacity-60" />
+          <p className="font-lora text-lg text-[#4D7D7D] italic">
+            Guiding alignment across the seen and unseen bodies
+          </p>
         </div>
       </div>
     </div>

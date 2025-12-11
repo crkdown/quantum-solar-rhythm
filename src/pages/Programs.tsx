@@ -2,6 +2,7 @@ import { Circle, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Programs = () => {
   const programs = [
@@ -59,6 +60,9 @@ const Programs = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+          </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Programs

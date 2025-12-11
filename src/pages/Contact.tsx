@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Contact = () => {
   return (
@@ -11,6 +12,9 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
+          <div className="flex justify-center mb-6">
+            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+          </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Contact
@@ -163,7 +167,7 @@ const Contact = () => {
                 I look forward to connecting with you."
               </p>
               <p className="font-sans text-sm text-foreground/70">
-                — Quantum Pau
+                — Paula
               </p>
             </div>
           </div>
