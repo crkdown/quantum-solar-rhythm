@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-quantum-waves.jpg";
+import logo from "@/assets/solaris-nutri-logo.jpeg";
 
 const Home = () => {
   return (
@@ -22,6 +23,11 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-32 text-center">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+            {/* Centered Logo */}
+            <div className="flex justify-center mb-8">
+              <img src={logo} alt="Solaris Nutri" className="h-32 md:h-40 w-auto" />
+            </div>
+            
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
               Quantum Rhythm Framework
@@ -134,36 +140,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Rhythm Calculator CTA */}
-      <section className="py-24 bg-accent/5 border-y border-accent/20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
-              <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
-              Free Assessment
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D]">
-              Discover Your Natural Chronotype
-            </h2>
-            <p className="font-sans text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-              Take our 8-question assessment to identify your unique rhythm signature 
-              and receive personalized eating window recommendations based on your biological clock.
-            </p>
-            <Link to="/rhythm-calculator">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-sans font-medium px-8 py-6 text-lg shadow-quantum transition-all hover:scale-105"
-              >
-                Take the Free Assessment
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </Link>
-            <p className="text-sm text-muted-foreground font-sans">
-              Results in 5 minutes • No email required
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-primary text-primary-foreground">

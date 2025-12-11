@@ -9,13 +9,12 @@ const Navigation = () => {
 
   const navLinks = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About Pau" },
+    { path: "/about", label: "About Paula" },
     { path: "/method", label: "The Method" },
     { path: "/programs", label: "Programs" },
     { path: "/rhythm-calculator", label: "Rhythm Calculator" },
     { path: "/food-rhythm-tool", label: "Food Rhythm Tool" },
     { path: "/earth-rhythm-retreat", label: "Earth Rhythm Retreat" },
-    { path: "/masterclasses", label: "Masterclasses" },
     { path: "/resources", label: "Resources" },
     { path: "/blog", label: "Journal" },
     { path: "/shop", label: "Shop" },

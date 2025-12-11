@@ -82,7 +82,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Clinical nutrition experience in hospitals & community health</span>
+                  <span>Basic and advanced levels of Pranic Healing</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
