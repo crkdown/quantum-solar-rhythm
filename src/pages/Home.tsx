@@ -25,7 +25,7 @@ const Home = () => {
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
             {/* Centered Logo */}
             <div className="flex justify-center mb-8">
-              <img src={logo} alt="Solaris Nutri" className="h-32 md:h-40 w-auto" />
+              <img src={logo} alt="Solaris Nutri" className="h-32 md:h-40 w-auto rounded-full" />
             </div>
             
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
