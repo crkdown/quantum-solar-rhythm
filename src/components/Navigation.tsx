@@ -2,23 +2,26 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About Paula" },
-    { path: "/method", label: "The Method" },
-    { path: "/programs", label: "Programs" },
+    { path: "/", label: t('nav.home') },
+    { path: "/about", label: t('nav.about') },
+    { path: "/method", label: t('nav.method') },
+    { path: "/programs", label: t('nav.programs') },
     { path: "/rhythm-calculator", label: "Rhythm Calculator" },
-    { path: "/food-rhythm-tool", label: "Food Rhythm Tool" },
-    { path: "/earth-rhythm-retreat", label: "Earth Rhythm Retreat" },
-    { path: "/resources", label: "Resources" },
-    { path: "/blog", label: "Journal" },
-    { path: "/shop", label: "Shop" },
-    { path: "/contact", label: "Contact" },
+    { path: "/food-rhythm-tool", label: t('nav.foodRhythm') },
+    { path: "/earth-rhythm-retreat", label: t('nav.retreat') },
+    { path: "/resources", label: t('nav.resources') },
+    { path: "/blog", label: t('nav.blog') },
+    { path: "/shop", label: t('nav.shop') },
+    { path: "/contact", label: t('nav.contact') },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -47,16 +50,20 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

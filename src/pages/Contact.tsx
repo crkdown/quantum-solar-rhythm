@@ -22,9 +22,15 @@ const Contact = () => {
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
             Let's Begin Your Rhythm Journey
           </h1>
-          <p className="font-sans text-xl text-foreground/80 leading-relaxed">
+          <p className="font-sans text-xl text-foreground/80 leading-relaxed mb-4">
             Reach out for program inquiries, discovery calls, or general questions.
           </p>
+          <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-sans text-sm">
+            <span>🇬🇧</span>
+            <span>🇪🇸</span>
+            <span>🇵🇹</span>
+            <span className="ml-1">Consultations available in English, Spanish & Portuguese</span>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
