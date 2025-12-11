@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+              <img src={logo} alt="Solaris Nutri" className="h-20 w-auto rounded-full" />
             </Link>
             <p className="text-[#A6A6A6] font-lora text-sm leading-relaxed mb-4">
               Guiding alignment across the seen and unseen bodies.<br />

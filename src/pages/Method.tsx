@@ -11,7 +11,7 @@ const Method = () => {
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
           <div className="flex justify-center mb-6">
-            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+            <img src={logo} alt="Solaris Nutri" className="h-20 w-auto rounded-full" />
           </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
@@ -60,7 +60,7 @@ const Method = () => {
                 <ul className="space-y-2 font-sans text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Your natural chronotype and optimal eating windows</span>
+                    <span>Your optimal eating windows</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
@@ -100,7 +100,7 @@ const Method = () => {
                 <ul className="space-y-2 font-sans text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Circadian eating windows tailored to your chronotype</span>
+                    <span>Circadian eating windows tailored to your rhythm</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
@@ -155,6 +155,45 @@ const Method = () => {
                     <span>Intuitive relationship with food and your body</span>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scientific References */}
+        <div className="max-w-5xl mx-auto mt-20 animate-fade-in-up">
+          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] text-center mb-8">
+            Scientific Foundation
+          </h2>
+          <div className="bg-muted/20 p-8 rounded-lg border border-border space-y-6">
+            <p className="font-sans text-foreground/80 text-center mb-6">
+              The Quantum Rhythm Framework is grounded in peer-reviewed research on circadian biology, chrononutrition, and metabolic health.
+            </p>
+            <div className="space-y-4 text-sm font-sans text-foreground/70">
+              <div className="p-4 bg-background rounded-lg border border-border">
+                <p className="font-medium text-foreground mb-1">Circadian Rhythm and Meal Timing</p>
+                <p>Panda S. "Circadian physiology of metabolism." <em>Science</em>. 2016;354(6315):1008-1015.</p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/27885007/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">PMID: 27885007</a>
+              </div>
+              <div className="p-4 bg-background rounded-lg border border-border">
+                <p className="font-medium text-foreground mb-1">Time-Restricted Eating and Metabolic Health</p>
+                <p>Wilkinson MJ, et al. "Ten-Hour Time-Restricted Eating Reduces Weight, Blood Pressure, and Atherogenic Lipids in Patients with Metabolic Syndrome." <em>Cell Metabolism</em>. 2020;31(1):92-104.</p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/31813824/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">PMID: 31813824</a>
+              </div>
+              <div className="p-4 bg-background rounded-lg border border-border">
+                <p className="font-medium text-foreground mb-1">Chrononutrition and Circadian Clocks</p>
+                <p>Asher G, Sassone-Corsi P. "Time for food: the intimate interplay between nutrition, metabolism, and the circadian clock." <em>Cell</em>. 2015;161(1):84-92.</p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25815987/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">PMID: 25815987</a>
+              </div>
+              <div className="p-4 bg-background rounded-lg border border-border">
+                <p className="font-medium text-foreground mb-1">Meal Timing and Weight Regulation</p>
+                <p>Garaulet M, et al. "Timing of food intake predicts weight loss effectiveness." <em>International Journal of Obesity</em>. 2013;37(4):604-611.</p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/23357955/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">PMID: 23357955</a>
+              </div>
+              <div className="p-4 bg-background rounded-lg border border-border">
+                <p className="font-medium text-foreground mb-1">Circadian Disruption and Disease</p>
+                <p>Roenneberg T, Merrow M. "The Circadian Clock and Human Health." <em>Current Biology</em>. 2016;26(10):R432-R443.</p>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/27218855/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">PMID: 27218855</a>
               </div>
             </div>
           </div>

@@ -181,7 +181,7 @@ const RhythmCalculator = () => {
             {/* Results Header */}
             <div className="text-center mb-12 animate-fade-in">
               <div className="flex justify-center mb-6">
-                <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+                <img src={logo} alt="Solaris Nutri" className="h-20 w-auto rounded-full" />
               </div>
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-4">
                 Your Spleen Rhythm Assessment
@@ -312,7 +312,7 @@ const RhythmCalculator = () => {
           {currentStep === 0 && (
             <div className="text-center mb-12 animate-fade-in">
               <div className="flex justify-center mb-6">
-                <img src={logo} alt="Solaris Nutri" className="h-20 w-auto" />
+                <img src={logo} alt="Solaris Nutri" className="h-20 w-auto rounded-full" />
               </div>
               <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
                 <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
