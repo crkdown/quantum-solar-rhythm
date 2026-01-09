@@ -3,8 +3,29 @@ import { ArrowRight, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-quantum-waves.jpg";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Home = () => {
+  const { t } = useLanguage();
+
+  const phases = [
+    {
+      phase: "01",
+      titleKey: 'home.phases.decode.title',
+      descKey: 'home.phases.decode.desc'
+    },
+    {
+      phase: "02",
+      titleKey: 'home.phases.reprogram.title',
+      descKey: 'home.phases.reprogram.desc'
+    },
+    {
+      phase: "03",
+      titleKey: 'home.phases.rebuild.title',
+      descKey: 'home.phases.rebuild.desc'
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -23,24 +44,27 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-32 text-center">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            {/* Centered Logo */}
+            {/* Centered Logo - perfectly round */}
             <div className="flex justify-center mb-8">
-              <img src={logo} alt="Solaris Nutri" className="h-32 md:h-40 w-auto rounded-full" />
+              <img 
+                src={logo} 
+                alt="Solaris Nutri" 
+                className="h-32 md:h-40 w-32 md:w-40 logo-circle object-cover shadow-quantum"
+              />
             </div>
             
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
-              Quantum Rhythm Framework
+              {t('home.hero.badge')}
             </div>
             
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-[#4D7D7D] leading-tight">
-              The world doesn't need another diet.
-              <span className="block text-accent mt-4">It needs rhythm.</span>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight">
+              {t('home.hero.title1')}
+              <span className="block text-accent mt-4">{t('home.hero.title2')}</span>
             </h1>
             
             <p className="font-sans text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-              Discover the revolutionary approach to nutrition that restores biological 
-              and emotional alignment through rhythm, not restriction.
+              {t('home.hero.subtitle')}
             </p>
 
             <div className="pt-8">
@@ -49,14 +73,14 @@ const Home = () => {
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-8 py-6 text-lg shadow-quantum transition-all hover:scale-105"
                 >
-                  Start Your 3-Month Rhythm Reset
+                  {t('home.hero.cta')}
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
             </div>
 
             <div className="pt-4 text-sm text-muted-foreground font-sans">
-              Alignment not restriction. Because alignment restores vitality.
+              {t('home.hero.tagline')}
             </div>
           </div>
         </div>
@@ -69,18 +93,14 @@ const Home = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in-up">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D]">
-              Why Rhythm?
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
+              {t('home.why.title')}
             </h2>
             <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-              Your body doesn't speak the language of calories or macros. 
-              It speaks the language of <span className="text-accent font-medium">circadian rhythms</span>, 
-              seasonal cycles, and biological alignment.
+              {t('home.why.p1')} <span className="text-accent font-medium">{t('home.why.highlight')}</span>{t('home.why.p1end')}
             </p>
             <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-              The Quantum Rhythm Framework (QR) is the first nutritional methodology 
-              that treats time as a nutrient — restoring your body's natural intelligence 
-              through aligned eating patterns.
+              {t('home.why.p2')}
             </p>
           </div>
         </div>
@@ -89,28 +109,12 @@ const Home = () => {
       {/* Three Pillars */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-6">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] text-center mb-16">
-            The Three Phases
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-center mb-16">
+            {t('home.phases.title')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                phase: "01",
-                title: "Decode",
-                description: "Understand your unique biological rhythm signature and identify misalignments causing fatigue, cravings, and inflammation."
-              },
-              {
-                phase: "02",
-                title: "Reprogram",
-                description: "Reset your circadian clock through strategic meal timing, light exposure, and quantum-aligned nutrition protocols."
-              },
-              {
-                phase: "03",
-                title: "Rebuild",
-                description: "Establish sustainable rhythms that restore vitality, mental clarity, and emotional resilience for life."
-              }
-            ].map((item, index) => (
+            {phases.map((item, index) => (
               <div 
                 key={index}
                 className="bg-card p-8 rounded-lg border border-border shadow-subtle-glow hover:shadow-quantum transition-all duration-300 animate-fade-in-up"
@@ -119,11 +123,11 @@ const Home = () => {
                 <div className="text-accent font-serif text-6xl font-bold mb-4 opacity-50">
                   {item.phase}
                 </div>
-                <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
-                  {item.title}
+                <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+                  {t(item.titleKey)}
                 </h3>
                 <p className="font-sans text-foreground/70 leading-relaxed">
-                  {item.description}
+                  {t(item.descKey)}
                 </p>
               </div>
             ))}
@@ -132,7 +136,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link to="/method">
               <Button variant="outline" size="lg" className="font-sans">
-                Learn More About The Method
+                {t('home.phases.cta')}
                 <ArrowRight className="ml-2" size={18} />
               </Button>
             </Link>
@@ -146,11 +150,10 @@ const Home = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="font-serif text-4xl md:text-5xl font-bold">
-              Ready to Restore Your Rhythm?
+              {t('home.cta.title')}
             </h2>
             <p className="font-sans text-lg opacity-90">
-              Begin your transformation with personalized rhythm resets, 
-              printable tools, and quantum-aligned nutrition guidance.
+              {t('home.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link to="/programs">
@@ -159,7 +162,7 @@ const Home = () => {
                   variant="secondary"
                   className="font-sans font-medium px-8"
                 >
-                  Explore Programs
+                  {t('home.cta.programs')}
                 </Button>
               </Link>
               <Link to="/contact">
@@ -168,7 +171,7 @@ const Home = () => {
                   variant="outline"
                   className="font-sans font-medium px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
                 >
-                  Book a Consultation
+                  {t('home.cta.consult')}
                 </Button>
               </Link>
             </div>

@@ -21,21 +21,21 @@ All colors MUST be HSL.
     --popover: 40 40% 99%;
     --popover-foreground: 40 15% 20%;
 
-    /* Primary - Deep Indigo (Quantum Depth) */
-    --primary: 235 60% 35%;
+    /* Primary - Deep Teal (#169494) */
+    --primary: 180 75% 33%;
     --primary-foreground: 40 30% 97%;
 
-    /* Secondary - Soft Olive (Grounded Nature) */
-    --secondary: 80 20% 75%;
+    /* Secondary - Soft Gray (#A6A6A6) */
+    --secondary: 0 0% 65%;
     --secondary-foreground: 40 15% 20%;
 
     /* Muted - Warm Sand */
     --muted: 40 25% 90%;
-    --muted-foreground: 40 15% 45%;
+    --muted-foreground: 0 0% 50%;
 
-    /* Accent - Luminous Gold (Vitality) */
-    --accent: 45 85% 65%;
-    --accent-foreground: 40 15% 20%;
+    /* Accent - Teal Glow */
+    --accent: 180 60% 45%;
+    --accent-foreground: 40 30% 97%;
 
     /* Destructive */
     --destructive: 0 70% 55%;
@@ -44,24 +44,24 @@ All colors MUST be HSL.
     /* Borders & Inputs - Subtle Sand */
     --border: 40 25% 88%;
     --input: 40 25% 88%;
-    --ring: 235 60% 35%;
+    --ring: 180 75% 33%;
 
     --radius: 0.75rem;
 
     /* Sidebar */
     --sidebar-background: 40 35% 96%;
     --sidebar-foreground: 40 15% 25%;
-    --sidebar-primary: 235 60% 35%;
+    --sidebar-primary: 180 75% 33%;
     --sidebar-primary-foreground: 40 30% 97%;
     --sidebar-accent: 40 30% 92%;
     --sidebar-accent-foreground: 40 15% 25%;
     --sidebar-border: 40 25% 88%;
-    --sidebar-ring: 235 60% 35%;
+    --sidebar-ring: 180 75% 33%;
 
     /* Custom Rhythm Variables */
-    --rhythm-gradient: linear-gradient(135deg, hsl(235 60% 35%), hsl(45 85% 65%));
-    --subtle-glow: 0 4px 20px hsla(45, 85%, 65%, 0.15);
-    --quantum-shadow: 0 8px 32px hsla(235, 60%, 35%, 0.12);
+    --rhythm-gradient: linear-gradient(135deg, hsl(180 75% 33%), hsl(180 60% 45%));
+    --subtle-glow: 0 4px 20px hsla(180, 75%, 33%, 0.15);
+    --quantum-shadow: 0 8px 32px hsla(180, 75%, 33%, 0.12);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -74,4 +74,11 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Logo styling - perfectly round with no white background */
+.logo-circle {
+  @apply rounded-full object-cover;
+  aspect-ratio: 1 / 1;
+  background: transparent;
 }
