@@ -1,7 +1,20 @@
 import { Circle } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+
+  const values = [
+    { key: 'rhythm', title: t('about.value.rhythm'), desc: t('about.value.rhythm.desc') },
+    { key: 'nature', title: t('about.value.nature'), desc: t('about.value.nature.desc') },
+    { key: 'integration', title: t('about.value.integration'), desc: t('about.value.integration.desc') },
+    { key: 'education', title: t('about.value.education'), desc: t('about.value.education.desc') },
+    { key: 'simplicity', title: t('about.value.simplicity'), desc: t('about.value.simplicity.desc') },
+    { key: 'evolution', title: t('about.value.evolution'), desc: t('about.value.evolution.desc') },
+    { key: 'integrity', title: t('about.value.integrity'), desc: t('about.value.integrity.desc') },
+  ];
+
   return (
     <div className="min-h-screen py-24">
       <div className="container mx-auto px-6">
@@ -9,14 +22,14 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
             <div className="flex justify-center mb-6">
-              <img src={logo} alt="Solaris Nutri" className="h-20 w-auto rounded-full" />
+              <img src={logo} alt="Solaris Nutri" className="h-20 w-20 logo-circle object-cover" />
             </div>
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
-              About Paula
+              {t('about.badge')}
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
-              Bridging Biology, Rhythm & Consciousness
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+              {t('about.title')}
             </h1>
           </div>
 
@@ -24,23 +37,13 @@ const About = () => {
           <div className="prose prose-lg max-w-none space-y-8 animate-fade-in-up">
             <div className="bg-card p-8 md:p-12 rounded-lg border border-border shadow-subtle-glow">
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                <span className="font-semibold text-primary">Solaris Nutri</span> is a forward-thinking 
-                wellness company led by Paula Carolina Suescun, a nutritionist, holistic health coach, 
-                and creator of the <span className="text-accent font-medium">Quantum Rhythm Nutrition™</span> method.
+                <span className="font-semibold text-primary">Solaris Nutri</span> {t('about.intro1')} <span className="text-accent font-medium">Quantum Rhythm Nutrition™</span> {t('about.intro2')}
               </p>
-
               <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                The method focuses on restoring biological alignment through circadian, lunar, seasonal, 
-                and digestive rhythms. Integrating physiology, chronobiology, microbiome science, Chinese 
-                Medicine, biodynamics, and esoteric principles, Solaris Nutri offers a unique multidimensional 
-                approach to nutrition that reconnects individuals with their natural cycles.
+                {t('about.story1')}
               </p>
-
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                Paula's mission is to empower people to regain clarity, energy, and metabolic balance by 
-                understanding their body as a rhythmic system influenced by natural forces. Her work bridges 
-                science and intuitive knowledge, guiding clients toward sustainable wellbeing and deeper 
-                coherence with the living world.
+                {t('about.story2')}
               </p>
             </div>
           </div>
@@ -48,49 +51,49 @@ const About = () => {
           {/* Philosophy */}
           <div className="mt-16 grid md:grid-cols-2 gap-8">
             <div className="bg-muted/30 p-8 rounded-lg border border-border animate-fade-in-up">
-              <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
-                My Approach
+              <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+                {t('about.approach')}
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Alignment over restriction — rhythm intelligence as foundation</span>
+                  <span>{t('about.approach1')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Integration of chronobiology, quantum biology, and planetary rhythms</span>
+                  <span>{t('about.approach2')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Food as frequency and information, not just calories</span>
+                  <span>{t('about.approach3')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Compassionate guidance rooted in love, kindness, and respect for nature</span>
+                  <span>{t('about.approach4')}</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-muted/30 p-8 rounded-lg border border-border animate-fade-in-up" style={{ animationDelay: "150ms" }}>
-              <h3 className="font-serif text-2xl font-semibold text-[#4D7D7D] mb-4">
-                My Credentials
+              <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
+                {t('about.credentials')}
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Nutritionist-Dietitian (UNAL - National University of Colombia)</span>
+                  <span>{t('about.cred1')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Certified Holistic Health Coach (IIN - Institute for Integrative Nutrition)</span>
+                  <span>{t('about.cred2')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Basic and advanced levels of Pranic Healing</span>
+                  <span>{t('about.cred3')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>Creator of Quantum Rhythm Nutrition framework</span>
+                  <span>{t('about.cred4')}</span>
                 </li>
               </ul>
             </div>
@@ -98,50 +101,21 @@ const About = () => {
 
           {/* Core Values */}
           <div className="mt-16 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-            <h3 className="font-serif text-3xl font-semibold text-[#4D7D7D] text-center mb-10">
-              Core Values
+            <h3 className="font-serif text-3xl font-semibold text-primary text-center mb-10">
+              {t('about.values')}
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Rhythm",
-                  description: "Honouring circadian, lunar, seasonal, and digestive cycles."
-                },
-                {
-                  title: "Nature",
-                  description: "Trusting natural simplicity as the ultimate teacher."
-                },
-                {
-                  title: "Integration",
-                  description: "Merging modern science with ancestral, biodynamic, Ayurvedic, and esoteric knowledge."
-                },
-                {
-                  title: "Education",
-                  description: "Empowering people through understanding."
-                },
-                {
-                  title: "Simplicity",
-                  description: "Restoring balance by removing complexity."
-                },
-                {
-                  title: "Conscious Evolution",
-                  description: "Supporting physical, emotional, and energetic growth."
-                },
-                {
-                  title: "Natural Integrity",
-                  description: "Choosing minimally industrialised foods that sustain vitality and ecological balance."
-                }
-              ].map((value, index) => (
+              {values.map((value, index) => (
                 <div 
                   key={index} 
                   className="bg-accent/5 p-6 rounded-lg border border-accent/20 hover:border-accent/40 transition-colors"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <Circle size={8} fill="currentColor" className="text-accent" />
-                    <h4 className="font-serif text-lg font-semibold text-[#4D7D7D]">{value.title}</h4>
+                    <h4 className="font-serif text-lg font-semibold text-primary">{value.title}</h4>
                   </div>
                   <p className="font-sans text-sm text-foreground/70 leading-relaxed">
-                    {value.description}
+                    {value.desc}
                   </p>
                 </div>
               ))}
