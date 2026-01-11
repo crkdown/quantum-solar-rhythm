@@ -1,125 +1,193 @@
-import { Circle, Clock, Heart, Sun, Droplets, Wind, Leaf, Users, MapPin } from "lucide-react";
+import { Circle, Clock, Heart, Sun, Droplets, Wind, Leaf, Users, MapPin, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const EarthRhythmRetreat = () => {
-  const schedule = [
-    { time: "10:00", duration: "15 min", title: "Arrival & Welcome", description: "Herbal drink, orientation, and clear safety boundaries. A calm start to settle the nervous system." },
-    { time: "10:15", duration: "15 min", title: "Ice-Breaker & Intentions", description: "Short introductions and a simple grounding question. Light, warm, and easy — immediate group comfort." },
-    { time: "10:30", duration: "15 min", title: "Breathwork + Gentle Movement", description: "Vagus activation, microcirculation support, and grounding before sauna. Coherent movement, not yoga or ritualistic practices." },
-    { time: "10:45", duration: "30 min", title: "Microbiome & Rhythm Talk", description: "Clear explanation of metabolic rhythms, spleen + digestive flow, microbiome balance, and why heat and nature restore coherence." },
-    { time: "11:15", duration: "40 min", title: "Biometrics Session", description: "Private Human Pod body scan including body composition, hydration, visceral fat, metabolic indicators, and rhythm interpretation." },
-    { time: "12:00", duration: "90 min", title: "Sauna Detox Protocol", description: "Guided sauna cycles, optional cold exposure, scrub mixture, and mineral hydration. A full metabolic and circulatory activation." },
-    { time: "13:30", duration: "10 min", title: "Cool Down + Hydration", description: "Light hydration, fruit or cooling herbal tea." },
-    { time: "13:40", duration: "45 min", title: "Lunch", description: "Warm, digestion-friendly, mineral-rich meal. Short explanation on how food supports recovery from heat therapy." },
-    { time: "14:25", duration: "15 min", title: "Rest & Digest", description: "Quiet outdoor moment to settle the system." },
-    { time: "14:40", duration: "20 min", title: "Nature Walk", description: "Slow, grounding walk through the land. Supports nervous system reset and sensory recalibration." },
-    { time: "15:00", duration: "25 min", title: "Twin Hearts Meditation", description: "Universal, non-dogmatic meditation for heart–brain coherence. Deep grounding and emotional clarity." },
-    { time: "15:25", duration: "30 min", title: "Presotherapy Boots", description: "Lymphatic activation to support detoxification. Participants rotate while others rest." },
-    { time: "16:00", duration: "25 min", title: "Integration Circle", description: "Light reflection, hydration, and next-step recommendations. Biometric report reminder." },
-    { time: "16:45", duration: "10–15 min", title: "Departure Window", description: "Slow, relaxed goodbye." }
-  ];
+  const { t, language } = useLanguage();
 
-  const faqs = [
-    {
-      question: "What is the purpose of this retreat?",
-      answer: "To reset your biological rhythms in one structured day using heat therapy, biometrics, breathwork, circadian-aligned nutrition, nature exposure, and lymphatic activation. This combination restores clarity, energy, and digestive flow by optimising how the body distributes vitality, processes stress, and regulates metabolism."
+  // Monthly retreat dates from March to September
+  const retreatDates = {
+    en: [
+      { month: "March", date: "March 15, 2025", available: true },
+      { month: "April", date: "April 12, 2025", available: true },
+      { month: "May", date: "May 17, 2025", available: true },
+      { month: "June", date: "June 14, 2025", available: true },
+      { month: "July", date: "July 19, 2025", available: true },
+      { month: "August", date: "August 16, 2025", available: true },
+      { month: "September", date: "September 13, 2025", available: true }
+    ],
+    es: [
+      { month: "Marzo", date: "15 de Marzo, 2025", available: true },
+      { month: "Abril", date: "12 de Abril, 2025", available: true },
+      { month: "Mayo", date: "17 de Mayo, 2025", available: true },
+      { month: "Junio", date: "14 de Junio, 2025", available: true },
+      { month: "Julio", date: "19 de Julio, 2025", available: true },
+      { month: "Agosto", date: "16 de Agosto, 2025", available: true },
+      { month: "Septiembre", date: "13 de Septiembre, 2025", available: true }
+    ],
+    pt: [
+      { month: "Março", date: "15 de Março, 2025", available: true },
+      { month: "Abril", date: "12 de Abril, 2025", available: true },
+      { month: "Maio", date: "17 de Maio, 2025", available: true },
+      { month: "Junho", date: "14 de Junho, 2025", available: true },
+      { month: "Julho", date: "19 de Julho, 2025", available: true },
+      { month: "Agosto", date: "16 de Agosto, 2025", available: true },
+      { month: "Setembro", date: "13 de Setembro, 2025", available: true }
+    ]
+  };
+
+  const schedule = {
+    en: [
+      { time: "10:00", duration: "15 min", title: "Arrival & Welcome", description: "Herbal drink, orientation, and clear safety boundaries. A calm start to settle the nervous system." },
+      { time: "10:15", duration: "15 min", title: "Ice-Breaker & Intentions", description: "Short introductions and a simple grounding question. Light, warm, and easy — immediate group comfort." },
+      { time: "10:30", duration: "15 min", title: "Breathwork + Gentle Movement", description: "Vagus activation, microcirculation support, and grounding before sauna. Coherent movement, not yoga or ritualistic practices." },
+      { time: "10:45", duration: "30 min", title: "Microbiome & Rhythm Talk", description: "Clear explanation of metabolic rhythms, spleen + digestive flow, microbiome balance, and why heat and nature restore coherence." },
+      { time: "11:15", duration: "40 min", title: "Biometrics Session", description: "Private Human Pod body scan including body composition, hydration, visceral fat, metabolic indicators, and rhythm interpretation." },
+      { time: "12:00", duration: "90 min", title: "Sauna Detox Protocol", description: "Guided sauna cycles, optional cold exposure, scrub mixture, and mineral hydration. A full metabolic and circulatory activation." },
+      { time: "13:30", duration: "10 min", title: "Cool Down + Hydration", description: "Light hydration, fruit or cooling herbal tea." },
+      { time: "13:40", duration: "45 min", title: "Lunch", description: "Warm, digestion-friendly, mineral-rich meal. Short explanation on how food supports recovery from heat therapy." },
+      { time: "14:25", duration: "15 min", title: "Rest & Digest", description: "Quiet outdoor moment to settle the system." },
+      { time: "14:40", duration: "20 min", title: "Nature Walk", description: "Slow, grounding walk through the land. Supports nervous system reset and sensory recalibration." },
+      { time: "15:00", duration: "25 min", title: "Twin Hearts Meditation", description: "Universal, non-dogmatic meditation for heart–brain coherence. Deep grounding and emotional clarity." },
+      { time: "15:25", duration: "30 min", title: "Presotherapy Boots", description: "Lymphatic activation to support detoxification. Participants rotate while others rest." },
+      { time: "16:00", duration: "25 min", title: "Integration Circle", description: "Light reflection, hydration, and next-step recommendations. Biometric report reminder." },
+      { time: "16:45", duration: "10–15 min", title: "Departure Window", description: "Slow, relaxed goodbye." }
+    ],
+    es: [
+      { time: "10:00", duration: "15 min", title: "Llegada y Bienvenida", description: "Bebida herbal, orientación y límites de seguridad claros. Un comienzo tranquilo para calmar el sistema nervioso." },
+      { time: "10:15", duration: "15 min", title: "Rompehielos e Intenciones", description: "Presentaciones breves y una pregunta simple de arraigo. Ligero, cálido y fácil — comodidad grupal inmediata." },
+      { time: "10:30", duration: "15 min", title: "Respiración + Movimiento Suave", description: "Activación vagal, soporte de microcirculación y arraigo antes del sauna. Movimiento coherente, no yoga ni prácticas rituales." },
+      { time: "10:45", duration: "30 min", title: "Charla sobre Microbioma y Ritmo", description: "Explicación clara de ritmos metabólicos, flujo digestivo + bazo, equilibrio del microbioma y por qué el calor y la naturaleza restauran la coherencia." },
+      { time: "11:15", duration: "40 min", title: "Sesión de Biometría", description: "Escaneo corporal privado Human Pod incluyendo composición corporal, hidratación, grasa visceral, indicadores metabólicos e interpretación del ritmo." },
+      { time: "12:00", duration: "90 min", title: "Protocolo de Desintoxicación en Sauna", description: "Ciclos guiados de sauna, exposición al frío opcional, mezcla de exfoliación e hidratación mineral. Activación metabólica y circulatoria completa." },
+      { time: "13:30", duration: "10 min", title: "Enfriamiento + Hidratación", description: "Hidratación ligera, fruta o té herbal refrescante." },
+      { time: "13:40", duration: "45 min", title: "Almuerzo", description: "Comida cálida, amigable con la digestión y rica en minerales. Breve explicación sobre cómo la comida apoya la recuperación de la terapia de calor." },
+      { time: "14:25", duration: "15 min", title: "Descanso y Digestión", description: "Momento tranquilo al aire libre para asentar el sistema." },
+      { time: "14:40", duration: "20 min", title: "Caminata en la Naturaleza", description: "Caminata lenta y arraigada por el terreno. Apoya el reset del sistema nervioso y la recalibración sensorial." },
+      { time: "15:00", duration: "25 min", title: "Meditación Twin Hearts", description: "Meditación universal y no dogmática para la coherencia corazón-cerebro. Arraigo profundo y claridad emocional." },
+      { time: "15:25", duration: "30 min", title: "Botas de Presoterapia", description: "Activación linfática para apoyar la desintoxicación. Los participantes rotan mientras otros descansan." },
+      { time: "16:00", duration: "25 min", title: "Círculo de Integración", description: "Reflexión ligera, hidratación y recomendaciones de próximos pasos. Recordatorio del informe biométrico." },
+      { time: "16:45", duration: "10–15 min", title: "Ventana de Despedida", description: "Despedida lenta y relajada." }
+    ],
+    pt: [
+      { time: "10:00", duration: "15 min", title: "Chegada e Boas-vindas", description: "Bebida herbal, orientação e limites de segurança claros. Um início calmo para acalmar o sistema nervoso." },
+      { time: "10:15", duration: "15 min", title: "Quebra-gelo e Intenções", description: "Apresentações breves e uma pergunta simples de ancoragem. Leve, caloroso e fácil — conforto grupal imediato." },
+      { time: "10:30", duration: "15 min", title: "Respiração + Movimento Suave", description: "Ativação vagal, suporte de microcirculação e ancoragem antes da sauna. Movimento coerente, não yoga ou práticas ritualísticas." },
+      { time: "10:45", duration: "30 min", title: "Palestra sobre Microbioma e Ritmo", description: "Explicação clara de ritmos metabólicos, fluxo digestivo + baço, equilíbrio do microbioma e por que o calor e a natureza restauram a coerência." },
+      { time: "11:15", duration: "40 min", title: "Sessão de Biometria", description: "Escaneamento corporal privado Human Pod incluindo composição corporal, hidratação, gordura visceral, indicadores metabólicos e interpretação do ritmo." },
+      { time: "12:00", duration: "90 min", title: "Protocolo de Desintoxicação em Sauna", description: "Ciclos guiados de sauna, exposição ao frio opcional, mistura de esfoliação e hidratação mineral. Ativação metabólica e circulatória completa." },
+      { time: "13:30", duration: "10 min", title: "Resfriamento + Hidratação", description: "Hidratação leve, fruta ou chá herbal refrescante." },
+      { time: "13:40", duration: "45 min", title: "Almoço", description: "Refeição quente, amigável à digestão e rica em minerais. Breve explicação sobre como a comida apoia a recuperação da terapia de calor." },
+      { time: "14:25", duration: "15 min", title: "Descanso e Digestão", description: "Momento tranquilo ao ar livre para assentar o sistema." },
+      { time: "14:40", duration: "20 min", title: "Caminhada na Natureza", description: "Caminhada lenta e ancorada pelo terreno. Apoia o reset do sistema nervoso e a recalibração sensorial." },
+      { time: "15:00", duration: "25 min", title: "Meditação Twin Hearts", description: "Meditação universal e não dogmática para a coerência coração-cérebro. Ancoragem profunda e clareza emocional." },
+      { time: "15:25", duration: "30 min", title: "Botas de Pressoterapia", description: "Ativação linfática para apoiar a desintoxicação. Os participantes rotacionam enquanto outros descansam." },
+      { time: "16:00", duration: "25 min", title: "Círculo de Integração", description: "Reflexão leve, hidratação e recomendações de próximos passos. Lembrete do relatório biométrico." },
+      { time: "16:45", duration: "10–15 min", title: "Janela de Despedida", description: "Despedida lenta e relaxada." }
+    ]
+  };
+
+  const faqs = {
+    en: [
+      { question: "What is the purpose of this retreat?", answer: "To reset your biological rhythms in one structured day using heat therapy, biometrics, breathwork, circadian-aligned nutrition, nature exposure, and lymphatic activation." },
+      { question: "What is microcirculation?", answer: "Microcirculation refers to the blood flow through the smallest vessels in your body — capillaries, arterioles, and venules. It's responsible for nutrient delivery, oxygen supply, toxin removal, lymphatic flow, and cellular rejuvenation." },
+      { question: "Is the sauna safe for everyone?", answer: "The sauna is safe for most people. Exceptions include pregnancy, uncontrolled hypertension, recent heart events, fever or acute infection, severe neuropathy, and conditions where heat exposure is contraindicated." },
+      { question: "What should I bring?", answer: "Swimsuit, comfortable clothes, water bottle, light towel (we provide sauna towels), sunscreen (optional for nature walk), any personal medications, and notebook for integration if you want." },
+      { question: "Is lunch included?", answer: "Yes. A plant-based, gluten-free, warm, digestion-friendly, mineral-rich meal designed to stabilise blood sugar and support post-sauna recovery is provided." },
+      { question: "How big is the group?", answer: "Maximum 6 people. This ensures safety, intimacy, and enough time for biometrics and treatments." },
+      { question: "What language is the retreat in?", answer: "English, Portuguese, or Spanish on request for private groups." }
+    ],
+    es: [
+      { question: "¿Cuál es el propósito de este retiro?", answer: "Restablecer tus ritmos biológicos en un día estructurado usando terapia de calor, biometría, respiración, nutrición alineada circadianamente, exposición a la naturaleza y activación linfática." },
+      { question: "¿Qué es la microcirculación?", answer: "La microcirculación se refiere al flujo sanguíneo a través de los vasos más pequeños de tu cuerpo — capilares, arteriolas y vénulas. Es responsable de la entrega de nutrientes, suministro de oxígeno, eliminación de toxinas, flujo linfático y rejuvenecimiento celular." },
+      { question: "¿Es el sauna seguro para todos?", answer: "El sauna es seguro para la mayoría de las personas. Las excepciones incluyen embarazo, hipertensión no controlada, eventos cardíacos recientes, fiebre o infección aguda, neuropatía severa y condiciones donde la exposición al calor está contraindicada." },
+      { question: "¿Qué debo llevar?", answer: "Traje de baño, ropa cómoda, botella de agua, toalla ligera (proporcionamos toallas de sauna), protector solar (opcional para la caminata en la naturaleza), cualquier medicamento personal y cuaderno para integración si lo deseas." },
+      { question: "¿El almuerzo está incluido?", answer: "Sí. Se proporciona una comida vegetal, sin gluten, cálida, amigable con la digestión y rica en minerales, diseñada para estabilizar el azúcar en sangre y apoyar la recuperación post-sauna." },
+      { question: "¿Qué tan grande es el grupo?", answer: "Máximo 6 personas. Esto asegura seguridad, intimidad y tiempo suficiente para biometría y tratamientos." },
+      { question: "¿En qué idioma es el retiro?", answer: "Inglés, portugués o español a pedido para grupos privados." }
+    ],
+    pt: [
+      { question: "Qual é o propósito deste retiro?", answer: "Redefinir seus ritmos biológicos em um dia estruturado usando terapia de calor, biometria, respiração, nutrição alinhada circadianamente, exposição à natureza e ativação linfática." },
+      { question: "O que é microcirculação?", answer: "Microcirculação refere-se ao fluxo sanguíneo através dos menores vasos do seu corpo — capilares, arteríolas e vênulas. É responsável pela entrega de nutrientes, fornecimento de oxigênio, remoção de toxinas, fluxo linfático e rejuvenescimento celular." },
+      { question: "A sauna é segura para todos?", answer: "A sauna é segura para a maioria das pessoas. As exceções incluem gravidez, hipertensão não controlada, eventos cardíacos recentes, febre ou infecção aguda, neuropatia severa e condições onde a exposição ao calor é contraindicada." },
+      { question: "O que devo levar?", answer: "Roupa de banho, roupas confortáveis, garrafa de água, toalha leve (fornecemos toalhas de sauna), protetor solar (opcional para a caminhada na natureza), qualquer medicamento pessoal e caderno para integração se desejar." },
+      { question: "O almoço está incluído?", answer: "Sim. Uma refeição vegetal, sem glúten, quente, amigável à digestão e rica em minerais, projetada para estabilizar o açúcar no sangue e apoiar a recuperação pós-sauna é fornecida." },
+      { question: "Qual o tamanho do grupo?", answer: "Máximo 6 pessoas. Isso garante segurança, intimidade e tempo suficiente para biometria e tratamentos." },
+      { question: "Em que idioma é o retiro?", answer: "Inglês, português ou espanhol a pedido para grupos privados." }
+    ]
+  };
+
+  const whoFor = {
+    en: ["Overwhelmed professionals", "Perimenopause/post-menopause women", "Digestive imbalance", "Low energy, cravings, or poor sleep", "People wanting grounded physiological reset", "Anyone tired of trends, rituals, or dogma"],
+    es: ["Profesionales abrumados", "Mujeres en perimenopausia/post-menopausia", "Desequilibrio digestivo", "Baja energía, antojos o mal sueño", "Personas que buscan un reset fisiológico arraigado", "Cualquiera cansado de tendencias, rituales o dogmas"],
+    pt: ["Profissionais sobrecarregados", "Mulheres na perimenopausa/pós-menopausa", "Desequilíbrio digestivo", "Baixa energia, desejos ou sono ruim", "Pessoas que buscam um reset fisiológico ancorado", "Qualquer um cansado de tendências, rituais ou dogmas"]
+  };
+
+  const whoNotFor = {
+    en: ["Those looking for spiritual ceremonies", "Extreme detox seekers", "People unable to tolerate sauna (medical exceptions)"],
+    es: ["Aquellos que buscan ceremonias espirituales", "Buscadores de desintoxicación extrema", "Personas que no pueden tolerar el sauna (excepciones médicas)"],
+    pt: ["Aqueles que procuram cerimônias espirituais", "Buscadores de desintoxicação extrema", "Pessoas que não podem tolerar a sauna (exceções médicas)"]
+  };
+
+  const takeHome = {
+    en: ["Biometric report", "One personalized rhythm recommendation", "Heat detox protocol", "Breathwork sequence", "Digestive and hydration guidance", "Restored clarity and energy", "Priority access to 3/6/9-month QRN mentoring"],
+    es: ["Informe biométrico", "Una recomendación de ritmo personalizada", "Protocolo de desintoxicación por calor", "Secuencia de respiración", "Guía digestiva y de hidratación", "Claridad y energía restauradas", "Acceso prioritario a mentoría QRN de 3/6/9 meses"],
+    pt: ["Relatório biométrico", "Uma recomendação de ritmo personalizada", "Protocolo de desintoxicação por calor", "Sequência de respiração", "Orientação digestiva e de hidratação", "Clareza e energia restauradas", "Acesso prioritário à mentoria QRN de 3/6/9 meses"]
+  };
+
+  const currentDates = retreatDates[language] || retreatDates.en;
+  const currentSchedule = schedule[language] || schedule.en;
+  const currentFaqs = faqs[language] || faqs.en;
+  const currentWhoFor = whoFor[language] || whoFor.en;
+  const currentWhoNotFor = whoNotFor[language] || whoNotFor.en;
+  const currentTakeHome = takeHome[language] || takeHome.en;
+
+  const texts = {
+    en: {
+      monthlyDates: "2025 Retreat Dates",
+      monthlyDatesDesc: "One retreat per month from March to September. Book your preferred date.",
+      spotsAvailable: "Spots Available",
+      bookDate: "Book This Date",
+      scheduleTitle: "The Experience",
+      scheduleTime: "10:00 to 16:45",
+      whoForTitle: "Who This Is For",
+      whoNotForTitle: "Who This Is Not For",
+      bookTitle: "Book Your Experience",
+      bookDesc: "Retreats run once per month from March to September. Maximum 6 people to maintain quality and safety. Spaces fill quickly due to the intimate setting and biometric component.",
+      requestDates: "Request Dates & Book"
     },
-    {
-      question: "What is microcirculation?",
-      answer: "Microcirculation refers to the blood flow through the smallest vessels in your body — capillaries, arterioles, and venules. It's responsible for nutrient delivery, oxygen supply, toxin removal, lymphatic flow, and cellular rejuvenation. Sauna, breathwork, gentle movement, and presotherapy all activate microcirculation, helping you feel lighter, clearer, and more energised."
+    es: {
+      monthlyDates: "Fechas de Retiro 2025",
+      monthlyDatesDesc: "Un retiro por mes de marzo a septiembre. Reserva tu fecha preferida.",
+      spotsAvailable: "Lugares Disponibles",
+      bookDate: "Reservar Esta Fecha",
+      scheduleTitle: "La Experiencia",
+      scheduleTime: "10:00 a 16:45",
+      whoForTitle: "Para Quién Es Esto",
+      whoNotForTitle: "Para Quién No Es Esto",
+      bookTitle: "Reserva Tu Experiencia",
+      bookDesc: "Los retiros se realizan una vez al mes de marzo a septiembre. Máximo 6 personas para mantener la calidad y seguridad. Los espacios se llenan rápidamente debido al entorno íntimo y el componente biométrico.",
+      requestDates: "Solicitar Fechas y Reservar"
     },
-    {
-      question: "What are biometrics and why are they included?",
-      answer: "Biometrics are measurable physiological markers that help assess your internal metabolic state. We measure body composition, hydration, visceral fat index, metabolic rate, muscle vs. fat balance, and water distribution. You receive a mini-report afterwards, which gives a clear picture of where your energy, metabolism, and rhythms currently stand."
-    },
-    {
-      question: "Is the sauna safe for everyone?",
-      answer: "The sauna is safe for most people. Exceptions include pregnancy, uncontrolled hypertension, recent heart events, fever or acute infection, severe neuropathy, and conditions where heat exposure is contraindicated. If unsure, consult your doctor before attending."
-    },
-    {
-      question: "What if I cannot tolerate heat for long?",
-      answer: "You can take breaks anytime. The retreat uses short, guided heat cycles, so you never stay inside longer than comfortable. Hydration and mineral support are provided."
-    },
-    {
-      question: "What is in the scrub mixture?",
-      answer: "Ingredients: vodka + baking soda. A natural exfoliating mixture used in heat therapy to promote circulation, support lymphatic flow, encourage detoxification through the skin, remove dead skin cells, and enhance sweating response. It's optional and gentle — no burning or irritation."
-    },
-    {
-      question: "What should I bring?",
-      answer: "Swimsuit, comfortable clothes, water bottle, light towel (we provide sauna towels), sunscreen (optional for nature walk), any personal medications, and notebook for integration if you want."
-    },
-    {
-      question: "Is lunch included?",
-      answer: "Yes. A plant-based, gluten-free, warm, digestion-friendly, mineral-rich meal designed to stabilise blood sugar and support post-sauna recovery is provided."
-    },
-    {
-      question: "What is presotherapy?",
-      answer: "Pressotherapy boots use controlled air pressure to stimulate lymphatic drainage, circulation, fluid balance, and tissue recovery. It's excellent for water retention, heaviness in legs, low circulation, and detox support."
-    },
-    {
-      question: "What is the Twin Hearts meditation?",
-      answer: "A universal, non-religious meditation that combines breath, intention, and gentle awareness to calm the nervous system, improve heart–brain coherence, release emotional tension, and stabilise mood. Short, simple, and accessible for all levels."
-    },
-    {
-      question: "What is the microbiome talk about?",
-      answer: "A practical, easy-to-understand explanation of how digestion and the microbiome work, why rhythm matters more than rules, what disrupts energy and metabolism, and how heat, nature, and structured eating restore balance. No jargon. No dogma. Just physiological clarity."
-    },
-    {
-      question: "How big is the group?",
-      answer: "Maximum 6 people. This ensures safety, intimacy, and enough time for biometrics and treatments."
-    },
-    {
-      question: "Is there accommodation?",
-      answer: "No overnight stay — this is a day retreat only. The setting is a mud house on private land surrounded by natural Algarve biodiversity."
-    },
-    {
-      question: "Is the retreat suitable for beginners?",
-      answer: "Absolutely. All elements — breathwork, heat cycles, meditation, movement — are beginner-friendly and guided step-by-step."
-    },
-    {
-      question: "Do we do anything physically intense?",
-      answer: "No. Movement is gentle, accessible, and rhythm-based. The most 'intense' element is the sauna, but breaks are always allowed."
-    },
-    {
-      question: "What results can I expect after the retreat?",
-      answer: "Most participants report lighter digestion, clearer thinking, improved sleep, reduced bloating, calmer mood, increased energy, deeper body awareness, and renewed motivation. Plus, you leave with a biometric snapshot that shows where your body currently stands."
-    },
-    {
-      question: "Is this retreat connected to your longer programs?",
-      answer: "Yes — the retreat is a natural entry into the 3/6/9-month Quantum Rhythm Nutrition programs. The biometrics help identify whether deeper metabolic or rhythm work would benefit you. No pressure — just options."
-    },
-    {
-      question: "What if the weather is bad for the nature walk?",
-      answer: "We adapt. Either a shorter outdoor moment or a grounding indoor session depending on conditions."
-    },
-    {
-      question: "Can I book this as a private group?",
-      answer: "Yes: €650 total for up to 5 people. This includes all biometrics + reports."
-    },
-    {
-      question: "What if someone in my group doesn't want to join the sauna?",
-      answer: "They can sit out and relax. There is plenty of space outdoors. They will still benefit from all other elements."
-    },
-    {
-      question: "What language is the retreat in?",
-      answer: "English, Portuguese, or Spanish on request for private groups."
-    },
-    {
-      question: "What is your cancellation policy?",
-      answer: "72+ hours before: full refund. 48 hours before: 50%. 24 hours before: non-refundable. You may transfer your booking to another date once."
-    },
-    {
-      question: "Is transportation included?",
-      answer: "No. Guests must arrange their own arrival. The location is accessible by car (parking available)."
-    },
-    {
-      question: "Who facilitates the retreat?",
-      answer: "The retreat is facilitated by Paula Carolina Suescun, the visionary entrepreneur behind Solaris Nutri. As a certified Nutritionist, Biorhythm Nutrition Coach, and the pioneering creator of the Quantum Rhythm Nutrition framework, she weaves ancient wisdom with modern nutrition. This synthesis fosters biofield alignment, circadian harmony, and vital energy integration, guiding participants toward organic sophistication and rhythmic vitality."
+    pt: {
+      monthlyDates: "Datas de Retiro 2025",
+      monthlyDatesDesc: "Um retiro por mês de março a setembro. Reserve sua data preferida.",
+      spotsAvailable: "Vagas Disponíveis",
+      bookDate: "Reservar Esta Data",
+      scheduleTitle: "A Experiência",
+      scheduleTime: "10:00 às 16:45",
+      whoForTitle: "Para Quem É Isso",
+      whoNotForTitle: "Para Quem Não É Isso",
+      bookTitle: "Reserve Sua Experiência",
+      bookDesc: "Os retiros acontecem uma vez por mês de março a setembro. Máximo 6 pessoas para manter a qualidade e segurança. Os espaços se preenchem rapidamente devido ao ambiente íntimo e ao componente biométrico.",
+      requestDates: "Solicitar Datas e Reservar"
     }
-  ];
+  };
+
+  const currentTexts = texts[language] || texts.en;
 
   return (
     <div className="min-h-screen">
@@ -133,52 +201,92 @@ const EarthRhythmRetreat = () => {
             </div>
             <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-6">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
-              One-Day Realignment Retreat
+              {t('retreat.badge')}
             </div>
-            <h1 className="font-serif text-6xl md:text-7xl font-bold text-[#4D7D7D] mb-6">
-              Earth Rhythm Reset
+            <h1 className="font-serif text-6xl md:text-7xl font-bold text-primary mb-6">
+              {t('retreat.title')}
             </h1>
             <p className="font-sans text-xl text-foreground/80 leading-relaxed mb-8">
-              A structured, physiology-centered reset designed for small groups in a serene mud house surrounded by olive trees and the natural silence of the Algarve.
+              {t('retreat.subtitle')}
             </p>
             <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
               <MapPin size={20} />
-              <span className="font-sans">Algarve, Portugal</span>
+              <span className="font-sans">{t('retreat.location')}</span>
             </div>
             <Button 
               onClick={() => window.location.href = '/contact'}
               size="lg" 
               className="bg-accent hover:bg-accent/90 font-sans text-lg px-8"
             >
-              Book Your Retreat Experience
+              {t('retreat.book')}
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Why This Works */}
+      {/* Monthly Retreat Dates */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 text-accent mb-4">
+                <CalendarDays size={24} />
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+                {currentTexts.monthlyDates}
+              </h2>
+              <p className="font-sans text-lg text-foreground/80">
+                {currentTexts.monthlyDatesDesc}
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {currentDates.map((date, index) => (
+                <Card key={index} className="border-border hover:border-accent/50 transition-all text-center">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="font-serif text-xl text-primary">
+                      {date.month}
+                    </CardTitle>
+                    <CardDescription className="font-sans text-sm">
+                      {date.date}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-xs text-accent font-sans mb-3">{currentTexts.spotsAvailable}</p>
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="w-full font-sans text-xs"
+                      onClick={() => window.location.href = '/contact'}
+                    >
+                      {currentTexts.bookDate}
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why This Works */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] mb-8 text-center">
-              Why This Retreat Works
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-8 text-center">
+              {t('retreat.whyTitle')}
             </h2>
             <div className="font-sans text-lg text-foreground/80 leading-relaxed space-y-4 mb-12">
-              <p>
-                Your biology is rhythmic, electric, and adaptive. When stress, poor sleep, and modern life disrupt those rhythms, everything becomes harder: energy drops, digestion slows, inflammation rises, cravings intensify, and mental clarity fades.
-              </p>
-              <p>
-                The Earth Rhythm Reset restores coherence through a sequence of proven physiological levers:
-              </p>
+              <p>{t('retreat.whyIntro')}</p>
+              <p>{t('retreat.whyResult')}</p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { icon: Heart, text: "Metabolic biometrics" },
-                { icon: Sun, text: "Heat + cold hormesis" },
-                { icon: Wind, text: "Vagus-focused breathwork" },
-                { icon: Leaf, text: "Earth-element grounding" },
-                { icon: Clock, text: "Circadian-aligned nutrition" },
-                { icon: Droplets, text: "Lymphatic stimulation" }
+                { icon: Heart, text: language === 'es' ? "Biometría metabólica" : language === 'pt' ? "Biometria metabólica" : "Metabolic biometrics" },
+                { icon: Sun, text: language === 'es' ? "Hormesis calor + frío" : language === 'pt' ? "Hormese calor + frio" : "Heat + cold hormesis" },
+                { icon: Wind, text: language === 'es' ? "Respiración enfocada en el vago" : language === 'pt' ? "Respiração focada no vago" : "Vagus-focused breathwork" },
+                { icon: Leaf, text: language === 'es' ? "Arraigo elemento tierra" : language === 'pt' ? "Ancoragem elemento terra" : "Earth-element grounding" },
+                { icon: Clock, text: language === 'es' ? "Nutrición alineada circadianamente" : language === 'pt' ? "Nutrição alinhada circadianamente" : "Circadian-aligned nutrition" },
+                { icon: Droplets, text: language === 'es' ? "Estimulación linfática" : language === 'pt' ? "Estimulação linfática" : "Lymphatic stimulation" }
               ].map((item, index) => (
                 <Card key={index} className="border-border">
                   <CardContent className="flex items-center gap-4 pt-6">
@@ -189,24 +297,24 @@ const EarthRhythmRetreat = () => {
               ))}
             </div>
             <p className="font-sans text-lg text-center text-foreground/80 mt-8">
-              The result: your system finds flow again.
+              {t('retreat.result')}
             </p>
           </div>
         </div>
       </section>
 
       {/* Schedule */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] mb-4 text-center">
-              The Experience
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4 text-center">
+              {currentTexts.scheduleTitle}
             </h2>
             <p className="font-sans text-xl text-center text-muted-foreground mb-12">
-              10:00 to 16:45
+              {currentTexts.scheduleTime}
             </p>
             <div className="space-y-4">
-              {schedule.map((item, index) => (
+              {currentSchedule.map((item, index) => (
                 <Card key={index} className="border-border hover:border-accent/50 transition-all">
                   <CardHeader>
                     <div className="flex items-start justify-between gap-4">
@@ -215,7 +323,7 @@ const EarthRhythmRetreat = () => {
                           <span className="font-sans text-sm font-medium text-accent">{item.time}</span>
                           <span className="font-sans text-sm text-muted-foreground">({item.duration})</span>
                         </div>
-                        <CardTitle className="font-serif text-xl text-[#4D7D7D]">
+                        <CardTitle className="font-serif text-xl text-primary">
                           {item.title}
                         </CardTitle>
                       </div>
@@ -232,22 +340,14 @@ const EarthRhythmRetreat = () => {
       </section>
 
       {/* What You Take Home */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] mb-12 text-center">
-              What You Take Home
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-12 text-center">
+              {t('retreat.takeHome')}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Biometric report",
-                "One personalized rhythm recommendation",
-                "Heat detox protocol",
-                "Breathwork sequence",
-                "Digestive and hydration guidance",
-                "Restored clarity and energy",
-                "Priority access to 3/6/9-month QRN mentoring"
-              ].map((item, index) => (
+              {currentTakeHome.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
                   <span className="font-sans text-foreground/80">{item}</span>
@@ -259,55 +359,59 @@ const EarthRhythmRetreat = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] mb-12 text-center">
-              Pricing
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-12 text-center">
+              {t('retreat.pricing')}
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl text-[#4D7D7D]">
-                    Group Experience
+                  <CardTitle className="font-serif text-2xl text-primary">
+                    {language === 'es' ? 'Experiencia Grupal' : language === 'pt' ? 'Experiência em Grupo' : 'Group Experience'}
                   </CardTitle>
                   <CardDescription className="font-sans text-sm">
-                    Minimum 4 participants
+                    {language === 'es' ? 'Mínimo 4 participantes' : language === 'pt' ? 'Mínimo 4 participantes' : 'Minimum 4 participants'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="font-serif text-4xl font-bold text-accent mb-4">€120</p>
-                  <p className="font-sans text-sm text-muted-foreground">per person</p>
+                  <p className="font-sans text-sm text-muted-foreground">{language === 'es' ? 'por persona' : language === 'pt' ? 'por pessoa' : 'per person'}</p>
                 </CardContent>
               </Card>
 
               <Card className="border-accent/50 bg-accent/5">
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl text-[#4D7D7D]">
-                    Private Group
+                  <CardTitle className="font-serif text-2xl text-primary">
+                    {language === 'es' ? 'Grupo Privado' : language === 'pt' ? 'Grupo Privado' : 'Private Group'}
                   </CardTitle>
                   <CardDescription className="font-sans text-sm">
-                    Friends/Families (up to 5 people)
+                    {language === 'es' ? 'Amigos/Familias (hasta 5)' : language === 'pt' ? 'Amigos/Famílias (até 5)' : 'Friends/Families (up to 5 people)'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="font-serif text-4xl font-bold text-accent mb-4">€650</p>
-                  <p className="font-sans text-sm text-muted-foreground">Includes biometrics + report for each guest</p>
+                  <p className="font-sans text-sm text-muted-foreground">
+                    {language === 'es' ? 'Incluye biometría + informe para cada invitado' : language === 'pt' ? 'Inclui biometria + relatório para cada convidado' : 'Includes biometrics + report for each guest'}
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="border-border">
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl text-[#4D7D7D]">
-                    1:1 VIP Reset Day
+                  <CardTitle className="font-serif text-2xl text-primary">
+                    {language === 'es' ? 'Día VIP 1:1' : language === 'pt' ? 'Dia VIP 1:1' : '1:1 VIP Reset Day'}
                   </CardTitle>
                   <CardDescription className="font-sans text-sm">
-                    Deep personalized experience
+                    {language === 'es' ? 'Experiencia profundamente personalizada' : language === 'pt' ? 'Experiência profundamente personalizada' : 'Deep personalized experience'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="font-serif text-4xl font-bold text-accent mb-4">€500</p>
-                  <p className="font-sans text-sm text-muted-foreground">Complete rhythm realignment</p>
+                  <p className="font-sans text-sm text-muted-foreground">
+                    {language === 'es' ? 'Realineación rítmica completa' : language === 'pt' ? 'Realinhamento rítmico completo' : 'Complete rhythm realignment'}
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -316,23 +420,16 @@ const EarthRhythmRetreat = () => {
       </section>
 
       {/* Who This Is For */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-6">
-                  Who This Is For
+                <h3 className="font-serif text-3xl font-bold text-primary mb-6">
+                  {currentTexts.whoForTitle}
                 </h3>
                 <ul className="space-y-3">
-                  {[
-                    "Overwhelmed professionals",
-                    "Perimenopause/post-menopause women",
-                    "Digestive imbalance",
-                    "Low energy, cravings, or poor sleep",
-                    "People wanting grounded physiological reset",
-                    "Anyone tired of trends, rituals, or dogma"
-                  ].map((item, index) => (
+                  {currentWhoFor.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
                       <span className="font-sans text-foreground/80">{item}</span>
@@ -341,15 +438,11 @@ const EarthRhythmRetreat = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-6">
-                  Who This Is Not For
+                <h3 className="font-serif text-3xl font-bold text-primary mb-6">
+                  {currentTexts.whoNotForTitle}
                 </h3>
                 <ul className="space-y-3">
-                  {[
-                    "Those looking for spiritual ceremonies",
-                    "Extreme detox seekers",
-                    "People unable to tolerate sauna (medical exceptions)"
-                  ].map((item, index) => (
+                  {currentWhoNotFor.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <Circle size={8} fill="currentColor" className="text-muted-foreground mt-2 flex-shrink-0" />
                       <span className="font-sans text-foreground/80">{item}</span>
@@ -363,14 +456,14 @@ const EarthRhythmRetreat = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] mb-12 text-center">
-              Frequently Asked Questions
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-12 text-center">
+              {t('retreat.faq')}
             </h2>
             <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
+              {currentFaqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-lg px-6">
                   <AccordionTrigger className="font-sans text-left text-foreground/90 hover:text-accent">
                     {faq.question}
@@ -389,12 +482,11 @@ const EarthRhythmRetreat = () => {
       <section className="py-20 bg-gradient-to-b from-accent/10 to-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#4D7D7D] mb-6">
-              Book Your Experience
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
+              {currentTexts.bookTitle}
             </h2>
             <p className="font-sans text-lg text-foreground/80 mb-8">
-              Retreats run twice per month. Maximum 6 people to maintain quality and safety.
-              Spaces fill quickly due to the intimate setting and biometric component.
+              {currentTexts.bookDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -402,7 +494,7 @@ const EarthRhythmRetreat = () => {
                 size="lg"
                 className="bg-accent hover:bg-accent/90 font-sans text-lg px-8"
               >
-                Request Dates & Book
+                {currentTexts.requestDates}
               </Button>
               <Button 
                 onClick={() => window.location.href = '/programs'}
@@ -410,7 +502,7 @@ const EarthRhythmRetreat = () => {
                 size="lg"
                 className="font-sans text-lg px-8"
               >
-                Explore Programs
+                {t('method.cta.button')}
               </Button>
             </div>
           </div>

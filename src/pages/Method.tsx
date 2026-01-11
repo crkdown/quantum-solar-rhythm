@@ -1,10 +1,13 @@
 import { Circle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import methodDiagram from "@/assets/method-diagram.jpg";
+import qrnFramework from "@/assets/qrn-framework.png";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Method = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen py-24">
       <div className="container mx-auto px-6">
@@ -15,14 +18,13 @@ const Method = () => {
           </div>
           <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
-            The Method
+            {t('method.badge')}
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
-            The Quantum Rhythm Framework
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+            {t('method.title')}
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
-            A revolutionary three-phase methodology that restores your body's 
-            natural intelligence through aligned nutrition and circadian coherence.
+            {t('method.subtitle')}
           </p>
         </div>
 
@@ -30,7 +32,7 @@ const Method = () => {
         <div className="max-w-3xl mx-auto mb-20 animate-fade-in-up">
           <div className="bg-card p-8 rounded-lg border border-border shadow-quantum">
             <img 
-              src={methodDiagram} 
+              src={qrnFramework} 
               alt="Quantum Rhythm Framework Diagram" 
               className="w-full h-auto rounded-lg"
             />
@@ -47,32 +49,30 @@ const Method = () => {
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-[#4D7D7D]">
-                Decode
+              <h2 className="font-serif text-4xl font-bold text-primary">
+                {t('method.decode')}
               </h2>
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                <span className="font-semibold text-primary">Understand your rhythm signature.</span> We begin by 
-                mapping your unique biological patterns — sleep-wake cycles, energy fluctuations, 
-                digestive rhythms, and hormonal patterns.
+                <span className="font-semibold text-primary">{t('method.decode.desc')}</span> {t('method.decode.intro')}
               </p>
               <div className="bg-muted/30 p-6 rounded-lg border border-border">
-                <h3 className="font-sans font-semibold text-foreground mb-3">What You'll Discover:</h3>
+                <h3 className="font-sans font-semibold text-foreground mb-3">{t('method.decode.title')}</h3>
                 <ul className="space-y-2 font-sans text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Your optimal eating windows</span>
+                    <span>{t('method.decode.1')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Hidden circadian misalignments causing symptoms</span>
+                    <span>{t('method.decode.2')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>BioRhythm alignment baseline assessment</span>
+                    <span>{t('method.decode.3')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Environmental factors disrupting your rhythm</span>
+                    <span>{t('method.decode.4')}</span>
                   </li>
                 </ul>
               </div>
@@ -87,32 +87,30 @@ const Method = () => {
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-[#4D7D7D]">
-                Reprogram
+              <h2 className="font-serif text-4xl font-bold text-primary">
+                {t('method.reprogram')}
               </h2>
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                <span className="font-semibold text-primary">Reset your biological clock.</span> Using 
-                strategic meal timing, light exposure protocols, and quantum-aligned nutrition, 
-                we restore your body's natural rhythms.
+                <span className="font-semibold text-primary">{t('method.reprogram.desc')}</span> {t('method.reprogram.intro')}
               </p>
               <div className="bg-muted/30 p-6 rounded-lg border border-border">
-                <h3 className="font-sans font-semibold text-foreground mb-3">Core Protocols:</h3>
+                <h3 className="font-sans font-semibold text-foreground mb-3">{t('method.reprogram.title')}</h3>
                 <ul className="space-y-2 font-sans text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Circadian eating windows tailored to your rhythm</span>
+                    <span>{t('method.reprogram.1')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Quantum-coherent food combinations and timing</span>
+                    <span>{t('method.reprogram.2')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Light exposure and darkness protocols</span>
+                    <span>{t('method.reprogram.3')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Movement aligned with natural energy peaks</span>
+                    <span>{t('method.reprogram.4')}</span>
                   </li>
                 </ul>
               </div>
@@ -127,32 +125,30 @@ const Method = () => {
               </div>
             </div>
             <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-[#4D7D7D]">
-                Rebuild
+              <h2 className="font-serif text-4xl font-bold text-primary">
+                {t('method.rebuild')}
               </h2>
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                <span className="font-semibold text-primary">Establish sustainable rhythms.</span> Once 
-                aligned, we solidify these patterns into lifelong habits that continuously 
-                regenerate your vitality.
+                <span className="font-semibold text-primary">{t('method.rebuild.desc')}</span> {t('method.rebuild.intro')}
               </p>
               <div className="bg-muted/30 p-6 rounded-lg border border-border">
-                <h3 className="font-sans font-semibold text-foreground mb-3">Long-Term Results:</h3>
+                <h3 className="font-sans font-semibold text-foreground mb-3">{t('method.rebuild.title')}</h3>
                 <ul className="space-y-2 font-sans text-foreground/80">
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Sustained energy without crashes or cravings</span>
+                    <span>{t('method.rebuild.1')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Balanced mood and emotional resilience</span>
+                    <span>{t('method.rebuild.2')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Improved sleep quality and recovery</span>
+                    <span>{t('method.rebuild.3')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                    <span>Intuitive relationship with food and your body</span>
+                    <span>{t('method.rebuild.4')}</span>
                   </li>
                 </ul>
               </div>
@@ -162,12 +158,12 @@ const Method = () => {
 
         {/* Scientific References */}
         <div className="max-w-5xl mx-auto mt-20 animate-fade-in-up">
-          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] text-center mb-8">
-            Scientific Foundation
+          <h2 className="font-serif text-3xl font-bold text-primary text-center mb-8">
+            {t('method.science')}
           </h2>
           <div className="bg-muted/20 p-8 rounded-lg border border-border space-y-6">
             <p className="font-sans text-foreground/80 text-center mb-6">
-              The Quantum Rhythm Framework is grounded in peer-reviewed research on circadian biology, chrononutrition, and metabolic health.
+              {t('method.science.desc')}
             </p>
             <div className="space-y-4 text-sm font-sans text-foreground/70">
               <div className="p-4 bg-background rounded-lg border border-border">
@@ -201,16 +197,15 @@ const Method = () => {
 
         {/* CTA */}
         <div className="max-w-3xl mx-auto mt-20 text-center bg-primary/5 p-12 rounded-lg border border-primary/20 animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-4">
-            Ready to Begin Your Rhythm Reset?
+          <h2 className="font-serif text-3xl font-bold text-primary mb-4">
+            {t('method.cta.title')}
           </h2>
           <p className="font-sans text-foreground/80 mb-8">
-            Choose from 3-week, 6-week, or 9-week programs — each designed to 
-            guide you through all three phases.
+            {t('method.cta.desc')}
           </p>
           <Link to="/programs">
             <Button size="lg" className="bg-primary hover:bg-primary/90 font-sans font-medium px-8">
-              Explore Programs
+              {t('method.cta.button')}
             </Button>
           </Link>
         </div>
