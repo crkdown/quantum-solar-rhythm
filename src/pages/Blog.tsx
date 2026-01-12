@@ -21,32 +21,60 @@ const Blog = () => {
       readTime: "10 min read"
     },
     {
-      title: "Why Your Cravings Are Communication, Not Weakness",
-      excerpt: "Learn to decode the intelligent language of cravings and understand what your body is truly asking for beneath surface desires.",
+      title: "Rudolf Steiner's Agriculture Course: The Foundation of Biodynamic Nutrition",
+      excerpt: "Explore the revolutionary lectures from 1924 that birthed biodynamic agriculture and understand how cosmic rhythms influence the vitality of our food.",
       date: "March 1, 2024",
-      category: "Body Wisdom",
-      readTime: "6 min read"
-    },
-    {
-      title: "Seasonal Eating: Aligning with Nature's Wisdom",
-      excerpt: "How shifting your nourishment patterns with the seasons can restore vitality, improve digestion, and reconnect you with natural cycles.",
-      date: "February 22, 2024",
-      category: "Seasonal Nourishment",
+      category: "Steiner Studies",
       readTime: "12 min read"
     },
     {
-      title: "The Cereal Code: Steiner's Grain Wisdom",
+      title: "Nutrition According to Rudolf Steiner: Food as Spiritual Substance",
+      excerpt: "Delve into Steiner's insights on how different foods affect the physical, etheric, astral, and ego bodies, and the spiritual dimensions of nourishment.",
+      date: "February 25, 2024",
+      category: "Anthroposophic Nutrition",
+      readTime: "10 min read"
+    },
+    {
+      title: "Spiritual Science and Medicine: Healing Through Wholeness",
+      excerpt: "Discover how Steiner's collaboration with Dr. Ita Wegman created a new paradigm for understanding health, illness, and the role of nutrition in healing.",
+      date: "February 18, 2024",
+      category: "Integrative Health",
+      readTime: "11 min read"
+    },
+    {
+      title: "Man as Symphony of the Creative Word: The Human Being and Cosmic Nutrition",
+      excerpt: "Explore Steiner's profound lectures on how humans are connected to the animal, plant, and mineral kingdoms, and what this means for conscious eating.",
+      date: "February 12, 2024",
+      category: "Cosmic Connection",
+      readTime: "14 min read"
+    },
+    {
+      title: "The Cereal Code: Steiner's Grain Wisdom and Planetary Rhythms",
       excerpt: "An introduction to Rudolf Steiner's 'Cereal of the Week' system and how planetary grain rhythms can support your weekly energy flow.",
-      date: "February 15, 2024",
+      date: "February 8, 2024",
       category: "Ancient Wisdom",
       readTime: "9 min read"
     },
     {
       title: "Beyond Calories: Food as Frequency and Information",
       excerpt: "Shift your perspective from counting calories to understanding food as energetic information that communicates with your cells.",
-      date: "February 8, 2024",
+      date: "February 1, 2024",
       category: "Quantum Nutrition",
       readTime: "7 min read"
+    },
+    {
+      title: "Seasonal Eating: Aligning with Nature's Wisdom",
+      excerpt: "How shifting your nourishment patterns with the seasons can restore vitality, improve digestion, and reconnect you with natural cycles.",
+      date: "January 25, 2024",
+      category: "Seasonal Nourishment",
+      readTime: "12 min read"
+    },
+    {
+      title: "Why Your Cravings Are Communication, Not Weakness",
+      excerpt: "Learn to decode the intelligent language of cravings and understand what your body is truly asking for beneath surface desires.",
+      date: "January 18, 2024",
+      category: "Body Wisdom",
+      readTime: "6 min read"
     }
   ];
 
