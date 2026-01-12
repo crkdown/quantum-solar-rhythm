@@ -114,15 +114,17 @@ const Shop = () => {
                   <p className="font-sans text-foreground/70 leading-relaxed mb-6">
                     {t('shop.product.desc')}
                   </p>
-                  <div className="font-serif text-4xl font-bold text-primary mb-4">
-                    €18
-                  </div>
-                  <p className="text-sm text-muted-foreground font-sans mb-6">
-                    {t('shop.product.details')}
-                  </p>
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 font-sans w-full md:w-auto">
-                    {t('shop.orderNow')}
-                  </Button>
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-lg font-medium animate-pulse-slow">
+                    {language === 'en' ? '🌿 Coming Soon' : language === 'es' ? '🌿 Próximamente' : '🌿 Em Breve'}
+                  </span>
+                </div>
+                <Button size="lg" disabled className="w-full bg-muted text-muted-foreground font-sans cursor-not-allowed md:w-auto">
+                  {language === 'en' ? 'Notify Me When Available' : language === 'es' ? 'Notificarme' : 'Notifique-me'}
+                </Button>
+                <p className="text-sm text-muted-foreground mt-3">
+                  {language === 'en' ? 'Be the first to know when our artisan granola launches.' : language === 'es' ? 'Sé el primero en saber cuando lancemos nuestra granola artesanal.' : 'Seja o primeiro a saber quando nossa granola artesanal for lançada.'}
+                </p>
                 </div>
                 <div className="flex justify-center">
                   <img 
