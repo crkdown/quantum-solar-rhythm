@@ -46,12 +46,12 @@ const Masterclasses = () => {
     "Por qué muchos síntomas digestivos reflejan desalineación rítmica",
     "Qué es la microbiota intestinal y cómo se ve influenciada por el tiempo y el estrés",
     "La diferencia entre comer de forma automática y comer con presencia corporal",
-    "Cómo comenzar a sincronizar la alimentación con el ritmo circadiano, las estaciones del año y fases lunares",
+    "Cómo comenzar a sincronizar la alimentación con los ritmos circadianos y lunares",
     "Primeros pasos hacia una nutrición intuitiva, rítmica y sostenible"
   ];
 
   const targetAudience = [
-    "Personas con irregularidades intestinales o fatiga frecuente",
+    "Personas con hinchazón, digestiones pesadas o fatiga frecuente",
     "Quienes sienten que comen de forma correcta pero su cuerpo no responde",
     "Personas que buscan comprender su cuerpo más allá de dietas",
     "Interesados en una nutrición con base científica e integrativa",
