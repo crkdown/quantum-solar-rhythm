@@ -3,6 +3,7 @@ import { ArrowRight, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-quantum-waves.jpg";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import sunriseImage from "@/assets/sunrise-nature.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Home = () => {
@@ -106,8 +107,53 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Three Pillars */}
+      {/* QRN Philosophy Section with Sunrise Image */}
       <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image Side */}
+            <div className="relative animate-fade-in">
+              <div className="relative overflow-hidden rounded-2xl shadow-quantum">
+                <img 
+                  src={sunriseImage} 
+                  alt="Sunrise over nature - representing natural rhythms" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
+              <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            </div>
+
+            {/* Text Side */}
+            <div className="space-y-8 animate-fade-in-up">
+              <div className="space-y-6">
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary leading-tight">
+                  Quantum Rhythm Nutrition
+                </h2>
+                
+                <div className="space-y-6">
+                  <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
+                    <p className="font-sans text-lg text-foreground/90 leading-relaxed italic">
+                      "Quantum Rhythm Nutrition is not a diet. It is a timing-based system that supports the restoration of energy, digestion, and clarity by aligning your biology with natural cycles."
+                    </p>
+                  </div>
+                  
+                  <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
+                    <p className="font-sans text-lg text-foreground/90 leading-relaxed italic">
+                      "Most people try to change what they eat. QRN starts with when your system is ready."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Three Pillars */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary text-center mb-16">
             {t('home.phases.title')}
@@ -168,8 +214,8 @@ const Home = () => {
               <Link to="/contact">
                 <Button 
                   size="lg" 
-                  variant="outline"
-                  className="font-sans font-medium px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                  variant="secondary"
+                  className="font-sans font-medium px-8"
                 >
                   {t('home.cta.consult')}
                 </Button>
