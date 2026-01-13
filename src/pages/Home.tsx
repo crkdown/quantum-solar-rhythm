@@ -45,17 +45,18 @@ const Home = () => {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         
+        {/* Logo - Top Right */}
+        <div className="absolute top-6 right-6 z-20">
+          <img 
+            src={logo} 
+            alt="Solaris Nutri" 
+            className="h-12 md:h-14 w-12 md:w-14 logo-circle object-cover shadow-quantum"
+          />
+        </div>
+        
         {/* Content - Minimal & Elegant */}
         <div className="relative z-10 container mx-auto px-6 py-32">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            {/* Small elegant logo */}
-            <div className="flex justify-center mb-12">
-              <img 
-                src={logo} 
-                alt="Solaris Nutri" 
-                className="h-20 md:h-24 w-20 md:w-24 logo-circle object-cover shadow-quantum"
-              />
-            </div>
             
             <div className="inline-flex items-center gap-2 text-white/80 font-sans text-xs tracking-widest uppercase mb-6">
               <Circle size={6} fill="currentColor" className="animate-pulse-slow" />
