@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-quantum-waves.jpg";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import sunriseImage from "@/assets/sunrise-nature.png";
+import fruitTreesImage from "@/assets/fruit-trees.jpg";
+import vegetablesImage from "@/assets/fresh-vegetables.jpg";
+import circadianImage from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Home = () => {
@@ -43,52 +45,48 @@ const Home = () => {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 py-32 text-center">
-          <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-            {/* Centered Logo - perfectly round */}
-            <div className="flex justify-center mb-8">
+        {/* Content - Minimal & Elegant */}
+        <div className="relative z-10 container mx-auto px-6 py-32">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in">
+            {/* Small elegant logo */}
+            <div className="flex justify-center mb-12">
               <img 
                 src={logo} 
                 alt="Solaris Nutri" 
-                className="h-32 md:h-40 w-32 md:w-40 logo-circle object-cover shadow-quantum"
+                className="h-20 md:h-24 w-20 md:w-24 logo-circle object-cover shadow-quantum"
               />
             </div>
             
-            <div className="inline-flex items-center gap-2 text-white/90 font-sans text-sm tracking-wider uppercase mb-4">
-              <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
+            <div className="inline-flex items-center gap-2 text-white/80 font-sans text-xs tracking-widest uppercase mb-6">
+              <Circle size={6} fill="currentColor" className="animate-pulse-slow" />
               {t('home.hero.badge')}
             </div>
             
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
+            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium text-white leading-tight tracking-wide drop-shadow-lg">
               {t('home.hero.title1')}
-              <span className="block text-amber-200 mt-4 drop-shadow-lg">{t('home.hero.title2')}</span>
+              <span className="block text-amber-100/90 mt-3 font-light">{t('home.hero.title2')}</span>
             </h1>
             
-            <p className="font-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="font-sans text-base md:text-lg text-white/80 max-w-xl mx-auto leading-relaxed mt-8 drop-shadow">
               {t('home.hero.subtitle')}
             </p>
 
-            <div className="pt-8">
+            <div className="mt-10">
               <Link to="/programs">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium px-8 py-6 text-lg shadow-quantum transition-all hover:scale-105"
+                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-sans font-light px-8 py-5 text-base border border-white/30 transition-all hover:scale-105"
                 >
                   {t('home.hero.cta')}
-                  <ArrowRight className="ml-2" size={20} />
+                  <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
-            </div>
-
-            <div className="pt-4 text-sm text-white/80 font-sans drop-shadow">
-              {t('home.hero.tagline')}
             </div>
           </div>
         </div>
 
         {/* Decorative Wave */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
       </section>
 
       {/* Introduction Section */}
@@ -108,45 +106,65 @@ const Home = () => {
         </div>
       </section>
 
-      {/* QRN Philosophy Section with Sunrise Image */}
-      <section className="py-24 bg-muted/20">
+      {/* Nature & Rhythm Visual Section */}
+      <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image Side */}
-            <div className="relative animate-fade-in">
-              <div className="relative overflow-hidden rounded-2xl shadow-quantum">
-                <img 
-                  src={sunriseImage} 
-                  alt="Sunrise over nature - representing natural rhythms" 
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-              </div>
-              {/* Decorative element */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
-              <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-primary mb-4">
+                Quantum Rhythm Nutrition
+              </h2>
+              <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
+                Aligning your biology with natural cycles
+              </p>
             </div>
 
-            {/* Text Side */}
-            <div className="space-y-8 animate-fade-in-up">
-              <div className="space-y-6">
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary leading-tight">
-                  Quantum Rhythm Nutrition
-                </h2>
-                
-                <div className="space-y-6">
-                  <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
-                    <p className="font-sans text-lg text-foreground/90 leading-relaxed italic">
-                      "Quantum Rhythm Nutrition is not a diet. It is a timing-based system that supports the restoration of energy, digestion, and clarity by aligning your biology with natural cycles."
-                    </p>
-                  </div>
-                  
-                  <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
-                    <p className="font-sans text-lg text-foreground/90 leading-relaxed italic">
-                      "Most people try to change what they eat. QRN starts with when your system is ready."
-                    </p>
-                  </div>
-                </div>
+            {/* Image Grid */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+                <img 
+                  src={fruitTreesImage} 
+                  alt="Fresh fruit trees" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">Nature&apos;s Timing</span>
+              </div>
+              
+              <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+                <img 
+                  src={circadianImage} 
+                  alt="Circadian rhythm cycle" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">Your Internal Clock</span>
+              </div>
+              
+              <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+                <img 
+                  src={vegetablesImage} 
+                  alt="Fresh organic vegetables" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">Wholesome Nutrition</span>
+              </div>
+            </div>
+
+            {/* QRN Quotes */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
+                <p className="font-serif text-lg text-foreground/90 leading-relaxed italic">
+                  &ldquo;Quantum Rhythm Nutrition is not a diet. It is a timing-based system that supports the restoration of energy, digestion, and clarity by aligning your biology with natural cycles.&rdquo;
+                </p>
+              </div>
+              
+              <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
+                <p className="font-serif text-lg text-foreground/90 leading-relaxed italic">
+                  &ldquo;Most people try to change what they eat. QRN starts with when your system is ready.&rdquo;
+                </p>
               </div>
             </div>
           </div>
