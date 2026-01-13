@@ -29,18 +29,19 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Sunrise Image */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background - Sunrise Image */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url(${heroImage})`,
+            backgroundImage: `url(${sunriseImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.4,
           }}
         />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-32 text-center">
@@ -54,17 +55,17 @@ const Home = () => {
               />
             </div>
             
-            <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
+            <div className="inline-flex items-center gap-2 text-white/90 font-sans text-sm tracking-wider uppercase mb-4">
               <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
               {t('home.hero.badge')}
             </div>
             
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight">
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">
               {t('home.hero.title1')}
-              <span className="block text-accent mt-4">{t('home.hero.title2')}</span>
+              <span className="block text-amber-200 mt-4 drop-shadow-lg">{t('home.hero.title2')}</span>
             </h1>
             
-            <p className="font-sans text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-sans text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
               {t('home.hero.subtitle')}
             </p>
 
@@ -80,7 +81,7 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="pt-4 text-sm text-muted-foreground font-sans">
+            <div className="pt-4 text-sm text-white/80 font-sans drop-shadow">
               {t('home.hero.tagline')}
             </div>
           </div>
