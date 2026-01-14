@@ -8,34 +8,34 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const EarthRhythmRetreat = () => {
   const { t, language } = useLanguage();
 
-  // Monthly retreat dates from March to September
+  // Monthly retreat dates from April to October 2026
   const retreatDates = {
     en: [
-      { month: "March", date: "March 15, 2025", available: true },
-      { month: "April", date: "April 12, 2025", available: true },
-      { month: "May", date: "May 17, 2025", available: true },
-      { month: "June", date: "June 14, 2025", available: true },
-      { month: "July", date: "July 19, 2025", available: true },
-      { month: "August", date: "August 16, 2025", available: true },
-      { month: "September", date: "September 13, 2025", available: true }
+      { month: "April", date: "April 11, 2026", available: true },
+      { month: "May", date: "May 16, 2026", available: true },
+      { month: "June", date: "June 13, 2026", available: true },
+      { month: "July", date: "July 18, 2026", available: true },
+      { month: "August", date: "August 15, 2026", available: true },
+      { month: "September", date: "September 12, 2026", available: true },
+      { month: "October", date: "October 10, 2026", available: true }
     ],
     es: [
-      { month: "Marzo", date: "15 de Marzo, 2025", available: true },
-      { month: "Abril", date: "12 de Abril, 2025", available: true },
-      { month: "Mayo", date: "17 de Mayo, 2025", available: true },
-      { month: "Junio", date: "14 de Junio, 2025", available: true },
-      { month: "Julio", date: "19 de Julio, 2025", available: true },
-      { month: "Agosto", date: "16 de Agosto, 2025", available: true },
-      { month: "Septiembre", date: "13 de Septiembre, 2025", available: true }
+      { month: "Abril", date: "11 de Abril, 2026", available: true },
+      { month: "Mayo", date: "16 de Mayo, 2026", available: true },
+      { month: "Junio", date: "13 de Junio, 2026", available: true },
+      { month: "Julio", date: "18 de Julio, 2026", available: true },
+      { month: "Agosto", date: "15 de Agosto, 2026", available: true },
+      { month: "Septiembre", date: "12 de Septiembre, 2026", available: true },
+      { month: "Octubre", date: "10 de Octubre, 2026", available: true }
     ],
     pt: [
-      { month: "Março", date: "15 de Março, 2025", available: true },
-      { month: "Abril", date: "12 de Abril, 2025", available: true },
-      { month: "Maio", date: "17 de Maio, 2025", available: true },
-      { month: "Junho", date: "14 de Junho, 2025", available: true },
-      { month: "Julho", date: "19 de Julho, 2025", available: true },
-      { month: "Agosto", date: "16 de Agosto, 2025", available: true },
-      { month: "Setembro", date: "13 de Setembro, 2025", available: true }
+      { month: "Abril", date: "11 de Abril, 2026", available: true },
+      { month: "Maio", date: "16 de Maio, 2026", available: true },
+      { month: "Junho", date: "13 de Junho, 2026", available: true },
+      { month: "Julho", date: "18 de Julho, 2026", available: true },
+      { month: "Agosto", date: "15 de Agosto, 2026", available: true },
+      { month: "Setembro", date: "12 de Setembro, 2026", available: true },
+      { month: "Outubro", date: "10 de Outubro, 2026", available: true }
     ]
   };
 
@@ -147,8 +147,8 @@ const EarthRhythmRetreat = () => {
 
   const texts = {
     en: {
-      monthlyDates: "2025 Retreat Dates",
-      monthlyDatesDesc: "One retreat per month from March to September. Book your preferred date.",
+      monthlyDates: "2026 Retreat Dates",
+      monthlyDatesDesc: "One retreat per month from April to October. Book your preferred date.",
       spotsAvailable: "Spots Available",
       bookDate: "Book This Date",
       scheduleTitle: "The Experience",
@@ -160,8 +160,8 @@ const EarthRhythmRetreat = () => {
       requestDates: "Request Dates & Book"
     },
     es: {
-      monthlyDates: "Fechas de Retiro 2025",
-      monthlyDatesDesc: "Un retiro por mes de marzo a septiembre. Reserva tu fecha preferida.",
+      monthlyDates: "Fechas de Retiro 2026",
+      monthlyDatesDesc: "Un retiro por mes de abril a octubre. Reserva tu fecha preferida.",
       spotsAvailable: "Lugares Disponibles",
       bookDate: "Reservar Esta Fecha",
       scheduleTitle: "La Experiencia",
@@ -173,8 +173,8 @@ const EarthRhythmRetreat = () => {
       requestDates: "Solicitar Fechas y Reservar"
     },
     pt: {
-      monthlyDates: "Datas de Retiro 2025",
-      monthlyDatesDesc: "Um retiro por mês de março a setembro. Reserve sua data preferida.",
+      monthlyDates: "Datas de Retiro 2026",
+      monthlyDatesDesc: "Um retiro por mês de abril a outubro. Reserve sua data preferida.",
       spotsAvailable: "Vagas Disponíveis",
       bookDate: "Reservar Esta Data",
       scheduleTitle: "A Experiência",

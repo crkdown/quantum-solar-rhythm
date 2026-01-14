@@ -45,12 +45,12 @@ const Home = () => {
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
         
-        {/* Logo - Top Right */}
-        <div className="absolute top-6 right-6 z-20">
+        {/* Logo - Top Right with entrance animation */}
+        <div className="absolute top-6 right-6 z-20 animate-[fade-in_1s_ease-out_0.3s_both] opacity-0">
           <img 
             src={logo} 
             alt="Solaris Nutri" 
-            className="h-12 md:h-14 w-12 md:w-14 logo-circle object-cover shadow-quantum"
+            className="h-12 md:h-14 w-12 md:w-14 logo-circle object-cover shadow-quantum hover:scale-110 transition-transform duration-300"
           />
         </div>
         

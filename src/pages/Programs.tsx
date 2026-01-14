@@ -1,7 +1,8 @@
-import { Circle, Check } from "lucide-react";
+import { Circle, Check, TrendingUp, BookOpen, Calendar, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -13,7 +14,7 @@ const Programs = () => {
       {
         duration: "3-Month",
         title: "Rhythm Reset",
-        price: "€700 – €900",
+        price: "€900",
         description: "Stabilize body rhythms, restore energy, and simplify nourishment through circadian alignment.",
         features: [
           "Rhythm calendar & circadian alignment",
@@ -28,7 +29,7 @@ const Programs = () => {
       {
         duration: "6-Month",
         title: "Coherence Deepening",
-        price: "€1,600 – €1,800",
+        price: "€1,800",
         description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
         features: [
           "Everything in 3-Month program",
@@ -44,7 +45,7 @@ const Programs = () => {
       {
         duration: "9-Month",
         title: "Full Quantum Rhythm Embodiment",
-        price: "€2,500 – €2,700",
+        price: "€2,700",
         description: "Complete reprogramming of body rhythms with planetary cycle integration and nervous system mastery.",
         features: [
           "Everything in 6-Month program",
@@ -62,7 +63,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€700 – €900",
+        price: "€900",
         description: "Estabiliza los ritmos corporales, restaura la energía y simplifica la nutrición a través de la alineación circadiana.",
         features: [
           "Calendario de ritmo y alineación circadiana",
@@ -77,7 +78,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Profundización de Coherencia",
-        price: "€1,600 – €1,800",
+        price: "€1,800",
         description: "Reconstruye la estabilidad metabólica y la regulación emocional a través de los ciclos lunares y transiciones estacionales.",
         features: [
           "Todo del programa de 3 meses",
@@ -93,7 +94,7 @@ const Programs = () => {
       {
         duration: "9 Meses",
         title: "Encarnación Completa del Ritmo Cuántico",
-        price: "€2,500 – €2,700",
+        price: "€2,700",
         description: "Reprogramación completa de los ritmos corporales con integración de ciclos planetarios y dominio del sistema nervioso.",
         features: [
           "Todo del programa de 6 meses",
@@ -111,7 +112,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€700 – €900",
+        price: "€900",
         description: "Estabilize os ritmos corporais, restaure a energia e simplifique a nutrição através do alinhamento circadiano.",
         features: [
           "Calendário de ritmo e alinhamento circadiano",
@@ -126,7 +127,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Aprofundamento de Coerência",
-        price: "€1,600 – €1,800",
+        price: "€1,800",
         description: "Reconstrua a estabilidade metabólica e a regulação emocional através dos ciclos lunares e transições sazonais.",
         features: [
           "Tudo do programa de 3 meses",
@@ -142,7 +143,7 @@ const Programs = () => {
       {
         duration: "9 Meses",
         title: "Incorporação Completa do Ritmo Quântico",
-        price: "€2,500 – €2,700",
+        price: "€2,700",
         description: "Reprogramação completa dos ritmos corporais com integração de ciclos planetários e domínio do sistema nervoso.",
         features: [
           "Tudo do programa de 6 meses",
@@ -158,41 +159,88 @@ const Programs = () => {
     ]
   };
 
-  const allIncluded = {
+  const progressTools = {
     en: [
-      "Comprehensive rhythm assessment",
-      "Personalized QRN protocols",
-      "Circadian eating window optimization",
-      "Light exposure guidance",
-      "Progress tracking tools",
-      "Educational resources",
-      "Ongoing email support",
-      "Access to Solaris community"
+      { name: "Rhythm Journal", progress: 85, desc: "Daily tracking of energy, meals & sleep patterns" },
+      { name: "Circadian Dashboard", progress: 70, desc: "Visual timeline of your body's natural cycles" },
+      { name: "Microbiome Tracker", progress: 60, desc: "Monitor digestive health & gut balance" },
+      { name: "Energy Mapping", progress: 90, desc: "Identify peak performance windows" }
     ],
     es: [
-      "Evaluación integral de ritmo",
-      "Protocolos QRN personalizados",
-      "Optimización de ventana alimenticia circadiana",
-      "Guía de exposición a la luz",
-      "Herramientas de seguimiento de progreso",
-      "Recursos educativos",
-      "Soporte continuo por email",
-      "Acceso a la comunidad Solaris"
+      { name: "Diario de Ritmo", progress: 85, desc: "Seguimiento diario de energía, comidas y patrones de sueño" },
+      { name: "Panel Circadiano", progress: 70, desc: "Línea de tiempo visual de los ciclos naturales de tu cuerpo" },
+      { name: "Rastreador de Microbioma", progress: 60, desc: "Monitorea la salud digestiva y el equilibrio intestinal" },
+      { name: "Mapeo de Energía", progress: 90, desc: "Identifica ventanas de rendimiento máximo" }
     ],
     pt: [
-      "Avaliação abrangente de ritmo",
-      "Protocolos QRN personalizados",
-      "Otimização de janela alimentar circadiana",
-      "Orientação de exposição à luz",
-      "Ferramentas de acompanhamento de progresso",
-      "Recursos educacionais",
-      "Suporte contínuo por email",
-      "Acesso à comunidade Solaris"
+      { name: "Diário de Ritmo", progress: 85, desc: "Acompanhamento diário de energia, refeições e padrões de sono" },
+      { name: "Painel Circadiano", progress: 70, desc: "Linha do tempo visual dos ciclos naturais do seu corpo" },
+      { name: "Rastreador de Microbioma", progress: 60, desc: "Monitore a saúde digestiva e o equilíbrio intestinal" },
+      { name: "Mapeamento de Energia", progress: 90, desc: "Identifique janelas de desempenho máximo" }
     ]
   };
 
+  const educationalResources = {
+    en: [
+      "QRN Foundations Video Library",
+      "Circadian Nutrition Guide (eBook)",
+      "Meal Timing Templates",
+      "Seasonal Eating Calendar",
+      "Breathwork Audio Sessions",
+      "Monthly Live Q&A Access"
+    ],
+    es: [
+      "Biblioteca de Videos Fundamentos QRN",
+      "Guía de Nutrición Circadiana (eBook)",
+      "Plantillas de Horarios de Comidas",
+      "Calendario de Alimentación Estacional",
+      "Sesiones de Audio de Respiración",
+      "Acceso a Q&A en Vivo Mensual"
+    ],
+    pt: [
+      "Biblioteca de Vídeos Fundamentos QRN",
+      "Guia de Nutrição Circadiana (eBook)",
+      "Modelos de Horários de Refeições",
+      "Calendário de Alimentação Sazonal",
+      "Sessões de Áudio de Respiração",
+      "Acesso a Q&A ao Vivo Mensal"
+    ]
+  };
+
+  const texts = {
+    en: {
+      progressTitle: "Progress Tracking Tools",
+      progressDesc: "Comprehensive tools to monitor your rhythm journey",
+      resourcesTitle: "Educational Resources",
+      resourcesDesc: "Deep learning materials included with every program",
+      retreatTitle: "2026 Retreat Access",
+      retreatDesc: "Join our Earth Rhythm Retreats running April to October 2026 in Northern Portugal",
+      retreatCta: "Learn About Retreats"
+    },
+    es: {
+      progressTitle: "Herramientas de Seguimiento",
+      progressDesc: "Herramientas completas para monitorear tu viaje rítmico",
+      resourcesTitle: "Recursos Educativos",
+      resourcesDesc: "Materiales de aprendizaje profundo incluidos con cada programa",
+      retreatTitle: "Acceso a Retiros 2026",
+      retreatDesc: "Únete a nuestros Retiros Earth Rhythm de abril a octubre 2026 en el norte de Portugal",
+      retreatCta: "Conocer los Retiros"
+    },
+    pt: {
+      progressTitle: "Ferramentas de Acompanhamento",
+      progressDesc: "Ferramentas abrangentes para monitorar sua jornada rítmica",
+      resourcesTitle: "Recursos Educacionais",
+      resourcesDesc: "Materiais de aprendizagem profunda incluídos em cada programa",
+      retreatTitle: "Acesso a Retiros 2026",
+      retreatDesc: "Junte-se aos nossos Retiros Earth Rhythm de abril a outubro de 2026 no norte de Portugal",
+      retreatCta: "Conhecer os Retiros"
+    }
+  };
+
   const currentPrograms = programs[language] || programs.en;
-  const currentIncluded = allIncluded[language] || allIncluded.en;
+  const currentTools = progressTools[language] || progressTools.en;
+  const currentResources = educationalResources[language] || educationalResources.en;
+  const currentTexts = texts[language] || texts.en;
 
   return (
     <div className="min-h-screen py-24">
@@ -284,23 +332,93 @@ const Programs = () => {
           ))}
         </div>
 
-        {/* What's Included */}
-        <div className="max-w-4xl mx-auto bg-muted/30 p-12 rounded-lg border border-border animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-primary text-center mb-8">
-            {t('programs.allInclude')}
-          </h2>
+        {/* Progress Tracking Tools Section */}
+        <div className="max-w-5xl mx-auto mb-20 animate-fade-in">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 text-accent mb-4">
+              <TrendingUp size={24} />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-3">
+              {currentTexts.progressTitle}
+            </h2>
+            <p className="font-sans text-foreground/70">
+              {currentTexts.progressDesc}
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-6">
-            {currentIncluded.map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                <span className="font-sans text-foreground/80">{item}</span>
-              </div>
+            {currentTools.map((tool, index) => (
+              <Card key={index} className="border-border hover:border-accent/50 transition-all">
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-serif text-lg font-semibold text-primary">{tool.name}</h3>
+                    <span className="font-sans text-sm text-accent font-medium">{tool.progress}%</span>
+                  </div>
+                  <Progress value={tool.progress} className="h-2 mb-3" />
+                  <p className="font-sans text-sm text-foreground/70">{tool.desc}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
 
+        {/* Educational Resources Section */}
+        <div className="max-w-5xl mx-auto mb-20 animate-fade-in">
+          <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-10 rounded-xl border border-border">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 text-accent mb-4">
+                <BookOpen size={24} />
+              </div>
+              <h2 className="font-serif text-3xl font-bold text-primary mb-3">
+                {currentTexts.resourcesTitle}
+              </h2>
+              <p className="font-sans text-foreground/70">
+                {currentTexts.resourcesDesc}
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {currentResources.map((resource, index) => (
+                <div key={index} className="flex items-center gap-3 bg-card p-4 rounded-lg border border-border">
+                  <Check size={18} className="text-accent flex-shrink-0" />
+                  <span className="font-sans text-sm text-foreground/80">{resource}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* 2026 Retreat Access Section */}
+        <div className="max-w-4xl mx-auto mb-20 animate-fade-in">
+          <Card className="border-accent/30 bg-gradient-to-r from-accent/5 to-primary/5 overflow-hidden">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center">
+                    <Calendar className="text-accent" size={36} />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="font-serif text-2xl font-bold text-primary mb-2">
+                    {currentTexts.retreatTitle}
+                  </h3>
+                  <p className="font-sans text-foreground/70 mb-4">
+                    {currentTexts.retreatDesc}
+                  </p>
+                  <Link to="/earth-rhythm-retreat">
+                    <Button variant="outline" className="font-sans group">
+                      {currentTexts.retreatCta}
+                      <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Not Sure Section */}
-        <div className="max-w-3xl mx-auto mt-16 text-center animate-fade-in">
+        <div className="max-w-3xl mx-auto text-center animate-fade-in">
           <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
             {t('programs.notSure')}
           </h3>

@@ -1,5 +1,6 @@
 import { Circle } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import paulaPhoto from "@/assets/paula-photo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
@@ -33,15 +34,33 @@ const About = () => {
             </h1>
           </div>
 
-          {/* Story */}
-          <div className="prose prose-lg max-w-none space-y-8 animate-fade-in-up">
+          {/* About Paula Section */}
+          <div className="mb-16 animate-fade-in-up">
             <div className="bg-card p-8 md:p-12 rounded-lg border border-border shadow-subtle-glow">
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                <span className="font-semibold text-primary">Solaris Nutri</span> {t('about.intro1')} <span className="text-accent font-medium">Quantum Rhythm Nutrition™</span> {t('about.intro2')}
-              </p>
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-6">
-                {t('about.story1')}
-              </p>
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="flex-shrink-0">
+                  <img 
+                    src={paulaPhoto} 
+                    alt="Paula Suescun" 
+                    className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-quantum border-4 border-accent/20"
+                  />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="font-serif text-3xl font-bold text-primary mb-4">Paula Suescun</h2>
+                  <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-4">
+                    <span className="font-semibold text-primary">Solaris Nutri</span> {t('about.intro1')} <span className="text-accent font-medium">Quantum Rhythm Nutrition™</span> {t('about.intro2')}
+                  </p>
+                  <p className="font-sans text-foreground/70 leading-relaxed">
+                    {t('about.story1')}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Story Continuation */}
+          <div className="prose prose-lg max-w-none space-y-8 animate-fade-in-up">
+            <div className="bg-muted/20 p-8 md:p-10 rounded-lg border border-border">
               <p className="font-sans text-lg text-foreground/80 leading-relaxed">
                 {t('about.story2')}
               </p>
