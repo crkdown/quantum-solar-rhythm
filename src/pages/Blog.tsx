@@ -64,7 +64,7 @@ const Blog = () => {
     },
     {
       title: "Seasonal Eating: Aligning with Nature's Wisdom",
-      excerpt: "How shifting your nourishment patterns with the seasons can restore vitality, improve digestion, and reconnect you with natural cycles.",
+      excerpt: "How shifting your nourishment patterns with the seasons can contribute to vitality, improve digestion, and reconnect you with natural cycles.",
       date: "January 25, 2024",
       category: "Seasonal Nourishment",
       readTime: "12 min read"

@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import wholesomeFood from "@/assets/wholesome-food.jpg";
+import natureRetreat from "@/assets/nature-retreat.jpg";
+import nourishingBowl from "@/assets/nourishing-bowl.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const EarthRhythmRetreat = () => {
@@ -44,7 +47,7 @@ const EarthRhythmRetreat = () => {
       { time: "10:00", duration: "15 min", title: "Arrival & Welcome", description: "Herbal drink, orientation, and clear safety boundaries. A calm start to settle the nervous system." },
       { time: "10:15", duration: "15 min", title: "Ice-Breaker & Intentions", description: "Short introductions and a simple grounding question. Light, warm, and easy — immediate group comfort." },
       { time: "10:30", duration: "15 min", title: "Breathwork + Gentle Movement", description: "Vagus activation, microcirculation support, and grounding before sauna. Coherent movement, not yoga or ritualistic practices." },
-      { time: "10:45", duration: "30 min", title: "Microbiome & Rhythm Talk", description: "Clear explanation of metabolic rhythms, spleen + digestive flow, microbiome balance, and why heat and nature restore coherence." },
+      { time: "10:45", duration: "30 min", title: "Microbiome & Rhythm Talk", description: "Clear explanation of metabolic rhythms, spleen + digestive flow, microbiome balance, and why heat and nature contribute to coherence." },
       { time: "11:15", duration: "40 min", title: "Biometrics Session", description: "Private Human Pod body scan including body composition, hydration, visceral fat, metabolic indicators, and rhythm interpretation." },
       { time: "12:00", duration: "90 min", title: "Sauna Detox Protocol", description: "Guided sauna cycles, optional cold exposure, scrub mixture, and mineral hydration. A full metabolic and circulatory activation." },
       { time: "13:30", duration: "10 min", title: "Cool Down + Hydration", description: "Light hydration, fruit or cooling herbal tea." },
@@ -60,7 +63,7 @@ const EarthRhythmRetreat = () => {
       { time: "10:00", duration: "15 min", title: "Llegada y Bienvenida", description: "Bebida herbal, orientación y límites de seguridad claros. Un comienzo tranquilo para calmar el sistema nervioso." },
       { time: "10:15", duration: "15 min", title: "Rompehielos e Intenciones", description: "Presentaciones breves y una pregunta simple de arraigo. Ligero, cálido y fácil — comodidad grupal inmediata." },
       { time: "10:30", duration: "15 min", title: "Respiración + Movimiento Suave", description: "Activación vagal, soporte de microcirculación y arraigo antes del sauna. Movimiento coherente, no yoga ni prácticas rituales." },
-      { time: "10:45", duration: "30 min", title: "Charla sobre Microbioma y Ritmo", description: "Explicación clara de ritmos metabólicos, flujo digestivo + bazo, equilibrio del microbioma y por qué el calor y la naturaleza restauran la coherencia." },
+      { time: "10:45", duration: "30 min", title: "Charla sobre Microbioma y Ritmo", description: "Explicación clara de ritmos metabólicos, flujo digestivo + bazo, equilibrio del microbioma y por qué el calor y la naturaleza contribuyen a la coherencia." },
       { time: "11:15", duration: "40 min", title: "Sesión de Biometría", description: "Escaneo corporal privado Human Pod incluyendo composición corporal, hidratación, grasa visceral, indicadores metabólicos e interpretación del ritmo." },
       { time: "12:00", duration: "90 min", title: "Protocolo de Desintoxicación en Sauna", description: "Ciclos guiados de sauna, exposición al frío opcional, mezcla de exfoliación e hidratación mineral. Activación metabólica y circulatoria completa." },
       { time: "13:30", duration: "10 min", title: "Enfriamiento + Hidratación", description: "Hidratación ligera, fruta o té herbal refrescante." },
@@ -76,7 +79,7 @@ const EarthRhythmRetreat = () => {
       { time: "10:00", duration: "15 min", title: "Chegada e Boas-vindas", description: "Bebida herbal, orientação e limites de segurança claros. Um início calmo para acalmar o sistema nervoso." },
       { time: "10:15", duration: "15 min", title: "Quebra-gelo e Intenções", description: "Apresentações breves e uma pergunta simples de ancoragem. Leve, caloroso e fácil — conforto grupal imediato." },
       { time: "10:30", duration: "15 min", title: "Respiração + Movimento Suave", description: "Ativação vagal, suporte de microcirculação e ancoragem antes da sauna. Movimento coerente, não yoga ou práticas ritualísticas." },
-      { time: "10:45", duration: "30 min", title: "Palestra sobre Microbioma e Ritmo", description: "Explicação clara de ritmos metabólicos, fluxo digestivo + baço, equilíbrio do microbioma e por que o calor e a natureza restauram a coerência." },
+      { time: "10:45", duration: "30 min", title: "Palestra sobre Microbioma e Ritmo", description: "Explicação clara de ritmos metabólicos, fluxo digestivo + baço, equilíbrio do microbioma e por que o calor e a natureza contribuem para a coerência." },
       { time: "11:15", duration: "40 min", title: "Sessão de Biometria", description: "Escaneamento corporal privado Human Pod incluindo composição corporal, hidratação, gordura visceral, indicadores metabólicos e interpretação do ritmo." },
       { time: "12:00", duration: "90 min", title: "Protocolo de Desintoxicação em Sauna", description: "Ciclos guiados de sauna, exposição ao frio opcional, mistura de esfoliação e hidratação mineral. Ativação metabólica e circulatória completa." },
       { time: "13:30", duration: "10 min", title: "Resfriamento + Hidratação", description: "Hidratação leve, fruta ou chá herbal refrescante." },
@@ -133,9 +136,9 @@ const EarthRhythmRetreat = () => {
   };
 
   const takeHome = {
-    en: ["Biometric report", "One personalized rhythm recommendation", "Heat detox protocol", "Breathwork sequence", "Digestive and hydration guidance", "Restored clarity and energy", "Priority access to 3/6/9-month QRN mentoring"],
-    es: ["Informe biométrico", "Una recomendación de ritmo personalizada", "Protocolo de desintoxicación por calor", "Secuencia de respiración", "Guía digestiva y de hidratación", "Claridad y energía restauradas", "Acceso prioritario a mentoría QRN de 3/6/9 meses"],
-    pt: ["Relatório biométrico", "Uma recomendação de ritmo personalizada", "Protocolo de desintoxicação por calor", "Sequência de respiração", "Orientação digestiva e de hidratação", "Clareza e energia restauradas", "Acesso prioritário à mentoria QRN de 3/6/9 meses"]
+    en: ["Biometric report", "One personalized rhythm recommendation", "Heat detox protocol", "Breathwork sequence", "Digestive and hydration guidance", "Enhanced clarity and energy", "Priority access to 3/6/9-month QRN mentoring"],
+    es: ["Informe biométrico", "Una recomendación de ritmo personalizada", "Protocolo de desintoxicación por calor", "Secuencia de respiración", "Guía digestiva y de hidratación", "Claridad y energía mejoradas", "Acceso prioritario a mentoría QRN de 3/6/9 meses"],
+    pt: ["Relatório biométrico", "Uma recomendação de ritmo personalizada", "Protocolo de desintoxicação por calor", "Sequência de respiração", "Orientação digestiva e de hidratação", "Clareza e energia aprimoradas", "Acesso prioritário à mentoria QRN de 3/6/9 meses"]
   };
 
   const currentDates = retreatDates[language] || retreatDates.en;
@@ -220,6 +223,49 @@ const EarthRhythmRetreat = () => {
             >
               {t('retreat.book')}
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Nature & Food Images */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+                <img 
+                  src={natureRetreat} 
+                  alt="Nature wellness path" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
+                  {language === 'es' ? 'Conexión con la Naturaleza' : language === 'pt' ? 'Conexão com a Natureza' : 'Nature Connection'}
+                </span>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+                <img 
+                  src={wholesomeFood} 
+                  alt="Wholesome organic food" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
+                  {language === 'es' ? 'Nutrición Integral' : language === 'pt' ? 'Nutrição Integral' : 'Wholesome Nutrition'}
+                </span>
+              </div>
+              <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+                <img 
+                  src={nourishingBowl} 
+                  alt="Nourishing meal" 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
+                  {language === 'es' ? 'Alimentación Armoniosa' : language === 'pt' ? 'Alimentação Harmoniosa' : 'Harmonious Eating'}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

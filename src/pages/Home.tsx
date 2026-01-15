@@ -7,6 +7,7 @@ import fruitTreesImage from "@/assets/fruit-trees.jpg";
 import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import GoogleReviews from "@/components/GoogleReviews";
 
 const Home = () => {
   const { t } = useLanguage();
@@ -158,7 +159,7 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
                 <p className="font-serif text-lg text-foreground/90 leading-relaxed italic">
-                  &ldquo;Quantum Rhythm Nutrition is not a diet. It is a timing-based system that supports the restoration of energy, digestion, and clarity by aligning your biology with natural cycles.&rdquo;
+                  &ldquo;Quantum Rhythm Nutrition is not a diet. It is a timing-based system that contributes to energy, digestion, and clarity by aligning your biology with natural cycles.&rdquo;
                 </p>
               </div>
               
@@ -209,6 +210,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews Section */}
+      <GoogleReviews />
 
 
       {/* CTA Section */}

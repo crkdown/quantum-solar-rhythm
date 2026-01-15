@@ -20,6 +20,7 @@ const Navigation = () => {
     { path: "/about", label: t('nav.about') },
     { path: "/method", label: t('nav.method') },
     { path: "/programs", label: t('nav.programs') },
+    { path: "/masterclasses", label: t('nav.masterclass') },
     { path: "/earth-rhythm-retreat", label: t('nav.retreat') },
     { path: "/shop", label: t('nav.shop') },
     { path: "/blog", label: t('nav.blog') },
@@ -29,9 +30,6 @@ const Navigation = () => {
   const toolsLinks = [
     { path: "/rhythm-calculator", label: t('nav.rhythmCalc') },
     { path: "/food-rhythm-tool", label: t('nav.foodRhythm') },
-  ];
-
-  const resourcesLinks = [
     { path: "/resources", label: t('nav.resources') },
   ];
 
@@ -83,22 +81,7 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Resources link (merged with Masterclass) */}
-            {resourcesLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-sans text-xs tracking-wide transition-colors ${
-                  isActive(link.path)
-                    ? "text-primary font-medium"
-                    : "text-foreground/70 hover:text-primary"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-
-            {mainLinks.slice(4).map((link) => (
+            {mainLinks.slice(5).map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
@@ -162,20 +145,6 @@ const Navigation = () => {
                   </Link>
                 ))}
               </div>
-              {resourcesLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`font-sans text-sm tracking-wide transition-colors ${
-                    isActive(link.path)
-                      ? "text-primary font-medium"
-                      : "text-foreground/70 hover:text-primary"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
             </div>
           </div>
         )}
