@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import wholesomeFood from "@/assets/wholesome-food.jpg";
+import natureRetreat from "@/assets/nature-retreat.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Programs = () => {
@@ -15,7 +17,7 @@ const Programs = () => {
         duration: "3-Month",
         title: "Rhythm Reset",
         price: "€900",
-        description: "Stabilize body rhythms, restore energy, and simplify nourishment through circadian alignment.",
+        description: "Stabilize body rhythms, contribute to energy, and simplify nourishment through circadian alignment.",
         features: [
           "Rhythm calendar & circadian alignment",
           "Gut reset protocol",
@@ -64,7 +66,7 @@ const Programs = () => {
         duration: "3 Meses",
         title: "Reset de Ritmo",
         price: "€900",
-        description: "Estabiliza los ritmos corporales, restaura la energía y simplifica la nutrición a través de la alineación circadiana.",
+        description: "Estabiliza los ritmos corporales, contribuye a la energía y simplifica la nutrición a través de la alineación circadiana.",
         features: [
           "Calendario de ritmo y alineación circadiana",
           "Protocolo de reset intestinal",
@@ -113,7 +115,7 @@ const Programs = () => {
         duration: "3 Meses",
         title: "Reset de Ritmo",
         price: "€900",
-        description: "Estabilize os ritmos corporais, restaure a energia e simplifique a nutrição através do alinhamento circadiano.",
+        description: "Estabilize os ritmos corporais, contribua para a energia e simplifique a nutrição através do alinhamento circadiano.",
         features: [
           "Calendário de ritmo e alinhamento circadiano",
           "Protocolo de reset intestinal",
@@ -265,6 +267,32 @@ const Programs = () => {
             <span>🇪🇸</span>
             <span>🇵🇹</span>
             <span className="ml-1">{t('programs.available')}</span>
+          </div>
+        </div>
+
+        {/* Nature & Food Images */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
+          <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+            <img 
+              src={wholesomeFood} 
+              alt="Wholesome organic food" 
+              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
+              {language === 'es' ? 'Nutrición Consciente' : language === 'pt' ? 'Nutrição Consciente' : 'Mindful Nourishment'}
+            </span>
+          </div>
+          <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+            <img 
+              src={natureRetreat} 
+              alt="Nature wellness retreat" 
+              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
+              {language === 'es' ? 'Ritmo Natural' : language === 'pt' ? 'Ritmo Natural' : 'Natural Rhythm'}
+            </span>
           </div>
         </div>
 
