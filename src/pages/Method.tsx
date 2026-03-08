@@ -43,7 +43,7 @@ const Method = () => {
 
         {/* Nature Images */}
         <div className="max-w-5xl mx-auto mb-20">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
               <img 
                 src={herbalRhythm} 
@@ -57,6 +57,15 @@ const Method = () => {
               <img 
                 src={grainsSeeds} 
                 alt="Whole grains and seeds" 
+                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">Living Rhythm with Nature</span>
+            </div>
+            <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
+              <img 
+                src={methodDiagram} 
+                alt="Embracing Simplicity" 
                 className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
