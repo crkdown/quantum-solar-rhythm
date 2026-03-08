@@ -210,7 +210,7 @@ const Programs = () => {
       resourcesTitle: "Educational Resources",
       resourcesDesc: "Deep learning materials included with every program",
       retreatTitle: "2026 Retreat Access",
-      retreatDesc: "Join our Earth Rhythm Retreats running April to October 2026 in Northern Portugal",
+      retreatDesc: "Join our Earth Rhythm Retreats running April to October 2026 in the Algarve, Portugal",
       retreatCta: "Learn About Retreats"
     },
     es: {
