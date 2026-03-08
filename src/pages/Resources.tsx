@@ -2,8 +2,9 @@ import { Circle, Download, Calendar, FileText, Sun, BookOpen, Users, MessageCirc
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
-import herbalRhythm from "@/assets/herbal-rhythm.jpg";
-import grainsSeeds from "@/assets/grains-seeds.jpg";
+import toolRhythmCycles from "@/assets/tool-rhythm-cycles.png";
+import toolBodyAwareness from "@/assets/tool-body-awareness.png";
+import toolNourishingRhythm from "@/assets/tool-nourishing-rhythm.png";
 
 const Resources = () => {
   const resources = [
@@ -107,26 +108,20 @@ const Resources = () => {
           </p>
         </div>
 
-        {/* Tool Area Images */}
+        {/* Tool Area Illustrations */}
         <div className="max-w-5xl mx-auto mb-16">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
-              <img 
-                src={herbalRhythm} 
-                alt="Herbal tea and natural healing" 
-                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">Natural Rhythms</span>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-card rounded-xl border border-border p-4 text-center shadow-subtle-glow hover:shadow-quantum transition-all">
+              <img src={toolRhythmCycles} alt="Circadian rhythm and inner cycles" className="w-full h-48 object-contain mb-3" />
+              <p className="font-sans text-sm text-foreground/70 font-medium">Rhythm & Inner Cycles</p>
             </div>
-            <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
-              <img 
-                src={grainsSeeds} 
-                alt="Whole grains and seeds for rhythmic nutrition" 
-                className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">Wholesome Nourishment</span>
+            <div className="bg-card rounded-xl border border-border p-4 text-center shadow-subtle-glow hover:shadow-quantum transition-all">
+              <img src={toolBodyAwareness} alt="Body awareness and spleen health" className="w-full h-48 object-contain mb-3" />
+              <p className="font-sans text-sm text-foreground/70 font-medium">Body Awareness</p>
+            </div>
+            <div className="bg-card rounded-xl border border-border p-4 text-center shadow-subtle-glow hover:shadow-quantum transition-all">
+              <img src={toolNourishingRhythm} alt="Nourishing rhythm and wholesome eating" className="w-full h-48 object-contain mb-3" />
+              <p className="font-sans text-sm text-foreground/70 font-medium">Nourishing Rhythm</p>
             </div>
           </div>
         </div>
