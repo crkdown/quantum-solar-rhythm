@@ -4,7 +4,24 @@ import paulaPhoto from "@/assets/paula-photo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const aboutTexts = {
+    en: {
+      paulaIntro: "I don't put you on another diet. I guide you into a new rhythm.",
+      paulaDesc: "We start by calming your spleen and nervous system so your body feels safe. Then we introduce slow, sustainable changes that grow from consciousness, care and love for your body – not from fear and control.",
+    },
+    es: {
+      paulaIntro: "No te pongo otra dieta. Te guío hacia un nuevo ritmo.",
+      paulaDesc: "Comenzamos calmando tu bazo y sistema nervioso para que tu cuerpo se sienta seguro. Luego introducimos cambios lentos y sostenibles que crecen desde la conciencia, el cuidado y el amor por tu cuerpo – no desde el miedo y el control.",
+    },
+    pt: {
+      paulaIntro: "Eu não te coloco em outra dieta. Eu te guio para um novo ritmo.",
+      paulaDesc: "Começamos acalmando seu baço e sistema nervoso para que seu corpo se sinta seguro. Então introduzimos mudanças lentas e sustentáveis que crescem da consciência, cuidado e amor pelo seu corpo – não do medo e controle.",
+    }
+  };
+
+  const currentAbout = aboutTexts[language] || aboutTexts.en;
 
   const values = [
     { key: 'rhythm', title: t('about.value.rhythm'), desc: t('about.value.rhythm.desc') },
@@ -47,8 +64,11 @@ const About = () => {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="font-serif text-3xl font-bold text-primary mb-4">Paula Suescun</h2>
-                  <p className="font-sans text-lg text-foreground/80 leading-relaxed mb-4">
-                    <span className="font-semibold text-primary">Solaris Nutri</span> {t('about.intro1')} <span className="text-accent font-medium">Quantum Rhythm Nutrition™</span> {t('about.intro2')}
+                  <p className="font-serif text-xl text-accent italic mb-4">
+                    &ldquo;{currentAbout.paulaIntro}&rdquo;
+                  </p>
+                  <p className="font-sans text-foreground/80 leading-relaxed mb-4">
+                    {currentAbout.paulaDesc}
                   </p>
                   <p className="font-sans text-foreground/70 leading-relaxed">
                     {t('about.story1')}
@@ -74,22 +94,12 @@ const About = () => {
                 {t('about.approach')}
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.approach1')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.approach2')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.approach3')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.approach4')}</span>
-                </li>
+                {['about.approach1', 'about.approach2', 'about.approach3', 'about.approach4'].map((key) => (
+                  <li key={key} className="flex items-start gap-2">
+                    <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
+                    <span>{t(key)}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -98,22 +108,12 @@ const About = () => {
                 {t('about.credentials')}
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.cred1')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.cred2')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.cred3')}</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                  <span>{t('about.cred4')}</span>
-                </li>
+                {['about.cred1', 'about.cred2', 'about.cred3', 'about.cred4'].map((key) => (
+                  <li key={key} className="flex items-start gap-2">
+                    <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
+                    <span>{t(key)}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

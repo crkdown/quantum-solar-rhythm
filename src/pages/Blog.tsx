@@ -14,6 +14,13 @@ const Blog = () => {
       readTime: "8 min read"
     },
     {
+      title: "The Spleen in Rhythm-Based Nutrition: Your Body's Quiet Engine",
+      excerpt: "Explore the spleen's crucial role in blood filtration, immune regulation, and digestive rhythm — and why calming the spleen is the first step to real change.",
+      date: "March 10, 2024",
+      category: "Spleen Health",
+      readTime: "9 min read"
+    },
+    {
       title: "The Lunar Cycle and Your Metabolic Rhythms",
       excerpt: "Explore the fascinating connection between lunar phases and your body's metabolic patterns, energy levels, and nutritional needs.",
       date: "March 8, 2024",
@@ -21,11 +28,25 @@ const Blog = () => {
       readTime: "10 min read"
     },
     {
+      title: "Vagus Nerve, Spleen, and the Anti-Inflammatory Reflex",
+      excerpt: "How the vagus nerve communicates with the spleen to regulate inflammation, and why breathwork can calm your entire digestive system.",
+      date: "March 5, 2024",
+      category: "Spleen & Nervous System",
+      readTime: "11 min read"
+    },
+    {
       title: "Rudolf Steiner's Agriculture Course: The Foundation of Biodynamic Nutrition",
       excerpt: "Explore the revolutionary lectures from 1924 that birthed biodynamic agriculture and understand how cosmic rhythms influence the vitality of our food.",
       date: "March 1, 2024",
       category: "Steiner Studies",
       readTime: "12 min read"
+    },
+    {
+      title: "The Spleen in Traditional Chinese Medicine: Transformation and Transport",
+      excerpt: "Understanding the spleen's energetic role in TCM — how it transforms food into qi and why spleen deficiency leads to bloating, fatigue, and cravings.",
+      date: "February 28, 2024",
+      category: "Integrative Spleen Health",
+      readTime: "10 min read"
     },
     {
       title: "Nutrition According to Rudolf Steiner: Food as Spiritual Substance",
@@ -40,6 +61,13 @@ const Blog = () => {
       date: "February 18, 2024",
       category: "Integrative Health",
       readTime: "11 min read"
+    },
+    {
+      title: "Iron Metabolism, the Spleen, and Rhythmic Blood Renewal",
+      excerpt: "How the spleen recycles red blood cells, regulates iron stores, and supports the body's natural rhythm of blood renewal — a process tied to circadian timing.",
+      date: "February 15, 2024",
+      category: "Spleen & Blood Health",
+      readTime: "8 min read"
     },
     {
       title: "Man as Symphony of the Creative Word: The Human Being and Cosmic Nutrition",
@@ -90,11 +118,11 @@ const Blog = () => {
             <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
             Journal
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#4D7D7D] mb-6">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
             Rhythmic Reflections
           </h1>
           <p className="font-sans text-xl text-foreground/80 leading-relaxed">
-            Insights on rhythm, planetary cycles, and the path back to natural alignment.
+            Insights on rhythm, planetary cycles, spleen health, and the path back to natural alignment.
           </p>
         </div>
 
@@ -143,7 +171,7 @@ const Blog = () => {
 
         {/* Newsletter Signup */}
         <div className="max-w-4xl mx-auto mt-20 bg-muted/30 p-12 rounded-lg border border-border text-center animate-fade-in">
-          <h2 className="font-serif text-3xl font-bold text-[#4D7D7D] mb-4">
+          <h2 className="font-serif text-3xl font-bold text-primary mb-4">
             Never Miss a Reflection
           </h2>
           <p className="font-sans text-foreground/80 mb-8">
