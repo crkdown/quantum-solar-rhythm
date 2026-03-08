@@ -14,7 +14,7 @@ const EarthRhythmRetreat = () => {
   // Monthly retreat dates from April to October 2026
   const retreatDates = {
     en: [
-      { month: "April", date: "April 11, 2026", available: true },
+      { month: "April", date: "April 11, 2026", available: false },
       { month: "May", date: "May 16, 2026", available: true },
       { month: "June", date: "June 13, 2026", available: true },
       { month: "July", date: "July 18, 2026", available: true },
@@ -23,7 +23,7 @@ const EarthRhythmRetreat = () => {
       { month: "October", date: "October 10, 2026", available: true }
     ],
     es: [
-      { month: "Abril", date: "11 de Abril, 2026", available: true },
+      { month: "Abril", date: "11 de Abril, 2026", available: false },
       { month: "Mayo", date: "16 de Mayo, 2026", available: true },
       { month: "Junio", date: "13 de Junio, 2026", available: true },
       { month: "Julio", date: "18 de Julio, 2026", available: true },
@@ -32,7 +32,7 @@ const EarthRhythmRetreat = () => {
       { month: "Octubre", date: "10 de Octubre, 2026", available: true }
     ],
     pt: [
-      { month: "Abril", date: "11 de Abril, 2026", available: true },
+      { month: "Abril", date: "11 de Abril, 2026", available: false },
       { month: "Maio", date: "16 de Maio, 2026", available: true },
       { month: "Junho", date: "13 de Junho, 2026", available: true },
       { month: "Julho", date: "18 de Julho, 2026", available: true },
@@ -287,7 +287,7 @@ const EarthRhythmRetreat = () => {
             </div>
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {currentDates.map((date, index) => (
-                <Card key={index} className="border-border hover:border-accent/50 transition-all text-center">
+                <Card key={index} className={`border-border transition-all text-center ${date.available ? 'hover:border-accent/50' : 'opacity-75'}`}>
                   <CardHeader className="pb-2">
                     <CardTitle className="font-serif text-xl text-primary">
                       {date.month}
@@ -297,15 +297,23 @@ const EarthRhythmRetreat = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-xs text-accent font-sans mb-3">{currentTexts.spotsAvailable}</p>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="w-full font-sans text-xs"
-                      onClick={() => window.location.href = '/contact'}
-                    >
-                      {currentTexts.bookDate}
-                    </Button>
+                    {date.available ? (
+                      <>
+                        <p className="text-xs text-accent font-sans mb-3">{currentTexts.spotsAvailable}</p>
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="w-full font-sans text-xs"
+                          onClick={() => window.location.href = '/contact'}
+                        >
+                          {currentTexts.bookDate}
+                        </Button>
+                      </>
+                    ) : (
+                      <p className="text-xs font-sans font-semibold text-destructive bg-destructive/10 py-2 rounded-md">
+                        {language === 'es' ? 'Completo' : language === 'pt' ? 'Esgotado' : 'Fully Booked'}
+                      </p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
