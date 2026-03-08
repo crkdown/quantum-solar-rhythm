@@ -2,8 +2,9 @@ import { Circle, Download, Calendar, FileText, Sun, BookOpen, Users, MessageCirc
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
-import herbalRhythm from "@/assets/herbal-rhythm.jpg";
-import grainsSeeds from "@/assets/grains-seeds.jpg";
+import toolRhythmCycles from "@/assets/tool-rhythm-cycles.png";
+import toolBodyAwareness from "@/assets/tool-body-awareness.png";
+import toolNourishingRhythm from "@/assets/tool-nourishing-rhythm.png";
 
 const Resources = () => {
   const resources = [
