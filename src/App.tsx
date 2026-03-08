@@ -19,6 +19,8 @@ import FoodRhythmTool from "./pages/FoodRhythmTool";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import LandingMasterclass from "./pages/LandingMasterclass";
+import LandingProgram from "./pages/LandingProgram";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +47,8 @@ const App = () => (
                 <Route path="/earth-rhythm-retreat" element={<EarthRhythmRetreat />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/landing/masterclass" element={<LandingMasterclass />} />
+                <Route path="/landing/program" element={<LandingProgram />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>

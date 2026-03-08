@@ -163,20 +163,14 @@ const Programs = () => {
 
   const progressTools = {
     en: [
-      { name: "Rhythm Journal", progress: 85, desc: "Daily tracking of energy, meals & sleep patterns" },
-      { name: "Circadian Dashboard", progress: 70, desc: "Visual timeline of your body's natural cycles" },
       { name: "Microbiome Tracker", progress: 60, desc: "Monitor digestive health & gut balance" },
       { name: "Energy Mapping", progress: 90, desc: "Identify peak performance windows" }
     ],
     es: [
-      { name: "Diario de Ritmo", progress: 85, desc: "Seguimiento diario de energía, comidas y patrones de sueño" },
-      { name: "Panel Circadiano", progress: 70, desc: "Línea de tiempo visual de los ciclos naturales de tu cuerpo" },
       { name: "Rastreador de Microbioma", progress: 60, desc: "Monitorea la salud digestiva y el equilibrio intestinal" },
       { name: "Mapeo de Energía", progress: 90, desc: "Identifica ventanas de rendimiento máximo" }
     ],
     pt: [
-      { name: "Diário de Ritmo", progress: 85, desc: "Acompanhamento diário de energia, refeições e padrões de sono" },
-      { name: "Painel Circadiano", progress: 70, desc: "Linha do tempo visual dos ciclos naturais do seu corpo" },
       { name: "Rastreador de Microbioma", progress: 60, desc: "Monitore a saúde digestiva e o equilíbrio intestinal" },
       { name: "Mapeamento de Energia", progress: 90, desc: "Identifique janelas de desempenho máximo" }
     ]
