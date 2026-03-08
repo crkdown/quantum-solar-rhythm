@@ -1,4 +1,4 @@
-import { Circle, Mail, Calendar } from "lucide-react";
+import { Circle, Mail, Calendar, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
