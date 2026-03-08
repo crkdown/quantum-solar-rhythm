@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import digestiveRhythm from "@/assets/tool-digestive-rhythm.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 type Answer = {
