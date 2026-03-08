@@ -602,7 +602,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.intro1': 'é uma empresa de bem-estar vanguardista liderada por Paula Carolina Suescun, nutricionista, coach de saúde holística e criadora do método',
     'about.intro2': '.',
     'about.story1': 'O método foca em restaurar o alinhamento biológico através de ritmos circadianos, lunares, sazonais e digestivos. Integrando fisiologia, cronobiologia, ciência do microbioma, Medicina Chinesa, biodinâmica e princípios esotéricos, Solaris Nutri oferece uma abordagem multidimensional única da nutrição que reconecta indivíduos com seus ciclos naturais.',
-    'about.story2': 'A missão de Paula é capacitar as pessoas a recuperar clareza, energia e equilíbrio metabólico ao entender seu corpo como um sistema rítmico influenciado por forças naturais. Seu trabalho une ciência e conhecimento intuitivo, guiando clientes rumo ao bem-estar sustentável e uma coerência mais profunda com o mundo vivo.',
+    'about.story2': 'A missão de Paula é capacitar as pessoas a recuperar clareza, alinhamento e equilíbrio metabólico ao compreender o sistema rítmico do seu corpo. Seu trabalho une ciência, Antroposofia e até Teosofia, guiando buscadores de saúde rumo ao bem-estar sustentável e uma coerência mais profunda com o mundo vivo.',
     'about.approach': 'Minha Abordagem',
     'about.approach1': 'Alinhamento sobre restrição — inteligência rítmica como fundamento',
     'about.approach2': 'Integração de cronobiologia, biologia quântica e ritmos planetários',
