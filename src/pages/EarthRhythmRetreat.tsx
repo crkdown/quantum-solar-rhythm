@@ -287,7 +287,7 @@ const EarthRhythmRetreat = () => {
             </div>
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {currentDates.map((date, index) => (
-                <Card key={index} className="border-border hover:border-accent/50 transition-all text-center">
+                <Card key={index} className={`border-border transition-all text-center ${date.available ? 'hover:border-accent/50' : 'opacity-75'}`}>
                   <CardHeader className="pb-2">
                     <CardTitle className="font-serif text-xl text-primary">
                       {date.month}
@@ -297,15 +297,23 @@ const EarthRhythmRetreat = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-xs text-accent font-sans mb-3">{currentTexts.spotsAvailable}</p>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
-                      className="w-full font-sans text-xs"
-                      onClick={() => window.location.href = '/contact'}
-                    >
-                      {currentTexts.bookDate}
-                    </Button>
+                    {date.available ? (
+                      <>
+                        <p className="text-xs text-accent font-sans mb-3">{currentTexts.spotsAvailable}</p>
+                        <Button 
+                          size="sm" 
+                          variant="outline" 
+                          className="w-full font-sans text-xs"
+                          onClick={() => window.location.href = '/contact'}
+                        >
+                          {currentTexts.bookDate}
+                        </Button>
+                      </>
+                    ) : (
+                      <p className="text-xs font-sans font-semibold text-destructive bg-destructive/10 py-2 rounded-md">
+                        {language === 'es' ? 'Completo' : language === 'pt' ? 'Esgotado' : 'Fully Booked'}
+                      </p>
+                    )}
                   </CardContent>
                 </Card>
               ))}
