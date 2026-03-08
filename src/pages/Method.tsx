@@ -30,14 +30,15 @@ const Method = () => {
           </p>
         </div>
 
-        {/* New Simpler Method Diagram */}
-        <div className="max-w-2xl mx-auto mb-16 animate-fade-in-up">
-          <div className="bg-card p-6 rounded-xl border border-border shadow-subtle-glow">
-            <img 
-              src={methodDiagram} 
-              alt="Body Awareness · Living Rhythm with Nature · Embracing Simplicity" 
-              className="w-full h-auto rounded-lg"
-            />
+        {/* Three Pillars - Subtle */}
+        <div className="max-w-3xl mx-auto mb-16 animate-fade-in-up">
+          <div className="grid grid-cols-3 gap-4 text-center">
+            {['Body Awareness', 'Living Rhythm with Nature', 'Embracing Simplicity'].map((pillar) => (
+              <div key={pillar} className="bg-accent/5 p-5 rounded-lg border border-accent/20">
+                <Circle size={10} fill="currentColor" className="text-accent mx-auto mb-2" />
+                <p className="font-serif text-sm font-medium text-primary">{pillar}</p>
+              </div>
+            ))}
           </div>
         </div>
 
