@@ -23,7 +23,7 @@ const EarthRhythmRetreat = () => {
       { month: "October", date: "October 10, 2026", available: true }
     ],
     es: [
-      { month: "Abril", date: "11 de Abril, 2026", available: true },
+      { month: "Abril", date: "11 de Abril, 2026", available: false },
       { month: "Mayo", date: "16 de Mayo, 2026", available: true },
       { month: "Junio", date: "13 de Junio, 2026", available: true },
       { month: "Julio", date: "18 de Julio, 2026", available: true },
