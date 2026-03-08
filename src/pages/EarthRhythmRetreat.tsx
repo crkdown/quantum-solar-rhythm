@@ -14,7 +14,7 @@ const EarthRhythmRetreat = () => {
   // Monthly retreat dates from April to October 2026
   const retreatDates = {
     en: [
-      { month: "April", date: "April 11, 2026", available: true },
+      { month: "April", date: "April 11, 2026", available: false },
       { month: "May", date: "May 16, 2026", available: true },
       { month: "June", date: "June 13, 2026", available: true },
       { month: "July", date: "July 18, 2026", available: true },
