@@ -55,7 +55,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.intro1': 'is a forward-thinking wellness company led by Paula Carolina Suescun, a nutritionist, holistic health coach, and creator of the',
     'about.intro2': 'method.',
     'about.story1': 'The method focuses on restoring biological alignment through circadian, lunar, seasonal, and digestive rhythms. Integrating physiology, chronobiology, microbiome science, Chinese Medicine, biodynamics, and esoteric principles, Solaris Nutri offers a unique multidimensional approach to nutrition that reconnects individuals with their natural cycles.',
-    'about.story2': "Paula's mission is to empower people to regain clarity, energy, and metabolic balance by understanding their body as a rhythmic system influenced by natural forces. Her work bridges science and intuitive knowledge, guiding clients toward sustainable wellbeing and deeper coherence with the living world.",
+    'about.story2': "Paula's mission is to empower people to regain clarity, alignment, and metabolic balance by understanding their body's rhythmic system. Her work bridges science, Anthroposophy, and even Theosophy, guiding health seekers toward sustainable wellbeing and deeper coherence with the living world.",
     'about.approach': 'My Approach',
     'about.approach1': 'Alignment over restriction — rhythm intelligence as foundation',
     'about.approach2': 'Integration of chronobiology, quantum biology, and planetary rhythms',
