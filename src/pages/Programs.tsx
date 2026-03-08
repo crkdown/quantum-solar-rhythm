@@ -219,7 +219,7 @@ const Programs = () => {
       resourcesTitle: "Recursos Educativos",
       resourcesDesc: "Materiales de aprendizaje profundo incluidos con cada programa",
       retreatTitle: "Acceso a Retiros 2026",
-      retreatDesc: "Únete a nuestros Retiros Earth Rhythm de abril a octubre 2026 en el norte de Portugal",
+      retreatDesc: "Únete a nuestros Retiros Earth Rhythm de abril a octubre 2026 en el Algarve, Portugal",
       retreatCta: "Conocer los Retiros"
     },
     pt: {
