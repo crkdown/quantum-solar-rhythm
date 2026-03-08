@@ -1,4 +1,4 @@
-import { Circle, Calendar, Clock, Video, CheckCircle, Users, AlertCircle } from "lucide-react";
+import { Circle, Calendar, Clock, Video, CheckCircle, Users, AlertCircle, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
@@ -10,7 +10,7 @@ const Masterclasses = () => {
 
   const texts = {
     en: {
-      badge: "LIVE ONLINE MASTERCLASS",
+      badge: "FREE LIVE ONLINE MASTERCLASS",
       title: "Alignment with Your Internal Clock",
       subtitle: "Digestive health, nutrition, and rhythm — explained simply",
       tagline: "\"I eat well, but I feel bad\"",
@@ -36,17 +36,18 @@ const Masterclasses = () => {
       whyDifferent: "Why this masterclass is different",
       whyDifferentText: "You won't be given long supplement lists or rigid plans. You'll gain clarity, awareness, and a rhythm-based foundation you can build on.",
       bridgeText: "This masterclass is the first step into a deeper program and digital resources designed to support long-term coherence and digestive health.",
-      date: "February 14",
+      date: "April 25, 2026",
       time: "10:30 a.m. (Colombia)",
       format: "Live on Zoom | Recording included",
       registerBtn: "Reserve your place here",
-      limitedSpaces: "Limited spaces available",
+      limitedSpaces: "Limited spaces available — FREE masterclass",
       instructor: "Paula Suescun",
       instructorRole: "Nutritionist-Dietitian – National University of Colombia",
-      instructorDesc: "Health Coach · Founder of Solaris Nutri · Creator of the Quantum Rhythm Nutrition (QRN) framework"
+      instructorDesc: "Health Coach · Founder of Solaris Nutri · Creator of the Quantum Rhythm Nutrition (QRN) framework",
+      whatsappCta: "Join our WhatsApp community",
     },
     es: {
-      badge: "MASTERCLASS ONLINE EN VIVO",
+      badge: "MASTERCLASS ONLINE EN VIVO — GRATUITA",
       title: "Alineación con tu Reloj Interno",
       subtitle: "Salud digestiva, nutrición y ritmo — explicados de forma simple",
       tagline: "\"Como bien, pero me siento mal\"",
@@ -72,17 +73,18 @@ const Masterclasses = () => {
       whyDifferent: "Por qué esta masterclass es diferente",
       whyDifferentText: "No recibirás largas listas de suplementos ni planes rígidos. Obtendrás claridad, consciencia y una base rítmica sobre la cual construir.",
       bridgeText: "Esta masterclass es el primer paso hacia un programa más profundo y recursos digitales diseñados para apoyar la coherencia digestiva y la salud a largo plazo.",
-      date: "14 de febrero",
+      date: "25 de abril, 2026",
       time: "10:30 a. m. (Colombia)",
       format: "En vivo por Zoom | Grabación incluida",
       registerBtn: "Reserva tu lugar aquí",
-      limitedSpaces: "Cupos limitados",
+      limitedSpaces: "Cupos limitados — Masterclass GRATUITA",
       instructor: "Paula Suescun",
       instructorRole: "Nutricionista-Dietista – Universidad Nacional de Colombia",
-      instructorDesc: "Health Coach · Fundadora de Solaris Nutri · Creadora del framework Quantum Rhythm Nutrition (QRN)"
+      instructorDesc: "Health Coach · Fundadora de Solaris Nutri · Creadora del framework Quantum Rhythm Nutrition (QRN)",
+      whatsappCta: "Únete a nuestra comunidad de WhatsApp",
     },
     pt: {
-      badge: "MASTERCLASS ONLINE AO VIVO",
+      badge: "MASTERCLASS ONLINE AO VIVO — GRATUITA",
       title: "Alinhamento com seu Relógio Interno",
       subtitle: "Saúde digestiva, nutrição e ritmo — explicados de forma simples",
       tagline: "\"Como bem, mas me sinto mal\"",
@@ -108,14 +110,15 @@ const Masterclasses = () => {
       whyDifferent: "Por que esta masterclass é diferente",
       whyDifferentText: "Você não receberá longas listas de suplementos ou planos rígidos. Você ganhará clareza, consciência e uma base rítmica sobre a qual construir.",
       bridgeText: "Esta masterclass é o primeiro passo para um programa mais profundo e recursos digitais projetados para apoiar a coerência digestiva e a saúde a longo prazo.",
-      date: "14 de fevereiro",
+      date: "25 de abril, 2026",
       time: "10:30 a.m. (Colômbia)",
       format: "Ao vivo via Zoom | Gravação incluída",
       registerBtn: "Reserve seu lugar aqui",
-      limitedSpaces: "Vagas limitadas",
+      limitedSpaces: "Vagas limitadas — Masterclass GRATUITA",
       instructor: "Paula Suescun",
       instructorRole: "Nutricionista-Dietista – Universidade Nacional da Colômbia",
-      instructorDesc: "Health Coach · Fundadora da Solaris Nutri · Criadora do framework Quantum Rhythm Nutrition (QRN)"
+      instructorDesc: "Health Coach · Fundadora da Solaris Nutri · Criadora do framework Quantum Rhythm Nutrition (QRN)",
+      whatsappCta: "Junte-se à nossa comunidade WhatsApp",
     }
   };
 
@@ -133,7 +136,7 @@ const Masterclasses = () => {
               className="h-20 w-20 logo-circle object-cover"
             />
           </div>
-          <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-sans font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-sans font-medium mb-6">
             <Video size={16} />
             {currentTexts.badge}
           </div>
@@ -259,18 +262,35 @@ const Masterclasses = () => {
               </div>
             </CardContent>
 
-            <CardFooter className="flex justify-center pb-10 pt-6">
+            <CardFooter className="flex flex-col gap-4 pb-10 pt-6 px-6 md:px-10">
               <a 
                 href="https://forms.gle/masterclass-registro" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full max-w-md"
+                className="w-full max-w-md mx-auto"
               >
                 <Button 
                   size="lg" 
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-medium py-6 text-lg shadow-quantum transition-all hover:scale-105"
                 >
                   👉 {currentTexts.registerBtn}
+                </Button>
+              </a>
+
+              {/* WhatsApp Community Link */}
+              <a 
+                href="https://chat.whatsapp.com/YOUR_GROUP_LINK" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full max-w-md mx-auto"
+              >
+                <Button 
+                  variant="outline"
+                  size="lg" 
+                  className="w-full border-green-500 text-green-700 hover:bg-green-50 font-sans font-medium py-5 text-base transition-all"
+                >
+                  <MessageCircle size={20} className="mr-2" />
+                  {currentTexts.whatsappCta}
                 </Button>
               </a>
             </CardFooter>
