@@ -457,6 +457,21 @@ const RhythmCalculator = () => {
               <p className="font-sans text-xl text-foreground/80 leading-relaxed mb-8">
                 {t('calc.subtitle')}
               </p>
+
+              {/* Digestive Rhythm Illustration */}
+              <div className="max-w-md mx-auto mb-8">
+                <div className="bg-card rounded-xl border border-border p-4 shadow-subtle-glow">
+                  <img 
+                    src={digestiveRhythm} 
+                    alt="Assess your digestive rhythm" 
+                    className="w-full h-auto object-contain"
+                  />
+                  <p className="font-sans text-sm text-foreground/60 mt-2 italic">
+                    {language === 'es' ? 'Evalúa tu ritmo digestivo' : language === 'pt' ? 'Avalie seu ritmo digestivo' : 'Assess your digestive rhythm'}
+                  </p>
+                </div>
+              </div>
+
               <Card className="border-accent/20 bg-accent/5 mb-8">
                 <CardContent className="pt-6">
                   <p className="font-sans font-semibold text-foreground mb-2">{t('calc.instruction')}</p>
