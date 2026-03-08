@@ -1,4 +1,4 @@
-import { Circle, Mail, Calendar } from "lucide-react";
+import { Circle, Mail, Calendar, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -136,6 +136,33 @@ const Contact = () => {
                     <Button variant="outline" className="font-sans">
                       Schedule Call
                     </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Instagram */}
+            <Card className="border-border hover:shadow-quantum transition-all">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-accent/10 p-3 rounded-lg">
+                    <Instagram className="text-accent" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-xl font-semibold text-[#4D7D7D] mb-2">
+                      Follow on Instagram
+                    </h3>
+                    <p className="font-sans text-foreground/70 mb-3">
+                      Daily inspiration, tips & rhythm insights
+                    </p>
+                    <a 
+                      href="https://www.instagram.com/solarisnutri" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-sans text-accent hover:text-accent/80 transition-colors"
+                    >
+                      @solarisnutri
+                    </a>
                   </div>
                 </div>
               </CardContent>
