@@ -2,7 +2,7 @@ import { Circle, Calendar, Clock, Video, CheckCircle, Users, AlertCircle, Messag
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
-import qrnFramework from "@/assets/qrn-framework.png";
+import circadianMasterclass from "@/assets/circadian-masterclass.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Masterclasses = () => {
