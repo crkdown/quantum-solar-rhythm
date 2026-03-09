@@ -78,7 +78,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.value.simplicity': 'Simplicity',
     'about.value.simplicity.desc': 'Restoring balance by removing complexity.',
     'about.value.evolution': 'Conscious Evolution',
-    'about.value.evolution.desc': 'Supporting physical, emotional, and energetic growth.',
+    'about.value.evolution.desc': 'Supporting physical, emotional, and energetic growth through Nutrition.',
     'about.value.integrity': 'Natural Integrity',
     'about.value.integrity.desc': 'Choosing minimally industrialised foods that sustain vitality and ecological balance.',
 
