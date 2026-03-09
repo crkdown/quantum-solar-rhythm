@@ -2,7 +2,7 @@ import { Circle, Calendar, Clock, Video, CheckCircle, Users, AlertCircle, Messag
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
-import qrnFramework from "@/assets/qrn-framework.png";
+import circadianMasterclass from "@/assets/circadian-masterclass.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Masterclasses = () => {
@@ -209,11 +209,11 @@ const Masterclasses = () => {
                 </div>
               </div>
 
-              {/* QRN Framework Image */}
+              {/* Circadian Rhythm Image */}
               <div className="flex justify-center py-6">
                 <img 
-                  src={qrnFramework} 
-                  alt="Quantum Rhythm Nutrition Framework" 
+                  src={circadianMasterclass} 
+                  alt="Circadian Rhythm and Nutrition" 
                   className="max-w-full md:max-w-3xl rounded-lg shadow-quantum"
                 />
               </div>

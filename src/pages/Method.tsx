@@ -5,6 +5,7 @@ import methodDiagram from "@/assets/method-diagram.jpg";
 import herbalRhythm from "@/assets/herbal-rhythm.jpg";
 import grainsSeeds from "@/assets/grains-seeds.jpg";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import qrnFramework from "@/assets/qrn-framework.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Method = () => {
@@ -222,6 +223,16 @@ const Method = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* QRN Framework Summary */}
+        <div className="max-w-2xl mx-auto mt-16 mb-8 text-center animate-fade-in-up">
+          <h3 className="font-serif text-2xl font-bold text-primary mb-4">Quantum Rhythm Nutrition</h3>
+          <img 
+            src={qrnFramework} 
+            alt="QRN Framework - Sunlight, Natural Cycles, Food as Information, Body Language" 
+            className="max-w-xs md:max-w-sm mx-auto rounded-lg shadow-subtle-glow"
+          />
         </div>
 
         {/* CTA */}
