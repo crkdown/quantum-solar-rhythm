@@ -72,7 +72,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.value.nature': 'Nature',
     'about.value.nature.desc': 'Trusting natural simplicity as the ultimate teacher.',
     'about.value.integration': 'Integration',
-    'about.value.integration.desc': 'Merging modern science with ancestral, biodynamic, Ayurvedic, and esoteric knowledge.',
+    'about.value.integration.desc': 'Merging modern science with ancestral, biodynamic, TCM spleen-focused, and esoteric knowledge.',
     'about.value.education': 'Education',
     'about.value.education.desc': 'Empowering people through understanding.',
     'about.value.simplicity': 'Simplicity',
