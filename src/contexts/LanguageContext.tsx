@@ -346,7 +346,7 @@ const translations: Record<Language, Record<string, string>> = {
     'about.value.nature': 'Naturaleza',
     'about.value.nature.desc': 'Confiando en la simplicidad natural como la maestra definitiva.',
     'about.value.integration': 'Integración',
-    'about.value.integration.desc': 'Fusionando ciencia moderna con conocimiento ancestral, biodinámico, ayurvédico y esotérico.',
+    'about.value.integration.desc': 'Fusionando ciencia moderna con conocimiento ancestral, biodinámico, enfoque del bazo en MTC y esotérico.',
     'about.value.education': 'Educación',
     'about.value.education.desc': 'Empoderando a las personas a través de la comprensión.',
     'about.value.simplicity': 'Simplicidad',
