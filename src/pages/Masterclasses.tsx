@@ -209,11 +209,11 @@ const Masterclasses = () => {
                 </div>
               </div>
 
-              {/* QRN Framework Image */}
+              {/* Circadian Rhythm Image */}
               <div className="flex justify-center py-6">
                 <img 
-                  src={qrnFramework} 
-                  alt="Quantum Rhythm Nutrition Framework" 
+                  src={circadianMasterclass} 
+                  alt="Circadian Rhythm and Nutrition" 
                   className="max-w-full md:max-w-3xl rounded-lg shadow-quantum"
                 />
               </div>
