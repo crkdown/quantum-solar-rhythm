@@ -5,6 +5,7 @@ import methodDiagram from "@/assets/method-diagram.jpg";
 import herbalRhythm from "@/assets/herbal-rhythm.jpg";
 import grainsSeeds from "@/assets/grains-seeds.jpg";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import qrnFramework from "@/assets/qrn-framework.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Method = () => {
