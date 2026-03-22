@@ -16,6 +16,7 @@ const Contact = () => {
         path="/contact"
         keywords="contact nutritionist, book nutrition consultation, Solaris Nutri contact"
       />
+      <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
           <div className="flex justify-center mb-6">
