@@ -7,6 +7,7 @@ import logo from "@/assets/solaris-nutri-logo.jpeg";
 import wholesomeFood from "@/assets/wholesome-food.jpg";
 import natureRetreat from "@/assets/nature-retreat.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Programs = () => {
   const { t, language } = useLanguage();

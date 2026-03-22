@@ -2,6 +2,7 @@ import { Circle } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import paulaPhoto from "@/assets/paula-photo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   const { t, language } = useLanguage();

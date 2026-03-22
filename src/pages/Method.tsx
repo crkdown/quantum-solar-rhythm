@@ -7,6 +7,7 @@ import grainsSeeds from "@/assets/grains-seeds.jpg";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import qrnFramework from "@/assets/qrn-framework.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Method = () => {
   const { t } = useLanguage();

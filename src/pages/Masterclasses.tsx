@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import circadianMasterclass from "@/assets/circadian-masterclass.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Masterclasses = () => {
   const { language } = useLanguage();
