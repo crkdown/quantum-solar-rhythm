@@ -2,6 +2,7 @@ import { Circle } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import paulaPhoto from "@/assets/paula-photo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const About = () => {
   const { t, language } = useLanguage();
@@ -35,6 +36,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEOHead
+        title="About Paula Suescun"
+        description="Meet Paula Suescun, founder of Solaris Nutri. A nutritionist bridging science, Anthroposophy and TCM to help you regain metabolic balance through rhythm-based nutrition."
+        path="/about"
+        keywords="Paula Suescun, holistic nutritionist, rhythm nutrition practitioner, Solaris Nutri founder"
+      />
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}

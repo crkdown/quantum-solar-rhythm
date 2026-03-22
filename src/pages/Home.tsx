@@ -8,6 +8,7 @@ import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import GoogleReviews from "@/components/GoogleReviews";
+import SEOHead from "@/components/SEOHead";
 
 const Home = () => {
   const { t, language } = useLanguage();
@@ -91,7 +92,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Sunrise Image */}
+      <SEOHead
+        title="Solaris Nutri — Rhythm-Based Nutrition for Metabolic Balance"
+        description="Regain clarity, alignment and metabolic balance through rhythm-based nutrition. Bridging science, Anthroposophy and TCM for sustainable wellbeing. Programs, masterclasses and consultations by Paula Suescun."
+        path="/"
+        keywords="rhythm nutrition, circadian rhythm diet, metabolic balance, holistic nutrition, chronobiology, TCM spleen, anthroposophic nutrition, Paula Suescun"
+      />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0"

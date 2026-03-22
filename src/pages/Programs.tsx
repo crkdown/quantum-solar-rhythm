@@ -7,6 +7,7 @@ import logo from "@/assets/solaris-nutri-logo.jpeg";
 import wholesomeFood from "@/assets/wholesome-food.jpg";
 import natureRetreat from "@/assets/nature-retreat.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const Programs = () => {
   const { t, language } = useLanguage();
@@ -240,6 +241,12 @@ const Programs = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEOHead
+        title="Nutrition Programs"
+        description="Join Solaris Nutri rhythm-based nutrition programs — 3, 6 or 9-month journeys to rebuild your metabolic balance through circadian alignment and holistic nutrition."
+        path="/programs"
+        keywords="nutrition programs, rhythm nutrition course, metabolic balance program, holistic nutrition coaching"
+      />
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
