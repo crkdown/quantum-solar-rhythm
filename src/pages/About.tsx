@@ -42,6 +42,7 @@ const About = () => {
         path="/about"
         keywords="Paula Suescun, holistic nutritionist, rhythm nutrition practitioner, Solaris Nutri founder"
       />
+      <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
