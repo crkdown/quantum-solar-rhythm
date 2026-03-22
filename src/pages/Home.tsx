@@ -8,6 +8,7 @@ import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import GoogleReviews from "@/components/GoogleReviews";
+import SEOHead from "@/components/SEOHead";
 
 const Home = () => {
   const { t, language } = useLanguage();
