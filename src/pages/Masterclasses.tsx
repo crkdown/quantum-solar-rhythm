@@ -127,7 +127,12 @@ const Masterclasses = () => {
 
   return (
     <div className="min-h-screen py-24">
-      <div className="container mx-auto px-6">
+      <SEOHead
+        title="Free Circadian Rhythm Masterclass"
+        description="Free live masterclass on circadian rhythm nutrition — learn how your internal clock affects digestion, hormones and energy. By Paula Suescun, Solaris Nutri."
+        path="/masterclasses"
+        keywords="circadian rhythm masterclass, free nutrition masterclass, digestive health class, chronobiology workshop"
+      />
         {/* Header */}
         <div className="text-center mb-12 max-w-4xl mx-auto animate-fade-in">
           <div className="flex justify-center mb-6">

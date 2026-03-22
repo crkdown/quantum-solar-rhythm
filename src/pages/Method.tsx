@@ -14,7 +14,12 @@ const Method = () => {
 
   return (
     <div className="min-h-screen py-24">
-      <div className="container mx-auto px-6">
+      <SEOHead
+        title="The Quantum Rhythm Method"
+        description="Discover the Quantum Rhythm Nutrition method — a timing-based system aligning your biology with natural cycles for better digestion, energy and metabolic balance."
+        path="/method"
+        keywords="quantum rhythm nutrition method, circadian rhythm eating, chronobiology nutrition, TCM spleen, metabolic alignment"
+      />
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
           <div className="flex justify-center mb-6">
