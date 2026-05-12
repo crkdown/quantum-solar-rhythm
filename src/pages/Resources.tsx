@@ -74,7 +74,7 @@ const Resources = () => {
     {
       author: "Master Choa Kok Sui",
       works: "Pranic Healing, Twin Hearts Meditation",
-      contribution: "Practical energy healing techniques, chakra-based health protocols, and the Twin Hearts meditation used in QRN retreats."
+      contribution: "Practical energy healing techniques, chakra-based health protocols, and the Twin Hearts meditation used in QRN practice."
     },
     {
       author: "Rudolf Steiner",
