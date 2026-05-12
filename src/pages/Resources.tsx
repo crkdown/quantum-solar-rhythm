@@ -154,6 +154,38 @@ const Resources = () => {
           </div>
         </div>
 
+        {/* QRN Rhythm Circle — Free with discovery call */}
+        <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
+          <Card className="border-accent/40 bg-gradient-to-br from-accent/10 via-background to-primary/5 overflow-hidden">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-full bg-accent/15 flex items-center justify-center">
+                    <Gift className="text-accent" size={36} />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <CardDescription className="text-xs font-sans uppercase tracking-wider text-accent mb-2">
+                    Free Gift
+                  </CardDescription>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2">
+                    QRN Rhythm Circle Assessment
+                  </h3>
+                  <p className="font-sans text-foreground/70 mb-5 leading-relaxed">
+                    A printable self-mapping tool to see which rhythm areas need support.
+                    Receive it for free when you book your complimentary discovery call — no purchase required.
+                  </p>
+                  <Link to="/contact">
+                    <Button size="lg" className="bg-accent hover:bg-accent/90 font-sans">
+                      Book Free Discovery Call & Get the Circle
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* Resources Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
           {resources.map((resource, index) => {
