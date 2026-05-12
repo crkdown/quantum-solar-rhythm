@@ -20,7 +20,7 @@ const Programs = () => {
         features: [
           "Rhythm calendar & circadian alignment",
           "Gut reset protocol",
-          "Weekly/biweekly sessions",
+          "Twice-monthly 1:1 sessions (2 per month)",
           "WhatsApp support",
           "Personalized rhythm plan",
           "QRN starter toolkit"
@@ -38,7 +38,7 @@ const Programs = () => {
           "Seasonal transition guidance",
           "Food energetics & microbiome optimization",
           "Advanced craving decoding",
-          "Bi-weekly deep-dive sessions",
+          "Twice-monthly deep-dive sessions",
           "Priority support"
         ],
         popular: true
@@ -69,7 +69,7 @@ const Programs = () => {
         features: [
           "Calendario de ritmo y alineación circadiana",
           "Protocolo de reset intestinal",
-          "Sesiones semanales/quincenales",
+          "Sesiones 1:1 dos veces al mes",
           "Soporte por WhatsApp",
           "Plan de ritmo personalizado",
           "Kit de inicio QRN"
@@ -87,7 +87,7 @@ const Programs = () => {
           "Guía de transición estacional",
           "Energética alimentaria y optimización del microbioma",
           "Decodificación avanzada de antojos",
-          "Sesiones profundas quincenales",
+          "Sesiones profundas dos veces al mes",
           "Soporte prioritario"
         ],
         popular: true
@@ -118,7 +118,7 @@ const Programs = () => {
         features: [
           "Calendário de ritmo e alinhamento circadiano",
           "Protocolo de reset intestinal",
-          "Sessões semanais/quinzenais",
+          "Sessões 1:1 duas vezes por mês",
           "Suporte por WhatsApp",
           "Plano de ritmo personalizado",
           "Kit inicial QRN"
@@ -136,7 +136,7 @@ const Programs = () => {
           "Orientação de transição sazonal",
           "Energética alimentar e otimização do microbioma",
           "Decodificação avançada de desejos",
-          "Sessões profundas quinzenais",
+          "Sessões profundas duas vezes por mês",
           "Suporte prioritário"
         ],
         popular: true
