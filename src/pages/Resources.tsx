@@ -274,6 +274,46 @@ const Resources = () => {
           </div>
         </div>
 
+        {/* Recipes & Healing Foods */}
+        <div className="max-w-5xl mx-auto mb-20 animate-fade-in">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 text-accent mb-4">
+              <ChefHat size={24} />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-3">
+              Recipes & Healing Foods
+            </h2>
+            <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
+              Curated recipe traditions and protocols woven into every QRN program — from anthroposophic grain wisdom to functional medicine and food-as-medicine science.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {recipeCollections.map((r, i) => (
+              <Card
+                key={i}
+                className="border-border hover:border-accent/40 hover:shadow-quantum transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <CardHeader className="pb-3">
+                  <CardDescription className="text-xs font-sans uppercase tracking-wider text-accent mb-1">
+                    {r.tag}
+                  </CardDescription>
+                  <CardTitle className="font-serif text-xl text-primary">
+                    {r.title}
+                  </CardTitle>
+                  <p className="font-sans text-sm text-foreground/60 italic">{r.author}</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="font-sans text-sm text-foreground/70 leading-relaxed">
+                    {r.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* WhatsApp Community */}
         <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
           <div className="bg-green-50 border border-green-200 p-8 rounded-xl text-center">
