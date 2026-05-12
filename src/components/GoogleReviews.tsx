@@ -20,9 +20,9 @@ const GoogleReviews = () => {
       name: "Ana Martins",
       rating: 5,
       text: {
-        en: "The Earth Rhythm Retreat was transformative. I left with clarity, energy, and a sustainable approach to my health.",
-        es: "El retiro Earth Rhythm fue transformador. Me fui con claridad, energía y un enfoque sostenible para mi salud.",
-        pt: "O retiro Earth Rhythm foi transformador. Saí com clareza, energia e uma abordagem sustentável para minha saúde."
+        en: "Working with Paula was transformative. I left with clarity, energy, and a sustainable approach to my health.",
+        es: "Trabajar con Paula fue transformador. Me fui con claridad, energía y un enfoque sostenible para mi salud.",
+        pt: "Trabalhar com a Paula foi transformador. Saí com clareza, energia e uma abordagem sustentável para minha saúde."
       },
       date: "1 month ago"
     },

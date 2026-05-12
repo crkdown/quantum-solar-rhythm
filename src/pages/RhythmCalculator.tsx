@@ -126,16 +126,16 @@ const RhythmCalculator = () => {
             "Avoid cold and raw foods, especially in the morning",
             "Practice breathwork to support vagal tone",
             "Address stress patterns affecting digestion",
-            "Consider the Earth Rhythm Reset Retreat for an immersive reset"
+            "Book a free discovery call for personalized rhythm support"
           ],
-          programSuggestion: "The 3-Month Rhythm Reset Program combined with the Earth Rhythm Reset Retreat would provide comprehensive support."
+          programSuggestion: "The 3-Month Rhythm Reset Program would provide comprehensive support."
         },
         significant: {
           level: "Significant" as const,
           description: "Significant depletion—digestive qi, vagal tone, and metabolic timing require urgent rhythm support",
           recommendations: [
             "Urgent rhythm realignment needed",
-            "Begin with the Earth Rhythm Reset Retreat for immediate support",
+            "Book a free discovery call to begin urgent rhythm support",
             "Establish strict meal timing consistency",
             "Focus exclusively on warm, cooked, nourishing foods",
             "Implement daily breathwork and vagus nerve support",
@@ -143,7 +143,7 @@ const RhythmCalculator = () => {
             "Consider gut-brain axis restoration protocols",
             "Work with personalized support through extended mentoring"
           ],
-          programSuggestion: "We recommend starting with the Earth Rhythm Reset Retreat, followed by the 6-Month Coherence Deepening Program for comprehensive metabolic and nervous system restoration."
+          programSuggestion: "We recommend the 6-Month Coherence Deepening Program for comprehensive metabolic and nervous system restoration."
         }
       },
       es: {
@@ -179,16 +179,16 @@ const RhythmCalculator = () => {
             "Evita alimentos fríos y crudos, especialmente en la mañana",
             "Practica respiración para apoyar el tono vagal",
             "Aborda los patrones de estrés que afectan la digestión",
-            "Considera el Retiro Earth Rhythm Reset para un reset inmersivo"
+            "Reserva una llamada de descubrimiento gratuita para apoyo personalizado"
           ],
-          programSuggestion: "El Programa de Reset de Ritmo de 3 Meses combinado con el Retiro Earth Rhythm Reset proporcionaría apoyo integral."
+          programSuggestion: "El Programa de Reset de Ritmo de 3 Meses proporcionaría apoyo integral."
         },
         significant: {
           level: "Significant" as const,
           description: "Agotamiento significativo—el qi digestivo, tono vagal y temporización metabólica requieren apoyo rítmico urgente",
           recommendations: [
             "Se necesita realineación rítmica urgente",
-            "Comienza con el Retiro Earth Rhythm Reset para apoyo inmediato",
+            "Reserva una llamada de descubrimiento gratuita para apoyo urgente",
             "Establece consistencia estricta en los horarios de comida",
             "Enfócate exclusivamente en alimentos calientes, cocidos y nutritivos",
             "Implementa respiración diaria y apoyo del nervio vago",
@@ -196,7 +196,7 @@ const RhythmCalculator = () => {
             "Considera protocolos de restauración del eje intestino-cerebro",
             "Trabaja con apoyo personalizado a través de mentoría extendida"
           ],
-          programSuggestion: "Recomendamos comenzar con el Retiro Earth Rhythm Reset, seguido del Programa de Profundización de Coherencia de 6 Meses para una restauración integral del sistema metabólico y nervioso."
+          programSuggestion: "Recomendamos el Programa de Profundización de Coherencia de 6 Meses para una restauración integral del sistema metabólico y nervioso."
         }
       },
       pt: {
@@ -232,16 +232,16 @@ const RhythmCalculator = () => {
             "Evite alimentos frios e crus, especialmente pela manhã",
             "Pratique respiração para apoiar o tono vagal",
             "Aborde os padrões de estresse que afetam a digestão",
-            "Considere o Retiro Earth Rhythm Reset para um reset imersivo"
+            "Agende uma chamada de descoberta gratuita para apoio personalizado"
           ],
-          programSuggestion: "O Programa de Reset de Ritmo de 3 Meses combinado com o Retiro Earth Rhythm Reset forneceria apoio abrangente."
+          programSuggestion: "O Programa de Reset de Ritmo de 3 Meses forneceria apoio abrangente."
         },
         significant: {
           level: "Significant" as const,
           description: "Esgotamento significativo—qi digestivo, tono vagal e temporização metabólica requerem apoio rítmico urgente",
           recommendations: [
             "Realinhamento rítmico urgente necessário",
-            "Comece com o Retiro Earth Rhythm Reset para apoio imediato",
+            "Agende uma chamada de descoberta gratuita para apoio urgente",
             "Estabeleça consistência rigorosa nos horários de refeição",
             "Foque exclusivamente em alimentos quentes, cozidos e nutritivos",
             "Implemente respiração diária e apoio do nervo vago",
@@ -249,7 +249,7 @@ const RhythmCalculator = () => {
             "Considere protocolos de restauração do eixo intestino-cérebro",
             "Trabalhe com apoio personalizado através de mentoria estendida"
           ],
-          programSuggestion: "Recomendamos começar com o Retiro Earth Rhythm Reset, seguido do Programa de Aprofundamento de Coerência de 6 Meses para uma restauração abrangente do sistema metabólico e nervoso."
+          programSuggestion: "Recomendamos o Programa de Aprofundamento de Coerência de 6 Meses para uma restauração abrangente do sistema metabólico e nervoso."
         }
       }
     };
@@ -359,18 +359,9 @@ const RhythmCalculator = () => {
                     {result.programSuggestion}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    {(result.level === "Moderate" || result.level === "Significant") && (
-                      <Button 
-                        onClick={() => window.location.href = '/earth-rhythm-retreat'}
-                        size="lg"
-                        className="bg-accent hover:bg-accent/90 font-sans"
-                      >
-                        {t('calc.results.exploreRetreat')}
-                      </Button>
-                    )}
                     <Button 
                       onClick={() => window.location.href = '/programs'}
-                      variant={result.level === "Moderate" || result.level === "Significant" ? "outline" : "default"}
+                      variant="default"
                       size="lg"
                       className="font-sans"
                     >

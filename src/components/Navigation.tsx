@@ -21,7 +21,6 @@ const Navigation = () => {
     { path: "/method", label: t('nav.method') },
     { path: "/programs", label: t('nav.programs') },
     { path: "/masterclasses", label: t('nav.masterclass') },
-    { path: "/earth-rhythm-retreat", label: t('nav.retreat') },
     { path: "/shop", label: t('nav.shop') },
     { path: "/blog", label: t('nav.blog') },
     { path: "/contact", label: t('nav.contact') },
@@ -81,7 +80,7 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {mainLinks.slice(5).map((link) => (
+            {mainLinks.slice(4).map((link) => (
               <Link
                 key={link.path}
                 to={link.path}

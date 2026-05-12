@@ -40,7 +40,7 @@ const LandingProgram = () => {
       includesTitle: "Every Program Includes",
       includes: [
         "Personalized rhythm plan",
-        "Weekly/biweekly 1:1 sessions",
+        "Twice-monthly 1:1 sessions (2 per month)",
         "WhatsApp support",
         "QRN digital resources & tools",
         "Circadian alignment guidance",
@@ -80,7 +80,7 @@ const LandingProgram = () => {
       includesTitle: "Cada Programa Incluye",
       includes: [
         "Plan de ritmo personalizado",
-        "Sesiones 1:1 semanales/quincenales",
+        "Sesiones 1:1 dos veces al mes",
         "Soporte por WhatsApp",
         "Recursos y herramientas digitales QRN",
         "Guía de alineación circadiana",
@@ -120,7 +120,7 @@ const LandingProgram = () => {
       includesTitle: "Cada Programa Inclui",
       includes: [
         "Plano de ritmo personalizado",
-        "Sessões 1:1 semanais/quinzenais",
+        "Sessões 1:1 duas vezes por mês",
         "Suporte por WhatsApp",
         "Recursos e ferramentas digitais QRN",
         "Orientação de alinhamento circadiano",

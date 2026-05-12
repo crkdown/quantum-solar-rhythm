@@ -1,11 +1,9 @@
-import { Circle, Check, TrendingUp, BookOpen, Calendar, ChevronRight } from "lucide-react";
+import { Circle, Check, TrendingUp, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
-import wholesomeFood from "@/assets/wholesome-food.jpg";
-import natureRetreat from "@/assets/nature-retreat.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 
@@ -22,7 +20,7 @@ const Programs = () => {
         features: [
           "Rhythm calendar & circadian alignment",
           "Gut reset protocol",
-          "Weekly/biweekly sessions",
+          "Twice-monthly 1:1 sessions (2 per month)",
           "WhatsApp support",
           "Personalized rhythm plan",
           "QRN starter toolkit"
@@ -40,7 +38,7 @@ const Programs = () => {
           "Seasonal transition guidance",
           "Food energetics & microbiome optimization",
           "Advanced craving decoding",
-          "Bi-weekly deep-dive sessions",
+          "Twice-monthly deep-dive sessions",
           "Priority support"
         ],
         popular: true
@@ -71,7 +69,7 @@ const Programs = () => {
         features: [
           "Calendario de ritmo y alineación circadiana",
           "Protocolo de reset intestinal",
-          "Sesiones semanales/quincenales",
+          "Sesiones 1:1 dos veces al mes",
           "Soporte por WhatsApp",
           "Plan de ritmo personalizado",
           "Kit de inicio QRN"
@@ -89,7 +87,7 @@ const Programs = () => {
           "Guía de transición estacional",
           "Energética alimentaria y optimización del microbioma",
           "Decodificación avanzada de antojos",
-          "Sesiones profundas quincenales",
+          "Sesiones profundas dos veces al mes",
           "Soporte prioritario"
         ],
         popular: true
@@ -120,7 +118,7 @@ const Programs = () => {
         features: [
           "Calendário de ritmo e alinhamento circadiano",
           "Protocolo de reset intestinal",
-          "Sessões semanais/quinzenais",
+          "Sessões 1:1 duas vezes por mês",
           "Suporte por WhatsApp",
           "Plano de ritmo personalizado",
           "Kit inicial QRN"
@@ -138,7 +136,7 @@ const Programs = () => {
           "Orientação de transição sazonal",
           "Energética alimentar e otimização do microbioma",
           "Decodificação avançada de desejos",
-          "Sessões profundas quinzenais",
+          "Sessões profundas duas vezes por mês",
           "Suporte prioritário"
         ],
         popular: true
@@ -209,28 +207,19 @@ const Programs = () => {
       progressTitle: "Progress Tracking Tools",
       progressDesc: "Comprehensive tools to monitor your rhythm journey",
       resourcesTitle: "Educational Resources",
-      resourcesDesc: "Deep learning materials included with every program",
-      retreatTitle: "2026 Retreat Access",
-      retreatDesc: "Join our Earth Rhythm Retreats running April to October 2026 in the Algarve, Portugal",
-      retreatCta: "Learn About Retreats"
+      resourcesDesc: "Deep learning materials included with every program"
     },
     es: {
       progressTitle: "Herramientas de Seguimiento",
       progressDesc: "Herramientas completas para monitorear tu viaje rítmico",
       resourcesTitle: "Recursos Educativos",
-      resourcesDesc: "Materiales de aprendizaje profundo incluidos con cada programa",
-      retreatTitle: "Acceso a Retiros 2026",
-      retreatDesc: "Únete a nuestros Retiros Earth Rhythm de abril a octubre 2026 en el Algarve, Portugal",
-      retreatCta: "Conocer los Retiros"
+      resourcesDesc: "Materiales de aprendizaje profundo incluidos con cada programa"
     },
     pt: {
       progressTitle: "Ferramentas de Acompanhamento",
       progressDesc: "Ferramentas abrangentes para monitorar sua jornada rítmica",
       resourcesTitle: "Recursos Educacionais",
-      resourcesDesc: "Materiais de aprendizagem profunda incluídos em cada programa",
-      retreatTitle: "Acesso a Retiros 2026",
-      retreatDesc: "Junte-se aos nossos Retiros Earth Rhythm de abril a outubro de 2026 no Algarve, Portugal",
-      retreatCta: "Conhecer os Retiros"
+      resourcesDesc: "Materiais de aprendizagem profunda incluídos em cada programa"
     }
   };
 
@@ -271,31 +260,7 @@ const Programs = () => {
           </div>
         </div>
 
-        {/* Nature & Food Images */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
-          <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
-            <img 
-              src={wholesomeFood} 
-              alt="Wholesome organic food" 
-              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
-              {language === 'es' ? 'Nutrición Consciente' : language === 'pt' ? 'Nutrição Consciente' : 'Mindful Nourishment'}
-            </span>
-          </div>
-          <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
-            <img 
-              src={natureRetreat} 
-              alt="Nature wellness retreat" 
-              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
-              {language === 'es' ? 'Ritmo Natural' : language === 'pt' ? 'Ritmo Natural' : 'Natural Rhythm'}
-            </span>
-          </div>
-        </div>
+
 
         {/* Program Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
@@ -415,35 +380,6 @@ const Programs = () => {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* 2026 Retreat Access Section */}
-        <div className="max-w-4xl mx-auto mb-20 animate-fade-in">
-          <Card className="border-accent/30 bg-gradient-to-r from-accent/5 to-primary/5 overflow-hidden">
-            <CardContent className="p-8 md:p-10">
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Calendar className="text-accent" size={36} />
-                  </div>
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-2">
-                    {currentTexts.retreatTitle}
-                  </h3>
-                  <p className="font-sans text-foreground/70 mb-4">
-                    {currentTexts.retreatDesc}
-                  </p>
-                  <Link to="/earth-rhythm-retreat">
-                    <Button variant="outline" className="font-sans group">
-                      {currentTexts.retreatCta}
-                      <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Not Sure Section */}

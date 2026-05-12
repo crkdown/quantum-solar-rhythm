@@ -1,4 +1,5 @@
-import { Circle, Download, Calendar, FileText, Sun, BookOpen, Users, MessageCircle } from "lucide-react";
+import { Circle, Download, Calendar, FileText, Sun, BookOpen, Users, MessageCircle, Gift, ChefHat } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
@@ -74,7 +75,7 @@ const Resources = () => {
     {
       author: "Master Choa Kok Sui",
       works: "Pranic Healing, Twin Hearts Meditation",
-      contribution: "Practical energy healing techniques, chakra-based health protocols, and the Twin Hearts meditation used in QRN retreats."
+      contribution: "Practical energy healing techniques, chakra-based health protocols, and the Twin Hearts meditation used in QRN practice."
     },
     {
       author: "Rudolf Steiner",
@@ -85,6 +86,33 @@ const Resources = () => {
       author: "Biodynamic Tradition",
       works: "Demeter Standards, Biodynamic Farming Principles",
       contribution: "Living agriculture aligned with lunar, planetary and seasonal cycles — the foundation of rhythmic food quality."
+    }
+  ];
+
+  const recipeCollections = [
+    {
+      author: "Rudolf Steiner",
+      title: "Cereal of the Week",
+      description: "Steiner's planetary grain rhythm: a different ancient cereal for each day of the week (rice, barley, millet, rye, oats, corn, wheat) — recipes that align body, planet and weekday for harmonised vitality.",
+      tag: "Anthroposophic Nutrition"
+    },
+    {
+      author: "Daverick Leggett",
+      title: "Recipes for Self-Healing",
+      description: "TCM-based seasonal recipes that nourish the spleen, support digestion, and rebuild qi using warming, easy-to-digest whole foods.",
+      tag: "Traditional Chinese Medicine"
+    },
+    {
+      author: "Susan Blum, MD",
+      title: "Immune System Recovery Plan",
+      description: "An anti-inflammatory protocol with gut-healing recipes designed to calm autoimmunity and restore immune balance through food.",
+      tag: "Functional Medicine"
+    },
+    {
+      author: "William W. Li, MD",
+      title: "Eat to Beat Disease",
+      description: "Recipes built around foods that activate the body's five defence systems — angiogenesis, regeneration, microbiome, DNA protection, and immunity.",
+      tag: "Food as Medicine"
     }
   ];
 
@@ -124,6 +152,38 @@ const Resources = () => {
               <p className="font-sans text-sm text-foreground/70 font-medium">Nourishing Rhythm</p>
             </div>
           </div>
+        </div>
+
+        {/* QRN Rhythm Circle — Free with discovery call */}
+        <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
+          <Card className="border-accent/40 bg-gradient-to-br from-accent/10 via-background to-primary/5 overflow-hidden">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-full bg-accent/15 flex items-center justify-center">
+                    <Gift className="text-accent" size={36} />
+                  </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <CardDescription className="text-xs font-sans uppercase tracking-wider text-accent mb-2">
+                    Free Gift
+                  </CardDescription>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2">
+                    QRN Rhythm Circle Assessment
+                  </h3>
+                  <p className="font-sans text-foreground/70 mb-5 leading-relaxed">
+                    A printable self-mapping tool to see which rhythm areas need support.
+                    Receive it for free when you book your complimentary discovery call — no purchase required.
+                  </p>
+                  <Link to="/contact">
+                    <Button size="lg" className="bg-accent hover:bg-accent/90 font-sans">
+                      Book Free Discovery Call & Get the Circle
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Resources Grid */}
@@ -210,6 +270,46 @@ const Resources = () => {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Recipes & Healing Foods */}
+        <div className="max-w-5xl mx-auto mb-20 animate-fade-in">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 text-accent mb-4">
+              <ChefHat size={24} />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-primary mb-3">
+              Recipes & Healing Foods
+            </h2>
+            <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
+              Curated recipe traditions and protocols woven into every QRN program — from anthroposophic grain wisdom to functional medicine and food-as-medicine science.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {recipeCollections.map((r, i) => (
+              <Card
+                key={i}
+                className="border-border hover:border-accent/40 hover:shadow-quantum transition-all duration-300 animate-fade-in-up"
+                style={{ animationDelay: `${i * 80}ms` }}
+              >
+                <CardHeader className="pb-3">
+                  <CardDescription className="text-xs font-sans uppercase tracking-wider text-accent mb-1">
+                    {r.tag}
+                  </CardDescription>
+                  <CardTitle className="font-serif text-xl text-primary">
+                    {r.title}
+                  </CardTitle>
+                  <p className="font-sans text-sm text-foreground/60 italic">{r.author}</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="font-sans text-sm text-foreground/70 leading-relaxed">
+                    {r.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
