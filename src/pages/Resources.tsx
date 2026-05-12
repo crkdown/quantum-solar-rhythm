@@ -89,6 +89,33 @@ const Resources = () => {
     }
   ];
 
+  const recipeCollections = [
+    {
+      author: "Rudolf Steiner",
+      title: "Cereal of the Week",
+      description: "Steiner's planetary grain rhythm: a different ancient cereal for each day of the week (rice, barley, millet, rye, oats, corn, wheat) — recipes that align body, planet and weekday for harmonised vitality.",
+      tag: "Anthroposophic Nutrition"
+    },
+    {
+      author: "Daverick Leggett",
+      title: "Recipes for Self-Healing",
+      description: "TCM-based seasonal recipes that nourish the spleen, support digestion, and rebuild qi using warming, easy-to-digest whole foods.",
+      tag: "Traditional Chinese Medicine"
+    },
+    {
+      author: "Susan Blum, MD",
+      title: "Immune System Recovery Plan",
+      description: "An anti-inflammatory protocol with gut-healing recipes designed to calm autoimmunity and restore immune balance through food.",
+      tag: "Functional Medicine"
+    },
+    {
+      author: "William W. Li, MD",
+      title: "Eat to Beat Disease",
+      description: "Recipes built around foods that activate the body's five defence systems — angiogenesis, regeneration, microbiome, DNA protection, and immunity.",
+      tag: "Food as Medicine"
+    }
+  ];
+
   return (
     <div className="min-h-screen py-24">
       <div className="container mx-auto px-6">
