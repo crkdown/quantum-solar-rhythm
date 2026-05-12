@@ -271,31 +271,7 @@ const Programs = () => {
           </div>
         </div>
 
-        {/* Nature & Food Images */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
-          <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
-            <img 
-              src={wholesomeFood} 
-              alt="Wholesome organic food" 
-              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
-              {language === 'es' ? 'Nutrición Consciente' : language === 'pt' ? 'Nutrição Consciente' : 'Mindful Nourishment'}
-            </span>
-          </div>
-          <div className="relative group overflow-hidden rounded-xl shadow-subtle-glow">
-            <img 
-              src={natureRetreat} 
-              alt="Nature wellness retreat" 
-              className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            <span className="absolute bottom-4 left-4 text-white font-sans text-sm tracking-wide">
-              {language === 'es' ? 'Ritmo Natural' : language === 'pt' ? 'Ritmo Natural' : 'Natural Rhythm'}
-            </span>
-          </div>
-        </div>
+
 
         {/* Program Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
@@ -415,35 +391,6 @@ const Programs = () => {
               ))}
             </div>
           </div>
-        </div>
-
-        {/* 2026 Retreat Access Section */}
-        <div className="max-w-4xl mx-auto mb-20 animate-fade-in">
-          <Card className="border-accent/30 bg-gradient-to-r from-accent/5 to-primary/5 overflow-hidden">
-            <CardContent className="p-8 md:p-10">
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Calendar className="text-accent" size={36} />
-                  </div>
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="font-serif text-2xl font-bold text-primary mb-2">
-                    {currentTexts.retreatTitle}
-                  </h3>
-                  <p className="font-sans text-foreground/70 mb-4">
-                    {currentTexts.retreatDesc}
-                  </p>
-                  <Link to="/earth-rhythm-retreat">
-                    <Button variant="outline" className="font-sans group">
-                      {currentTexts.retreatCta}
-                      <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Not Sure Section */}
