@@ -207,28 +207,19 @@ const Programs = () => {
       progressTitle: "Progress Tracking Tools",
       progressDesc: "Comprehensive tools to monitor your rhythm journey",
       resourcesTitle: "Educational Resources",
-      resourcesDesc: "Deep learning materials included with every program",
-      retreatTitle: "2026 Retreat Access",
-      retreatDesc: "Join our Earth Rhythm Retreats running April to October 2026 in the Algarve, Portugal",
-      retreatCta: "Learn About Retreats"
+      resourcesDesc: "Deep learning materials included with every program"
     },
     es: {
       progressTitle: "Herramientas de Seguimiento",
       progressDesc: "Herramientas completas para monitorear tu viaje rítmico",
       resourcesTitle: "Recursos Educativos",
-      resourcesDesc: "Materiales de aprendizaje profundo incluidos con cada programa",
-      retreatTitle: "Acceso a Retiros 2026",
-      retreatDesc: "Únete a nuestros Retiros Earth Rhythm de abril a octubre 2026 en el Algarve, Portugal",
-      retreatCta: "Conocer los Retiros"
+      resourcesDesc: "Materiales de aprendizaje profundo incluidos con cada programa"
     },
     pt: {
       progressTitle: "Ferramentas de Acompanhamento",
       progressDesc: "Ferramentas abrangentes para monitorar sua jornada rítmica",
       resourcesTitle: "Recursos Educacionais",
-      resourcesDesc: "Materiais de aprendizagem profunda incluídos em cada programa",
-      retreatTitle: "Acesso a Retiros 2026",
-      retreatDesc: "Junte-se aos nossos Retiros Earth Rhythm de abril a outubro de 2026 no Algarve, Portugal",
-      retreatCta: "Conhecer os Retiros"
+      resourcesDesc: "Materiais de aprendizagem profunda incluídos em cada programa"
     }
   };
 
