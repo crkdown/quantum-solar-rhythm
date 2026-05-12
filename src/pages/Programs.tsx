@@ -1,11 +1,9 @@
-import { Circle, Check, TrendingUp, BookOpen, Calendar, ChevronRight } from "lucide-react";
+import { Circle, Check, TrendingUp, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
-import wholesomeFood from "@/assets/wholesome-food.jpg";
-import natureRetreat from "@/assets/nature-retreat.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 
