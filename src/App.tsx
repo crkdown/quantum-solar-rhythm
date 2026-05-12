@@ -15,7 +15,6 @@ import Masterclasses from "./pages/Masterclasses";
 import Resources from "./pages/Resources";
 import Blog from "./pages/Blog";
 import RhythmCalculator from "./pages/RhythmCalculator";
-import EarthRhythmRetreat from "./pages/EarthRhythmRetreat";
 import FoodRhythmTool from "./pages/FoodRhythmTool";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
@@ -46,7 +45,6 @@ const App = () => (
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/rhythm-calculator" element={<RhythmCalculator />} />
                   <Route path="/food-rhythm-tool" element={<FoodRhythmTool />} />
-                  <Route path="/earth-rhythm-retreat" element={<EarthRhythmRetreat />} />
                   <Route path="/shop" element={<Shop />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/landing/masterclass" element={<LandingMasterclass />} />
