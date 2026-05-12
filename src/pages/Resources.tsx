@@ -1,4 +1,5 @@
-import { Circle, Download, Calendar, FileText, Sun, BookOpen, Users, MessageCircle } from "lucide-react";
+import { Circle, Download, Calendar, FileText, Sun, BookOpen, Users, MessageCircle, Gift, ChefHat } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
