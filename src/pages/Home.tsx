@@ -90,6 +90,43 @@ const Home = () => {
 
   const currentRhythm = rhythmBlocks[language] || rhythmBlocks.en;
 
+  const lightBlocks = {
+    en: {
+      badge: "Light as a Nutrient",
+      title: "Your first meal of the day is sunrise light",
+      text: "Before food, your body is nourished by light. Morning sunlight sets your inner clock, calms your nervous system and prepares your digestion, hormones and mood for the day. Receiving natural light at sunrise is one of the simplest, most powerful rhythms you can rebuild.",
+      points: [
+        "Morning light anchors your circadian rhythm.",
+        "Sunlight supports energy, sleep and mood.",
+        "Aligning with the sun makes nutrition work better."
+      ]
+    },
+    es: {
+      badge: "La luz como nutriente",
+      title: "Tu primera comida del día es la luz del amanecer",
+      text: "Antes del alimento, tu cuerpo se nutre de luz. La luz solar de la mañana ajusta tu reloj interno, calma tu sistema nervioso y prepara tu digestión, hormonas y ánimo para el día. Recibir luz natural al amanecer es uno de los ritmos más simples y poderosos que puedes reconstruir.",
+      points: [
+        "La luz matutina ancla tu ritmo circadiano.",
+        "El sol favorece energía, sueño y estado de ánimo.",
+        "Alinearte con el sol hace que la nutrición funcione mejor."
+      ]
+    },
+    pt: {
+      badge: "A luz como nutriente",
+      title: "Sua primeira refeição do dia é a luz do amanhecer",
+      text: "Antes do alimento, seu corpo é nutrido pela luz. A luz solar da manhã ajusta seu relógio interno, acalma seu sistema nervoso e prepara sua digestão, hormônios e humor para o dia. Receber luz natural ao amanhecer é um dos ritmos mais simples e poderosos que você pode reconstruir.",
+      points: [
+        "A luz da manhã ancora seu ritmo circadiano.",
+        "O sol favorece energia, sono e humor.",
+        "Alinhar-se ao sol faz a nutrição funcionar melhor."
+      ]
+    }
+  };
+
+  const currentLight = lightBlocks[language] || lightBlocks.en;
+
+
+
   return (
     <div className="min-h-screen">
       <SEOHead
