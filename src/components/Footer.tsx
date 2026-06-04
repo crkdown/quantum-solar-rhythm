@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
