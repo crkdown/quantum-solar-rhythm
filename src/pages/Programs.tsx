@@ -43,22 +43,6 @@ const Programs = () => {
         ],
         popular: true
       },
-      {
-        duration: "9-Month",
-        title: "Full Quantum Rhythm Embodiment",
-        price: "€2,700",
-        description: "Complete reprogramming of body rhythms with planetary cycle integration and nervous system mastery.",
-        features: [
-          "Everything in 6-Month program",
-          "Planetary rhythm cycle integration",
-          "Nervous system & vagus regulation",
-          "Weekly 1:1 deep-dive sessions",
-          "Complete rhythm intelligence embodiment",
-          "Lifetime access to resources",
-          "6 months post-program support"
-        ],
-        popular: false
-      }
     ],
     es: [
       {
