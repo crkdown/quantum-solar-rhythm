@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Circle, Sun, Play } from "lucide-react";
+import { ArrowRight, Circle, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import sunriseImage from "@/assets/sunrise-nature.png";
