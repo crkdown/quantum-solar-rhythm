@@ -48,7 +48,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€900",
+        price: "€600",
         description: "Estabiliza los ritmos corporales, contribuye a la energía y simplifica la nutrición a través de la alineación circadiana.",
         features: [
           "Calendario de ritmo y alineación circadiana",
