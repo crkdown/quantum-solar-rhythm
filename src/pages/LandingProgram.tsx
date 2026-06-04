@@ -138,19 +138,16 @@ const LandingProgram = () => {
 
   const programs = {
     en: [
-      { duration: "3 Months", title: "Rhythm Reset", price: "€700–€900", desc: "Stabilize body rhythms, contribute to energy, simplify nourishment." },
-      { duration: "6 Months", title: "Coherence Deepening", price: "€1,600–€1,800", desc: "Rebuild metabolic stability through lunar cycles and seasonal transitions.", popular: true },
-      { duration: "9 Months", title: "Full Quantum Rhythm Embodiment", price: "€2,500–€2,700", desc: "Complete reprogramming with planetary rhythms and nervous system mastery." },
+      { duration: "3 Months", title: "Rhythm Reset", price: "€600", desc: "Stabilize body rhythms, contribute to energy, simplify nourishment." },
+      { duration: "6 Months", title: "Coherence Deepening", price: "€900", desc: "Rebuild metabolic stability through lunar cycles and seasonal transitions.", popular: true },
     ],
     es: [
-      { duration: "3 Meses", title: "Reset de Ritmo", price: "€700–€900", desc: "Estabiliza los ritmos corporales, contribuye a la energía, simplifica la nutrición." },
-      { duration: "6 Meses", title: "Profundización de Coherencia", price: "€1,600–€1,800", desc: "Reconstruye la estabilidad metabólica a través de ciclos lunares y transiciones estacionales.", popular: true },
-      { duration: "9 Meses", title: "Encarnación Completa del Ritmo Cuántico", price: "€2,500–€2,700", desc: "Reprogramación completa con ritmos planetarios y dominio del sistema nervioso." },
+      { duration: "3 Meses", title: "Reset de Ritmo", price: "€600", desc: "Estabiliza los ritmos corporales, contribuye a la energía, simplifica la nutrición." },
+      { duration: "6 Meses", title: "Profundización de Coherencia", price: "€900", desc: "Reconstruye la estabilidad metabólica a través de ciclos lunares y transiciones estacionales.", popular: true },
     ],
     pt: [
-      { duration: "3 Meses", title: "Reset de Ritmo", price: "€700–€900", desc: "Estabilize os ritmos corporais, contribua para a energia, simplifique a nutrição." },
-      { duration: "6 Meses", title: "Aprofundamento de Coerência", price: "€1,600–€1,800", desc: "Reconstrua a estabilidade metabólica através de ciclos lunares e transições sazonais.", popular: true },
-      { duration: "9 Meses", title: "Incorporação Completa do Ritmo Quântico", price: "€2,500–€2,700", desc: "Reprogramação completa com ritmos planetários e domínio do sistema nervoso." },
+      { duration: "3 Meses", title: "Reset de Ritmo", price: "€600", desc: "Estabilize os ritmos corporais, contribua para a energia, simplifique a nutrição." },
+      { duration: "6 Meses", title: "Aprofundamento de Coerência", price: "€900", desc: "Reconstrua a estabilidade metabólica através de ciclos lunares e transições sazonais.", popular: true },
     ]
   };
 
