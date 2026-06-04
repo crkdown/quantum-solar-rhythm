@@ -109,22 +109,6 @@ const Programs = () => {
         ],
         popular: true
       },
-      {
-        duration: "9 Meses",
-        title: "Incorporação Completa do Ritmo Quântico",
-        price: "€2,700",
-        description: "Reprogramação completa dos ritmos corporais com integração de ciclos planetários e domínio do sistema nervoso.",
-        features: [
-          "Tudo do programa de 6 meses",
-          "Integração de ciclos rítmicos planetários",
-          "Regulação do sistema nervoso e vagal",
-          "Sessões profundas 1:1 semanais",
-          "Incorporação completa de inteligência rítmica",
-          "Acesso vitalício a recursos",
-          "6 meses de suporte pós-programa"
-        ],
-        popular: false
-      }
     ]
   };
 
