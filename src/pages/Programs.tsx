@@ -76,22 +76,6 @@ const Programs = () => {
         ],
         popular: true
       },
-      {
-        duration: "9 Meses",
-        title: "Encarnación Completa del Ritmo Cuántico",
-        price: "€2,700",
-        description: "Reprogramación completa de los ritmos corporales con integración de ciclos planetarios y dominio del sistema nervioso.",
-        features: [
-          "Todo del programa de 6 meses",
-          "Integración de ciclos rítmicos planetarios",
-          "Regulación del sistema nervioso y vagal",
-          "Sesiones profundas 1:1 semanales",
-          "Encarnación completa de inteligencia rítmica",
-          "Acceso de por vida a recursos",
-          "6 meses de soporte post-programa"
-        ],
-        popular: false
-      }
     ],
     pt: [
       {
