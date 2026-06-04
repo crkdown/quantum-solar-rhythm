@@ -1,4 +1,5 @@
 import { Circle, Mail, Calendar, Instagram } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,7 +8,25 @@ import { Label } from "@/components/ui/label";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
 
+const CONTACT_EMAIL = "qr4nutrition@gmail.com";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [interest, setInterest] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      interest ? `Inquiry: ${interest}` : "New inquiry from Solaris Nutri"
+    );
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nInterested in: ${interest}\n\n${message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="min-h-screen py-24">
       <SEOHead
@@ -49,13 +68,16 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <Label htmlFor="name" className="font-sans text-sm">Name</Label>
                   <Input 
                     id="name" 
                     placeholder="Your full name" 
                     className="font-sans"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -66,6 +88,9 @@ const Contact = () => {
                     type="email" 
                     placeholder="your@email.com" 
                     className="font-sans"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -73,8 +98,10 @@ const Contact = () => {
                   <Label htmlFor="interest" className="font-sans text-sm">I'm interested in...</Label>
                   <Input 
                     id="interest" 
-                    placeholder="e.g., 6-Week Rhythm Reset" 
+                    placeholder="e.g., 3-Month Rhythm Reset" 
                     className="font-sans"
+                    value={interest}
+                    onChange={(e) => setInterest(e.target.value)}
                   />
                 </div>
 
@@ -85,6 +112,9 @@ const Contact = () => {
                     placeholder="Tell me about your current challenges and goals..."
                     rows={6}
                     className="font-sans"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -116,10 +146,10 @@ const Contact = () => {
                       For general inquiries or quick questions
                     </p>
                     <a 
-                      href="mailto:hello@solarisnutri.com" 
+                      href={`mailto:${CONTACT_EMAIL}`} 
                       className="font-sans text-accent hover:text-accent/80 transition-colors"
                     >
-                      hello@solarisnutri.com
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>

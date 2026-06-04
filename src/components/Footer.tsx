@@ -81,7 +81,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="mailto:hello@solarisnutri.com" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:qr4nutrition@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('footer.email')}
                 </a>
               </li>
