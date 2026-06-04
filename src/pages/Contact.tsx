@@ -146,10 +146,10 @@ const Contact = () => {
                       For general inquiries or quick questions
                     </p>
                     <a 
-                      href="mailto:hello@solarisnutri.com" 
+                      href={`mailto:${CONTACT_EMAIL}`} 
                       className="font-sans text-accent hover:text-accent/80 transition-colors"
                     >
-                      hello@solarisnutri.com
+                      {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>
