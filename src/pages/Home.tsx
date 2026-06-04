@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Circle } from "lucide-react";
+import { ArrowRight, Circle, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import sunriseImage from "@/assets/sunrise-nature.png";
+import lightVideo from "@/assets/light-nutrient-sunrise.mp4.asset.json";
 import fruitTreesImage from "@/assets/fruit-trees.jpg";
 import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
@@ -89,6 +90,43 @@ const Home = () => {
 
   const currentRhythm = rhythmBlocks[language] || rhythmBlocks.en;
 
+  const lightBlocks = {
+    en: {
+      badge: "Light as a Nutrient",
+      title: "Your first meal of the day is sunrise light",
+      text: "Before food, your body is nourished by light. Morning sunlight sets your inner clock, calms your nervous system and prepares your digestion, hormones and mood for the day. Receiving natural light at sunrise is one of the simplest, most powerful rhythms you can rebuild.",
+      points: [
+        "Morning light anchors your circadian rhythm.",
+        "Sunlight supports energy, sleep and mood.",
+        "Aligning with the sun makes nutrition work better."
+      ]
+    },
+    es: {
+      badge: "La luz como nutriente",
+      title: "Tu primera comida del día es la luz del amanecer",
+      text: "Antes del alimento, tu cuerpo se nutre de luz. La luz solar de la mañana ajusta tu reloj interno, calma tu sistema nervioso y prepara tu digestión, hormonas y ánimo para el día. Recibir luz natural al amanecer es uno de los ritmos más simples y poderosos que puedes reconstruir.",
+      points: [
+        "La luz matutina ancla tu ritmo circadiano.",
+        "El sol favorece energía, sueño y estado de ánimo.",
+        "Alinearte con el sol hace que la nutrición funcione mejor."
+      ]
+    },
+    pt: {
+      badge: "A luz como nutriente",
+      title: "Sua primeira refeição do dia é a luz do amanhecer",
+      text: "Antes do alimento, seu corpo é nutrido pela luz. A luz solar da manhã ajusta seu relógio interno, acalma seu sistema nervoso e prepara sua digestão, hormônios e humor para o dia. Receber luz natural ao amanhecer é um dos ritmos mais simples e poderosos que você pode reconstruir.",
+      points: [
+        "A luz da manhã ancora seu ritmo circadiano.",
+        "O sol favorece energia, sono e humor.",
+        "Alinhar-se ao sol faz a nutrição funcionar melhor."
+      ]
+    }
+  };
+
+  const currentLight = lightBlocks[language] || lightBlocks.en;
+
+
+
   return (
     <div className="min-h-screen">
       <SEOHead
@@ -132,22 +170,35 @@ const Home = () => {
               {t('home.hero.subtitle')}
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-amber-100 hover:bg-amber-50 text-primary font-sans font-medium px-8 py-5 text-base transition-all hover:scale-105 shadow-quantum"
+                >
+                  Book a Free Assessment Call
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </Link>
               <Link to="/programs">
                 <Button 
                   size="lg" 
-                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-sans font-light px-8 py-5 text-base border border-white/30 transition-all hover:scale-105"
+                  className="bg-white/15 backdrop-blur-sm hover:bg-white/25 text-white font-sans font-light px-8 py-5 text-base border border-white/30 transition-all hover:scale-105"
                 >
                   {t('home.hero.cta')}
-                  <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
             </div>
           </div>
         </div>
 
+        <a href="#light" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white/70 hover:text-white transition-colors animate-bounce">
+          <Circle size={28} className="opacity-60" />
+        </a>
+
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
       </section>
+
 
       {/* Paula's Quote */}
       <section className="py-16 bg-accent/5">
@@ -160,6 +211,48 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Light as a Nutrient - Video Section */}
+      <section id="light" className="py-24 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-widest uppercase mb-5">
+                <Sun size={16} className="animate-pulse-slow" />
+                {currentLight.badge}
+              </div>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight mb-6">
+                {currentLight.title}
+              </h2>
+              <p className="font-sans text-base md:text-lg text-foreground/80 leading-relaxed mb-8">
+                {currentLight.text}
+              </p>
+              <ul className="space-y-3">
+                {currentLight.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Sun size={18} className="text-accent mt-1 flex-shrink-0" />
+                    <span className="font-sans text-foreground/80">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-quantum animate-fade-in group">
+              <video
+                src={lightVideo.url}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover aspect-video"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-amber-100/10 pointer-events-none" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Rhythm-Based Nutrition Concept */}
       <section className="py-20 bg-background">
