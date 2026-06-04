@@ -30,7 +30,7 @@ const Programs = () => {
       {
         duration: "6-Month",
         title: "Coherence Deepening",
-        price: "€1,800",
+        price: "€900",
         description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
         features: [
           "Everything in 3-Month program",
