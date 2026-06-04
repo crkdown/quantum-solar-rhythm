@@ -68,13 +68,16 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <Label htmlFor="name" className="font-sans text-sm">Name</Label>
                   <Input 
                     id="name" 
                     placeholder="Your full name" 
                     className="font-sans"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -85,6 +88,9 @@ const Contact = () => {
                     type="email" 
                     placeholder="your@email.com" 
                     className="font-sans"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -92,8 +98,10 @@ const Contact = () => {
                   <Label htmlFor="interest" className="font-sans text-sm">I'm interested in...</Label>
                   <Input 
                     id="interest" 
-                    placeholder="e.g., 6-Week Rhythm Reset" 
+                    placeholder="e.g., 3-Month Rhythm Reset" 
                     className="font-sans"
+                    value={interest}
+                    onChange={(e) => setInterest(e.target.value)}
                   />
                 </div>
 
@@ -104,6 +112,9 @@ const Contact = () => {
                     placeholder="Tell me about your current challenges and goals..."
                     rows={6}
                     className="font-sans"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
                   />
                 </div>
 
