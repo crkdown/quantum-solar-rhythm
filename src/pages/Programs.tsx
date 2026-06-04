@@ -15,7 +15,7 @@ const Programs = () => {
       {
         duration: "3-Month",
         title: "Rhythm Reset",
-        price: "€900",
+        price: "€600",
         description: "Stabilize body rhythms, contribute to energy, and simplify nourishment through circadian alignment.",
         features: [
           "Rhythm calendar & circadian alignment",
