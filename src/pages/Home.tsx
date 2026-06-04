@@ -170,22 +170,35 @@ const Home = () => {
               {t('home.hero.subtitle')}
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-amber-100 hover:bg-amber-50 text-primary font-sans font-medium px-8 py-5 text-base transition-all hover:scale-105 shadow-quantum"
+                >
+                  Book a Free Assessment Call
+                  <ArrowRight className="ml-2" size={18} />
+                </Button>
+              </Link>
               <Link to="/programs">
                 <Button 
                   size="lg" 
-                  className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white font-sans font-light px-8 py-5 text-base border border-white/30 transition-all hover:scale-105"
+                  className="bg-white/15 backdrop-blur-sm hover:bg-white/25 text-white font-sans font-light px-8 py-5 text-base border border-white/30 transition-all hover:scale-105"
                 >
                   {t('home.hero.cta')}
-                  <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
             </div>
           </div>
         </div>
 
+        <a href="#light" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 text-white/70 hover:text-white transition-colors animate-bounce">
+          <Circle size={28} className="opacity-60" />
+        </a>
+
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
       </section>
+
 
       {/* Paula's Quote */}
       <section className="py-16 bg-accent/5">
