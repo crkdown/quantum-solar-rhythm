@@ -1,4 +1,5 @@
 import { Circle, Mail, Calendar, Instagram } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,7 +8,25 @@ import { Label } from "@/components/ui/label";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
 
+const CONTACT_EMAIL = "qr4nutrition@gmail.com";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [interest, setInterest] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(
+      interest ? `Inquiry: ${interest}` : "New inquiry from Solaris Nutri"
+    );
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nInterested in: ${interest}\n\n${message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="min-h-screen py-24">
       <SEOHead
