@@ -138,11 +138,18 @@ const Contact = () => {
                       Book a Discovery Call
                     </h3>
                     <p className="font-sans text-foreground/70 mb-3">
-                      30-minute complimentary session to discuss your needs
+                      30-minute complimentary session — book it by sending a DM on Instagram
                     </p>
-                    <Button variant="outline" className="font-sans">
-                      Schedule Call
-                    </Button>
+                    <a
+                      href="https://www.instagram.com/solarisnutri"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline" className="font-sans gap-2">
+                        <Instagram size={18} />
+                        Book via Instagram DM
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>

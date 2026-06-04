@@ -7,7 +7,6 @@ import fruitTreesImage from "@/assets/fruit-trees.jpg";
 import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
-import GoogleReviews from "@/components/GoogleReviews";
 import SEOHead from "@/components/SEOHead";
 
 const Home = () => {
@@ -307,9 +306,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Google Reviews Section */}
-      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="py-24 bg-primary text-primary-foreground">

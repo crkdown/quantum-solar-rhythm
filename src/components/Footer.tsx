@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -82,6 +83,18 @@ const Footer = () => {
               <li>
                 <a href="mailto:hello@solarisnutri.com" className="text-muted-foreground hover:text-primary transition-colors">
                   {t('footer.email')}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/solarisnutri"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Solaris Nutri on Instagram"
+                >
+                  <Instagram size={18} />
+                  @solarisnutri
                 </a>
               </li>
             </ul>

@@ -15,7 +15,7 @@ const Programs = () => {
       {
         duration: "3-Month",
         title: "Rhythm Reset",
-        price: "€900",
+        price: "€600",
         description: "Stabilize body rhythms, contribute to energy, and simplify nourishment through circadian alignment.",
         features: [
           "Rhythm calendar & circadian alignment",
@@ -30,7 +30,7 @@ const Programs = () => {
       {
         duration: "6-Month",
         title: "Coherence Deepening",
-        price: "€1,800",
+        price: "€900",
         description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
         features: [
           "Everything in 3-Month program",
@@ -43,28 +43,12 @@ const Programs = () => {
         ],
         popular: true
       },
-      {
-        duration: "9-Month",
-        title: "Full Quantum Rhythm Embodiment",
-        price: "€2,700",
-        description: "Complete reprogramming of body rhythms with planetary cycle integration and nervous system mastery.",
-        features: [
-          "Everything in 6-Month program",
-          "Planetary rhythm cycle integration",
-          "Nervous system & vagus regulation",
-          "Weekly 1:1 deep-dive sessions",
-          "Complete rhythm intelligence embodiment",
-          "Lifetime access to resources",
-          "6 months post-program support"
-        ],
-        popular: false
-      }
     ],
     es: [
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€900",
+        price: "€600",
         description: "Estabiliza los ritmos corporales, contribuye a la energía y simplifica la nutrición a través de la alineación circadiana.",
         features: [
           "Calendario de ritmo y alineación circadiana",
@@ -79,7 +63,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Profundización de Coherencia",
-        price: "€1,800",
+        price: "€900",
         description: "Reconstruye la estabilidad metabólica y la regulación emocional a través de los ciclos lunares y transiciones estacionales.",
         features: [
           "Todo del programa de 3 meses",
@@ -92,28 +76,12 @@ const Programs = () => {
         ],
         popular: true
       },
-      {
-        duration: "9 Meses",
-        title: "Encarnación Completa del Ritmo Cuántico",
-        price: "€2,700",
-        description: "Reprogramación completa de los ritmos corporales con integración de ciclos planetarios y dominio del sistema nervioso.",
-        features: [
-          "Todo del programa de 6 meses",
-          "Integración de ciclos rítmicos planetarios",
-          "Regulación del sistema nervioso y vagal",
-          "Sesiones profundas 1:1 semanales",
-          "Encarnación completa de inteligencia rítmica",
-          "Acceso de por vida a recursos",
-          "6 meses de soporte post-programa"
-        ],
-        popular: false
-      }
     ],
     pt: [
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€900",
+        price: "€600",
         description: "Estabilize os ritmos corporais, contribua para a energia e simplifique a nutrição através do alinhamento circadiano.",
         features: [
           "Calendário de ritmo e alinhamento circadiano",
@@ -128,7 +96,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Aprofundamento de Coerência",
-        price: "€1,800",
+        price: "€900",
         description: "Reconstrua a estabilidade metabólica e a regulação emocional através dos ciclos lunares e transições sazonais.",
         features: [
           "Tudo do programa de 3 meses",
@@ -141,22 +109,6 @@ const Programs = () => {
         ],
         popular: true
       },
-      {
-        duration: "9 Meses",
-        title: "Incorporação Completa do Ritmo Quântico",
-        price: "€2,700",
-        description: "Reprogramação completa dos ritmos corporais com integração de ciclos planetários e domínio do sistema nervoso.",
-        features: [
-          "Tudo do programa de 6 meses",
-          "Integração de ciclos rítmicos planetários",
-          "Regulação do sistema nervoso e vagal",
-          "Sessões profundas 1:1 semanais",
-          "Incorporação completa de inteligência rítmica",
-          "Acesso vitalício a recursos",
-          "6 meses de suporte pós-programa"
-        ],
-        popular: false
-      }
     ]
   };
 
@@ -232,7 +184,7 @@ const Programs = () => {
     <div className="min-h-screen py-24">
       <SEOHead
         title="Nutrition Programs"
-        description="Join Solaris Nutri rhythm-based nutrition programs — 3, 6 or 9-month journeys to rebuild your metabolic balance through circadian alignment and holistic nutrition."
+        description="Join Solaris Nutri rhythm-based nutrition programs — 3 or 6-month journeys to rebuild your metabolic balance through circadian alignment and holistic nutrition."
         path="/programs"
         keywords="nutrition programs, rhythm nutrition course, metabolic balance program, holistic nutrition coaching"
       />
