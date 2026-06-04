@@ -63,7 +63,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Profundización de Coherencia",
-        price: "€1,800",
+        price: "€900",
         description: "Reconstruye la estabilidad metabólica y la regulación emocional a través de los ciclos lunares y transiciones estacionales.",
         features: [
           "Todo del programa de 3 meses",
