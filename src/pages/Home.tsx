@@ -212,6 +212,48 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Light as a Nutrient - Video Section */}
+      <section id="light" className="py-24 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-widest uppercase mb-5">
+                <Sun size={16} className="animate-pulse-slow" />
+                {currentLight.badge}
+              </div>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight mb-6">
+                {currentLight.title}
+              </h2>
+              <p className="font-sans text-base md:text-lg text-foreground/80 leading-relaxed mb-8">
+                {currentLight.text}
+              </p>
+              <ul className="space-y-3">
+                {currentLight.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <Sun size={18} className="text-accent mt-1 flex-shrink-0" />
+                    <span className="font-sans text-foreground/80">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-quantum animate-fade-in group">
+              <video
+                src={lightVideo.url}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover aspect-video"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-amber-100/10 pointer-events-none" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Rhythm-Based Nutrition Concept */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
