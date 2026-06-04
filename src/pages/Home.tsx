@@ -307,9 +307,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Google Reviews Section */}
-      <GoogleReviews />
-
       {/* CTA Section */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
