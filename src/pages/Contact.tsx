@@ -171,11 +171,11 @@ const Contact = () => {
                       30-minute complimentary session — book it by sending a DM on Instagram
                     </p>
                     <a
-                      href="https://www.instagram.com/solarisnutri"
+                      href="https://ig.me/m/solarisnutri"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button variant="outline" className="font-sans gap-2">
+                      <Button className="font-sans gap-2 bg-primary hover:bg-primary/90">
                         <Instagram size={18} />
                         Book via Instagram DM
                       </Button>
