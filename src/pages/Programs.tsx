@@ -184,7 +184,7 @@ const Programs = () => {
     <div className="min-h-screen py-24">
       <SEOHead
         title="Nutrition Programs"
-        description="Join Solaris Nutri rhythm-based nutrition programs — 3, 6 or 9-month journeys to rebuild your metabolic balance through circadian alignment and holistic nutrition."
+        description="Join Solaris Nutri rhythm-based nutrition programs — 3 or 6-month journeys to rebuild your metabolic balance through circadian alignment and holistic nutrition."
         path="/programs"
         keywords="nutrition programs, rhythm nutrition course, metabolic balance program, holistic nutrition coaching"
       />
