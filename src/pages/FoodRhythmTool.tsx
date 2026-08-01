@@ -8,6 +8,7 @@ import { Progress } from "@/components/ui/progress";
 import { Link } from "react-router-dom";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 type Answer = {
   questionIndex: number;
@@ -648,6 +649,7 @@ const FoodRhythmTool = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEOHead title="Food Rhythm Tool" description="Map your meal timing and circadian patterns with the free Solaris Nutri Food Rhythm assessment." path="/food-rhythm-tool" keywords="meal timing tool, chrononutrition assessment" />
       <div className="container mx-auto px-6 max-w-2xl">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
