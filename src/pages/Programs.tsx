@@ -129,7 +129,7 @@ const Programs = () => {
 
   const educationalResources = {
     en: [
-      "QRN Foundations Video Library",
+      
       "Circadian Nutrition Guide (eBook)",
       "Meal Timing Templates",
       "Seasonal Eating Calendar",
@@ -137,7 +137,7 @@ const Programs = () => {
       "Monthly Live Q&A Access"
     ],
     es: [
-      "Biblioteca de Videos Fundamentos QRN",
+      
       "Guía de Nutrición Circadiana (eBook)",
       "Plantillas de Horarios de Comidas",
       "Calendario de Alimentación Estacional",
@@ -145,7 +145,7 @@ const Programs = () => {
       "Acceso a Q&A en Vivo Mensual"
     ],
     pt: [
-      "Biblioteca de Vídeos Fundamentos QRN",
+      
       "Guia de Nutrição Circadiana (eBook)",
       "Modelos de Horários de Refeições",
       "Calendário de Alimentação Sazonal",
