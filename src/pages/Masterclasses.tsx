@@ -153,7 +153,7 @@ const Masterclasses = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-primary bg-gradient-to-br from-primary/5 to-accent/5 overflow-hidden">
             <CardHeader className="text-center pb-4">
-              <CardTitle className="font-serif text-4xl md:text-5xl text-primary mb-4">
+              <CardTitle asChild><h1 className="font-serif text-4xl md:text-5xl text-primary mb-4">
                 {currentTexts.title}
               </CardTitle>
               <CardDescription className="text-lg text-foreground/80 font-sans">
