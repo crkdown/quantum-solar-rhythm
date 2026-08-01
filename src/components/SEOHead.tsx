@@ -10,7 +10,7 @@ interface SEOHeadProps {
   jsonLd?: Record<string, unknown>;
 }
 
-const SITE_URL = "https://quantum-solar-rhythm.lovable.app";
+const SITE_URL = "https://solarisnutri-com.lovable.app";
 const DEFAULT_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/cfa0961b-099d-4762-ace1-e2ae3846cf0f/id-preview-67e43c67--40abf203-18fb-48fc-8cc0-e5b115ec36fa.lovable.app-1773000272087.png";
 
 const SEOHead = ({ title, description, path, type = "website", image, keywords, jsonLd }: SEOHeadProps) => {
