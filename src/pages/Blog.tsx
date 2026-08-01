@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import SEOHead from "@/components/SEOHead";
 
 const Blog = () => {
   const articles = [
@@ -108,6 +109,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEOHead title="Rhythm & Nutrition Blog" description="Articles on circadian nutrition, TCM spleen health, Rudolf Steiner's grain rhythms and rebuilding metabolic balance through timing." path="/blog" keywords="circadian nutrition blog, TCM spleen, Rudolf Steiner nutrition" />
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
