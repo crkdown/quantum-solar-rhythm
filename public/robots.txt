@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quantum-solar-rhythm.lovable.app/sitemap.xml
+Sitemap: https://solarisnutri-com.lovable.app/sitemap.xml
 
 User-agent: Googlebot
 Allow: /

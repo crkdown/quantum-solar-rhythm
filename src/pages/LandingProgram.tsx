@@ -7,6 +7,7 @@ import wholesomeFood from "@/assets/wholesome-food.jpg";
 import nourishingBowl from "@/assets/nourishing-bowl.jpg";
 import sunriseNature from "@/assets/sunrise-nature.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const LandingProgram = () => {
   const { language } = useLanguage();
@@ -161,6 +162,7 @@ const LandingProgram = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead title="Rhythm Nutrition Programs" description="3 and 6-month rhythm-based nutrition programs with twice-monthly 1:1 coaching to rebuild metabolic balance." path="/landing/program" keywords="nutrition coaching program, circadian nutrition program" />
       {/* Hero */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/8 via-background to-accent/8">
         <div className="container mx-auto px-6 max-w-4xl text-center">

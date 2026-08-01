@@ -4,6 +4,7 @@ import logo from "@/assets/solaris-nutri-logo.jpeg";
 import paulaPhoto from "@/assets/paula-photo.jpeg";
 import circadianRhythm from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEOHead from "@/components/SEOHead";
 
 const LandingMasterclass = () => {
   const { language } = useLanguage();
@@ -129,6 +130,7 @@ const LandingMasterclass = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead title="Free Live Masterclass" description="Join Paula Suescun's free live masterclass on rhythm-based nutrition, digestion and energy." path="/landing/masterclass" keywords="free nutrition masterclass, circadian nutrition webinar" />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/10 py-20 md:py-28">
         <div className="container mx-auto px-6 max-w-4xl text-center">

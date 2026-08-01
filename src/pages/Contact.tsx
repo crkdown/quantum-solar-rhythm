@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
 
-const CONTACT_EMAIL = "qr4nutrition@gmail.com";
+const CONTACT_EMAIL = "qrnutrition4@gmail.com";
 
 const Contact = () => {
   const [name, setName] = useState("");

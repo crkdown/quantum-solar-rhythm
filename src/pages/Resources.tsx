@@ -6,6 +6,7 @@ import logo from "@/assets/solaris-nutri-logo.jpeg";
 import toolRhythmCycles from "@/assets/tool-rhythm-cycles.png";
 import toolBodyAwareness from "@/assets/tool-body-awareness.png";
 import toolNourishingRhythm from "@/assets/tool-nourishing-rhythm.png";
+import SEOHead from "@/components/SEOHead";
 
 const Resources = () => {
   const resources = [
@@ -118,6 +119,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen py-24">
+      <SEOHead title="Free Rhythm Resources & Recipes" description="Free QRN guides, seasonal nutrition PDFs, rhythm tools and curated healing-food recipe traditions from Solaris Nutri." path="/resources" keywords="free nutrition resources, seasonal eating guide, circadian rhythm tools" />
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
