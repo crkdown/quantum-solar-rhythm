@@ -1,8 +1,9 @@
-import { Circle } from "lucide-react";
+import { Circle, Apple, Clock, Leaf, HeartHandshake, BrainCircuit, Fingerprint, RefreshCw, FlaskConical } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import paulaPhoto from "@/assets/paula-photo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEOHead from "@/components/SEOHead";
+import type { LucideIcon } from "lucide-react";
 
 const About = () => {
   const { t, language } = useLanguage();
