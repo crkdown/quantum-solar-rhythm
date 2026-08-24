@@ -355,10 +355,10 @@ const About = () => {
             </div>
           </div>
 
-          {/* Core Values */}
+          {/* Core Pillars */}
           <div className="mt-16 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
             <h3 className="font-serif text-3xl font-semibold text-primary text-center mb-10">
-              {t('about.values')}
+              {t('about.pillars')}
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (

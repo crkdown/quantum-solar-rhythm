@@ -286,7 +286,7 @@ const Resources = () => {
               Recipes & Healing Foods
             </h2>
             <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
-              Curated recipe traditions and protocols woven into every QRN program — from anthroposophic grain wisdom to functional medicine and food-as-medicine science.
+              Curated recipe traditions and protocols woven into every Solaris Nutri program — from anthroposophic grain wisdom to functional medicine and food-as-medicine science.
             </p>
           </div>
 

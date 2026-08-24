@@ -232,12 +232,12 @@ const Method = () => {
           </div>
         </div>
 
-        {/* QRN Framework Summary */}
+        {/* Solaris Nutri Framework Summary */}
         <div className="max-w-2xl mx-auto mt-16 mb-8 text-center animate-fade-in-up">
           <h3 className="font-serif text-2xl font-bold text-primary mb-4">Solaris Nutri Framework</h3>
           <img 
             src={qrnFramework} 
-            alt="QRN Framework - Sunlight, Natural Cycles, Food as Information, Body Language" 
+            alt="Solaris Nutri Framework - Sunlight, Natural Cycles, Food as Information, Body Language" 
             className="max-w-xs md:max-w-sm mx-auto rounded-lg shadow-subtle-glow"
           />
         </div>
