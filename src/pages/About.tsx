@@ -377,6 +377,72 @@ const About = () => {
               ))}
             </div>
           </div>
+
+          {/* Why Solaris Nutri is Different */}
+          <div className="mt-24 animate-fade-in-up">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase mb-4">
+                <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
+                {currentDifference.eyebrow}
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+                {currentDifference.title}
+              </h2>
+              <p className="font-serif text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto mb-2">
+                {currentDifference.intro}
+              </p>
+              <p className="font-sans text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
+                {currentDifference.context}
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {currentDifference.points.map((point, index) => {
+                const Icon = point.icon;
+                return (
+                  <div
+                    key={index}
+                    className="group bg-card rounded-lg border border-border p-6 hover:border-accent/40 hover:shadow-subtle-glow transition-all duration-300 flex flex-col"
+                    style={{ animationDelay: `${index * 75}ms` }}
+                  >
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <Icon size={22} strokeWidth={1.5} />
+                      </div>
+                      <span className="font-sans text-xs tracking-widest text-muted-foreground">
+                        {point.number}
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-lg font-semibold text-primary mb-2">
+                      {point.title}
+                    </h3>
+                    <p className="font-sans text-sm font-medium text-accent mb-3">
+                      {point.subtitle}
+                    </p>
+                    <p className="font-sans text-sm text-foreground/70 leading-relaxed flex-grow">
+                      {point.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-16 text-center bg-primary/5 rounded-2xl border border-primary/20 p-8 md:p-12">
+              <h3 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
+                {currentDifference.closingTitle}
+              </h3>
+              <p className="font-serif text-xl text-foreground/80 mb-2">
+                {currentDifference.closingLine1}
+              </p>
+              <p className="font-serif text-xl text-foreground/80 mb-6">
+                {currentDifference.closingLine2}
+              </p>
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-sm tracking-wider uppercase">
+                <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
+                {currentDifference.closingBrand}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
