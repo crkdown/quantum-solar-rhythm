@@ -15,10 +15,10 @@ const Method = () => {
   return (
     <div className="min-h-screen py-24">
       <SEOHead
-        title="The Quantum Rhythm Method"
-        description="Discover the Quantum Rhythm Nutrition method — a timing-based system aligning your biology with natural cycles for better digestion, energy and metabolic balance."
+        title="The Solaris Nutri Method"
+        description="Discover the Solaris Nutri Framework method — a timing-based system aligning your biology with natural cycles for better digestion, energy and metabolic balance."
         path="/method"
-        keywords="quantum rhythm nutrition method, circadian rhythm eating, chronobiology nutrition, TCM spleen, metabolic alignment"
+        keywords="solaris nutri framework method, circadian rhythm eating, chronobiology nutrition, TCM spleen, metabolic alignment"
       />
       <div className="container mx-auto px-6">
         {/* Header */}
@@ -234,7 +234,7 @@ const Method = () => {
 
         {/* QRN Framework Summary */}
         <div className="max-w-2xl mx-auto mt-16 mb-8 text-center animate-fade-in-up">
-          <h3 className="font-serif text-2xl font-bold text-primary mb-4">Quantum Rhythm Nutrition</h3>
+          <h3 className="font-serif text-2xl font-bold text-primary mb-4">Solaris Nutri Framework</h3>
           <img 
             src={qrnFramework} 
             alt="QRN Framework - Sunlight, Natural Cycles, Food as Information, Body Language" 

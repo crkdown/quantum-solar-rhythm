@@ -44,7 +44,7 @@ const Masterclasses = () => {
       limitedSpaces: "Limited spaces available — FREE masterclass",
       instructor: "Paula Suescun",
       instructorRole: "Nutritionist-Dietitian – National University of Colombia",
-      instructorDesc: "Health Coach · Founder of Solaris Nutri · Creator of the Quantum Rhythm Nutrition (QRN) framework",
+      instructorDesc: "Health Coach · Founder of Solaris Nutri · Creator of the Solaris Nutri Framework framework",
       whatsappCta: "Join our WhatsApp community",
     },
     es: {
@@ -81,7 +81,7 @@ const Masterclasses = () => {
       limitedSpaces: "Cupos limitados — Masterclass GRATUITA",
       instructor: "Paula Suescun",
       instructorRole: "Nutricionista-Dietista – Universidad Nacional de Colombia",
-      instructorDesc: "Health Coach · Fundadora de Solaris Nutri · Creadora del framework Quantum Rhythm Nutrition (QRN)",
+      instructorDesc: "Health Coach · Fundadora de Solaris Nutri · Creadora del framework Solaris Nutri Framework",
       whatsappCta: "Únete a nuestra comunidad de WhatsApp",
     },
     pt: {
@@ -118,7 +118,7 @@ const Masterclasses = () => {
       limitedSpaces: "Vagas limitadas — Masterclass GRATUITA",
       instructor: "Paula Suescun",
       instructorRole: "Nutricionista-Dietista – Universidade Nacional da Colômbia",
-      instructorDesc: "Health Coach · Fundadora da Solaris Nutri · Criadora do framework Quantum Rhythm Nutrition (QRN)",
+      instructorDesc: "Health Coach · Fundadora da Solaris Nutri · Criadora do framework Solaris Nutri Framework",
       whatsappCta: "Junte-se à nossa comunidade WhatsApp",
     }
   };

@@ -321,7 +321,7 @@ const Home = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl md:text-4xl font-medium text-primary mb-4">
-                Quantum Rhythm Nutrition
+                Solaris Nutri Framework
               </h2>
               <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
                 Aligning your biology with natural cycles
@@ -349,12 +349,12 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
                 <p className="font-serif text-lg text-foreground/90 leading-relaxed italic">
-                  &ldquo;Quantum Rhythm Nutrition is not a diet. It is a timing-based system that contributes to energy, digestion, and clarity by aligning your biology with natural cycles.&rdquo;
+                  &ldquo;Solaris Nutri Framework is not a diet. It is a timing-based system that contributes to energy, digestion, and clarity by aligning your biology with natural cycles.&rdquo;
                 </p>
               </div>
               <div className="p-6 bg-card rounded-xl border border-border shadow-subtle-glow">
                 <p className="font-serif text-lg text-foreground/90 leading-relaxed italic">
-                  &ldquo;Most people try to change what they eat. QRN starts with when your system is ready.&rdquo;
+                  &ldquo;Most people try to change what they eat. The framework starts with when your system is ready.&rdquo;
                 </p>
               </div>
             </div>

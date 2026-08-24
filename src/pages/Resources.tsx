@@ -76,7 +76,7 @@ const Resources = () => {
     {
       author: "Master Choa Kok Sui",
       works: "Pranic Healing, Twin Hearts Meditation",
-      contribution: "Practical energy healing techniques, chakra-based health protocols, and the Twin Hearts meditation used in QRN practice."
+      contribution: "Practical energy healing techniques, chakra-based health protocols, and the Twin Hearts meditation used in Solaris Nutri practice."
     },
     {
       author: "Rudolf Steiner",
@@ -119,7 +119,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen py-24">
-      <SEOHead title="Free Rhythm Resources & Recipes" description="Free QRN guides, seasonal nutrition PDFs, rhythm tools and curated healing-food recipe traditions from Solaris Nutri." path="/resources" keywords="free nutrition resources, seasonal eating guide, circadian rhythm tools" />
+      <SEOHead title="Free Rhythm Resources & Recipes" description="Free Solaris Nutri guides, seasonal nutrition PDFs, rhythm tools and curated healing-food recipe traditions from Solaris Nutri." path="/resources" keywords="free nutrition resources, seasonal eating guide, circadian rhythm tools" />
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
@@ -156,7 +156,7 @@ const Resources = () => {
           </div>
         </div>
 
-        {/* QRN Rhythm Circle — Free with discovery call */}
+        {/* Solaris Nutri Rhythm Circle — Free with discovery call */}
         <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
           <Card className="border-accent/40 bg-gradient-to-br from-accent/10 via-background to-primary/5 overflow-hidden">
             <CardContent className="p-8 md:p-10">
@@ -171,7 +171,7 @@ const Resources = () => {
                     Free Gift
                   </CardDescription>
                   <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2">
-                    QRN Rhythm Circle Assessment
+                    Solaris Nutri Rhythm Circle Assessment
                   </h3>
                   <p className="font-sans text-foreground/70 mb-5 leading-relaxed">
                     A printable self-mapping tool to see which rhythm areas need support.
@@ -238,17 +238,17 @@ const Resources = () => {
           })}
         </div>
 
-        {/* QRN Foundation Library */}
+        {/* Solaris Nutri Foundation Library */}
         <div className="max-w-5xl mx-auto mb-20 animate-fade-in">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 text-accent mb-4">
               <BookOpen size={24} />
             </div>
             <h2 className="font-serif text-3xl font-bold text-primary mb-3">
-              QRN Foundation Library
+              Solaris Nutri Foundation Library
             </h2>
             <p className="font-sans text-foreground/70 max-w-2xl mx-auto">
-              The authors, traditions, and lineages that inform the Quantum Rhythm Nutrition framework.
+              The authors, traditions, and lineages that inform the Solaris Nutri Framework.
             </p>
           </div>
 

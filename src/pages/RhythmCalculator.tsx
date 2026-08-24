@@ -430,7 +430,7 @@ const RhythmCalculator = () => {
 
   return (
     <div className="min-h-screen py-24">
-      <SEOHead title="Rhythm Calculator" description="Free interactive assessment to discover your optimal eating windows and daily rhythm profile with Quantum Rhythm Nutrition." path="/rhythm-calculator" keywords="eating window calculator, circadian rhythm quiz" />
+      <SEOHead title="Rhythm Calculator" description="Free interactive assessment to discover your optimal eating windows and daily rhythm profile with Solaris Nutri Framework." path="/rhythm-calculator" keywords="eating window calculator, circadian rhythm quiz" />
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
           {/* Header */}

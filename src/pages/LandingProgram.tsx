@@ -18,7 +18,7 @@ const LandingProgram = () => {
       title: "Rebuild Your Natural Rhythm",
       subtitle: "Instead of counting calories or cutting more foods, we help you rebuild your natural rhythm – so your body feels safe, grounded, and ready to change.",
       quote: "I don't put you on another diet. I guide you into a new rhythm.",
-      quoteAuthor: "Paula Suescun · Nutritionist & QRN Creator",
+      quoteAuthor: "Paula Suescun · Nutritionist & Solaris Nutri Framework Creator",
       howTitle: "How It Works",
       steps: [
         { icon: "heart", title: "Decode — See Your Rhythm", desc: "We observe your sleep, meals, stress, and emotions with compassion. We understand how your spleen and nervous system are living in survival mode — and we name your patterns with love, not shame." },
@@ -43,7 +43,7 @@ const LandingProgram = () => {
         "Personalized rhythm plan",
         "Twice-monthly 1:1 sessions (2 per month)",
         "WhatsApp support",
-        "QRN digital resources & tools",
+        "Solaris Nutri digital resources & tools",
         "Circadian alignment guidance",
         "Gut reset protocol"
       ],
@@ -58,7 +58,7 @@ const LandingProgram = () => {
       title: "Reconstruye Tu Ritmo Natural",
       subtitle: "En lugar de contar calorías o eliminar más alimentos, te ayudamos a reconstruir tu ritmo natural — para que tu cuerpo se sienta seguro, enraizado y listo para cambiar.",
       quote: "No te pongo otra dieta. Te guío hacia un nuevo ritmo.",
-      quoteAuthor: "Paula Suescun · Nutricionista y Creadora de QRN",
+      quoteAuthor: "Paula Suescun · Nutricionista y Creadora del Solaris Nutri Framework",
       howTitle: "Cómo Funciona",
       steps: [
         { icon: "heart", title: "Decodificar — Observa Tu Ritmo", desc: "Observamos tu sueño, comidas, estrés y emociones con compasión. Entendemos cómo tu bazo y sistema nervioso viven en modo supervivencia — y nombramos tus patrones con amor, no con vergüenza." },
@@ -83,7 +83,7 @@ const LandingProgram = () => {
         "Plan de ritmo personalizado",
         "Sesiones 1:1 dos veces al mes",
         "Soporte por WhatsApp",
-        "Recursos y herramientas digitales QRN",
+        "Recursos y herramientas digitales Solaris Nutri",
         "Guía de alineación circadiana",
         "Protocolo de reset intestinal"
       ],
@@ -98,7 +98,7 @@ const LandingProgram = () => {
       title: "Reconstrua Seu Ritmo Natural",
       subtitle: "Em vez de contar calorias ou cortar mais alimentos, ajudamos você a reconstruir seu ritmo natural — para que seu corpo se sinta seguro, enraizado e pronto para mudar.",
       quote: "Eu não te coloco em outra dieta. Eu te guio para um novo ritmo.",
-      quoteAuthor: "Paula Suescun · Nutricionista e Criadora de QRN",
+      quoteAuthor: "Paula Suescun · Nutricionista e Criadora do Solaris Nutri Framework",
       howTitle: "Como Funciona",
       steps: [
         { icon: "heart", title: "Decodificar — Veja Seu Ritmo", desc: "Observamos seu sono, refeições, estresse e emoções com compaixão. Entendemos como seu baço e sistema nervoso vivem em modo de sobrevivência — e nomeamos seus padrões com amor, não com vergonha." },
@@ -123,7 +123,7 @@ const LandingProgram = () => {
         "Plano de ritmo personalizado",
         "Sessões 1:1 duas vezes por mês",
         "Suporte por WhatsApp",
-        "Recursos e ferramentas digitais QRN",
+        "Recursos e ferramentas digitais Solaris Nutri",
         "Orientação de alinhamento circadiano",
         "Protocolo de reset intestinal"
       ],

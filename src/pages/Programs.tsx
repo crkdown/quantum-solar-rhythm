@@ -23,7 +23,7 @@ const Programs = () => {
           "Twice-monthly 1:1 sessions (2 per month)",
           "WhatsApp support",
           "Personalized rhythm plan",
-          "QRN starter toolkit"
+          "Solaris Nutri starter toolkit"
         ],
         popular: false
       },
@@ -56,7 +56,7 @@ const Programs = () => {
           "Sesiones 1:1 dos veces al mes",
           "Soporte por WhatsApp",
           "Plan de ritmo personalizado",
-          "Kit de inicio QRN"
+          "Kit de inicio Solaris Nutri"
         ],
         popular: false
       },
@@ -89,7 +89,7 @@ const Programs = () => {
           "Sessões 1:1 duas vezes por mês",
           "Suporte por WhatsApp",
           "Plano de ritmo personalizado",
-          "Kit inicial QRN"
+          "Kit inicial Solaris Nutri"
         ],
         popular: false
       },
