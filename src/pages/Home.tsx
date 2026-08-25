@@ -125,6 +125,34 @@ const Home = () => {
 
   const currentLight = lightBlocks[language] || lightBlocks.en;
 
+  const pitchBlocks = {
+    en: {
+      badge: "Who I Help",
+      title: "Solaris Nutri helps women in midlife whose metabolism and energy seem to have changed",
+      text: "Despite trying different diets, nothing works the way it used to. I help them understand their biological rhythms and rebuild their nutrition around them.",
+      cta: "Book a Free Assessment Call",
+      alt: "Woman waking up and looking at the sunrise",
+    },
+    es: {
+      badge: "A quién acompaño",
+      title: "Solaris Nutri acompaña a mujeres en la mediana edad cuyo metabolismo y energía parecen haber cambiado",
+      text: "A pesar de probar diferentes dietas, nada funciona como antes. Las ayudo a comprender sus ritmos biológicos y a reconstruir su nutrición en torno a ellos.",
+      cta: "Reserva una llamada de evaluación gratuita",
+      alt: "Mujer despertando y contemplando el amanecer",
+    },
+    pt: {
+      badge: "Quem eu acompanho",
+      title: "A Solaris Nutri acompanha mulheres na meia-idade cujo metabolismo e energia parecem ter mudado",
+      text: "Apesar de tentarem diferentes dietas, nada funciona como antes. Ajudo-as a compreender os seus ritmos biológicos e a reconstruir a sua nutrição em torno deles.",
+      cta: "Marque uma chamada de avaliação gratuita",
+      alt: "Mulher a acordar e a contemplar o nascer do sol",
+    },
+  };
+
+  const currentPitch = pitchBlocks[language] || pitchBlocks.en;
+
+
+
 
 
   return (
