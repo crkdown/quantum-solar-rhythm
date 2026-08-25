@@ -207,7 +207,7 @@ const Masterclasses = () => {
                     className="h-16 w-16 logo-circle object-cover"
                   />
                   <div>
-                    <h3 className="font-serif text-xl font-semibold text-primary">{currentTexts.instructor}</h3>
+                    <h2 className="font-serif text-xl font-semibold text-primary">{currentTexts.instructor}</h2>
                     <p className="font-sans text-sm text-foreground/70">
                       {currentTexts.instructorRole}<br />
                       {currentTexts.instructorDesc}
@@ -227,7 +227,7 @@ const Masterclasses = () => {
 
               {/* What you'll learn */}
               <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-semibold text-primary">{currentTexts.learnTitle}</h3>
+                <h2 className="font-serif text-2xl font-semibold text-primary">{currentTexts.learnTitle}</h2>
                 <ul className="space-y-3">
                   {currentTexts.learnItems.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -240,7 +240,7 @@ const Masterclasses = () => {
 
               {/* Target Audience */}
               <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-semibold text-primary">{currentTexts.audienceTitle}</h3>
+                <h2 className="font-serif text-2xl font-semibold text-primary">{currentTexts.audienceTitle}</h2>
                 <ul className="space-y-3">
                   {currentTexts.audienceItems.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
@@ -253,7 +253,7 @@ const Masterclasses = () => {
 
               {/* Why Different */}
               <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-semibold text-primary">{currentTexts.whyDifferent}</h3>
+                <h2 className="font-serif text-2xl font-semibold text-primary">{currentTexts.whyDifferent}</h2>
                 <p className="font-sans text-foreground/80 leading-relaxed">
                   {currentTexts.whyDifferentText}
                 </p>

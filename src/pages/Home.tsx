@@ -327,9 +327,9 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-            {/* Block 1 */}
+          {/* Block 1 */}
             <div className="bg-card p-8 rounded-xl border border-border shadow-subtle-glow animate-fade-in-up">
-              <h3 className="font-serif text-xl font-semibold text-primary mb-4">{currentRhythm.block1Title}</h3>
+              <h2 className="font-serif text-xl font-semibold text-primary mb-4">{currentRhythm.block1Title}</h2>
               <p className="font-sans text-foreground/80 leading-relaxed text-sm">
                 {currentRhythm.block1Text}
               </p>
@@ -337,7 +337,7 @@ const Home = () => {
 
             {/* Block 2 */}
             <div className="bg-card p-8 rounded-xl border border-border shadow-subtle-glow animate-fade-in-up" style={{ animationDelay: "100ms" }}>
-              <h3 className="font-serif text-xl font-semibold text-primary mb-4">{currentRhythm.block2Title}</h3>
+              <h2 className="font-serif text-xl font-semibold text-primary mb-4">{currentRhythm.block2Title}</h2>
               <ul className="space-y-3 mb-4">
                 {currentRhythm.block2Items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
@@ -353,7 +353,7 @@ const Home = () => {
 
             {/* Block 3 */}
             <div className="bg-card p-8 rounded-xl border border-border shadow-subtle-glow animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-              <h3 className="font-serif text-xl font-semibold text-primary mb-4">{currentRhythm.block3Title}</h3>
+              <h2 className="font-serif text-xl font-semibold text-primary mb-4">{currentRhythm.block3Title}</h2>
               <ul className="space-y-3">
                 {currentRhythm.block3Items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">

@@ -332,7 +332,7 @@ const RhythmCalculator = () => {
               {/* Recommendations */}
               <Card className="border-accent/20 bg-accent/5 animate-fade-in-up">
                 <CardHeader>
-                  <CardTitle className="font-serif text-2xl text-primary">
+                  <CardTitle as="h2" className="font-serif text-2xl text-primary">
                     {t('calc.results.recommendations')}
                   </CardTitle>
                 </CardHeader>
@@ -351,7 +351,7 @@ const RhythmCalculator = () => {
               {/* Program Suggestion */}
               <Card className="border-border animate-fade-in-up" style={{ animationDelay: "100ms" }}>
                 <CardHeader>
-                  <CardTitle className="font-serif text-xl text-primary">
+                  <CardTitle as="h2" className="font-serif text-xl text-primary">
                     {t('calc.results.nextSteps')}
                   </CardTitle>
                 </CardHeader>
@@ -395,7 +395,7 @@ const RhythmCalculator = () => {
             {/* Next Steps */}
             <Card className="mt-12 bg-muted/30 border-border animate-fade-in" style={{ animationDelay: "300ms" }}>
               <CardHeader>
-                <CardTitle className="font-serif text-2xl text-primary text-center">
+                <CardTitle as="h2" className="font-serif text-2xl text-primary text-center">
                   {t('calc.results.ready')}
                 </CardTitle>
               </CardHeader>
