@@ -25,9 +25,9 @@ const copy = {
     sending: "Sending...",
     successTitle: "You're in.",
     successDesc:
-      "Your 7-Day Rhythm Reset is on its way. While you wait, try the free Rhythm Circle assessment.",
+      "Paula will send you the 7-Day Rhythm Reset personally from qrnutrition4@gmail.com. In the meantime, try the free Rhythm Circle assessment.",
     successLink: "Open the free assessment",
-    already: "You're already subscribed — the guide is on its way.",
+    already: "You're already on the list — Paula will be in touch by email.",
     invalidEmail: "Please enter a valid email address.",
     error: "Something went wrong. Please try again.",
     privacy: "No spam. Unsubscribe any time.",
