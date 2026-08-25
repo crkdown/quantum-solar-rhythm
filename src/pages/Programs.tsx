@@ -278,6 +278,8 @@ const Programs = () => {
   const currentResources = educationalResources[language] || educationalResources.en;
   const currentTexts = texts[language] || texts.en;
   const currentFit = fitContent[language] || fitContent.en;
+  const currentStart = startHere[language] || startHere.en;
+
 
 
   return (
