@@ -19,6 +19,7 @@ import RhythmCalculator from "./pages/RhythmCalculator";
 import FoodRhythmTool from "./pages/FoodRhythmTool";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import LandingMasterclass from "./pages/LandingMasterclass";
 import LandingProgram from "./pages/LandingProgram";
