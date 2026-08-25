@@ -1,11 +1,15 @@
-import { Circle, Check, TrendingUp, BookOpen, X } from "lucide-react";
+import { Circle, Check, TrendingUp, BookOpen, X, Users, Sparkles, CalendarHeart, MessageCircle, HeartHandshake, GraduationCap, UserRound, ClipboardList, LifeBuoy, Salad, Sun, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
+import collectiveImg from "@/assets/program-collective.jpg";
+import privateImg from "@/assets/program-private.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEOHead from "@/components/SEOHead";
+
+const featureIcons = [CalendarHeart, Sun, MessageCircle, HeartHandshake, GraduationCap];
 
 const Programs = () => {
   const { t, language } = useLanguage();
@@ -13,104 +17,159 @@ const Programs = () => {
   const programs = {
     en: [
       {
-        duration: "3-Month",
-        title: "Rhythm Reset",
-        price: "$600",
-        description: "Stabilize body rhythms, contribute to energy, and simplify nourishment through circadian alignment.",
+        icon: Users,
+        image: collectiveImg,
+        badge: "Solaris Collective",
+        duration: "90-Day Group Journey",
+        title: "Solaris Collective",
+        subtitle: "90-Day Rhythm Nutrition Journey",
+        price: "€360",
+        period: "/ 3 months",
+        description: "A supportive small-group experience where you learn to understand your body through rhythm, nourishment and daily practices — guided through the foundations of the Solaris Nutri Framework while learning alongside others, sharing experiences and creating accountability together.",
         features: [
-          "Rhythm calendar & circadian alignment",
-          "Gut reset protocol",
-          "Twice-monthly 1:1 sessions (2 per month)",
-          "WhatsApp support",
-          "Personalized rhythm plan",
-          "Solaris Nutri starter toolkit"
+          "2 live group sessions per month",
+          "Weekly rhythm practices and guidance",
+          "Private community support",
+          "Collective accountability",
+          "Nutrition, circadian rhythm, gut–brain connection and lifestyle education"
         ],
+        bestForLabel: "Best for",
+        bestFor: "People who want guidance, community and structure without the intensity or cost of private coaching.",
         popular: false
       },
       {
-        duration: "6-Month",
-        title: "Coherence Deepening",
-        price: "$900",
-        description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
+        icon: Leaf,
+        image: privateImg,
+        badge: "Solaris Private",
+        duration: "Personalised 90-Day Program",
+        title: "Solaris Private",
+        subtitle: "Personalised 90-Day Rhythm Nutrition Program",
+        price: "€600",
+        period: "/ 3 months",
+        description: "A deeper, personalised journey designed around your individual rhythms, lifestyle, nutrition and goals. Together we identify where your daily rhythm is out of alignment and build practical changes that work with your biology rather than against it.",
         features: [
-          "Everything in 3-Month program",
-          "Lunar cycle synchronization",
-          "Seasonal transition guidance",
-          "Food energetics & microbiome optimization",
-          "Advanced craving decoding",
-          "Twice-monthly deep-dive sessions",
-          "Priority support"
+          "2 private consultations per month",
+          "Personalised Solaris Nutri guidance",
+          "Individual rhythm assessment",
+          "Ongoing support between sessions",
+          "Practical nutrition and lifestyle strategies"
         ],
+        bestForLabel: "Best for",
+        bestFor: "People who want individual attention, deeper personalisation and direct support.",
         popular: true
       },
     ],
     es: [
       {
-        duration: "3 Meses",
-        title: "Reset de Ritmo",
-        price: "$600",
-        description: "Estabiliza los ritmos corporales, contribuye a la energía y simplifica la nutrición a través de la alineación circadiana.",
+        icon: Users,
+        image: collectiveImg,
+        badge: "Solaris Collective",
+        duration: "Viaje Grupal de 90 Días",
+        title: "Solaris Collective",
+        subtitle: "Viaje de Nutrición Rítmica de 90 Días",
+        price: "€360",
+        period: "/ 3 meses",
+        description: "Una experiencia grupal y cercana donde aprendes a entender tu cuerpo a través del ritmo, la nutrición y las prácticas diarias — guiada por los fundamentos del Marco Solaris Nutri, aprendiendo junto a otras personas, compartiendo experiencias y creando responsabilidad compartida.",
         features: [
-          "Calendario de ritmo y alineación circadiana",
-          "Protocolo de reset intestinal",
-          "Sesiones 1:1 dos veces al mes",
-          "Soporte por WhatsApp",
-          "Plan de ritmo personalizado",
-          "Kit de inicio Solaris Nutri"
+          "2 sesiones grupales en vivo al mes",
+          "Prácticas y guía de ritmo semanales",
+          "Comunidad privada de apoyo",
+          "Responsabilidad colectiva",
+          "Educación en nutrición, ritmo circadiano, conexión intestino–cerebro y estilo de vida"
         ],
+        bestForLabel: "Ideal para",
+        bestFor: "Personas que quieren guía, comunidad y estructura sin la intensidad ni el coste del acompañamiento privado.",
         popular: false
       },
       {
-        duration: "6 Meses",
-        title: "Profundización de Coherencia",
-        price: "$900",
-        description: "Reconstruye la estabilidad metabólica y la regulación emocional a través de los ciclos lunares y transiciones estacionales.",
+        icon: Leaf,
+        image: privateImg,
+        badge: "Solaris Private",
+        duration: "Programa Personalizado de 90 Días",
+        title: "Solaris Private",
+        subtitle: "Programa Personalizado de Nutrición Rítmica de 90 Días",
+        price: "€600",
+        period: "/ 3 meses",
+        description: "Un viaje más profundo y personalizado, diseñado en torno a tus ritmos, tu estilo de vida, tu nutrición y tus objetivos. Juntas identificamos dónde tu ritmo diario está desalineado y creamos cambios prácticos que trabajan con tu biología, no en su contra.",
         features: [
-          "Todo del programa de 3 meses",
-          "Sincronización con el ciclo lunar",
-          "Guía de transición estacional",
-          "Energética alimentaria y optimización del microbioma",
-          "Decodificación avanzada de antojos",
-          "Sesiones profundas dos veces al mes",
-          "Soporte prioritario"
+          "2 consultas privadas al mes",
+          "Guía personalizada Solaris Nutri",
+          "Evaluación individual de ritmo",
+          "Apoyo continuo entre sesiones",
+          "Estrategias prácticas de nutrición y estilo de vida"
         ],
+        bestForLabel: "Ideal para",
+        bestFor: "Personas que quieren atención individual, mayor personalización y apoyo directo.",
         popular: true
       },
     ],
     pt: [
       {
-        duration: "3 Meses",
-        title: "Reset de Ritmo",
-        price: "$600",
-        description: "Estabilize os ritmos corporais, contribua para a energia e simplifique a nutrição através do alinhamento circadiano.",
+        icon: Users,
+        image: collectiveImg,
+        badge: "Solaris Collective",
+        duration: "Jornada em Grupo de 90 Dias",
+        title: "Solaris Collective",
+        subtitle: "Jornada de Nutrição Rítmica de 90 Dias",
+        price: "€360",
+        period: "/ 3 meses",
+        description: "Uma experiência em pequeno grupo onde aprendes a compreender o teu corpo através do ritmo, da nutrição e das práticas diárias — guiada pelos fundamentos do Método Solaris Nutri, aprendendo com outras pessoas, partilhando experiências e criando responsabilidade em conjunto.",
         features: [
-          "Calendário de ritmo e alinhamento circadiano",
-          "Protocolo de reset intestinal",
-          "Sessões 1:1 duas vezes por mês",
-          "Suporte por WhatsApp",
-          "Plano de ritmo personalizado",
-          "Kit inicial Solaris Nutri"
+          "2 sessões de grupo ao vivo por mês",
+          "Práticas e orientação de ritmo semanais",
+          "Comunidade privada de apoio",
+          "Responsabilidade coletiva",
+          "Educação em nutrição, ritmo circadiano, conexão intestino–cérebro e estilo de vida"
         ],
+        bestForLabel: "Ideal para",
+        bestFor: "Pessoas que querem orientação, comunidade e estrutura sem a intensidade ou o custo do acompanhamento privado.",
         popular: false
       },
       {
-        duration: "6 Meses",
-        title: "Aprofundamento de Coerência",
-        price: "$900",
-        description: "Reconstrua a estabilidade metabólica e a regulação emocional através dos ciclos lunares e transições sazonais.",
+        icon: Leaf,
+        image: privateImg,
+        badge: "Solaris Private",
+        duration: "Programa Personalizado de 90 Dias",
+        title: "Solaris Private",
+        subtitle: "Programa Personalizado de Nutrição Rítmica de 90 Dias",
+        price: "€600",
+        period: "/ 3 meses",
+        description: "Uma jornada mais profunda e personalizada, desenhada em torno dos teus ritmos, estilo de vida, nutrição e objetivos. Juntas identificamos onde o teu ritmo diário está desalinhado e construímos mudanças práticas que trabalham com a tua biologia e não contra ela.",
         features: [
-          "Tudo do programa de 3 meses",
-          "Sincronização com o ciclo lunar",
-          "Orientação de transição sazonal",
-          "Energética alimentar e otimização do microbioma",
-          "Decodificação avançada de desejos",
-          "Sessões profundas duas vezes por mês",
-          "Suporte prioritário"
+          "2 consultas privadas por mês",
+          "Orientação personalizada Solaris Nutri",
+          "Avaliação individual de ritmo",
+          "Apoio contínuo entre sessões",
+          "Estratégias práticas de nutrição e estilo de vida"
         ],
+        bestForLabel: "Ideal para",
+        bestFor: "Pessoas que querem atenção individual, maior personalização e apoio direto.",
         popular: true
       },
     ]
   };
+
+  const startHere = {
+    en: {
+      title: "Start where you are.",
+      collective: "Collective — learn, connect and grow together.",
+      private: "Private — go deeper with individual guidance.",
+      quote: "The goal isn't to control your body. It is to learn its rhythm."
+    },
+    es: {
+      title: "Empieza donde estás.",
+      collective: "Collective — aprende, conecta y crece en comunidad.",
+      private: "Private — profundiza con guía individual.",
+      quote: "El objetivo no es controlar tu cuerpo. Es aprender su ritmo."
+    },
+    pt: {
+      title: "Começa onde estás.",
+      collective: "Collective — aprende, conecta e cresce em conjunto.",
+      private: "Private — aprofunda com orientação individual.",
+      quote: "O objetivo não é controlar o teu corpo. É aprender o seu ritmo."
+    }
+  };
+
 
   const progressTools = {
     en: [
