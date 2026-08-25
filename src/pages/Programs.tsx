@@ -15,7 +15,7 @@ const Programs = () => {
       {
         duration: "3-Month",
         title: "Rhythm Reset",
-        price: "€600",
+        price: "$600",
         description: "Stabilize body rhythms, contribute to energy, and simplify nourishment through circadian alignment.",
         features: [
           "Rhythm calendar & circadian alignment",
@@ -30,7 +30,7 @@ const Programs = () => {
       {
         duration: "6-Month",
         title: "Coherence Deepening",
-        price: "€900",
+        price: "$900",
         description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
         features: [
           "Everything in 3-Month program",
@@ -48,7 +48,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€600",
+        price: "$600",
         description: "Estabiliza los ritmos corporales, contribuye a la energía y simplifica la nutrición a través de la alineación circadiana.",
         features: [
           "Calendario de ritmo y alineación circadiana",
@@ -63,7 +63,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Profundización de Coherencia",
-        price: "€900",
+        price: "$900",
         description: "Reconstruye la estabilidad metabólica y la regulación emocional a través de los ciclos lunares y transiciones estacionales.",
         features: [
           "Todo del programa de 3 meses",
@@ -81,7 +81,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€600",
+        price: "$600",
         description: "Estabilize os ritmos corporais, contribua para a energia e simplifique a nutrição através do alinhamento circadiano.",
         features: [
           "Calendário de ritmo e alinhamento circadiano",
@@ -96,7 +96,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Aprofundamento de Coerência",
-        price: "€900",
+        price: "$900",
         description: "Reconstrua a estabilidade metabólica e a regulação emocional através dos ciclos lunares e transições sazonais.",
         features: [
           "Tudo do programa de 3 meses",
@@ -215,7 +215,7 @@ const Programs = () => {
 
 
         {/* Program Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
           {currentPrograms.map((program, index) => (
             <Card 
               key={index}

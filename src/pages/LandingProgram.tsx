@@ -139,16 +139,16 @@ const LandingProgram = () => {
 
   const programs = {
     en: [
-      { duration: "3 Months", title: "Rhythm Reset", price: "€600", desc: "Stabilize body rhythms, contribute to energy, simplify nourishment." },
-      { duration: "6 Months", title: "Coherence Deepening", price: "€900", desc: "Rebuild metabolic stability through lunar cycles and seasonal transitions.", popular: true },
+      { duration: "3 Months", title: "Rhythm Reset", price: "$600", desc: "Stabilize body rhythms, contribute to energy, simplify nourishment." },
+      { duration: "6 Months", title: "Coherence Deepening", price: "$900", desc: "Rebuild metabolic stability through lunar cycles and seasonal transitions.", popular: true },
     ],
     es: [
-      { duration: "3 Meses", title: "Reset de Ritmo", price: "€600", desc: "Estabiliza los ritmos corporales, contribuye a la energía, simplifica la nutrición." },
-      { duration: "6 Meses", title: "Profundización de Coherencia", price: "€900", desc: "Reconstruye la estabilidad metabólica a través de ciclos lunares y transiciones estacionales.", popular: true },
+      { duration: "3 Meses", title: "Reset de Ritmo", price: "$600", desc: "Estabiliza los ritmos corporales, contribuye a la energía, simplifica la nutrición." },
+      { duration: "6 Meses", title: "Profundización de Coherencia", price: "$900", desc: "Reconstruye la estabilidad metabólica a través de ciclos lunares y transiciones estacionales.", popular: true },
     ],
     pt: [
-      { duration: "3 Meses", title: "Reset de Ritmo", price: "€600", desc: "Estabilize os ritmos corporais, contribua para a energia, simplifique a nutrição." },
-      { duration: "6 Meses", title: "Aprofundamento de Coerência", price: "€900", desc: "Reconstrua a estabilidade metabólica através de ciclos lunares e transições sazonais.", popular: true },
+      { duration: "3 Meses", title: "Reset de Ritmo", price: "$600", desc: "Estabilize os ritmos corporais, contribua para a energia, simplifique a nutrição." },
+      { duration: "6 Meses", title: "Aprofundamento de Coerência", price: "$900", desc: "Reconstrua a estabilidade metabólica através de ciclos lunares e transições sazonais.", popular: true },
     ]
   };
 
