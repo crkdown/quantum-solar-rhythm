@@ -4,108 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
+import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
-  const articles = [
-    {
-      title: "Understanding Circadian Rhythm and Your Body's Natural Clock",
-      excerpt: "Discover how your internal timing system governs everything from hormone production to cellular repair, and why alignment matters more than restriction.",
-      date: "March 15, 2024",
-      category: "Rhythm Science",
-      readTime: "8 min read"
-    },
-    {
-      title: "The Spleen in Rhythm-Based Nutrition: Your Body's Quiet Engine",
-      excerpt: "Explore the spleen's crucial role in blood filtration, immune regulation, and digestive rhythm — and why calming the spleen is the first step to real change.",
-      date: "March 10, 2024",
-      category: "Spleen Health",
-      readTime: "9 min read"
-    },
-    {
-      title: "The Lunar Cycle and Your Metabolic Rhythms",
-      excerpt: "Explore the fascinating connection between lunar phases and your body's metabolic patterns, energy levels, and nutritional needs.",
-      date: "March 8, 2024",
-      category: "Planetary Rhythms",
-      readTime: "10 min read"
-    },
-    {
-      title: "Vagus Nerve, Spleen, and the Anti-Inflammatory Reflex",
-      excerpt: "How the vagus nerve communicates with the spleen to regulate inflammation, and why breathwork can calm your entire digestive system.",
-      date: "March 5, 2024",
-      category: "Spleen & Nervous System",
-      readTime: "11 min read"
-    },
-    {
-      title: "Rudolf Steiner's Agriculture Course: The Foundation of Biodynamic Nutrition",
-      excerpt: "Explore the revolutionary lectures from 1924 that birthed biodynamic agriculture and understand how cosmic rhythms influence the vitality of our food.",
-      date: "March 1, 2024",
-      category: "Steiner Studies",
-      readTime: "12 min read"
-    },
-    {
-      title: "The Spleen in Traditional Chinese Medicine: Transformation and Transport",
-      excerpt: "Understanding the spleen's energetic role in TCM — how it transforms food into qi and why spleen deficiency leads to bloating, fatigue, and cravings.",
-      date: "February 28, 2024",
-      category: "Integrative Spleen Health",
-      readTime: "10 min read"
-    },
-    {
-      title: "Nutrition According to Rudolf Steiner: Food as Spiritual Substance",
-      excerpt: "Delve into Steiner's insights on how different foods affect the physical, etheric, astral, and ego bodies, and the spiritual dimensions of nourishment.",
-      date: "February 25, 2024",
-      category: "Anthroposophic Nutrition",
-      readTime: "10 min read"
-    },
-    {
-      title: "Spiritual Science and Medicine: Healing Through Wholeness",
-      excerpt: "Discover how Steiner's collaboration with Dr. Ita Wegman created a new paradigm for understanding health, illness, and the role of nutrition in healing.",
-      date: "February 18, 2024",
-      category: "Integrative Health",
-      readTime: "11 min read"
-    },
-    {
-      title: "Iron Metabolism, the Spleen, and Rhythmic Blood Renewal",
-      excerpt: "How the spleen recycles red blood cells, regulates iron stores, and supports the body's natural rhythm of blood renewal — a process tied to circadian timing.",
-      date: "February 15, 2024",
-      category: "Spleen & Blood Health",
-      readTime: "8 min read"
-    },
-    {
-      title: "Man as Symphony of the Creative Word: The Human Being and Cosmic Nutrition",
-      excerpt: "Explore Steiner's profound lectures on how humans are connected to the animal, plant, and mineral kingdoms, and what this means for conscious eating.",
-      date: "February 12, 2024",
-      category: "Cosmic Connection",
-      readTime: "14 min read"
-    },
-    {
-      title: "The Cereal Code: Steiner's Grain Wisdom and Planetary Rhythms",
-      excerpt: "An introduction to Rudolf Steiner's 'Cereal of the Week' system and how planetary grain rhythms can support your weekly energy flow.",
-      date: "February 8, 2024",
-      category: "Ancient Wisdom",
-      readTime: "9 min read"
-    },
-    {
-      title: "Beyond Calories: Food as Frequency and Information",
-      excerpt: "Shift your perspective from counting calories to understanding food as energetic information that communicates with your cells.",
-      date: "February 1, 2024",
-      category: "Quantum Nutrition",
-      readTime: "7 min read"
-    },
-    {
-      title: "Seasonal Eating: Aligning with Nature's Wisdom",
-      excerpt: "How shifting your nourishment patterns with the seasons can contribute to vitality, improve digestion, and reconnect you with natural cycles.",
-      date: "January 25, 2024",
-      category: "Seasonal Nourishment",
-      readTime: "12 min read"
-    },
-    {
-      title: "Why Your Cravings Are Communication, Not Weakness",
-      excerpt: "Learn to decode the intelligent language of cravings and understand what your body is truly asking for beneath surface desires.",
-      date: "January 18, 2024",
-      category: "Body Wisdom",
-      readTime: "6 min read"
-    }
-  ];
+  const articles = blogPosts;
 
   return (
     <div className="min-h-screen py-24">
@@ -132,7 +34,7 @@ const Blog = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {articles.map((article, index) => (
             <Card 
-              key={index}
+              key={article.slug}
               className="border-border hover:shadow-quantum transition-all duration-300 animate-fade-in-up group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -147,7 +49,7 @@ const Blog = () => {
                   </span>
                 </div>
                 <CardTitle className="font-serif text-2xl text-primary group-hover:text-accent transition-colors">
-                  {article.title}
+                  <Link to={`/blog/${article.slug}`}>{article.title}</Link>
                 </CardTitle>
                 <CardDescription className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
                   <Calendar size={14} />
@@ -159,13 +61,15 @@ const Blog = () => {
                 <p className="font-sans text-foreground/70 leading-relaxed mb-4">
                   {article.excerpt}
                 </p>
-                <Button 
-                  variant="link" 
-                  className="p-0 h-auto font-sans text-accent hover:text-accent/80"
-                >
-                  Read Full Article
-                  <ArrowRight size={16} className="ml-2" />
-                </Button>
+                <Link to={`/blog/${article.slug}`}>
+                  <Button 
+                    variant="link" 
+                    className="p-0 h-auto font-sans text-accent hover:text-accent/80"
+                  >
+                    Read Full Article
+                    <ArrowRight size={16} className="ml-2" />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
