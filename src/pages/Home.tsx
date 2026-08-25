@@ -7,6 +7,7 @@ import lightVideo from "@/assets/light-nutrient-sunrise.mp4.asset.json";
 import fruitTreesImage from "@/assets/fruit-trees.jpg";
 import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
+import pitchImage from "@/assets/elevator-sunrise-woman.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SEOHead from "@/components/SEOHead";
 
@@ -236,6 +237,43 @@ const Home = () => {
               &ldquo;{currentRhythm.quote}&rdquo;
             </p>
             <p className="font-sans text-sm text-accent mt-4 font-medium">— Paula Suescun, Solaris Nutri</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Elevator Pitch */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-2xl overflow-hidden shadow-quantum animate-fade-in order-last lg:order-first">
+              <img
+                src={pitchImage}
+                alt={currentPitch.alt}
+                loading="lazy"
+                width={1536}
+                height={1024}
+                className="w-full h-full object-cover aspect-[3/2]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/15 via-transparent to-transparent pointer-events-none" />
+            </div>
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-widest uppercase mb-5">
+                <Circle size={8} fill="currentColor" className="animate-pulse-slow" />
+                {currentPitch.badge}
+              </div>
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight mb-6">
+                {currentPitch.title}
+              </h2>
+              <p className="font-sans text-base md:text-lg text-foreground/80 leading-relaxed mb-8">
+                {currentPitch.text}
+              </p>
+              <Link to="/contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 font-sans">
+                  {currentPitch.cta}
+                  <ArrowRight size={18} className="ml-2" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
