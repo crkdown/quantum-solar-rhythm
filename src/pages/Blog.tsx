@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
 import { blogPosts } from "@/data/blogPosts";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 const Blog = () => {
   const articles = blogPosts;
