@@ -1,4 +1,4 @@
-import { Circle, Check, TrendingUp, BookOpen } from "lucide-react";
+import { Circle, Check, TrendingUp, BookOpen, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,7 +15,7 @@ const Programs = () => {
       {
         duration: "3-Month",
         title: "Rhythm Reset",
-        price: "€600",
+        price: "$600",
         description: "Stabilize body rhythms, contribute to energy, and simplify nourishment through circadian alignment.",
         features: [
           "Rhythm calendar & circadian alignment",
@@ -30,7 +30,7 @@ const Programs = () => {
       {
         duration: "6-Month",
         title: "Coherence Deepening",
-        price: "€900",
+        price: "$900",
         description: "Rebuild metabolic stability and emotional regulation through lunar cycles and seasonal transitions.",
         features: [
           "Everything in 3-Month program",
@@ -48,7 +48,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€600",
+        price: "$600",
         description: "Estabiliza los ritmos corporales, contribuye a la energía y simplifica la nutrición a través de la alineación circadiana.",
         features: [
           "Calendario de ritmo y alineación circadiana",
@@ -63,7 +63,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Profundización de Coherencia",
-        price: "€900",
+        price: "$900",
         description: "Reconstruye la estabilidad metabólica y la regulación emocional a través de los ciclos lunares y transiciones estacionales.",
         features: [
           "Todo del programa de 3 meses",
@@ -81,7 +81,7 @@ const Programs = () => {
       {
         duration: "3 Meses",
         title: "Reset de Ritmo",
-        price: "€600",
+        price: "$600",
         description: "Estabilize os ritmos corporais, contribua para a energia e simplifique a nutrição através do alinhamento circadiano.",
         features: [
           "Calendário de ritmo e alinhamento circadiano",
@@ -96,7 +96,7 @@ const Programs = () => {
       {
         duration: "6 Meses",
         title: "Aprofundamento de Coerência",
-        price: "€900",
+        price: "$900",
         description: "Reconstrua a estabilidade metabólica e a regulação emocional através dos ciclos lunares e transições sazonais.",
         features: [
           "Tudo do programa de 3 meses",
@@ -175,10 +175,51 @@ const Programs = () => {
     }
   };
 
+  const fitContent = {
+    en: {
+      forTitle: "Who this is for",
+      forDesc: "Solaris Nutri helps women in midlife whose metabolism and energy seem to have changed despite trying different diets. I help them understand their biological rhythms and rebuild their nutrition around them.",
+      notTitle: "Who this is not for",
+      notItems: [
+        "You want a quick-fix diet or a rapid weight-loss plan.",
+        "You are looking for meal plans to follow without understanding your own biology.",
+        "You are not willing to adjust sleep, light exposure and meal timing.",
+        "You want supplements or protocols instead of sustainable daily habits.",
+        "You are seeking treatment for an acute medical condition rather than nutritional guidance."
+      ]
+    },
+    es: {
+      forTitle: "Para quién es",
+      forDesc: "Solaris Nutri ayuda a mujeres en la mediana edad cuyo metabolismo y energía parecen haber cambiado a pesar de probar diferentes dietas. Las acompaño a entender sus ritmos biológicos y a reconstruir su nutrición en torno a ellos.",
+      notTitle: "Para quién no es",
+      notItems: [
+        "Buscas una dieta rápida o un plan de pérdida de peso exprés.",
+        "Quieres menús para seguir sin entender tu propia biología.",
+        "No estás dispuesta a ajustar el sueño, la luz y los horarios de comida.",
+        "Prefieres suplementos o protocolos en lugar de hábitos diarios sostenibles.",
+        "Buscas tratamiento para una condición médica aguda y no orientación nutricional."
+      ]
+    },
+    pt: {
+      forTitle: "Para quem é",
+      forDesc: "A Solaris Nutri ajuda mulheres na meia-idade cujo metabolismo e energia parecem ter mudado apesar de terem tentado várias dietas. Ajudo-as a compreender os seus ritmos biológicos e a reconstruir a sua nutrição em torno deles.",
+      notTitle: "Para quem não é",
+      notItems: [
+        "Procuras uma dieta rápida ou um plano de emagrecimento expresso.",
+        "Queres ementas para seguir sem compreender a tua própria biologia.",
+        "Não estás disponível para ajustar sono, luz e horários das refeições.",
+        "Preferes suplementos ou protocolos em vez de hábitos diários sustentáveis.",
+        "Procuras tratamento para uma condição médica aguda e não orientação nutricional."
+      ]
+    }
+  };
+
   const currentPrograms = programs[language] || programs.en;
   const currentTools = progressTools[language] || progressTools.en;
   const currentResources = educationalResources[language] || educationalResources.en;
   const currentTexts = texts[language] || texts.en;
+  const currentFit = fitContent[language] || fitContent.en;
+
 
   return (
     <div className="min-h-screen py-24">
@@ -215,7 +256,7 @@ const Programs = () => {
 
 
         {/* Program Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
           {currentPrograms.map((program, index) => (
             <Card 
               key={index}
@@ -333,6 +374,32 @@ const Programs = () => {
             </div>
           </div>
         </div>
+
+        {/* Fit Section */}
+        <div className="max-w-5xl mx-auto mb-20 grid md:grid-cols-2 gap-6 animate-fade-in">
+          <div className="bg-accent/5 border border-accent/20 rounded-xl p-8">
+            <div className="flex items-center gap-2 mb-4 text-accent">
+              <Check size={22} />
+              <h2 className="font-serif text-2xl font-bold text-primary">{currentFit.forTitle}</h2>
+            </div>
+            <p className="font-sans text-foreground/80 leading-relaxed">{currentFit.forDesc}</p>
+          </div>
+          <div className="bg-muted/40 border border-border rounded-xl p-8">
+            <div className="flex items-center gap-2 mb-4 text-muted-foreground">
+              <X size={22} />
+              <h2 className="font-serif text-2xl font-bold text-primary">{currentFit.notTitle}</h2>
+            </div>
+            <ul className="space-y-3">
+              {currentFit.notItems.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                  <span className="font-sans text-sm text-foreground/70">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
 
         {/* Not Sure Section */}
         <div className="max-w-3xl mx-auto text-center animate-fade-in">

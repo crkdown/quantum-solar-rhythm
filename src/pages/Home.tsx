@@ -104,7 +104,7 @@ const Home = () => {
     es: {
       badge: "La luz como nutriente",
       title: "Tu primera comida del día es la luz del amanecer",
-      text: "Antes del alimento, tu cuerpo se nutre de luz. La luz solar de la mañana ajusta tu reloj interno, calma tu sistema nervioso y prepara tu digestión, hormonas y ánimo para el día. Recibir luz natural al amanecer es uno de los ritmos más simples y poderosos que puedes reconstruir.",
+      text: "Antes del alimento, tu cuerpo se nutre de luz. La luz solar de la mañana ajusta tu reloj interno, calma tu sistema nervioso y prepara tu digestión, hormonas y ánimo para el día. Recibir luz natural, especialmente al amanecer, es uno de los hábitos más poderosos que puedes integrar en tu rutina diaria.",
       points: [
         "La luz matutina ancla tu ritmo circadiano.",
         "El sol favorece energía, sueño y estado de ánimo.",

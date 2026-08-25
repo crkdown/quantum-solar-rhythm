@@ -345,7 +345,7 @@ const About = () => {
                 {t('about.credentials')}
               </h3>
               <ul className="space-y-3 font-sans text-foreground/80">
-                {['about.cred1', 'about.cred2', 'about.cred3', 'about.cred4'].map((key) => (
+                {['about.cred1', 'about.cred2', 'about.cred3', 'about.cred4', 'about.cred5'].map((key) => (
                   <li key={key} className="flex items-start gap-2">
                     <Circle size={8} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
                     <span>{t(key)}</span>
