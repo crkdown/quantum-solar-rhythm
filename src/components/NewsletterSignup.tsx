@@ -71,9 +71,9 @@ const copy = {
     sending: "A enviar...",
     successTitle: "Tudo certo!",
     successDesc:
-      "O seu Reinício de Ritmo em 7 Dias está a caminho. Entretanto, experimente a avaliação gratuita Rhythm Circle.",
+      "A Paula enviar-lhe-á o Reinício de Ritmo em 7 Dias pessoalmente a partir de qrnutrition4@gmail.com. Entretanto, experimente a avaliação gratuita Rhythm Circle.",
     successLink: "Abrir a avaliação gratuita",
-    already: "Já está subscrita — o guia está a caminho.",
+    already: "Já está na lista — a Paula entrará em contacto por email.",
     invalidEmail: "Introduza um email válido.",
     error: "Algo correu mal. Tente novamente.",
     privacy: "Sem spam. Pode cancelar quando quiser.",
