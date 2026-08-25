@@ -175,10 +175,51 @@ const Programs = () => {
     }
   };
 
+  const fitContent = {
+    en: {
+      forTitle: "Who this is for",
+      forDesc: "Solaris Nutri helps women in midlife whose metabolism and energy seem to have changed despite trying different diets. I help them understand their biological rhythms and rebuild their nutrition around them.",
+      notTitle: "Who this is not for",
+      notItems: [
+        "You want a quick-fix diet or a rapid weight-loss plan.",
+        "You are looking for meal plans to follow without understanding your own biology.",
+        "You are not willing to adjust sleep, light exposure and meal timing.",
+        "You want supplements or protocols instead of sustainable daily habits.",
+        "You are seeking treatment for an acute medical condition rather than nutritional guidance."
+      ]
+    },
+    es: {
+      forTitle: "Para quién es",
+      forDesc: "Solaris Nutri ayuda a mujeres en la mediana edad cuyo metabolismo y energía parecen haber cambiado a pesar de probar diferentes dietas. Las acompaño a entender sus ritmos biológicos y a reconstruir su nutrición en torno a ellos.",
+      notTitle: "Para quién no es",
+      notItems: [
+        "Buscas una dieta rápida o un plan de pérdida de peso exprés.",
+        "Quieres menús para seguir sin entender tu propia biología.",
+        "No estás dispuesta a ajustar el sueño, la luz y los horarios de comida.",
+        "Prefieres suplementos o protocolos en lugar de hábitos diarios sostenibles.",
+        "Buscas tratamiento para una condición médica aguda y no orientación nutricional."
+      ]
+    },
+    pt: {
+      forTitle: "Para quem é",
+      forDesc: "A Solaris Nutri ajuda mulheres na meia-idade cujo metabolismo e energia parecem ter mudado apesar de terem tentado várias dietas. Ajudo-as a compreender os seus ritmos biológicos e a reconstruir a sua nutrição em torno deles.",
+      notTitle: "Para quem não é",
+      notItems: [
+        "Procuras uma dieta rápida ou um plano de emagrecimento expresso.",
+        "Queres ementas para seguir sem compreender a tua própria biologia.",
+        "Não estás disponível para ajustar sono, luz e horários das refeições.",
+        "Preferes suplementos ou protocolos em vez de hábitos diários sustentáveis.",
+        "Procuras tratamento para uma condição médica aguda e não orientação nutricional."
+      ]
+    }
+  };
+
   const currentPrograms = programs[language] || programs.en;
   const currentTools = progressTools[language] || progressTools.en;
   const currentResources = educationalResources[language] || educationalResources.en;
   const currentTexts = texts[language] || texts.en;
+  const currentFit = fitContent[language] || fitContent.en;
+
 
   return (
     <div className="min-h-screen py-24">
