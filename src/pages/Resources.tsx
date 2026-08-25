@@ -7,6 +7,8 @@ import toolRhythmCycles from "@/assets/tool-rhythm-cycles.png";
 import toolBodyAwareness from "@/assets/tool-body-awareness.png";
 import toolNourishingRhythm from "@/assets/tool-nourishing-rhythm.png";
 import SEOHead from "@/components/SEOHead";
+import FreeEbook from "@/components/FreeEbook";
+
 
 const Resources = () => {
   const resources = [
@@ -156,7 +158,13 @@ const Resources = () => {
           </div>
         </div>
 
+        {/* Free e-book for Instagram followers */}
+        <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
+          <FreeEbook />
+        </div>
+
         {/* Solaris Nutri Rhythm Circle — Free with discovery call */}
+
         <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
           <Card className="border-accent/40 bg-gradient-to-br from-accent/10 via-background to-primary/5 overflow-hidden">
             <CardContent className="p-8 md:p-10">
