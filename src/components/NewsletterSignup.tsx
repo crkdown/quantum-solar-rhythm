@@ -48,9 +48,9 @@ const copy = {
     sending: "Enviando...",
     successTitle: "¡Listo!",
     successDesc:
-      "Tu Reinicio de Ritmo en 7 Días va en camino. Mientras tanto, prueba la evaluación gratuita Rhythm Circle.",
+      "Paula te enviará el Reinicio de Ritmo en 7 Días personalmente desde qrnutrition4@gmail.com. Mientras tanto, prueba la evaluación gratuita Rhythm Circle.",
     successLink: "Abrir la evaluación gratuita",
-    already: "Ya estás suscrita — la guía va en camino.",
+    already: "Ya estás en la lista — Paula te escribirá por correo.",
     invalidEmail: "Introduce un correo electrónico válido.",
     error: "Algo salió mal. Inténtalo de nuevo.",
     privacy: "Sin spam. Puedes darte de baja cuando quieras.",
