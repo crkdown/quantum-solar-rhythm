@@ -9,6 +9,7 @@ import vegetablesImage from "@/assets/fresh-vegetables.jpg";
 import circadianImage from "@/assets/circadian-rhythm.jpg";
 import pitchImage from "@/assets/elevator-sunrise-woman.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import SEOHead from "@/components/SEOHead";
 
 const Home = () => {
@@ -491,6 +492,13 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Newsletter lead magnet */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <NewsletterSignup source="home" />
+        </div>
+      </section>
+
     </div>
   );
 };

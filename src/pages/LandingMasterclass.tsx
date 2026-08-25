@@ -4,6 +4,7 @@ import logo from "@/assets/solaris-nutri-logo.jpeg";
 import paulaPhoto from "@/assets/paula-photo.jpeg";
 import circadianRhythm from "@/assets/circadian-rhythm.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import SEOHead from "@/components/SEOHead";
 
 const LandingMasterclass = () => {
@@ -295,6 +296,13 @@ const LandingMasterclass = () => {
           </div>
         </div>
       </section>
+      {/* Newsletter lead magnet */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <NewsletterSignup source="landing-masterclass" />
+        </div>
+      </section>
+
     </div>
   );
 };
