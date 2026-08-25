@@ -317,49 +317,81 @@ const Programs = () => {
 
 
         {/* Program Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
-          {currentPrograms.map((program, index) => (
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16 items-stretch">
+          {currentPrograms.map((program, index) => {
+            const Icon = program.icon;
+            return (
             <Card 
               key={index}
-              className={`relative ${
+              className={`relative overflow-hidden flex flex-col ${
                 program.popular 
-                  ? 'border-accent shadow-quantum scale-105' 
+                  ? 'border-accent shadow-quantum' 
                   : 'border-border'
               } animate-fade-in-up`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {program.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-sans font-semibold">
-                  {t('programs.popular')}
+              <div className="relative h-48 w-full overflow-hidden">
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  loading="lazy"
+                  width={1024}
+                  height={700}
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
+                <div className="absolute bottom-3 left-4 flex items-center gap-2 text-primary-foreground">
+                  <Icon size={20} />
+                  <span className="font-sans text-xs uppercase tracking-[0.2em]">{program.badge}</span>
                 </div>
-              )}
-              
+                {program.popular && (
+                  <div className="absolute top-3 right-3 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-sans font-semibold">
+                    {t('programs.popular')}
+                  </div>
+                )}
+              </div>
+
               <CardHeader className="text-center pb-4">
                 <CardDescription className="text-sm font-sans uppercase tracking-wide text-muted-foreground mb-2">
                   {program.duration}
                 </CardDescription>
-                <CardTitle className="font-serif text-3xl text-primary mb-2">
+                <CardTitle className="font-serif text-3xl text-primary mb-1">
                   {program.title}
                 </CardTitle>
-                <div className="font-serif text-4xl font-bold text-primary mt-4">
-                  {program.price}
+                <p className="font-sans text-sm text-foreground/70">{program.subtitle}</p>
+                <div className="flex items-end justify-center gap-2 mt-4">
+                  <span className="font-serif text-4xl font-bold text-primary">{program.price}</span>
+                  <span className="font-sans text-sm text-muted-foreground mb-1">{program.period}</span>
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-6 flex-1">
                 <p className="font-sans text-sm text-foreground/70 text-center leading-relaxed">
                   {program.description}
                 </p>
 
                 <div className="space-y-3">
-                  {program.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <Check size={18} className="text-accent mt-0.5 flex-shrink-0" />
-                      <span className="font-sans text-sm text-foreground/80">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
+                  {program.features.map((feature, featureIndex) => {
+                    const FeatureIcon = featureIcons[featureIndex % featureIcons.length];
+                    return (
+                      <div key={featureIndex} className="flex items-start gap-3">
+                        <span className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                          <FeatureIcon size={15} />
+                        </span>
+                        <span className="font-sans text-sm text-foreground/80 pt-1">
+                          {feature}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="rounded-lg bg-muted/50 border border-border p-4">
+                  <div className="flex items-center gap-2 mb-1 text-accent">
+                    <Sparkles size={16} />
+                    <span className="font-sans text-xs uppercase tracking-wider font-semibold">{program.bestForLabel}</span>
+                  </div>
+                  <p className="font-sans text-sm text-foreground/75 leading-relaxed">{program.bestFor}</p>
                 </div>
               </CardContent>
 
@@ -377,8 +409,33 @@ const Programs = () => {
                 </Link>
               </CardFooter>
             </Card>
-          ))}
+            );
+          })}
         </div>
+
+        {/* Start where you are */}
+        <div className="max-w-4xl mx-auto mb-20 text-center bg-gradient-to-br from-primary/5 to-accent/5 border border-border rounded-xl p-10 animate-fade-in">
+          <div className="inline-flex items-center gap-2 text-accent mb-3">
+            <Sparkles size={22} />
+          </div>
+          <h2 className="font-serif text-3xl font-bold text-primary mb-6">{currentStart.title}</h2>
+          <div className="grid sm:grid-cols-2 gap-4 mb-8 text-left">
+            <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border">
+              <Users size={20} className="text-accent mt-0.5 flex-shrink-0" />
+              <span className="font-sans text-sm text-foreground/80">{currentStart.collective}</span>
+            </div>
+            <div className="flex items-start gap-3 bg-card p-4 rounded-lg border border-border">
+              <UserRound size={20} className="text-accent mt-0.5 flex-shrink-0" />
+              <span className="font-sans text-sm text-foreground/80">{currentStart.private}</span>
+            </div>
+          </div>
+          <p className="font-serif text-xl md:text-2xl text-primary italic mb-6">"{currentStart.quote}"</p>
+          <Link to="/contact">
+            <Button size="lg" className="font-sans">{t('common.bookNow')}</Button>
+          </Link>
+        </div>
+
+
 
         {/* Progress Tracking Tools Section */}
         <div className="max-w-5xl mx-auto mb-20 animate-fade-in">
