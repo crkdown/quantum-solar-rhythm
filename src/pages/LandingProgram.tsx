@@ -7,6 +7,7 @@ import wholesomeFood from "@/assets/wholesome-food.jpg";
 import nourishingBowl from "@/assets/nourishing-bowl.jpg";
 import sunriseNature from "@/assets/sunrise-nature.png";
 import { useLanguage } from "@/contexts/LanguageContext";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import SEOHead from "@/components/SEOHead";
 
 const LandingProgram = () => {
@@ -348,6 +349,13 @@ const LandingProgram = () => {
           </a>
         </div>
       </section>
+      {/* Newsletter lead magnet */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <NewsletterSignup source="landing-program" />
+        </div>
+      </section>
+
     </div>
   );
 };

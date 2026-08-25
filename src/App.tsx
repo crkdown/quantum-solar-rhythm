@@ -19,6 +19,7 @@ import RhythmCalculator from "./pages/RhythmCalculator";
 import FoodRhythmTool from "./pages/FoodRhythmTool";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import LandingMasterclass from "./pages/LandingMasterclass";
 import LandingProgram from "./pages/LandingProgram";
@@ -49,6 +50,7 @@ const App = () => (
                   <Route path="/food-rhythm-tool" element={<FoodRhythmTool />} />
                   <Route path="/shop" element={<Shop />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/faq" element={<FAQ />} />
                   <Route path="/landing/masterclass" element={<LandingMasterclass />} />
                   <Route path="/landing/program" element={<LandingProgram />} />
                   <Route path="*" element={<NotFound />} />

@@ -68,6 +68,11 @@ const Footer = () => {
                   {t('nav.shop')}
                 </Link>
               </li>
+              <li>
+                <Link to="/faq" className="text-muted-foreground hover:text-primary transition-colors">
+                  {t('nav.faq')}
+                </Link>
+              </li>
             </ul>
           </div>
 

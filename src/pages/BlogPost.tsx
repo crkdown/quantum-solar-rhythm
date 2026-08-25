@@ -1,6 +1,7 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { Calendar, ArrowLeft, Circle, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import SEOHead from "@/components/SEOHead";
 import { getPostBySlug, blogPosts } from "@/data/blogPosts";
 
@@ -114,6 +115,9 @@ const BlogPost = () => {
               </Link>
             ))}
           </div>
+        </div>
+        <div className="mt-16">
+          <NewsletterSignup source="blog-post" />
         </div>
       </article>
     </div>
