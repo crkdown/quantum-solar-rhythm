@@ -10,6 +10,8 @@ import circadianImage from "@/assets/circadian-rhythm.jpg";
 import pitchImage from "@/assets/elevator-sunrise-woman.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import FreeEbook from "@/components/FreeEbook";
+
 import SEOHead from "@/components/SEOHead";
 
 const Home = () => {
@@ -492,12 +494,20 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Free e-book for Instagram followers */}
+      <section className="py-16 bg-muted/20">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <FreeEbook />
+        </div>
+      </section>
+
       {/* Newsletter lead magnet */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6 max-w-6xl">
           <NewsletterSignup source="home" />
         </div>
       </section>
+
 
     </div>
   );
