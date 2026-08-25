@@ -1,3 +1,17 @@
+import imgGrains from "@/assets/blog-fibre-grains.jpg";
+import imgMicrobiome from "@/assets/blog-microbiome.jpg";
+import imgBloodSugar from "@/assets/blog-blood-sugar.jpg";
+import imgCardio from "@/assets/blog-cardiovascular.jpg";
+import imgProtective from "@/assets/blog-protective-foods.jpg";
+import imgMealTiming from "@/assets/blog-meal-timing.jpg";
+import imgSpleen from "@/assets/blog-spleen-tcm.jpg";
+import imgLunar from "@/assets/blog-lunar-cycle.jpg";
+import imgFarm from "@/assets/blog-biodynamic-farm.jpg";
+import imgSeasonal from "@/assets/blog-seasonal.jpg";
+import imgBodyWisdom from "@/assets/blog-body-wisdom.jpg";
+import imgCircadian from "@/assets/circadian-rhythm.jpg";
+import imgHerbal from "@/assets/herbal-rhythm.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -5,6 +19,7 @@ export interface BlogPost {
   date: string;
   category: string;
   readTime: string;
+  image: string;
   content: string[];
   references?: { label: string; url: string }[];
 }
@@ -12,6 +27,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "fiber-and-health-what-the-research-shows",
+    image: imgGrains,
     title: "Fibre and Health: What Published Research Actually Shows",
     excerpt: "A plain-language review of the large trials and meta-analyses linking dietary fibre intake with mortality, heart disease, diabetes and colorectal cancer risk.",
     date: "August 18, 2026",
@@ -32,6 +48,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fibre-and-the-gut-microbiome",
+    image: imgMicrobiome,
     title: "Fibre and the Gut Microbiome: Feeding the Ecosystem Inside You",
     excerpt: "How fermentable fibres shape microbial diversity, short-chain fatty acid production and gut barrier integrity — and what happens when fibre is missing.",
     date: "August 11, 2026",
@@ -51,6 +68,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fibre-and-blood-sugar-regulation",
+    image: imgBloodSugar,
     title: "Fibre and Blood Sugar: Viscosity, Timing and Glycaemic Control",
     excerpt: "Why viscous fibres blunt glucose spikes, what the trials in type 2 diabetes show, and how meal order changes the curve.",
     date: "August 4, 2026",
@@ -69,6 +87,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fibre-and-cardiovascular-health",
+    image: imgCardio,
     title: "Fibre and Cardiovascular Health: Cholesterol, Blood Pressure and Inflammation",
     excerpt: "The mechanisms behind fibre's effect on LDL cholesterol and blood pressure, and how large a difference realistic intakes make.",
     date: "July 28, 2026",
@@ -87,6 +106,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fibre-and-colorectal-cancer-prevention",
+    image: imgProtective,
     title: "Fibre and Colorectal Cancer Prevention: Butyrate, Transit and Risk",
     excerpt: "What the World Cancer Research Fund evidence and cohort pooling projects show about fibre, whole grains and colorectal cancer risk.",
     date: "July 21, 2026",
@@ -105,6 +125,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fibre-appetite-and-metabolic-regulation",
+    image: imgMealTiming,
     title: "Fibre, Appetite and Metabolic Regulation in Midlife",
     excerpt: "How short-chain fatty acids influence GLP-1 and PYY, why fibre changes satiety without restriction, and what this means during perimenopause.",
     date: "July 14, 2026",
@@ -123,6 +144,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "how-to-increase-fibre-without-bloating",
+    image: imgGrains,
     title: "How to Increase Fibre Without Bloating: A Rhythm-Based Protocol",
     excerpt: "A gradual, evidence-informed approach to raising fibre intake toward 30 g a day while keeping digestion calm.",
     date: "July 7, 2026",
@@ -142,6 +164,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "understanding-circadian-rhythm",
+    image: imgCircadian,
     title: "Understanding Circadian Rhythm and Your Body's Natural Clock",
     excerpt: "Discover how your internal timing system governs everything from hormone production to cellular repair, and why alignment matters more than restriction.",
     date: "March 15, 2024",
@@ -156,6 +179,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "the-spleen-in-rhythm-based-nutrition",
+    image: imgSpleen,
     title: "The Spleen in Rhythm-Based Nutrition: Your Body's Quiet Engine",
     excerpt: "Explore the spleen's crucial role in blood filtration, immune regulation, and digestive rhythm — and why calming the spleen is the first step to real change.",
     date: "March 10, 2024",
@@ -170,6 +194,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "the-lunar-cycle-and-metabolic-rhythms",
+    image: imgLunar,
     title: "The Lunar Cycle and Your Metabolic Rhythms",
     excerpt: "Explore the connection between lunar phases and your body's metabolic patterns, energy levels, and nutritional needs.",
     date: "March 8, 2024",
@@ -184,6 +209,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "vagus-nerve-spleen-anti-inflammatory-reflex",
+    image: imgBodyWisdom,
     title: "Vagus Nerve, Spleen, and the Anti-Inflammatory Reflex",
     excerpt: "How the vagus nerve communicates with the spleen to regulate inflammation, and why breathwork can calm your entire digestive system.",
     date: "March 5, 2024",
@@ -201,6 +227,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "steiner-agriculture-course-biodynamic-nutrition",
+    image: imgFarm,
     title: "Rudolf Steiner's Agriculture Course: The Foundation of Biodynamic Nutrition",
     excerpt: "Explore the 1924 lectures that birthed biodynamic agriculture and how cosmic rhythms were said to influence the vitality of our food.",
     date: "March 1, 2024",
@@ -215,6 +242,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "spleen-in-traditional-chinese-medicine",
+    image: imgSpleen,
     title: "The Spleen in Traditional Chinese Medicine: Transformation and Transport",
     excerpt: "Understanding the spleen's energetic role in TCM — how it transforms food into qi and why spleen deficiency leads to bloating, fatigue, and cravings.",
     date: "February 28, 2024",
@@ -229,6 +257,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "nutrition-according-to-rudolf-steiner",
+    image: imgFarm,
     title: "Nutrition According to Rudolf Steiner: Food as Spiritual Substance",
     excerpt: "Steiner's insights on how different foods were said to affect the human being, and the spiritual dimensions of nourishment.",
     date: "February 25, 2024",
@@ -243,6 +272,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "spiritual-science-and-medicine",
+    image: imgHerbal,
     title: "Spiritual Science and Medicine: Healing Through Wholeness",
     excerpt: "How Steiner's collaboration with Dr. Ita Wegman created a paradigm for understanding health, illness, and the role of nutrition in healing.",
     date: "February 18, 2024",
@@ -257,6 +287,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "iron-metabolism-spleen-blood-renewal",
+    image: imgProtective,
     title: "Iron Metabolism, the Spleen, and Rhythmic Blood Renewal",
     excerpt: "How the spleen recycles red blood cells, regulates iron stores, and supports the body's natural rhythm of blood renewal.",
     date: "February 15, 2024",
@@ -271,6 +302,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "man-as-symphony-of-the-creative-word",
+    image: imgLunar,
     title: "Man as Symphony of the Creative Word: The Human Being and Cosmic Nutrition",
     excerpt: "Steiner's lectures on how humans relate to the animal, plant, and mineral kingdoms, and what this means for conscious eating.",
     date: "February 12, 2024",
@@ -285,6 +317,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "the-cereal-code-steiner-grain-wisdom",
+    image: imgGrains,
     title: "The Cereal Code: Steiner's Grain Wisdom and Planetary Rhythms",
     excerpt: "An introduction to Rudolf Steiner's 'Cereal of the Week' system and how weekly grain rotation can support your energy flow.",
     date: "February 8, 2024",
@@ -299,6 +332,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "beyond-calories-food-as-frequency",
+    image: imgMicrobiome,
     title: "Beyond Calories: Food as Information",
     excerpt: "Shift your perspective from counting calories to understanding food as information that communicates with your cells.",
     date: "February 1, 2024",
@@ -313,6 +347,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "seasonal-eating-natures-wisdom",
+    image: imgSeasonal,
     title: "Seasonal Eating: Aligning with Nature's Wisdom",
     excerpt: "How shifting your nourishment patterns with the seasons can contribute to vitality, improve digestion, and reconnect you with natural cycles.",
     date: "January 25, 2024",
@@ -327,6 +362,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "cravings-are-communication",
+    image: imgBodyWisdom,
     title: "Why Your Cravings Are Communication, Not Weakness",
     excerpt: "Learn to decode the intelligent language of cravings and understand what your body is truly asking for beneath surface desires.",
     date: "January 18, 2024",

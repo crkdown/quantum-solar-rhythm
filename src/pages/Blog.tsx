@@ -35,9 +35,19 @@ const Blog = () => {
           {articles.map((article, index) => (
             <Card 
               key={article.slug}
-              className="border-border hover:shadow-quantum transition-all duration-300 animate-fade-in-up group"
+              className="border-border hover:shadow-quantum transition-all duration-300 animate-fade-in-up group overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
+              <Link to={`/blog/${article.slug}`} className="block overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  loading="lazy"
+                  width={1536}
+                  height={1024}
+                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </Link>
               <CardHeader>
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-xs font-sans uppercase tracking-wide text-accent">

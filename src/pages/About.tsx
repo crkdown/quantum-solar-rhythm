@@ -32,7 +32,6 @@ const About = () => {
     { key: 'education', title: t('about.value.education'), desc: t('about.value.education.desc') },
     { key: 'simplicity', title: t('about.value.simplicity'), desc: t('about.value.simplicity.desc') },
     { key: 'evolution', title: t('about.value.evolution'), desc: t('about.value.evolution.desc') },
-    { key: 'integrity', title: t('about.value.integrity'), desc: t('about.value.integrity.desc') },
   ];
 
   type DifferencePoint = {

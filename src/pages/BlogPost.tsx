@@ -21,12 +21,12 @@ const BlogPost = () => {
         keywords={post.category}
       />
       <article className="container mx-auto px-6 max-w-3xl">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-accent font-sans text-sm mb-8 hover:underline">
+        <Link to="/blog" className="flex w-fit items-center gap-2 text-accent font-sans text-sm mb-8 hover:underline">
           <ArrowLeft size={16} />
           Back to Journal
         </Link>
 
-        <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
+        <div className="flex w-fit items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
           <Circle size={8} fill="currentColor" />
           {post.category}
         </div>
@@ -44,9 +44,18 @@ const BlogPost = () => {
           <span>{post.readTime}</span>
         </div>
 
+        <img
+          src={post.image}
+          alt={post.title}
+          width={1536}
+          height={1024}
+          className="w-full aspect-[3/2] object-cover rounded-2xl border border-border shadow-quantum mb-10"
+        />
+
         <p className="font-serif text-xl text-foreground/80 leading-relaxed mb-10 border-l-2 border-accent pl-6">
           {post.excerpt}
         </p>
+
 
         <div className="space-y-6">
           {post.content.map((paragraph, i) => (
