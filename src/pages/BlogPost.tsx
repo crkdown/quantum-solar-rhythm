@@ -44,9 +44,18 @@ const BlogPost = () => {
           <span>{post.readTime}</span>
         </div>
 
+        <img
+          src={post.image}
+          alt={post.title}
+          width={1536}
+          height={1024}
+          className="w-full aspect-[3/2] object-cover rounded-2xl border border-border shadow-quantum mb-10"
+        />
+
         <p className="font-serif text-xl text-foreground/80 leading-relaxed mb-10 border-l-2 border-accent pl-6">
           {post.excerpt}
         </p>
+
 
         <div className="space-y-6">
           {post.content.map((paragraph, i) => (
