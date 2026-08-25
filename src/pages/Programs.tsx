@@ -375,6 +375,32 @@ const Programs = () => {
           </div>
         </div>
 
+        {/* Fit Section */}
+        <div className="max-w-5xl mx-auto mb-20 grid md:grid-cols-2 gap-6 animate-fade-in">
+          <div className="bg-accent/5 border border-accent/20 rounded-xl p-8">
+            <div className="flex items-center gap-2 mb-4 text-accent">
+              <Check size={22} />
+              <h2 className="font-serif text-2xl font-bold text-primary">{currentFit.forTitle}</h2>
+            </div>
+            <p className="font-sans text-foreground/80 leading-relaxed">{currentFit.forDesc}</p>
+          </div>
+          <div className="bg-muted/40 border border-border rounded-xl p-8">
+            <div className="flex items-center gap-2 mb-4 text-muted-foreground">
+              <X size={22} />
+              <h2 className="font-serif text-2xl font-bold text-primary">{currentFit.notTitle}</h2>
+            </div>
+            <ul className="space-y-3">
+              {currentFit.notItems.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <X size={16} className="text-muted-foreground mt-1 flex-shrink-0" />
+                  <span className="font-sans text-sm text-foreground/70">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+
         {/* Not Sure Section */}
         <div className="max-w-3xl mx-auto text-center animate-fade-in">
           <h3 className="font-serif text-2xl font-semibold text-primary mb-4">
