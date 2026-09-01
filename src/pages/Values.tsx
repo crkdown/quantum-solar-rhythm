@@ -73,7 +73,7 @@ const copy: Record<Lang, Copy> = {
     visionLabel: "Vision",
     visionTitle: "The world we’re building toward",
     visionText:
-      "A world where women stop fighting their bodies and learn to nourish themselves in rhythm — with food, gut health and biology working together.",
+      "A world where people no longer fight their bodies in the pursuit of health, but learn to understand, nourish and respect them — living in greater harmony with their biology, their rhythms and their environment.",
     valuesLabel: "Core Values",
     valuesTitle: "The values that shape our work",
     valuesIntro:
@@ -129,7 +129,7 @@ const copy: Record<Lang, Copy> = {
     visionLabel: "Visión",
     visionTitle: "El mundo hacia el que caminamos",
     visionText:
-      "Un mundo donde las mujeres dejen de luchar contra su cuerpo y aprendan a nutrirse en ritmo — con la alimentación, la salud intestinal y la biología trabajando juntas.",
+      "Un mundo donde las personas ya no luchen contra su cuerpo en la búsqueda de la salud, sino que aprendan a comprenderlo, nutrirlo y respetarlo — viviendo en mayor armonía con su biología, sus ritmos y su entorno.",
     valuesLabel: "Valores Fundamentales",
     valuesTitle: "Los valores que dan forma a nuestro trabajo",
     valuesIntro:
@@ -185,7 +185,7 @@ const copy: Record<Lang, Copy> = {
     visionLabel: "Visão",
     visionTitle: "O mundo para o qual caminhamos",
     visionText:
-      "Um mundo onde as mulheres deixem de lutar contra o seu corpo e aprendam a nutrir-se em ritmo — com a alimentação, a saúde intestinal e a biologia a trabalharem juntas.",
+      "Um mundo onde as pessoas já não lutem contra o seu corpo na procura da saúde, mas aprendam a compreendê-lo, nutri-lo e respeitá-lo — vivendo em maior harmonia com a sua biologia, os seus ritmos e o seu ambiente.",
     valuesLabel: "Valores Fundamentais",
     valuesTitle: "Os valores que moldam o nosso trabalho",
     valuesIntro:
