@@ -1,4 +1,4 @@
-import { Circle, Mail, Calendar, Instagram } from "lucide-react";
+import { Circle, Mail, Calendar, Instagram, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,25 +7,65 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
+import { supabase } from "@/integrations/supabase/client";
 
-const CONTACT_EMAIL = "qrnutrition4@gmail.com";
+type SubmitStatus = "idle" | "sending" | "success" | "error";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [interest, setInterest] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<SubmitStatus>("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      interest ? `Inquiry: ${interest}` : "New inquiry from Solaris Nutri"
-    );
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nInterested in: ${interest}\n\n${message}`
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setStatus("sending");
+
+    const templateData = { name, email, interest, message };
+
+    try {
+      // 1. Deliver the lead's message to the Solaris Nutri inbox.
+      const notification = await supabase.functions.invoke(
+        "send-transactional-email",
+        {
+          body: {
+            templateName: "contact-notification",
+            recipientEmail: "qrnutrition4@gmail.com",
+            idempotencyKey: `contact-notify-${Date.now()}`,
+            templateData,
+          },
+        }
+      );
+
+      if (notification.error) throw notification.error;
+
+      // 2. Send a warm confirmation back to the person who reached out.
+      const confirmation = await supabase.functions.invoke(
+        "send-transactional-email",
+        {
+          body: {
+            templateName: "contact-confirmation",
+            recipientEmail: email,
+            idempotencyKey: `contact-confirm-${Date.now()}`,
+            templateData: { name },
+          },
+        }
+      );
+
+      if (confirmation.error) throw confirmation.error;
+
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setInterest("");
+      setMessage("");
+    } catch (err) {
+      console.error("Contact form email delivery failed", err);
+      setStatus("error");
+    }
   };
+
 
   return (
     <div className="min-h-screen py-24">
