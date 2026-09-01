@@ -107,8 +107,11 @@ const copy: Record<Lang, Copy> = {
     intro: "Os princípios por trás de cada decisão que tomamos na Solaris Nutri.",
     missionLabel: "Missão",
     missionTitle: "Por que a Solaris Nutri existe",
-    missionText:
-      "Ajudar as mulheres — especialmente na meia-idade — a compreender os seus ritmos biológicos e a reconstruir a sua nutrição em torno deles, para que a mudança seja sustentável em vez de uma luta.",
+    missionText: [
+      "A Solaris Nutri ajuda as mulheres a atravessar a meia-idade com maior consciência biológica, utilizando a nutrição, a saúde intestinal, o estilo de vida e o ritmo para reconstruir uma relação respeitosa com o seu corpo.",
+      "Ajudamos as mulheres a compreender e responder aos sinais do seu corpo, desenvolver hábitos sustentáveis e reconhecer os primeiros sinais de que a sua saúde pode estar a sair do equilíbrio.",
+      "O nosso objetivo não é outra dieta restritiva, mas uma abordagem mais amável e integrada da nutrição — que apoie a saúde digestiva, metabólica e global, contribuindo para a prevenção e redução do risco de doenças crónicas evitáveis como a diabetes tipo 2.",
+    ],
     visionLabel: "Visão",
     visionTitle: "O mundo para o qual caminhamos",
     visionText:
