@@ -433,6 +433,10 @@ const RhythmCalculator = () => {
       <SEOHead title="Rhythm Calculator" description="Free interactive assessment to discover your optimal eating windows and daily rhythm profile with Solaris Nutri Framework." path="/rhythm-calculator" keywords="eating window calculator, circadian rhythm quiz" />
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
+          {/* Persistent H1 so the page keeps exactly one heading root on every step */}
+          {currentStep !== 0 && (
+            <h1 className="sr-only">{t('calc.title')}</h1>
+          )}
           {/* Header */}
           {currentStep === 0 && (
             <div className="text-center mb-12 animate-fade-in">
@@ -479,7 +483,7 @@ const RhythmCalculator = () => {
           {/* Question Card */}
           <Card className="border-border shadow-quantum animate-fade-in-up" style={{ animationDelay: "100ms" }}>
             <CardHeader>
-              <CardTitle className="font-serif text-2xl text-primary">
+              <CardTitle as="h2" className="font-serif text-2xl text-primary">
                 {currentQuestions[currentStep].question}
               </CardTitle>
               <CardDescription className="font-sans text-sm text-muted-foreground mt-2">
