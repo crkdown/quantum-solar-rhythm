@@ -115,9 +115,8 @@ const NewsletterSignup = ({ source = "site", className = "" }: NewsletterSignupP
       language,
       source: source.slice(0, 60),
     });
-    setLoading(false);
-
     if (error) {
+      setLoading(false);
       if (error.code === "23505") {
         setDone(true);
         toast.success(t.already);
@@ -127,6 +126,26 @@ const NewsletterSignup = ({ source = "site", className = "" }: NewsletterSignupP
       return;
     }
 
+    // Deliver the free guide. If the sending domain isn't verified yet the send
+    // fails silently — the subscriber is already stored and Paula can follow up.
+    try {
+      const { error: sendError } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "newsletter-welcome",
+          recipientEmail: parsed.data.email.toLowerCase(),
+          idempotencyKey: `newsletter-welcome-${parsed.data.email.toLowerCase()}`,
+          templateData: {
+            name: parsed.data.name || undefined,
+            guideUrl: `${window.location.origin}/resources`,
+          },
+        },
+      });
+      if (sendError) console.error("Guide email not sent:", sendError);
+    } catch (err) {
+      console.error("Guide email not sent:", err);
+    }
+
+    setLoading(false);
     setDone(true);
   };
 
