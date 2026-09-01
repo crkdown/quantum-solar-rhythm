@@ -25,7 +25,9 @@ const clampDescription = (text: string) => {
 const SEOHead = ({ title, description, path, type = "website", image, keywords, jsonLd, noindex }: SEOHeadProps) => {
   const fullUrl = `${SITE_URL}${path}`;
   const fullTitle = path === "/" ? title : `${title} | Solaris Nutri`;
-  const ogImage = image || DEFAULT_IMAGE;
+  // Bundled asset imports resolve to relative paths; crawlers need absolute URLs.
+  const resolved = image || DEFAULT_IMAGE;
+  const ogImage = resolved.startsWith("http") ? resolved : `${SITE_URL}${resolved.startsWith("/") ? "" : "/"}${resolved}`;
   const metaDescription = clampDescription(description);
 
   return (
