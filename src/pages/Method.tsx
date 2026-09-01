@@ -16,7 +16,7 @@ const Method = () => {
     <div className="min-h-screen py-24">
       <SEOHead
         title="The Solaris Nutri Method"
-        description="Discover the Solaris Nutri Framework method — a timing-based system aligning your biology with natural cycles for better digestion, energy and metabolic balance."
+        description="A timing-based method that aligns your biology with natural cycles for better digestion, steadier energy and metabolic balance."
         path="/method"
         keywords="solaris nutri framework method, circadian rhythm eating, chronobiology nutrition, TCM spleen, metabolic alignment"
       />

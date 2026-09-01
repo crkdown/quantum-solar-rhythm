@@ -163,7 +163,7 @@ const Home = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Solaris Nutri — Rhythm-Based Nutrition for Metabolic Balance"
-        description="Regain clarity, alignment and metabolic balance through rhythm-based nutrition. Bridging science, Anthroposophy and TCM for sustainable wellbeing. Programs, masterclasses and consultations by Paula Suescun."
+        description="Rhythm-based nutrition for midlife energy and metabolic balance. Programs, masterclasses and 1:1 coaching with Paula Suescun."
         path="/"
         keywords="rhythm nutrition, circadian rhythm diet, metabolic balance, holistic nutrition, chronobiology, TCM spleen, anthroposophic nutrition, Paula Suescun"
       />
