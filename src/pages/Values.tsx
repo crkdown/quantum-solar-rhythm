@@ -20,7 +20,7 @@ interface Copy {
   intro: string;
   missionLabel: string;
   missionTitle: string;
-  missionText: string;
+  missionText: string[];
   visionLabel: string;
   visionTitle: string;
   visionText: string;
@@ -41,8 +41,11 @@ const copy: Record<Lang, Copy> = {
     intro: "The principles behind every choice we make at Solaris Nutri.",
     missionLabel: "Mission",
     missionTitle: "Why Solaris Nutri exists",
-    missionText:
-      "To help women — especially in midlife — understand their biological rhythms and rebuild their nutrition around them, so change becomes sustainable instead of a fight.",
+    missionText: [
+      "Solaris Nutri helps women navigate midlife with greater biological awareness, using nutrition, gut health, lifestyle and rhythm to rebuild a respectful relationship with their bodies.",
+      "We help women understand and respond to their body's signals, develop sustainable habits and recognise early signs that their health may be moving out of balance.",
+      "Our aim is not another restrictive diet, but a kinder and more integrated approach to nourishment — supporting digestive, metabolic and overall health while contributing to the prevention and reduction of risk for preventable chronic diseases such as type 2 diabetes.",
+    ],
     visionLabel: "Vision",
     visionTitle: "The world we’re building toward",
     visionText:
@@ -71,8 +74,11 @@ const copy: Record<Lang, Copy> = {
     intro: "Los principios detrás de cada decisión que tomamos en Solaris Nutri.",
     missionLabel: "Misión",
     missionTitle: "Por qué existe Solaris Nutri",
-    missionText:
-      "Ayudar a las mujeres — especialmente en la mediana edad — a comprender sus ritmos biológicos y reconstruir su nutrición en torno a ellos, para que el cambio sea sostenible en lugar de una lucha.",
+    missionText: [
+      "Solaris Nutri ayuda a las mujeres a transitar la mediana edad con mayor conciencia biológica, utilizando la nutrición, la salud intestinal, el estilo de vida y el ritmo para reconstruir una relación respetuosa con su cuerpo.",
+      "Ayudamos a las mujeres a comprender y responder a las señales de su cuerpo, desarrollar hábitos sostenibles y reconocer los primeros signos de que su salud podría estar perdiendo el equilibrio.",
+      "Nuestro objetivo no es otra dieta restrictiva, sino un enfoque más amable e integrado de la nutrición — que apoye la salud digestiva, metabólica y general, contribuyendo a la prevención y reducción del riesgo de enfermedades crónicas prevenibles como la diabetes tipo 2.",
+    ],
     visionLabel: "Visión",
     visionTitle: "El mundo hacia el que caminamos",
     visionText:
