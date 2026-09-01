@@ -31,7 +31,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-nourd font-semibold text-primary mb-4">{t('footer.explore')}</h4>
+            <h2 className="font-nourd font-semibold text-primary mb-4 text-sm">{t('footer.explore')}</h2>
             <ul className="space-y-2 text-sm font-lora">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
@@ -78,7 +78,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-nourd font-semibold text-primary mb-4">{t('footer.connect')}</h4>
+            <h2 className="font-nourd font-semibold text-primary mb-4 text-sm">{t('footer.connect')}</h2>
             <ul className="space-y-2 text-sm font-lora">
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
