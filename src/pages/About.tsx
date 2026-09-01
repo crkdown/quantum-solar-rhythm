@@ -267,7 +267,7 @@ const About = () => {
     <div className="min-h-screen py-24">
       <SEOHead
         title="About Paula Suescun"
-        description="Meet Paula Suescun, founder of Solaris Nutri. A nutritionist bridging science, Anthroposophy and TCM to help you regain metabolic balance through rhythm-based nutrition."
+        description="Meet Paula Suescun, founder of Solaris Nutri, blending science, Anthroposophy and TCM to restore metabolic balance through rhythm."
         path="/about"
         keywords="Paula Suescun, holistic nutritionist, rhythm nutrition practitioner, Solaris Nutri founder"
       />

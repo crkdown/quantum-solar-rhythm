@@ -281,7 +281,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen py-24">
       <SEOHead
-        title="FAQ — Who the Solaris Nutri Method Is (and Isn't) For"
+        title="FAQ — Is This Method For You?"
         description="Honest answers about the Solaris Nutri Method: how sessions work, who it helps, and who this rhythm-based approach is not for."
         path="/faq"
         keywords="solaris nutri faq, who is this method for, rhythm nutrition questions"
