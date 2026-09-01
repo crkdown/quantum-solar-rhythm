@@ -18,6 +18,7 @@ const Navigation = () => {
 
   const mainLinks = [
     { path: "/about", label: t('nav.about') },
+    { path: "/values", label: t('nav.values') },
     { path: "/method", label: t('nav.method') },
     { path: "/programs", label: t('nav.programs') },
     { path: "/masterclasses", label: t('nav.masterclass') },

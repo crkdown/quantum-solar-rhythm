@@ -22,6 +22,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.blog': 'Blog',
     'nav.faq': 'FAQ',
     'nav.contact': 'Contact',
+    'nav.values': 'Values',
     'nav.foodRhythm': 'Food Rhythm Tool',
     'nav.rhythmCalc': 'Rhythm Calculator',
     
@@ -298,6 +299,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.blog': 'Blog',
     'nav.faq': 'Preguntas',
     'nav.contact': 'Contacto',
+    'nav.values': 'Valores',
     'nav.foodRhythm': 'Herramienta de Ritmo',
     'nav.rhythmCalc': 'Calculadora de Ritmo',
     
@@ -573,6 +575,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.blog': 'Blog',
     'nav.faq': 'Perguntas',
     'nav.contact': 'Contacto',
+    'nav.values': 'Valores',
     'nav.foodRhythm': 'Ferramenta de Ritmo',
     'nav.rhythmCalc': 'Calculadora de Ritmo',
     
