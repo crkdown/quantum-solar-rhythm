@@ -38,7 +38,7 @@ Running list. Update status as tasks move.
 - [Lead magnet] Dedicated lead-magnet page for the circadian guide with a form that stores leads + emails the guide.
 - [Contact] Ensure Contact page has email + Instagram links and a form that sends inquiries to inbox (qrnutrition4@gmail.com).
 - [Contact] **Wire contact form to real email delivery** via `send-transactional-email` Edge Function: notification to Solaris Nutri + confirmation to submitter. Replace `mailto:` fallback. (Email domain DNS pending; scaffolds now, sends after verification.)
-- [Values] Confirm/restore Paula's mission text to the user-provided 3-paragraph statement (EN/ES/PT).
+- [Values] Confirm/restore Paula's mission text to the user-provided 3-paragraph statement (EN/ES/PT). — DONE: already in place exactly (EN/ES/PT).
 - [About] Real About page: story, mission, contact details + structured data in sitemap.
 
 ## To do — needs external infra / user action
