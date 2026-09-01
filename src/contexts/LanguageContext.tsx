@@ -23,6 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.faq': 'FAQ',
     'nav.contact': 'Contact',
     'nav.values': 'Values',
+    'nav.midlife': 'Midlife',
     'nav.foodRhythm': 'Food Rhythm Tool',
     'nav.rhythmCalc': 'Rhythm Calculator',
     
@@ -300,6 +301,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.faq': 'Preguntas',
     'nav.contact': 'Contacto',
     'nav.values': 'Valores',
+    'nav.midlife': 'Mediana edad',
     'nav.foodRhythm': 'Herramienta de Ritmo',
     'nav.rhythmCalc': 'Calculadora de Ritmo',
     
@@ -576,6 +578,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.faq': 'Perguntas',
     'nav.contact': 'Contacto',
     'nav.values': 'Valores',
+    'nav.midlife': 'Meia-idade',
     'nav.foodRhythm': 'Ferramenta de Ritmo',
     'nav.rhythmCalc': 'Calculadora de Ritmo',
     

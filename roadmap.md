@@ -47,3 +47,9 @@ Running list. Update status as tasks move.
 - [GSC] Publish, then submit sitemap.xml + request indexing (home, Masterclasses, Program, blog posts) + verify ownership. Needs google_search_console OAuth connection authorized (card surfaced earlier).
 - [Instagram] Create real IG profile (bio, pinned post, Stories linking to free e-book). NOTE: cannot be created by Lovable — user must build it on Instagram; site already links to @solarisnutri.
 - [Template] Upgrade to latest Lovable template (TanStack Start SSR) for per-page OG tags. User-initiated via "/" → "Migrate to TanStack Start".
+
+## Session update (Sep 1)
+- [Content] **DONE**: `/midlife-journey` page built (EN/ES/PT) — mission + health sentence capstone, 6 midlife signals, 4 stages (early shift, perimenopause, menopause, post-menopause), "why rhythm not a diet" narrative, newsletter block, CTAs. Route + nav (`nav.midlife`) + sitemap + WebPage JSON-LD. Verified: one H1, no skipped levels, no console errors.
+- [Email] **DONE (code)**: `newsletter-welcome` template created + registered; NewsletterSignup now invokes `send-transactional-email` after storing the subscriber, delivering the 7-Day Rhythm Reset with guide link. Send activates automatically once `notify.solarisnutri.com` DNS verifies; failures are logged and never block signup.
+- [Template] Still user-initiated: "/" → Migrate to TanStack Start (needed for per-post OG tags).
+- [GSC] Still needs the Google Search Console OAuth card authorized before sitemap submission / indexing requests.

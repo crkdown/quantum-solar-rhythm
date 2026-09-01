@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Values from "./pages/Values";
+import MidlifeJourney from "./pages/MidlifeJourney";
 import Method from "./pages/Method";
 import Programs from "./pages/Programs";
 import Masterclasses from "./pages/Masterclasses";
@@ -43,6 +44,7 @@ const App = () => (
                   <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/values" element={<Values />} />
+                  <Route path="/midlife-journey" element={<MidlifeJourney />} />
                   <Route path="/method" element={<Method />} />
                   <Route path="/programs" element={<Programs />} />
                   <Route path="/masterclasses" element={<Masterclasses />} />
