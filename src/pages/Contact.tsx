@@ -160,13 +160,32 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary hover:bg-primary/90 font-sans font-medium"
+                <Button
+                  type="submit"
+                  disabled={status === "sending" || status === "success"}
+                  className="w-full bg-primary hover:bg-primary/90 font-sans font-medium gap-2"
                   size="lg"
                 >
-                  Send Message
+                  {status === "sending" && <Loader2 size={18} className="animate-spin" />}
+                  {status === "success" && <CheckCircle2 size={18} />}
+                  {status === "idle" && "Send Message"}
+                  {status === "sending" && "Sending…"}
+                  {status === "success" && "Message Sent"}
+                  {status === "error" && "Try Again"}
                 </Button>
+
+                {status === "success" && (
+                  <p className="flex items-center gap-2 font-sans text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-4 py-3">
+                    <CheckCircle2 size={16} className="flex-shrink-0" />
+                    Thank you — your message is on its way to Paula. Expect a reply within 24–48 hours.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="flex items-center gap-2 font-sans text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                    <AlertCircle size={16} className="flex-shrink-0" />
+                    Something went wrong sending your message. Please try again, or reach us directly via Instagram DM.
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>
