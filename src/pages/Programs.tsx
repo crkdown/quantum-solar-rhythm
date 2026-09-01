@@ -282,6 +282,47 @@ const Programs = () => {
 
 
 
+  const programsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Solaris Nutri Rhythm-Based Nutrition Programs",
+    serviceType: "Rhythm-based nutrition coaching",
+    description:
+      "3 and 6-month rhythm-based nutrition journeys rebuilding metabolic balance through circadian alignment, TCM spleen support and whole-food nutrition.",
+    url: "https://solarisnutri-com.lovable.app/programs",
+    areaServed: ["Worldwide", "Online"],
+    provider: {
+      "@type": "HealthAndBeautyBusiness",
+      name: "Solaris Nutri",
+      url: "https://solarisnutri-com.lovable.app",
+      email: "qrnutrition4@gmail.com",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Nutrition Programs",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          name: "Solaris Collective — 90-Day Group Journey",
+          description: "Group 90-day rhythm nutrition journey with twice-monthly live sessions and community support.",
+          price: "360",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: "https://solarisnutri-com.lovable.app/programs",
+        },
+        {
+          "@type": "Offer",
+          name: "Solaris Private — Personalised 90-Day Program",
+          description: "Personalised 90-day rhythm nutrition program with twice-monthly 1:1 sessions.",
+          price: "600",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: "https://solarisnutri-com.lovable.app/programs",
+        },
+      ],
+    },
+  };
+
   return (
     <div className="min-h-screen py-24">
       <SEOHead
@@ -290,7 +331,9 @@ const Programs = () => {
         path="/programs"
         image={collectiveImg}
         keywords="nutrition programs, rhythm nutrition course, metabolic balance program, holistic nutrition coaching"
+        jsonLd={programsSchema}
       />
+
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">

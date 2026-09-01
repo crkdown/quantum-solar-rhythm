@@ -13,6 +13,29 @@ const BlogPost = () => {
 
   const related = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://solarisnutri-com.lovable.app${post.image.startsWith("/") ? "" : "/"}${post.image}`,
+    datePublished: new Date(post.date).toISOString().split("T")[0],
+    dateModified: new Date(post.date).toISOString().split("T")[0],
+    articleSection: post.category,
+    inLanguage: "en",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://solarisnutri-com.lovable.app/blog/${post.slug}`,
+    },
+    author: { "@type": "Person", name: "Paula Suescun" },
+    publisher: {
+      "@type": "Organization",
+      name: "Solaris Nutri",
+      url: "https://solarisnutri-com.lovable.app",
+    },
+    citation: post.references?.map((r) => r.label),
+  };
+
   return (
     <div className="min-h-screen py-24">
       <SEOHead
@@ -22,7 +45,9 @@ const BlogPost = () => {
         image={post.image}
         type="article"
         keywords={post.category}
+        jsonLd={articleSchema}
       />
+
       <article className="container mx-auto px-6 max-w-3xl">
         <Link to="/blog" className="flex w-fit items-center gap-2 text-accent font-sans text-sm mb-8 hover:underline">
           <ArrowLeft size={16} />
