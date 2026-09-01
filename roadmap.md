@@ -8,7 +8,12 @@ Running list. Update status as tasks move.
 - Elevator pitch updated on Home (EN/ES/PT): "Solaris Nutri helps women stop fighting their bodies… using food, gut health and biological rhythms to create sustainable change through midlife."
 
 ## Open decision
-- [Values] 7th value: COMPASSION vs SELF-RESPECT vs NON-HARM — recommendation given (NON-HARM). Awaiting user choice before adding the 7th card.
+- [Values] 7th value: COMPASSION vs SELF-RESPECT vs NON-HARM. The `/values` page now carries an "An Open Question" section presenting all three candidates (strengths + tensions) and inviting reflection. Solaris Nutri's lean = Non-Harm as the floor, with Compassion & Self-Respect woven through it. Awaiting user's final word before promoting one to the main values grid.
+
+## Done this session (continued)
+- [Values] Mission rewritten to the full 3-paragraph statement (midlife awareness; respond to body signals + sustainable habits + early warning signs; not another restrictive diet; digestive/metabolic/overall health + type 2 diabetes risk reduction). EN/ES/PT.
+- [Values] Vision replaced with user-provided copy: people no longer fight their bodies in pursuit of health; understand, nourish, respect — harmony with biology, rhythms, environment. EN/ES/PT.
+- [Template migration] User re-requested migrating to the latest Lovable template (TanStack Start SSR) so per-page OG/social previews render live. This is user-initiated via the composer "/" → "Migrate to TanStack Start" (Lovable cannot self-trigger the migration).
 
 ## In progress / next up (code-only)
 - [Content] Dedicated Midlife Journey page (`/midlife-journey`): expand home pitch; stages of midlife + how Solaris Nutri supports each. EN/ES/PT. Add nav + sitemap + structured data.
