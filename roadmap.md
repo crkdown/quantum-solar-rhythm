@@ -37,6 +37,9 @@ Running list. Update status as tasks move.
 - [Video] Add a circadian-rhythm basics video on the site (Home or dedicated section).
 - [Lead magnet] Dedicated lead-magnet page for the circadian guide with a form that stores leads + emails the guide.
 - [Contact] Ensure Contact page has email + Instagram links and a form that sends inquiries to inbox (qrnutrition4@gmail.com).
+- [Contact] **DONE**: Wired contact form to real email delivery. Created `contact-notification` (to Solaris Nutri inbox) + `contact-confirmation` (to submitter) templates, registered + deployed `send-transactional-email` (plus unsubscribe/suppression/preview functions), built `/unsubscribe` page + route. Replaced `mailto:` fallback with async Edge Function invoke + status UI. Emails send once `notify.solarisnutri.com` DNS verifies.
+- [Contact] **Wire contact form to real email delivery** via `send-transactional-email` Edge Function: notification to Solaris Nutri + confirmation to submitter. Replace `mailto:` fallback. (Email domain DNS pending; scaffolds now, sends after verification.)
+- [Values] Confirm/restore Paula's mission text to the user-provided 3-paragraph statement (EN/ES/PT). — DONE: already in place exactly (EN/ES/PT).
 - [About] Real About page: story, mission, contact details + structured data in sitemap.
 
 ## To do — needs external infra / user action
