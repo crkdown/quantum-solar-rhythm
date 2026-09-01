@@ -293,6 +293,9 @@ const Values = () => {
                     <p key={i} className="font-sans text-foreground/80 leading-relaxed">{paragraph}</p>
                   ))}
                 </div>
+                <p className="mt-6 pt-6 border-t border-border/60 font-serif text-lg italic text-primary/90 leading-relaxed">
+                  {t.missionCapstone}
+                </p>
               </div>
               <div className="bg-card p-8 md:p-10 rounded-2xl border border-border shadow-subtle-glow animate-fade-in-up" style={{ animationDelay: "120ms" }}>
                 <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
