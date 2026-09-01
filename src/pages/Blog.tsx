@@ -7,12 +7,39 @@ import SEOHead from "@/components/SEOHead";
 import { blogPosts } from "@/data/blogPosts";
 import NewsletterSignup from "@/components/NewsletterSignup";
 
+const SITE_URL = "https://solarisnutri-com.lovable.app";
+
 const Blog = () => {
   const articles = blogPosts;
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Solaris Nutri Journal",
+    description:
+      "Articles on circadian nutrition, TCM spleen health, Rudolf Steiner's grain rhythms and rebuilding metabolic balance through timing.",
+    url: `${SITE_URL}/blog`,
+    inLanguage: "en",
+    publisher: {
+      "@type": "Organization",
+      name: "Solaris Nutri",
+      url: SITE_URL,
+    },
+    blogPost: articles.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: new Date(post.date).toISOString().split("T")[0],
+      articleSection: post.category,
+      url: `${SITE_URL}/blog/${post.slug}`,
+      author: { "@type": "Person", name: "Paula Suescun" },
+    })),
+  };
+
   return (
     <div className="min-h-screen py-24">
-      <SEOHead title="Rhythm & Nutrition Blog" description="Articles on circadian nutrition, TCM spleen health, Rudolf Steiner's grain rhythms and rebuilding metabolic balance through timing." path="/blog" keywords="circadian nutrition blog, TCM spleen, Rudolf Steiner nutrition" />
+      <SEOHead title="Rhythm & Nutrition Blog" description="Articles on circadian nutrition, TCM spleen health, Rudolf Steiner's grain rhythms and rebuilding metabolic balance through timing." path="/blog" keywords="circadian nutrition blog, TCM spleen, Rudolf Steiner nutrition" jsonLd={blogSchema} />
+
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
