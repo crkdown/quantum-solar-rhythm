@@ -1,5 +1,18 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Circle, Heart, ShieldCheck, Compass, UserCheck, Scale, Layers, Sun } from "lucide-react";
+import {
+  ArrowRight,
+  Circle,
+  Heart,
+  ShieldCheck,
+  Compass,
+  UserCheck,
+  Scale,
+  Layers,
+  Sun,
+  Shield,
+  Sparkles,
+  MessageCircleHeart,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import { Button } from "@/components/ui/button";
@@ -14,13 +27,19 @@ interface ValueEntry {
   Icon: LucideIcon;
 }
 
+interface CandidateEntry {
+  name: string;
+  desc: string;
+  Icon: LucideIcon;
+}
+
 interface Copy {
   badge: string;
   title: string;
   intro: string;
   missionLabel: string;
   missionTitle: string;
-  missionText: string;
+  missionText: string[];
   visionLabel: string;
   visionTitle: string;
   visionText: string;
@@ -28,6 +47,11 @@ interface Copy {
   valuesTitle: string;
   valuesIntro: string;
   values: ValueEntry[];
+  explorationLabel: string;
+  explorationTitle: string;
+  explorationIntro: string;
+  candidates: CandidateEntry[];
+  explorationNote: string;
   closingTitle: string;
   closingText: string;
   ctaPrimary: string;
@@ -41,12 +65,15 @@ const copy: Record<Lang, Copy> = {
     intro: "The principles behind every choice we make at Solaris Nutri.",
     missionLabel: "Mission",
     missionTitle: "Why Solaris Nutri exists",
-    missionText:
-      "To help women — especially in midlife — understand their biological rhythms and rebuild their nutrition around them, so change becomes sustainable instead of a fight.",
+    missionText: [
+      "Solaris Nutri helps women navigate midlife with greater biological awareness, using nutrition, gut health, lifestyle and rhythm to rebuild a respectful relationship with their bodies.",
+      "We help women understand and respond to their body's signals, develop sustainable habits and recognise early signs that their health may be moving out of balance.",
+      "Our aim is not another restrictive diet, but a kinder and more integrated approach to nourishment — supporting digestive, metabolic and overall health while contributing to the prevention and reduction of risk for preventable chronic diseases such as type 2 diabetes.",
+    ],
     visionLabel: "Vision",
     visionTitle: "The world we’re building toward",
     visionText:
-      "A world where women stop fighting their bodies and learn to nourish themselves in rhythm — with food, gut health and biology working together.",
+      "A world where people no longer fight their bodies in the pursuit of health, but learn to understand, nourish and respect them — living in greater harmony with their biology, their rhythms and their environment.",
     valuesLabel: "Core Values",
     valuesTitle: "The values that shape our work",
     valuesIntro:
@@ -59,6 +86,29 @@ const copy: Record<Lang, Copy> = {
       { name: "Alignment", desc: "Create choices that fit biology, life circumstances and individual needs.", Icon: Scale },
       { name: "Integration", desc: "Knowledge only matters when it becomes lived behaviour.", Icon: Layers },
     ],
+    explorationLabel: "An Open Question",
+    explorationTitle: "Compassion, Self-Respect or Non-Harm?",
+    explorationIntro:
+      "Six values feel settled. The seventh is the one we are still exploring — and we want to think it through carefully, because whichever we choose shapes how we show up.",
+    candidates: [
+      {
+        name: "Compassion",
+        desc: "Meeting yourself and your body with warmth, especially when change is hard. Strength: it humanises the journey. Tension: without a boundary, compassion can quietly slip into self-indulgence or staying small.",
+        Icon: Heart,
+      },
+      {
+        name: "Self-Respect",
+        desc: "Honouring your own needs, limits and pace as real and worthy. Strength: protects against people-pleasing and over-giving. Tension: can edge toward rigidity or self-criticism if mistaken for perfectionism.",
+        Icon: UserCheck,
+      },
+      {
+        name: "Non-Harm",
+        desc: "A clear ethical guardrail — do no harm to body, mind or your relationship with food. Strength: an objective floor that holds even on hard days. Tension: more a boundary than a feeling, so it may need compassion or self-respect to warm it.",
+        Icon: Shield,
+      },
+    ],
+    explorationNote:
+      "Our current lean: Non-Harm as the floor, with Compassion and Self-Respect woven through it. We'd genuinely love your reflection — which one lands as most true for you?",
     closingTitle: "Change that comes from understanding, not control",
     closingText:
       "If these principles speak to you, the next step is a free assessment call — no protocol, no pressure.",
@@ -71,12 +121,15 @@ const copy: Record<Lang, Copy> = {
     intro: "Los principios detrás de cada decisión que tomamos en Solaris Nutri.",
     missionLabel: "Misión",
     missionTitle: "Por qué existe Solaris Nutri",
-    missionText:
-      "Ayudar a las mujeres — especialmente en la mediana edad — a comprender sus ritmos biológicos y reconstruir su nutrición en torno a ellos, para que el cambio sea sostenible en lugar de una lucha.",
+    missionText: [
+      "Solaris Nutri ayuda a las mujeres a transitar la mediana edad con mayor conciencia biológica, utilizando la nutrición, la salud intestinal, el estilo de vida y el ritmo para reconstruir una relación respetuosa con su cuerpo.",
+      "Ayudamos a las mujeres a comprender y responder a las señales de su cuerpo, desarrollar hábitos sostenibles y reconocer los primeros signos de que su salud podría estar perdiendo el equilibrio.",
+      "Nuestro objetivo no es otra dieta restrictiva, sino un enfoque más amable e integrado de la nutrición — que apoye la salud digestiva, metabólica y general, contribuyendo a la prevención y reducción del riesgo de enfermedades crónicas prevenibles como la diabetes tipo 2.",
+    ],
     visionLabel: "Visión",
     visionTitle: "El mundo hacia el que caminamos",
     visionText:
-      "Un mundo donde las mujeres dejen de luchar contra su cuerpo y aprendan a nutrirse en ritmo — con la alimentación, la salud intestinal y la biología trabajando juntas.",
+      "Un mundo donde las personas ya no luchen contra su cuerpo en la búsqueda de la salud, sino que aprendan a comprenderlo, nutrirlo y respetarlo — viviendo en mayor armonía con su biología, sus ritmos y su entorno.",
     valuesLabel: "Valores Fundamentales",
     valuesTitle: "Los valores que dan forma a nuestro trabajo",
     valuesIntro:
@@ -89,6 +142,29 @@ const copy: Record<Lang, Copy> = {
       { name: "Alineación", desc: "Crear elecciones que se ajusten a la biología, las circunstancias de la vida y las necesidades individuales.", Icon: Scale },
       { name: "Integración", desc: "El conocimiento solo importa cuando se convierte en comportamiento vivido.", Icon: Layers },
     ],
+    explorationLabel: "Una Pregunta Abierta",
+    explorationTitle: "¿Compasión, Respeto por Uno Mismo o No-Daño?",
+    explorationIntro:
+      "Seis valores se sienten asentados. El séptimo es el que todavía estamos explorando — y queremos pensarlo con cuidado, porque el que elijamos da forma a cómo nos presentamos.",
+    candidates: [
+      {
+        name: "Compasión",
+        desc: "Encontrarte a ti y a tu cuerpo con calidez, especialmente cuando el cambio cuesta. Fuerza: humaniza el camino. Tensión: sin un límite, la compasión puede deslizarse en silencio hacia la autocomplacencia o el quedarse pequeña.",
+        Icon: Heart,
+      },
+      {
+        name: "Respeto por Uno Mismo",
+        desc: "Honrar tus propias necesidades, límites y ritmo como reales y dignos. Fuerza: protege frente a complacer a otros y darte de más. Tensión: puede rozar la rigidez o la autocrítica si se confunde con perfeccionismo.",
+        Icon: UserCheck,
+      },
+      {
+        name: "No-Daño",
+        desc: "Una guía ética clara — no hacer daño al cuerpo, a la mente ni a tu relación con la comida. Fuerza: un suelo objetivo que se sostiene incluso en los días difíciles. Tensión: es más un límite que un sentimiento, así que quizá necesite compasión o respeto para darle calidez.",
+        Icon: Shield,
+      },
+    ],
+    explorationNote:
+      "Nuestra inclinación actual: el No-Daño como base, con la Compasión y el Respeto por Uno Mismo entrelazados. Nos encantaría de verdad tu reflexión — ¿cuál resuena como más verdadera para ti?",
     closingTitle: "Un cambio que nace de la comprensión, no del control",
     closingText:
       "Si estos principios resuenan contigo, el siguiente paso es una llamada de evaluación gratuita — sin protocolo, sin presión.",
@@ -101,12 +177,15 @@ const copy: Record<Lang, Copy> = {
     intro: "Os princípios por trás de cada decisão que tomamos na Solaris Nutri.",
     missionLabel: "Missão",
     missionTitle: "Por que a Solaris Nutri existe",
-    missionText:
-      "Ajudar as mulheres — especialmente na meia-idade — a compreender os seus ritmos biológicos e a reconstruir a sua nutrição em torno deles, para que a mudança seja sustentável em vez de uma luta.",
+    missionText: [
+      "A Solaris Nutri ajuda as mulheres a atravessar a meia-idade com maior consciência biológica, utilizando a nutrição, a saúde intestinal, o estilo de vida e o ritmo para reconstruir uma relação respeitosa com o seu corpo.",
+      "Ajudamos as mulheres a compreender e responder aos sinais do seu corpo, desenvolver hábitos sustentáveis e reconhecer os primeiros sinais de que a sua saúde pode estar a sair do equilíbrio.",
+      "O nosso objetivo não é outra dieta restritiva, mas uma abordagem mais amável e integrada da nutrição — que apoie a saúde digestiva, metabólica e global, contribuindo para a prevenção e redução do risco de doenças crónicas evitáveis como a diabetes tipo 2.",
+    ],
     visionLabel: "Visão",
     visionTitle: "O mundo para o qual caminhamos",
     visionText:
-      "Um mundo onde as mulheres deixem de lutar contra o seu corpo e aprendam a nutrir-se em ritmo — com a alimentação, a saúde intestinal e a biologia a trabalharem juntas.",
+      "Um mundo onde as pessoas já não lutem contra o seu corpo na procura da saúde, mas aprendam a compreendê-lo, nutri-lo e respeitá-lo — vivendo em maior harmonia com a sua biologia, os seus ritmos e o seu ambiente.",
     valuesLabel: "Valores Fundamentais",
     valuesTitle: "Os valores que moldam o nosso trabalho",
     valuesIntro:
@@ -119,6 +198,29 @@ const copy: Record<Lang, Copy> = {
       { name: "Alinhamento", desc: "Criar escolhas que se adequem à biologia, às circunstâncias de vida e às necessidades individuais.", Icon: Scale },
       { name: "Integração", desc: "O conhecimento só importa quando se torna comportamento vivido.", Icon: Layers },
     ],
+    explorationLabel: "Uma Pergunta em Aberto",
+    explorationTitle: "Compaixão, Respeito por Si Mesmo ou Não-Dano?",
+    explorationIntro:
+      "Seis valores sentam-se bem. O sétimo é aquele que ainda estamos a explorar — e queremos pensá-lo com cuidado, porque o que escolhermos molda a forma como nos apresentamos.",
+    candidates: [
+      {
+        name: "Compaixão",
+        desc: "Encontrar-se a si e ao seu corpo com calor, especialmente quando a mudança custa. Força: humaniza o caminho. Tensão: sem um limite, a compaixão pode escorregar silenciosamente para a autocomplacência ou o ficar pequena.",
+        Icon: Heart,
+      },
+      {
+        name: "Respeito por Si Mesmo",
+        desc: "Honrar as suas próprias necessidades, limites e ritmo como reais e dignos. Força: protege contra o agradar e o dar demasiado de si. Tensão: pode roçar a rigidez ou a autocrítica se for confundida com perfeccionismo.",
+        Icon: UserCheck,
+      },
+      {
+        name: "Não-Dano",
+        desc: "Uma salvaguarda ética clara — não causar dano ao corpo, à mente ou à sua relação com a comida. Força: um chão objetivo que se mantém mesmo nos dias difíceis. Tensão: é mais um limite do que um sentimento, por isso pode precisar de compaixão ou respeito para o aquecer.",
+        Icon: Shield,
+      },
+    ],
+    explorationNote:
+      "A nossa inclinação atual: o Não-Dano como base, com a Compaixão e o Respeito por Si Mesmo entrelaçados. Gostaríamos muito da sua reflexão — qual ressoa como mais verdadeira para si?",
     closingTitle: "Uma mudança que nasce da compreensão, não do controlo",
     closingText:
       "Se estes princípios ressoam em ti, o próximo passo é uma chamada de avaliação gratuita — sem protocolo, sem pressão.",
@@ -179,7 +281,11 @@ const Values = () => {
                   {t.missionLabel}
                 </div>
                 <h3 className="font-serif text-2xl font-semibold text-primary mb-4">{t.missionTitle}</h3>
-                <p className="font-sans text-foreground/80 leading-relaxed">{t.missionText}</p>
+                <div className="space-y-4">
+                  {t.missionText.map((paragraph, i) => (
+                    <p key={i} className="font-sans text-foreground/80 leading-relaxed">{paragraph}</p>
+                  ))}
+                </div>
               </div>
               <div className="bg-card p-8 md:p-10 rounded-2xl border border-border shadow-subtle-glow animate-fade-in-up" style={{ animationDelay: "120ms" }}>
                 <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
@@ -222,6 +328,46 @@ const Values = () => {
                   </div>
                 );
               })}
+            </div>
+          </section>
+
+          {/* The Seventh Value — an open question */}
+          <section aria-labelledby="exploration-heading" className="mb-20">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
+                <Sparkles size={14} />
+                {t.explorationLabel}
+              </div>
+              <h2 id="exploration-heading" className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
+                {t.explorationTitle}
+              </h2>
+              <p className="font-sans text-foreground/70 leading-relaxed">{t.explorationIntro}</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {t.candidates.map((candidate, index) => {
+                const Icon = candidate.Icon;
+                return (
+                  <div
+                    key={candidate.name}
+                    className="group bg-muted/20 p-8 rounded-2xl border border-accent/20 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 animate-fade-in-up flex flex-col"
+                    style={{ animationDelay: `${index * 90}ms` }}
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                      <Icon className="text-accent" size={24} strokeWidth={1.75} />
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold text-primary mb-3">{candidate.name}</h3>
+                    <p className="font-sans text-sm text-foreground/75 leading-relaxed">{candidate.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-8 flex items-start gap-3 bg-card p-6 md:p-8 rounded-2xl border border-border">
+              <MessageCircleHeart className="text-accent flex-shrink-0 mt-1" size={22} strokeWidth={1.75} />
+              <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed italic">
+                {t.explorationNote}
+              </p>
             </div>
           </section>
 
