@@ -1,5 +1,18 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Circle, Heart, ShieldCheck, Compass, UserCheck, Scale, Layers, Sun } from "lucide-react";
+import {
+  ArrowRight,
+  Circle,
+  Heart,
+  ShieldCheck,
+  Compass,
+  UserCheck,
+  Scale,
+  Layers,
+  Sun,
+  Shield,
+  Sparkles,
+  MessageCircleHeart,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import logo from "@/assets/solaris-nutri-logo.jpeg";
 import { Button } from "@/components/ui/button";
@@ -9,6 +22,12 @@ import SEOHead from "@/components/SEOHead";
 type Lang = "en" | "es" | "pt";
 
 interface ValueEntry {
+  name: string;
+  desc: string;
+  Icon: LucideIcon;
+}
+
+interface CandidateEntry {
   name: string;
   desc: string;
   Icon: LucideIcon;
@@ -28,6 +47,11 @@ interface Copy {
   valuesTitle: string;
   valuesIntro: string;
   values: ValueEntry[];
+  explorationLabel: string;
+  explorationTitle: string;
+  explorationIntro: string;
+  candidates: CandidateEntry[];
+  explorationNote: string;
   closingTitle: string;
   closingText: string;
   ctaPrimary: string;
@@ -62,6 +86,29 @@ const copy: Record<Lang, Copy> = {
       { name: "Alignment", desc: "Create choices that fit biology, life circumstances and individual needs.", Icon: Scale },
       { name: "Integration", desc: "Knowledge only matters when it becomes lived behaviour.", Icon: Layers },
     ],
+    explorationLabel: "An Open Question",
+    explorationTitle: "Compassion, Self-Respect or Non-Harm?",
+    explorationIntro:
+      "Six values feel settled. The seventh is the one we are still exploring — and we want to think it through carefully, because whichever we choose shapes how we show up.",
+    candidates: [
+      {
+        name: "Compassion",
+        desc: "Meeting yourself and your body with warmth, especially when change is hard. Strength: it humanises the journey. Tension: without a boundary, compassion can quietly slip into self-indulgence or staying small.",
+        Icon: Heart,
+      },
+      {
+        name: "Self-Respect",
+        desc: "Honouring your own needs, limits and pace as real and worthy. Strength: protects against people-pleasing and over-giving. Tension: can edge toward rigidity or self-criticism if mistaken for perfectionism.",
+        Icon: UserCheck,
+      },
+      {
+        name: "Non-Harm",
+        desc: "A clear ethical guardrail — do no harm to body, mind or your relationship with food. Strength: an objective floor that holds even on hard days. Tension: more a boundary than a feeling, so it may need compassion or self-respect to warm it.",
+        Icon: Shield,
+      },
+    ],
+    explorationNote:
+      "Our current lean: Non-Harm as the floor, with Compassion and Self-Respect woven through it. We'd genuinely love your reflection — which one lands as most true for you?",
     closingTitle: "Change that comes from understanding, not control",
     closingText:
       "If these principles speak to you, the next step is a free assessment call — no protocol, no pressure.",
@@ -95,6 +142,29 @@ const copy: Record<Lang, Copy> = {
       { name: "Alineación", desc: "Crear elecciones que se ajusten a la biología, las circunstancias de la vida y las necesidades individuales.", Icon: Scale },
       { name: "Integración", desc: "El conocimiento solo importa cuando se convierte en comportamiento vivido.", Icon: Layers },
     ],
+    explorationLabel: "Una Pregunta Abierta",
+    explorationTitle: "¿Compasión, Respeto por Uno Mismo o No-Daño?",
+    explorationIntro:
+      "Seis valores se sienten asentados. El séptimo es el que todavía estamos explorando — y queremos pensarlo con cuidado, porque el que elijamos da forma a cómo nos presentamos.",
+    candidates: [
+      {
+        name: "Compasión",
+        desc: "Encontrarte a ti y a tu cuerpo con calidez, especialmente cuando el cambio cuesta. Fuerza: humaniza el camino. Tensión: sin un límite, la compasión puede deslizarse en silencio hacia la autocomplacencia o el quedarse pequeña.",
+        Icon: Heart,
+      },
+      {
+        name: "Respeto por Uno Mismo",
+        desc: "Honrar tus propias necesidades, límites y ritmo como reales y dignos. Fuerza: protege frente a complacer a otros y darte de más. Tensión: puede rozar la rigidez o la autocrítica si se confunde con perfeccionismo.",
+        Icon: UserCheck,
+      },
+      {
+        name: "No-Daño",
+        desc: "Una guía ética clara — no hacer daño al cuerpo, a la mente ni a tu relación con la comida. Fuerza: un suelo objetivo que se sostiene incluso en los días difíciles. Tensión: es más un límite que un sentimiento, así que quizá necesite compasión o respeto para darle calidez.",
+        Icon: Shield,
+      },
+    ],
+    explorationNote:
+      "Nuestra inclinación actual: el No-Daño como base, con la Compasión y el Respeto por Uno Mismo entrelazados. Nos encantaría de verdad tu reflexión — ¿cuál resuena como más verdadera para ti?",
     closingTitle: "Un cambio que nace de la comprensión, no del control",
     closingText:
       "Si estos principios resuenan contigo, el siguiente paso es una llamada de evaluación gratuita — sin protocolo, sin presión.",
@@ -128,6 +198,29 @@ const copy: Record<Lang, Copy> = {
       { name: "Alinhamento", desc: "Criar escolhas que se adequem à biologia, às circunstâncias de vida e às necessidades individuais.", Icon: Scale },
       { name: "Integração", desc: "O conhecimento só importa quando se torna comportamento vivido.", Icon: Layers },
     ],
+    explorationLabel: "Uma Pergunta em Aberto",
+    explorationTitle: "Compaixão, Respeito por Si Mesmo ou Não-Dano?",
+    explorationIntro:
+      "Seis valores sentam-se bem. O sétimo é aquele que ainda estamos a explorar — e queremos pensá-lo com cuidado, porque o que escolhermos molda a forma como nos apresentamos.",
+    candidates: [
+      {
+        name: "Compaixão",
+        desc: "Encontrar-se a si e ao seu corpo com calor, especialmente quando a mudança custa. Força: humaniza o caminho. Tensão: sem um limite, a compaixão pode escorregar silenciosamente para a autocomplacência ou o ficar pequena.",
+        Icon: Heart,
+      },
+      {
+        name: "Respeito por Si Mesmo",
+        desc: "Honrar as suas próprias necessidades, limites e ritmo como reais e dignos. Força: protege contra o agradar e o dar demasiado de si. Tensão: pode roçar a rigidez ou a autocrítica se for confundida com perfeccionismo.",
+        Icon: UserCheck,
+      },
+      {
+        name: "Não-Dano",
+        desc: "Uma salvaguarda ética clara — não causar dano ao corpo, à mente ou à sua relação com a comida. Força: um chão objetivo que se mantém mesmo nos dias difíceis. Tensão: é mais um limite do que um sentimento, por isso pode precisar de compaixão ou respeito para o aquecer.",
+        Icon: Shield,
+      },
+    ],
+    explorationNote:
+      "A nossa inclinação atual: o Não-Dano como base, com a Compaixão e o Respeito por Si Mesmo entrelaçados. Gostaríamos muito da sua reflexão — qual ressoa como mais verdadeira para si?",
     closingTitle: "Uma mudança que nasce da compreensão, não do controlo",
     closingText:
       "Se estes princípios ressoam em ti, o próximo passo é uma chamada de avaliação gratuita — sem protocolo, sem pressão.",
@@ -188,7 +281,11 @@ const Values = () => {
                   {t.missionLabel}
                 </div>
                 <h3 className="font-serif text-2xl font-semibold text-primary mb-4">{t.missionTitle}</h3>
-                <p className="font-sans text-foreground/80 leading-relaxed">{t.missionText}</p>
+                <div className="space-y-4">
+                  {t.missionText.map((paragraph, i) => (
+                    <p key={i} className="font-sans text-foreground/80 leading-relaxed">{paragraph}</p>
+                  ))}
+                </div>
               </div>
               <div className="bg-card p-8 md:p-10 rounded-2xl border border-border shadow-subtle-glow animate-fade-in-up" style={{ animationDelay: "120ms" }}>
                 <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
@@ -231,6 +328,46 @@ const Values = () => {
                   </div>
                 );
               })}
+            </div>
+          </section>
+
+          {/* The Seventh Value — an open question */}
+          <section aria-labelledby="exploration-heading" className="mb-20">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <div className="inline-flex items-center gap-2 text-accent font-sans text-xs tracking-wider uppercase mb-4">
+                <Sparkles size={14} />
+                {t.explorationLabel}
+              </div>
+              <h2 id="exploration-heading" className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
+                {t.explorationTitle}
+              </h2>
+              <p className="font-sans text-foreground/70 leading-relaxed">{t.explorationIntro}</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {t.candidates.map((candidate, index) => {
+                const Icon = candidate.Icon;
+                return (
+                  <div
+                    key={candidate.name}
+                    className="group bg-muted/20 p-8 rounded-2xl border border-accent/20 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 animate-fade-in-up flex flex-col"
+                    style={{ animationDelay: `${index * 90}ms` }}
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                      <Icon className="text-accent" size={24} strokeWidth={1.75} />
+                    </div>
+                    <h3 className="font-serif text-xl font-semibold text-primary mb-3">{candidate.name}</h3>
+                    <p className="font-sans text-sm text-foreground/75 leading-relaxed">{candidate.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-8 flex items-start gap-3 bg-card p-6 md:p-8 rounded-2xl border border-border">
+              <MessageCircleHeart className="text-accent flex-shrink-0 mt-1" size={22} strokeWidth={1.75} />
+              <p className="font-serif text-lg md:text-xl text-foreground/85 leading-relaxed italic">
+                {t.explorationNote}
+              </p>
             </div>
           </section>
 
