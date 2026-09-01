@@ -1,0 +1,25 @@
+# Solaris Nutri
+
+> Solaris Nutri is a rhythm-based nutrition practice helping midlife women rebuild their energy and metabolism around their biological rhythms — not another diet.
+
+Solaris Nutri blends TCM spleen health, circadian nutrition, and light-as-a-nutrient principles into the Solaris Nutri Framework (formerly Quantum Rhythm Nutrition). Programs run in two formats: a group Collective and a private 1:1 journey, both grounded in PubMed-referenced research on fiber, light, and metabolic health.
+
+## Pages
+
+- [Home](/): Introduction to the Solaris Nutri Framework, light as a nutrient, and the elevator pitch.
+- [About](/about): Paula Carolina Suescun's credentials, the Solaris Nutri difference, and core pillars.
+- [Method](/method): The Solaris Nutri Method — phases, pillars, and scientific grounding.
+- [Programs](/programs): Solaris Collective and Solaris Private programs, pricing, and who this is for.
+- [Masterclasses](/masterclasses): Live and recorded masterclass offerings.
+- [Resources](/resources): Educational resources, free rhythm assessment, recipes, and healing foods.
+- [Blog](/blog): Articles on fiber, circadian nutrition, TCM spleen health, and metabolic wellness with PubMed references.
+- [Rhythm Calculator](/rhythm-calculator): Interactive circadian rhythm assessment tool.
+- [Food Rhythm Tool](/food-rhythm-tool): Interactive assessment for meal timing and circadian patterns.
+- [Spleen Rhythm Assessment](/food-rhythm-tool): 10-question assessment replacing chronotypes.
+- [Shop](/shop): Solaris Nutri Granola and shop products.
+- [FAQ](/faq): Common questions, including who this method is not for.
+- [Contact](/contact): Book a free consultation via Instagram DM or email.
+
+## Optional
+
+- [Free Rhythm Reset Guide](/resources): Lead magnet for newsletter subscribers.
