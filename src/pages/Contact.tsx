@@ -9,6 +9,8 @@ import logo from "@/assets/solaris-nutri-logo.jpeg";
 import SEOHead from "@/components/SEOHead";
 import { supabase } from "@/integrations/supabase/client";
 
+const CONTACT_EMAIL = "qrnutrition4@gmail.com";
+
 type SubmitStatus = "idle" | "sending" | "success" | "error";
 
 const Contact = () => {
