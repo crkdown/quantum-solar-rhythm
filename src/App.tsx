@@ -24,6 +24,7 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import LandingMasterclass from "./pages/LandingMasterclass";
 import LandingProgram from "./pages/LandingProgram";
+import Unsubscribe from "./pages/Unsubscribe";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
                   <Route path="/faq" element={<FAQ />} />
                   <Route path="/landing/masterclass" element={<LandingMasterclass />} />
                   <Route path="/landing/program" element={<LandingProgram />} />
+                  <Route path="/unsubscribe" element={<Unsubscribe />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
