@@ -40,6 +40,7 @@ interface Copy {
   missionLabel: string;
   missionTitle: string;
   missionText: string[];
+  missionCapstone: string;
   visionLabel: string;
   visionTitle: string;
   visionText: string;
@@ -70,6 +71,8 @@ const copy: Record<Lang, Copy> = {
       "We help women understand and respond to their body's signals, develop sustainable habits and recognise early signs that their health may be moving out of balance.",
       "Our aim is not another restrictive diet, but a kinder and more integrated approach to nourishment — supporting digestive, metabolic and overall health while contributing to the prevention and reduction of risk for preventable chronic diseases such as type 2 diabetes.",
     ],
+    missionCapstone:
+      "Health is not created by finding the perfect diet. It is built through the repeated relationship between what we eat, how we live, how we feel, and how well we listen to the signals of our biology.",
     visionLabel: "Vision",
     visionTitle: "The world we’re building toward",
     visionText:
@@ -126,6 +129,8 @@ const copy: Record<Lang, Copy> = {
       "Ayudamos a las mujeres a comprender y responder a las señales de su cuerpo, desarrollar hábitos sostenibles y reconocer los primeros signos de que su salud podría estar perdiendo el equilibrio.",
       "Nuestro objetivo no es otra dieta restrictiva, sino un enfoque más amable e integrado de la nutrición — que apoye la salud digestiva, metabólica y general, contribuyendo a la prevención y reducción del riesgo de enfermedades crónicas prevenibles como la diabetes tipo 2.",
     ],
+    missionCapstone:
+      "La salud no se crea encontrando la dieta perfecta. Se construye a través de la relación repetida entre lo que comemos, cómo vivimos, cómo nos sentimos y qué tan bien escuchamos las señales de nuestra biología.",
     visionLabel: "Visión",
     visionTitle: "El mundo hacia el que caminamos",
     visionText:
@@ -182,6 +187,8 @@ const copy: Record<Lang, Copy> = {
       "Ajudamos as mulheres a compreender e responder aos sinais do seu corpo, desenvolver hábitos sustentáveis e reconhecer os primeiros sinais de que a sua saúde pode estar a sair do equilíbrio.",
       "O nosso objetivo não é outra dieta restritiva, mas uma abordagem mais amável e integrada da nutrição — que apoie a saúde digestiva, metabólica e global, contribuindo para a prevenção e redução do risco de doenças crónicas evitáveis como a diabetes tipo 2.",
     ],
+    missionCapstone:
+      "A saúde não é criada ao encontrar a dieta perfeita. Constrói-se através da relação repetida entre o que comemos, como vivemos, como nos sentimos e quão bem escutamos os sinais da nossa biologia.",
     visionLabel: "Visão",
     visionTitle: "O mundo para o qual caminhamos",
     visionText:
