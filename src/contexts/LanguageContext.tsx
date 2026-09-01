@@ -301,7 +301,6 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.faq': 'Preguntas',
     'nav.contact': 'Contacto',
     'nav.values': 'Valores',
-    'nav.midlife': 'Meia-idade',
     'nav.midlife': 'Mediana edad',
     'nav.foodRhythm': 'Herramienta de Ritmo',
     'nav.rhythmCalc': 'Calculadora de Ritmo',
@@ -579,6 +578,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.faq': 'Perguntas',
     'nav.contact': 'Contacto',
     'nav.values': 'Valores',
+    'nav.midlife': 'Meia-idade',
     'nav.foodRhythm': 'Ferramenta de Ritmo',
     'nav.rhythmCalc': 'Calculadora de Ritmo',
     
