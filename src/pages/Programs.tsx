@@ -288,6 +288,7 @@ const Programs = () => {
         title="Nutrition Programs"
         description="Join Solaris Nutri rhythm-based nutrition programs — 3 or 6-month journeys to rebuild your metabolic balance through circadian alignment and holistic nutrition."
         path="/programs"
+        image={collectiveImg}
         keywords="nutrition programs, rhythm nutrition course, metabolic balance program, holistic nutrition coaching"
       />
       <div className="container mx-auto px-6">

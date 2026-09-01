@@ -19,6 +19,8 @@ const BlogPost = () => {
         title={post.title}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
+        image={post.image}
+        type="article"
         keywords={post.category}
       />
       <article className="container mx-auto px-6 max-w-3xl">

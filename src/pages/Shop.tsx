@@ -82,7 +82,7 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen py-24">
-      <SEOHead title="Shop — Solaris Nutri Granola" description="Slow-roasted Solaris Nutri granola crafted to support your circadian rhythm and morning digestion. Whole, unprocessed ingredients." path="/shop" keywords="healthy granola, circadian breakfast, artisan granola" />
+      <SEOHead title="Shop — Solaris Nutri Granola" description="Slow-roasted Solaris Nutri granola crafted to support your circadian rhythm and morning digestion. Whole, unprocessed ingredients." path="/shop" image={granolaProduct} keywords="healthy granola, circadian breakfast, artisan granola" />
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-4xl mx-auto animate-fade-in">
