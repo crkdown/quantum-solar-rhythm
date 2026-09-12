@@ -53,3 +53,6 @@ Running list. Update status as tasks move.
 - [Email] **DONE (code)**: `newsletter-welcome` template created + registered; NewsletterSignup now invokes `send-transactional-email` after storing the subscriber, delivering the 7-Day Rhythm Reset with guide link. Send activates automatically once `notify.solarisnutri.com` DNS verifies; failures are logged and never block signup.
 - [Template] Still user-initiated: "/" → Migrate to TanStack Start (needed for per-post OG tags).
 - [GSC] Still needs the Google Search Console OAuth card authorized before sitemap submission / indexing requests.
+
+## New request (Sep 12)
+- [App] **Digestive & health tracking tool**: members upload/log info, track digestive signs and health concerns over time, see patterns, get prevention-oriented nutrition education. Needs: accounts (login), a daily log form (digestion, energy, sleep, meals/timing, symptoms), history + simple trends, and an education layer tied to what they log. Scope + design to be confirmed with user.
