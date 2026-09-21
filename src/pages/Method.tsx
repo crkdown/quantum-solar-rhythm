@@ -33,21 +33,15 @@ const Method = () => {
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
             {t('method.title')}
           </h1>
-          <p className="font-sans text-xl text-foreground/80 leading-relaxed">
+          <p className="font-serif text-2xl md:text-3xl text-primary/90 leading-snug mb-6">
+            {t('method.headline')}
+          </p>
+          <p className="font-sans text-xl text-foreground/80 leading-relaxed mb-5">
             {t('method.subtitle')}
           </p>
-        </div>
-
-        {/* Three Pillars - Subtle */}
-        <div className="max-w-3xl mx-auto mb-16 animate-fade-in-up">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            {['Body Awareness', 'Living Rhythm with Nature', 'Embracing Simplicity'].map((pillar) => (
-              <div key={pillar} className="bg-accent/5 p-5 rounded-lg border border-accent/20">
-                <Circle size={10} fill="currentColor" className="text-accent mx-auto mb-2" />
-                <p className="font-serif text-sm font-medium text-primary">{pillar}</p>
-              </div>
-            ))}
-          </div>
+          <p className="font-sans text-base text-foreground/70 leading-relaxed max-w-3xl mx-auto">
+            {t('method.support')}
+          </p>
         </div>
 
         {/* Nature Images */}
