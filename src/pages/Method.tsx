@@ -33,21 +33,15 @@ const Method = () => {
           <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
             {t('method.title')}
           </h1>
-          <p className="font-sans text-xl text-foreground/80 leading-relaxed">
+          <p className="font-serif text-2xl md:text-3xl text-primary/90 leading-snug mb-6">
+            {t('method.headline')}
+          </p>
+          <p className="font-sans text-xl text-foreground/80 leading-relaxed mb-5">
             {t('method.subtitle')}
           </p>
-        </div>
-
-        {/* Three Pillars - Subtle */}
-        <div className="max-w-3xl mx-auto mb-16 animate-fade-in-up">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            {['Body Awareness', 'Living Rhythm with Nature', 'Embracing Simplicity'].map((pillar) => (
-              <div key={pillar} className="bg-accent/5 p-5 rounded-lg border border-accent/20">
-                <Circle size={10} fill="currentColor" className="text-accent mx-auto mb-2" />
-                <p className="font-serif text-sm font-medium text-primary">{pillar}</p>
-              </div>
-            ))}
-          </div>
+          <p className="font-sans text-base text-foreground/70 leading-relaxed max-w-3xl mx-auto">
+            {t('method.support')}
+          </p>
         </div>
 
         {/* Nature Images */}
@@ -83,79 +77,26 @@ const Method = () => {
           </div>
         </div>
 
-        {/* Three Phases - Detailed */}
-        <div className="max-w-5xl mx-auto space-y-16">
-          {/* Phase 1: Decode */}
-          <div className="grid md:grid-cols-12 gap-8 items-start animate-fade-in-up">
-            <div className="md:col-span-3">
-              <div className="text-accent font-serif text-8xl font-bold opacity-30">01</div>
-            </div>
-            <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-primary">{t('method.decode')}</h2>
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                <span className="font-semibold text-primary">{t('method.decode.desc')}</span> {t('method.decode.intro')}
-              </p>
-              <div className="bg-muted/30 p-6 rounded-lg border border-border">
-                <h3 className="font-sans font-semibold text-foreground mb-3">{t('method.decode.title')}</h3>
-                <ul className="space-y-2 font-sans text-foreground/80">
-                  {['method.decode.1', 'method.decode.2', 'method.decode.3', 'method.decode.4'].map((key) => (
-                    <li key={key} className="flex items-start gap-2">
-                      <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                      <span>{t(key)}</span>
-                    </li>
-                  ))}
-                </ul>
+        {/* Four Stages */}
+        <div className="max-w-5xl mx-auto space-y-12">
+          {[
+            { n: '01', key: 'method.decode' },
+            { n: '02', key: 'method.rebuild' },
+            { n: '03', key: 'method.reprogram' },
+            { n: '04', key: 'method.align' },
+          ].map((stage) => (
+            <div key={stage.key} className="grid md:grid-cols-12 gap-8 items-start animate-fade-in-up">
+              <div className="md:col-span-3">
+                <div className="text-accent font-serif text-8xl font-bold opacity-30">{stage.n}</div>
+              </div>
+              <div className="md:col-span-9 space-y-4">
+                <h2 className="font-serif text-4xl font-bold text-primary">{t(stage.key)}</h2>
+                <p className="font-sans text-lg text-foreground/80 leading-relaxed">
+                  {t(`${stage.key}.intro`)}
+                </p>
               </div>
             </div>
-          </div>
-
-          {/* Phase 2: Reprogram */}
-          <div className="grid md:grid-cols-12 gap-8 items-start animate-fade-in-up">
-            <div className="md:col-span-3">
-              <div className="text-accent font-serif text-8xl font-bold opacity-30">02</div>
-            </div>
-            <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-primary">{t('method.reprogram')}</h2>
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                <span className="font-semibold text-primary">{t('method.reprogram.desc')}</span> {t('method.reprogram.intro')}
-              </p>
-              <div className="bg-muted/30 p-6 rounded-lg border border-border">
-                <h3 className="font-sans font-semibold text-foreground mb-3">{t('method.reprogram.title')}</h3>
-                <ul className="space-y-2 font-sans text-foreground/80">
-                  {['method.reprogram.1', 'method.reprogram.2', 'method.reprogram.3', 'method.reprogram.4'].map((key) => (
-                    <li key={key} className="flex items-start gap-2">
-                      <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                      <span>{t(key)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Phase 3: Rebuild */}
-          <div className="grid md:grid-cols-12 gap-8 items-start animate-fade-in-up">
-            <div className="md:col-span-3">
-              <div className="text-accent font-serif text-8xl font-bold opacity-30">03</div>
-            </div>
-            <div className="md:col-span-9 space-y-4">
-              <h2 className="font-serif text-4xl font-bold text-primary">{t('method.rebuild')}</h2>
-              <p className="font-sans text-lg text-foreground/80 leading-relaxed">
-                <span className="font-semibold text-primary">{t('method.rebuild.desc')}</span> {t('method.rebuild.intro')}
-              </p>
-              <div className="bg-muted/30 p-6 rounded-lg border border-border">
-                <h3 className="font-sans font-semibold text-foreground mb-3">{t('method.rebuild.title')}</h3>
-                <ul className="space-y-2 font-sans text-foreground/80">
-                  {['method.rebuild.1', 'method.rebuild.2', 'method.rebuild.3', 'method.rebuild.4'].map((key) => (
-                    <li key={key} className="flex items-start gap-2">
-                      <Circle size={6} fill="currentColor" className="text-accent mt-2 flex-shrink-0" />
-                      <span>{t(key)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Scientific References — expanded with spleen health */}
