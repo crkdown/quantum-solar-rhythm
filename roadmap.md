@@ -56,3 +56,4 @@ Running list. Update status as tasks move.
 
 ## New request (Sep 12)
 - [App] **Digestive & health tracking tool**: members upload/log info, track digestive signs and health concerns over time, see patterns, get prevention-oriented nutrition education. Needs: accounts (login), a daily log form (digestion, energy, sleep, meals/timing, symptoms), history + simple trends, and an education layer tied to what they log. Scope + design to be confirmed with user.
+- [Method] Rewrite /method as a four-stage framework: Decode, Rebuild, Reprogram, Align (exact names/order), with new headline + supporting copy. EN/ES/PT.
