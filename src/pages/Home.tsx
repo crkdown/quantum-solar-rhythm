@@ -37,57 +37,57 @@ const Home = () => {
 
   const rhythmBlocks = {
     en: {
-      quote: "Instead of counting calories or cutting more foods, I help you rebuild your natural rhythm – so your body feels safe, grounded, and ready to change.",
+      quote: "Instead of counting calories or cutting out more foods, I help you understand your biology and return to a natural rhythm—so you can make changes that are sustainable, practical, and right for your life.",
       block1Title: "What is rhythm-based nutrition?",
-      block1Text: "Rhythm-based nutrition is a gentle way of eating that focuses on when and how you eat before obsessing over what you eat. We stabilise your daily rhythms – sleep, light, nervous system, meals – so your digestion, hormones and emotions can finally relax. From there, better food choices feel natural, not forced.",
-      block2Title: "Why rhythm instead of diet?",
+      block1Text: "Rhythm-based nutrition considers not only what you eat, but also when you eat, how you begin your day, how you rest, and how your daily habits interact with your physiology. It explores the relationship between nutrition, meal timing, circadian rhythms, sleep, light exposure, stress, digestion, movement and metabolic wellbeing. The goal is not rigid rules, but a more consistent and supportive environment in which healthier choices become easier to understand, practise and maintain.",
+      block2Title: "Why another diet is not the answer",
       block2Items: [
-        "Diets push your body while it is still in survival mode.",
-        "Irregular meals, stress and poor sleep confuse your inner clock.",
-        "When your nervous system and spleen are calm, your body stops fighting you."
+        "Conventional diets focus on restriction, calorie control and short-term compliance.",
+        "They may overlook sleep, stress, meal timing, movement, digestion and daily rhythms.",
+        "Your body is not a problem to be controlled. It is a biological system to be understood."
       ],
-      block2Short: "First we calm your system, then food begins to change by itself.",
+      block2Short: "First we understand your system. Then we create changes that work with it.",
       block3Title: "What changes in practice?",
       block3Items: [
-        "Regular, warm meals instead of random snacking.",
-        "Earlier, lighter dinners and better sleep.",
-        "Small, loving changes that are easy to repeat every day."
+        "More consistency around meals, rest, movement and daily routines.",
+        "Practical changes without relying on extreme restriction.",
+        "Habits that can be maintained well beyond a short-term diet."
       ]
     },
     es: {
-      quote: "En lugar de contar calorías o eliminar más alimentos, te ayudo a reconstruir tu ritmo natural – para que tu cuerpo se sienta seguro, arraigado y listo para cambiar.",
+      quote: "En lugar de contar calorías o eliminar más alimentos, te ayudo a comprender tu biología y a volver a un ritmo natural—para que puedas hacer cambios sostenibles, prácticos y adecuados para tu vida.",
       block1Title: "¿Qué es la nutrición basada en ritmo?",
-      block1Text: "La nutrición basada en ritmo es una forma gentil de comer que se enfoca en cuándo y cómo comes antes de obsesionarte con qué comes. Estabilizamos tus ritmos diarios – sueño, luz, sistema nervioso, comidas – para que tu digestión, hormonas y emociones finalmente se relajen. A partir de ahí, mejores elecciones alimentarias se sienten naturales, no forzadas.",
-      block2Title: "¿Por qué ritmo en vez de dieta?",
+      block1Text: "La nutrición basada en ritmo considera no solo qué comes, sino también cuándo comes, cómo empiezas el día, cómo descansas y cómo tus hábitos diarios interactúan con tu fisiología. Explora la relación entre nutrición, horarios de comida, ritmos circadianos, sueño, exposición a la luz, estrés, digestión, movimiento y bienestar metabólico. El objetivo no son reglas rígidas, sino un entorno más consistente donde las elecciones saludables sean más fáciles de comprender, practicar y mantener.",
+      block2Title: "Por qué otra dieta no es la respuesta",
       block2Items: [
-        "Las dietas empujan tu cuerpo mientras aún está en modo de supervivencia.",
-        "Comidas irregulares, estrés y mal sueño confunden tu reloj interno.",
-        "Cuando tu sistema nervioso y bazo están calmados, tu cuerpo deja de luchar contra ti."
+        "Las dietas convencionales se centran en la restricción, el control de calorías y el cumplimiento a corto plazo.",
+        "Pueden pasar por alto el sueño, el estrés, los horarios de comida, el movimiento, la digestión y los ritmos diarios.",
+        "Tu cuerpo no es un problema que controlar. Es un sistema biológico que comprender."
       ],
-      block2Short: "Primero calmamos tu sistema, luego la comida comienza a cambiar por sí sola.",
+      block2Short: "Primero comprendemos tu sistema. Luego creamos cambios que trabajan con él.",
       block3Title: "¿Qué cambia en la práctica?",
       block3Items: [
-        "Comidas regulares y cálidas en vez de picoteo aleatorio.",
-        "Cenas más tempranas y ligeras, y mejor sueño.",
-        "Pequeños cambios amorosos que son fáciles de repetir cada día."
+        "Más consistencia en comidas, descanso, movimiento y rutinas diarias.",
+        "Cambios prácticos sin depender de la restricción extrema.",
+        "Hábitos que se pueden mantener mucho más allá de una dieta corta."
       ]
     },
     pt: {
-      quote: "Em vez de contar calorias ou cortar mais alimentos, eu ajudo você a reconstruir seu ritmo natural – para que seu corpo se sinta seguro, ancorado e pronto para mudar.",
+      quote: "Em vez de contar calorias ou cortar mais alimentos, ajudo-a a compreender a sua biologia e a regressar a um ritmo natural—para que possa fazer mudanças sustentáveis, práticas e certas para a sua vida.",
       block1Title: "O que é nutrição baseada em ritmo?",
-      block1Text: "Nutrição baseada em ritmo é uma forma gentil de comer que foca em quando e como você come antes de se obsedar com o que come. Estabilizamos seus ritmos diários – sono, luz, sistema nervoso, refeições – para que sua digestão, hormônios e emoções finalmente relaxem. A partir daí, melhores escolhas alimentares parecem naturais, não forçadas.",
-      block2Title: "Por que ritmo em vez de dieta?",
+      block1Text: "A nutrição baseada em ritmo considera não apenas o que come, mas também quando come, como começa o dia, como descansa e como os seus hábitos diários interagem com a sua fisiologia. Explora a relação entre nutrição, horários das refeições, ritmos circadianos, sono, exposição à luz, stress, digestão, movimento e bem-estar metabólico. O objetivo não são regras rígidas, mas um ambiente mais consistente onde as escolhas saudáveis sejam mais fáceis de compreender, praticar e manter.",
+      block2Title: "Porque outra dieta não é a resposta",
       block2Items: [
-        "Dietas forçam seu corpo enquanto ele ainda está em modo de sobrevivência.",
-        "Refeições irregulares, estresse e sono ruim confundem seu relógio interno.",
-        "Quando seu sistema nervoso e baço estão calmos, seu corpo para de lutar contra você."
+        "As dietas convencionais focam-se na restrição, no controlo de calorias e no cumprimento a curto prazo.",
+        "Podem ignorar o sono, o stress, os horários das refeições, o movimento, a digestão e os ritmos diários.",
+        "O seu corpo não é um problema a controlar. É um sistema biológico a compreender."
       ],
-      block2Short: "Primeiro acalmamos seu sistema, depois a comida começa a mudar sozinha.",
+      block2Short: "Primeiro compreendemos o seu sistema. Depois criamos mudanças que trabalham com ele.",
       block3Title: "O que muda na prática?",
       block3Items: [
-        "Refeições regulares e quentes em vez de lanches aleatórios.",
-        "Jantares mais cedo e leves, e melhor sono.",
-        "Pequenas mudanças amorosas que são fáceis de repetir todos os dias."
+        "Mais consistência nas refeições, descanso, movimento e rotinas diárias.",
+        "Mudanças práticas sem depender de restrição extrema.",
+        "Hábitos que se podem manter muito para além de uma dieta curta."
       ]
     }
   };
@@ -98,7 +98,7 @@ const Home = () => {
     en: {
       badge: "Light as a Nutrient",
       title: "Your first meal of the day is sunrise light",
-      text: "Before food, your body is nourished by light. Morning sunlight sets your inner clock, calms your nervous system and prepares your digestion, hormones and mood for the day. Receiving natural light at sunrise is one of the simplest, most powerful rhythms you can rebuild.",
+      text: "Before food, your body is nourished by light. Morning sunlight sets your inner clock, calms your nervous system and prepares your digestion, hormones and mood for the day. Receiving natural light at sunrise is one of the simplest, most powerful rhythms you can return to.",
       points: [
         "Morning light anchors your circadian rhythm.",
         "Sunlight supports energy, sleep and mood.",
@@ -118,7 +118,7 @@ const Home = () => {
     pt: {
       badge: "A luz como nutriente",
       title: "Sua primeira refeição do dia é a luz do amanhecer",
-      text: "Antes do alimento, seu corpo é nutrido pela luz. A luz solar da manhã ajusta seu relógio interno, acalma seu sistema nervoso e prepara sua digestão, hormônios e humor para o dia. Receber luz natural ao amanhecer é um dos ritmos mais simples e poderosos que você pode reconstruir.",
+      text: "Antes do alimento, seu corpo é nutrido pela luz. A luz solar da manhã ajusta seu relógio interno, acalma seu sistema nervoso e prepara sua digestão, hormônios e humor para o dia. Receber luz natural ao amanhecer é um dos ritmos mais simples e poderosos a que pode regressar.",
       points: [
         "A luz da manhã ancora seu ritmo circadiano.",
         "O sol favorece energia, sono e humor.",
@@ -132,23 +132,23 @@ const Home = () => {
   const pitchBlocks = {
     en: {
       badge: "Who I Help",
-      title: "Solaris Nutri helps women stop fighting their bodies and start understanding them",
-      text: "Using food, gut health and biological rhythms to create sustainable change through midlife.",
-      cta: "Book a Free Assessment Call",
+      title: "Solaris Nutri helps midlife women understand their biology and work with their natural rhythms",
+      text: "Using nutrition, gut health, meal timing and daily rhythms to create sustainable changes that support metabolic wellbeing.",
+      cta: "Book Your Consultation",
       alt: "Woman waking up and looking at the sunrise",
     },
     es: {
       badge: "A quién acompaño",
-      title: "Solaris Nutri ayuda a las mujeres a dejar de luchar contra su cuerpo y empezar a comprenderlo",
-      text: "Usando la alimentación, la salud intestinal y los ritmos biológicos para crear un cambio sostenible durante la mediana edad.",
-      cta: "Reserva una llamada de evaluación gratuita",
+      title: "Solaris Nutri ayuda a mujeres en la mediana edad a comprender su biología y trabajar con sus ritmos naturales",
+      text: "Con nutrición, salud intestinal, horarios de comida y ritmos diarios para crear cambios sostenibles que apoyan el bienestar metabólico.",
+      cta: "Reserva Tu Consulta",
       alt: "Mujer despertando y contemplando el amanecer",
     },
     pt: {
       badge: "Quem eu acompanho",
-      title: "A Solaris Nutri ajuda as mulheres a parar de lutar contra o corpo e começar a compreendê-lo",
-      text: "Usando a alimentação, a saúde intestinal e os ritmos biológicos para criar uma mudança sustentável durante a meia-idade.",
-      cta: "Marque uma chamada de avaliação gratuita",
+      title: "A Solaris Nutri ajuda mulheres na meia-idade a compreender a sua biologia e a trabalhar com os seus ritmos naturais",
+      text: "Com nutrição, saúde intestinal, horários das refeições e ritmos diários para criar mudanças sustentáveis que apoiam o bem-estar metabólico.",
+      cta: "Marque a Sua Consulta",
       alt: "Mulher a acordar e a contemplar o nascer do sol",
     },
   };
