@@ -208,16 +208,16 @@ const Home = () => {
                   size="lg" 
                   className="bg-amber-100 hover:bg-amber-50 text-primary font-sans font-medium px-8 py-5 text-base transition-all hover:scale-105 shadow-quantum"
                 >
-                  Book a Free Assessment Call
+                  {t('home.hero.cta')}
                   <ArrowRight className="ml-2" size={18} />
                 </Button>
               </Link>
-              <Link to="/programs">
+              <Link to="/method">
                 <Button 
                   size="lg" 
                   className="bg-white/15 backdrop-blur-sm hover:bg-white/25 text-white font-sans font-light px-8 py-5 text-base border border-white/30 transition-all hover:scale-105"
                 >
-                  {t('home.hero.cta')}
+                  {t('home.phases.cta')}
                 </Button>
               </Link>
             </div>

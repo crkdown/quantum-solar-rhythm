@@ -13,11 +13,11 @@ const copy = {
     badge: "Free Guide",
     title: "The 7-Day Rhythm Reset",
     desc:
-      "A short, practical guide to rebuilding your day around light, meal timing and rest — the first steps of the Solaris Nutri Method. Sent straight to your inbox, plus occasional rhythm insights.",
+      "A practical seven-day introduction to the foundations of rhythm-based nutrition: morning light, first-meal timing, a consistent eating rhythm, evening routines and simple ways to observe your body's signals.",
     bullets: [
       "Morning light and first-meal timing",
-      "A simple eating window that fits your life",
-      "Evening wind-down for deeper repair",
+      "A consistent eating rhythm that fits your life",
+      "Evening routines and practical ways to observe your signals",
     ],
     name: "First name",
     email: "Your email",
