@@ -24,6 +24,7 @@ const Programs = () => {
         title: "Solaris Collective",
         subtitle: "90-Day Rhythm Nutrition Journey",
         price: "€360",
+        priceCop: "COP 1.300.000",
         period: "/ 3 months",
         description: "A supportive small-group experience where you learn to understand your body through rhythm, nourishment and daily practices — guided through the foundations of the Solaris Nutri Framework while learning alongside others, sharing experiences and creating accountability together.",
         features: [
@@ -45,6 +46,7 @@ const Programs = () => {
         title: "Solaris Private",
         subtitle: "Personalised 90-Day Rhythm Nutrition Program",
         price: "€600",
+        priceCop: "COP 2.200.000",
         period: "/ 3 months",
         description: "A deeper, personalised journey designed around your individual rhythms, lifestyle, nutrition and goals. Together we identify where your daily rhythm is out of alignment and build practical changes that work with your biology rather than against it.",
         features: [
@@ -68,6 +70,7 @@ const Programs = () => {
         title: "Solaris Collective",
         subtitle: "Viaje de Nutrición Rítmica de 90 Días",
         price: "€360",
+        priceCop: "COP 1.300.000",
         period: "/ 3 meses",
         description: "Una experiencia grupal y cercana donde aprendes a entender tu cuerpo a través del ritmo, la nutrición y las prácticas diarias — guiada por los fundamentos del Marco Solaris Nutri, aprendiendo junto a otras personas, compartiendo experiencias y creando responsabilidad compartida.",
         features: [
@@ -89,6 +92,7 @@ const Programs = () => {
         title: "Solaris Private",
         subtitle: "Programa Personalizado de Nutrición Rítmica de 90 Días",
         price: "€600",
+        priceCop: "COP 2.200.000",
         period: "/ 3 meses",
         description: "Un viaje más profundo y personalizado, diseñado en torno a tus ritmos, tu estilo de vida, tu nutrición y tus objetivos. Juntas identificamos dónde tu ritmo diario está desalineado y creamos cambios prácticos que trabajan con tu biología, no en su contra.",
         features: [
@@ -112,6 +116,7 @@ const Programs = () => {
         title: "Solaris Collective",
         subtitle: "Jornada de Nutrição Rítmica de 90 Dias",
         price: "€360",
+        priceCop: "COP 1.300.000",
         period: "/ 3 meses",
         description: "Uma experiência em pequeno grupo onde aprendes a compreender o teu corpo através do ritmo, da nutrição e das práticas diárias — guiada pelos fundamentos do Método Solaris Nutri, aprendendo com outras pessoas, partilhando experiências e criando responsabilidade em conjunto.",
         features: [
@@ -133,6 +138,7 @@ const Programs = () => {
         title: "Solaris Private",
         subtitle: "Programa Personalizado de Nutrição Rítmica de 90 Dias",
         price: "€600",
+        priceCop: "COP 2.200.000",
         period: "/ 3 meses",
         description: "Uma jornada mais profunda e personalizada, desenhada em torno dos teus ritmos, estilo de vida, nutrição e objetivos. Juntas identificamos onde o teu ritmo diário está desalinhado e construímos mudanças práticas que trabalham com a tua biologia e não contra ela.",
         features: [
