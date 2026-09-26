@@ -194,6 +194,27 @@ const Programs = () => {
         bestFor: "Pessoas que querem atenção individual, maior personalização e apoio direto.",
         popular: true
       },
+      {
+        icon: UserRound,
+        image: privateImg,
+        badge: "Sessão Única",
+        duration: "Consulta Pontual",
+        title: "Consulta Solaris",
+        subtitle: "Consulta Pessoal Pontual",
+        price: "€70",
+        priceCop: "COP 250.000",
+        period: "/ sessão única",
+        description: "Ainda não estás pronta para um programa completo? Marca uma consulta pontual. Analisamos a tua situação atual, as tuas principais preocupações e o teu ritmo diário, e sais com passos práticos e claros que podes aplicar de imediato.",
+        features: [
+          "Uma sessão privada 1:1",
+          "Análise do teu ritmo atual e das tuas preocupações",
+          "Primeiros passos práticos para aplicar de imediato",
+          "Sem compromisso com um programa completo"
+        ],
+        bestForLabel: "Ideal para",
+        bestFor: "Pessoas que querem começar com uma única sessão antes de se comprometerem com um programa.",
+        popular: false
+      },
     ]
   };
 
