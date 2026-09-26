@@ -388,6 +388,15 @@ const Programs = () => {
           availability: "https://schema.org/InStock",
           url: "https://solarisnutri-com.lovable.app/programs",
         },
+        {
+          "@type": "Offer",
+          name: "Solaris Consultation — One-off Personal Consultation",
+          description: "Single one-off 1:1 nutrition consultation with practical first steps.",
+          price: "70",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: "https://solarisnutri-com.lovable.app/programs",
+        },
       ],
     },
   };
@@ -430,7 +439,7 @@ const Programs = () => {
 
 
         {/* Program Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 items-stretch">
           {currentPrograms.map((program, index) => {
             const Icon = program.icon;
             return (
@@ -472,9 +481,15 @@ const Programs = () => {
                   {program.title}
                 </CardTitle>
                 <p className="font-sans text-sm text-foreground/70">{program.subtitle}</p>
-                <div className="flex items-end justify-center gap-2 mt-4">
-                  <span className="font-serif text-4xl font-bold text-primary">{program.price}</span>
-                  <span className="font-sans text-sm text-muted-foreground mb-1">{program.period}</span>
+                <div className="mt-4 space-y-1">
+                  <div className="flex items-end justify-center gap-2">
+                    <span className="font-serif text-4xl font-bold text-primary">{program.price}</span>
+                    <span className="font-sans text-sm text-muted-foreground mb-1">{program.period}</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="font-sans text-lg font-semibold text-accent">{program.priceCop}</span>
+                    <span className="font-sans text-xs text-muted-foreground">(Colombia)</span>
+                  </div>
                 </div>
               </CardHeader>
 
