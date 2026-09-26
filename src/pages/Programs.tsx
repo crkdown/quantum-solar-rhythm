@@ -24,6 +24,7 @@ const Programs = () => {
         title: "Solaris Collective",
         subtitle: "90-Day Rhythm Nutrition Journey",
         price: "€360",
+        priceCop: "COP 1.300.000",
         period: "/ 3 months",
         description: "A supportive small-group experience where you learn to understand your body through rhythm, nourishment and daily practices — guided through the foundations of the Solaris Nutri Framework while learning alongside others, sharing experiences and creating accountability together.",
         features: [
@@ -45,6 +46,7 @@ const Programs = () => {
         title: "Solaris Private",
         subtitle: "Personalised 90-Day Rhythm Nutrition Program",
         price: "€600",
+        priceCop: "COP 2.200.000",
         period: "/ 3 months",
         description: "A deeper, personalised journey designed around your individual rhythms, lifestyle, nutrition and goals. Together we identify where your daily rhythm is out of alignment and build practical changes that work with your biology rather than against it.",
         features: [
@@ -58,6 +60,27 @@ const Programs = () => {
         bestFor: "People who want individual attention, deeper personalisation and direct support.",
         popular: true
       },
+      {
+        icon: UserRound,
+        image: privateImg,
+        badge: "Single Session",
+        duration: "One-off Consultation",
+        title: "Solaris Consultation",
+        subtitle: "One-off Personal Consultation",
+        price: "€70",
+        priceCop: "COP 250.000",
+        period: "/ single session",
+        description: "Not ready for a full program? Book a single one-off consultation. We review your current situation, your main concerns and your daily rhythm, and you leave with clear, practical first steps you can start right away.",
+        features: [
+          "One private 1:1 session",
+          "Review of your current rhythm and concerns",
+          "Practical first steps to start immediately",
+          "No commitment to a full program"
+        ],
+        bestForLabel: "Best for",
+        bestFor: "People who want to start with a single session before committing to a program.",
+        popular: false
+      },
     ],
     es: [
       {
@@ -68,6 +91,7 @@ const Programs = () => {
         title: "Solaris Collective",
         subtitle: "Viaje de Nutrición Rítmica de 90 Días",
         price: "€360",
+        priceCop: "COP 1.300.000",
         period: "/ 3 meses",
         description: "Una experiencia grupal y cercana donde aprendes a entender tu cuerpo a través del ritmo, la nutrición y las prácticas diarias — guiada por los fundamentos del Marco Solaris Nutri, aprendiendo junto a otras personas, compartiendo experiencias y creando responsabilidad compartida.",
         features: [
@@ -89,6 +113,7 @@ const Programs = () => {
         title: "Solaris Private",
         subtitle: "Programa Personalizado de Nutrición Rítmica de 90 Días",
         price: "€600",
+        priceCop: "COP 2.200.000",
         period: "/ 3 meses",
         description: "Un viaje más profundo y personalizado, diseñado en torno a tus ritmos, tu estilo de vida, tu nutrición y tus objetivos. Juntas identificamos dónde tu ritmo diario está desalineado y creamos cambios prácticos que trabajan con tu biología, no en su contra.",
         features: [
@@ -102,6 +127,27 @@ const Programs = () => {
         bestFor: "Personas que quieren atención individual, mayor personalización y apoyo directo.",
         popular: true
       },
+      {
+        icon: UserRound,
+        image: privateImg,
+        badge: "Sesión Única",
+        duration: "Consulta Puntual",
+        title: "Consulta Solaris",
+        subtitle: "Consulta Personal Puntual",
+        price: "€70",
+        priceCop: "COP 250.000",
+        period: "/ sesión única",
+        description: "¿Aún no estás lista para un programa completo? Reserva una consulta puntual. Revisamos tu situación actual, tus principales preocupaciones y tu ritmo diario, y te llevas pasos prácticos y claros que puedes aplicar de inmediato.",
+        features: [
+          "Una sesión privada 1:1",
+          "Revisión de tu ritmo actual y tus preocupaciones",
+          "Primeros pasos prácticos para aplicar de inmediato",
+          "Sin compromiso con un programa completo"
+        ],
+        bestForLabel: "Ideal para",
+        bestFor: "Personas que quieren empezar con una sola sesión antes de comprometerse con un programa.",
+        popular: false
+      },
     ],
     pt: [
       {
@@ -112,6 +158,7 @@ const Programs = () => {
         title: "Solaris Collective",
         subtitle: "Jornada de Nutrição Rítmica de 90 Dias",
         price: "€360",
+        priceCop: "COP 1.300.000",
         period: "/ 3 meses",
         description: "Uma experiência em pequeno grupo onde aprendes a compreender o teu corpo através do ritmo, da nutrição e das práticas diárias — guiada pelos fundamentos do Método Solaris Nutri, aprendendo com outras pessoas, partilhando experiências e criando responsabilidade em conjunto.",
         features: [
@@ -133,6 +180,7 @@ const Programs = () => {
         title: "Solaris Private",
         subtitle: "Programa Personalizado de Nutrição Rítmica de 90 Dias",
         price: "€600",
+        priceCop: "COP 2.200.000",
         period: "/ 3 meses",
         description: "Uma jornada mais profunda e personalizada, desenhada em torno dos teus ritmos, estilo de vida, nutrição e objetivos. Juntas identificamos onde o teu ritmo diário está desalinhado e construímos mudanças práticas que trabalham com a tua biologia e não contra ela.",
         features: [
@@ -145,6 +193,27 @@ const Programs = () => {
         bestForLabel: "Ideal para",
         bestFor: "Pessoas que querem atenção individual, maior personalização e apoio direto.",
         popular: true
+      },
+      {
+        icon: UserRound,
+        image: privateImg,
+        badge: "Sessão Única",
+        duration: "Consulta Pontual",
+        title: "Consulta Solaris",
+        subtitle: "Consulta Pessoal Pontual",
+        price: "€70",
+        priceCop: "COP 250.000",
+        period: "/ sessão única",
+        description: "Ainda não estás pronta para um programa completo? Marca uma consulta pontual. Analisamos a tua situação atual, as tuas principais preocupações e o teu ritmo diário, e sais com passos práticos e claros que podes aplicar de imediato.",
+        features: [
+          "Uma sessão privada 1:1",
+          "Análise do teu ritmo atual e das tuas preocupações",
+          "Primeiros passos práticos para aplicar de imediato",
+          "Sem compromisso com um programa completo"
+        ],
+        bestForLabel: "Ideal para",
+        bestFor: "Pessoas que querem começar com uma única sessão antes de se comprometerem com um programa.",
+        popular: false
       },
     ]
   };
@@ -319,6 +388,15 @@ const Programs = () => {
           availability: "https://schema.org/InStock",
           url: "https://solarisnutri-com.lovable.app/programs",
         },
+        {
+          "@type": "Offer",
+          name: "Solaris Consultation — One-off Personal Consultation",
+          description: "Single one-off 1:1 nutrition consultation with practical first steps.",
+          price: "70",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: "https://solarisnutri-com.lovable.app/programs",
+        },
       ],
     },
   };
@@ -361,7 +439,7 @@ const Programs = () => {
 
 
         {/* Program Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 items-stretch">
           {currentPrograms.map((program, index) => {
             const Icon = program.icon;
             return (
@@ -403,9 +481,15 @@ const Programs = () => {
                   {program.title}
                 </CardTitle>
                 <p className="font-sans text-sm text-foreground/70">{program.subtitle}</p>
-                <div className="flex items-end justify-center gap-2 mt-4">
-                  <span className="font-serif text-4xl font-bold text-primary">{program.price}</span>
-                  <span className="font-sans text-sm text-muted-foreground mb-1">{program.period}</span>
+                <div className="mt-4 space-y-1">
+                  <div className="flex items-end justify-center gap-2">
+                    <span className="font-serif text-4xl font-bold text-primary">{program.price}</span>
+                    <span className="font-sans text-sm text-muted-foreground mb-1">{program.period}</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="font-sans text-lg font-semibold text-accent">{program.priceCop}</span>
+                    <span className="font-sans text-xs text-muted-foreground">(Colombia)</span>
+                  </div>
                 </div>
               </CardHeader>
 
