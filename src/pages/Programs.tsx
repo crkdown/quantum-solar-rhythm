@@ -60,6 +60,27 @@ const Programs = () => {
         bestFor: "People who want individual attention, deeper personalisation and direct support.",
         popular: true
       },
+      {
+        icon: UserRound,
+        image: privateImg,
+        badge: "Single Session",
+        duration: "One-off Consultation",
+        title: "Solaris Consultation",
+        subtitle: "One-off Personal Consultation",
+        price: "€70",
+        priceCop: "COP 250.000",
+        period: "/ single session",
+        description: "Not ready for a full program? Book a single one-off consultation. We review your current situation, your main concerns and your daily rhythm, and you leave with clear, practical first steps you can start right away.",
+        features: [
+          "One private 1:1 session",
+          "Review of your current rhythm and concerns",
+          "Practical first steps to start immediately",
+          "No commitment to a full program"
+        ],
+        bestForLabel: "Best for",
+        bestFor: "People who want to start with a single session before committing to a program.",
+        popular: false
+      },
     ],
     es: [
       {
@@ -105,6 +126,27 @@ const Programs = () => {
         bestForLabel: "Ideal para",
         bestFor: "Personas que quieren atención individual, mayor personalización y apoyo directo.",
         popular: true
+      },
+      {
+        icon: UserRound,
+        image: privateImg,
+        badge: "Sesión Única",
+        duration: "Consulta Puntual",
+        title: "Consulta Solaris",
+        subtitle: "Consulta Personal Puntual",
+        price: "€70",
+        priceCop: "COP 250.000",
+        period: "/ sesión única",
+        description: "¿Aún no estás lista para un programa completo? Reserva una consulta puntual. Revisamos tu situación actual, tus principales preocupaciones y tu ritmo diario, y te llevas pasos prácticos y claros que puedes aplicar de inmediato.",
+        features: [
+          "Una sesión privada 1:1",
+          "Revisión de tu ritmo actual y tus preocupaciones",
+          "Primeros pasos prácticos para aplicar de inmediato",
+          "Sin compromiso con un programa completo"
+        ],
+        bestForLabel: "Ideal para",
+        bestFor: "Personas que quieren empezar con una sola sesión antes de comprometerse con un programa.",
+        popular: false
       },
     ],
     pt: [
