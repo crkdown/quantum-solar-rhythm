@@ -151,19 +151,19 @@ const Programs = () => {
 
   const startHere = {
     en: {
-      title: "Start where you are.",
+      title: "Real change takes time.",
       collective: "Collective — learn, connect and grow together.",
       private: "Private — go deeper with individual guidance.",
       quote: "The goal isn't to control your body. It is to learn its rhythm."
     },
     es: {
-      title: "Empieza donde estás.",
+      title: "El cambio real toma tiempo.",
       collective: "Collective — aprende, conecta y crece en comunidad.",
       private: "Private — profundiza con guía individual.",
       quote: "El objetivo no es controlar tu cuerpo. Es aprender su ritmo."
     },
     pt: {
-      title: "Começa onde estás.",
+      title: "A mudança real leva tempo.",
       collective: "Collective — aprende, conecta e cresce em conjunto.",
       private: "Private — aprofunda com orientação individual.",
       quote: "O objetivo não é controlar o teu corpo. É aprender o seu ritmo."
